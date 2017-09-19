@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xn="http://www.renren.com/2009/xnml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/templets/jxdoc/style/common.css" rel="stylesheet" type="text/css" />
+<link href="/templets/jxdoc/style/listmore.css" rel="stylesheet" type="text/css" />
+<link href="/templets/jxdoc/style/searchResult.css" rel="stylesheet" type="text/css" />
+<LINK rel=stylesheet type=text/css href="/templets/jxdoc/baidu/homenew.css">
+<SCRIPT type=text/javascript src="/templets/jxdoc/baidu/tangram-1.3.2.js"></SCRIPT>
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmspath/}/images/js/j.js" ></script>
+<script language="javascript" type="text/javascript" src="/templets/jxdoc/js/jquery.cookie.js"></script>
+<script language="javascript" type="text/javascript" src="/templets/jxdoc/js/changeSkin.js"></script>
+</head>
+<body>
+<!-- /header 开始 -->
+{dede:include filename="head.htm"/}<!-- /search 结束-->
+<!--sear-result-->
+<div class="wapper">
+  <h2 class="tar">搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</h2>
+  <div class="doc-list-style2 doc-mark">
+    <div id="search-sort"><span>排序:</span> <b>相关性</b>| <a href="/plus/search.php?keyword={dede:global name='keyword' function='RemoveXSS(@me)'/}&orderby=pubdate&kwtype=0&searchtype=titlekeyword">发布时间</a> | <a href="/plus/search.php?keyword={dede:global name='keyword' function='RemoveXSS(@me)'/}&orderby=click&kwtype=0&searchtype=titlekeyword">最多点击</a> | <a href="/plus/search.php?keyword={dede:global name='keyword' function='RemoveXSS(@me)'/}&orderby=needmoney&kwtype=0&searchtype=keyword">价格排序</a> </div>
+    <!--turn-->
+    {dede:list perpage='20'}
+    <dl class="clear">
+      <dt class="imgs">[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]<!--span class="t">72 Pages</span--></dt>
+      <dd class="fc-baidu title"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></dd>
+      <dd class="summary">[field:description/]...</dd>
+      <dd>
+        <ul>
+          <!--li class="padding-l"><em title="顶" class="top">顶</em>0<span>|</span></li-->
+          <li> 上传人: [field:writer/] </li>
+          <li><span>[field:stime/]</span><span>|</span></li>
+           <!--<li class="viewhot-tips">热度:<span class='viewhot5'></span><span>|</span></li-->
+          <li >格式:[field:filetype/]<span>|</span></li>
+          <li >分类:<a href="[field:typeurl/]" target="_blank">[field:typename/]</a><span>|</span></li>
+		  <!--<li ><span class="price"></span><font color="red"><strong>￥[field:needmoney/]</strong></font><span>|</span></li-->
+          <li ><span class="preview"></span>[field:click/]<span>|</span></li>
+		  <li ><span class="downtimes"></span><script src="[field:phpurl/]/disdls.php?aid=[field:id/]" language="javascript"></script><span>|</span></li>
+		  <li ><span class="favtimes"></span><script src="[field:phpurl/]/disstows.php?aid=[field:id/]" language="javascript"></script><span>|</span></li>
+        </ul>
+      </dd>
+    </dl>
+    {/dede:list}
+    <!--turn end-->
+  </div>
+  <!--翻页-->
+  <div id="feny"> {dede:pagelist listsize='4'/} </div>
+  <!--翻页结束-->
+  <div class="pright">
+    <div class="commend">
+      <dl class="tbox light">
+        <dt class='light'><strong>相关搜索</strong></dt>
+        <dd class='light'>
+          <ul class="d4">
+            <li>{dede:likewords num='8'/}</li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <!-- /commend -->
+  </div>
+  <!-- /pright -->
+</div>
+<!--sear-result end-->
+﻿{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

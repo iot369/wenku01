@@ -1,0 +1,192 @@
+<?php
+//cookie全部传到后台，否则取不到登录信息
+$cookies .= '"MyCssSkin":'."'".$_COOKIE["MyCssSkin"]."',";
+$cookies .= '"lastCid":'."'".$_COOKIE["lastCid"]."',";
+$cookies .= '"lastCid__ckMd5":'."'".$_COOKIE["lastCid__ckMd5"]."',";
+$cookies .= '"DedeUserID":'."'".$_COOKIE["DedeUserID"]."',";
+$cookies .= '"DedeUserID__ckMd5":'."'".$_COOKIE["DedeUserID__ckMd5"]."',";
+$cookies .= '"DedeLoginTime":'."'".$_COOKIE["DedeLoginTime"]."',";
+$cookies .= '"DedeLoginTime__ckMd5":'."'".$_COOKIE["DedeLoginTime__ckMd5"]."',";
+$cookies .= '"PHPSESSID":'."'".$_COOKIE["PHPSESSID"]."'";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文档上传 - {dede:global.cfg_webname/}</title>
+<meta name="description" content=""/>
+<link href="templets/style/common.css" rel="stylesheet" type="text/css" />
+<link href="templets/style/upload.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_cmsurl/}/js/jquery.uploadify-v2.1.0/uploadify.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/js/swfobject.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/js/jquery.uploadify-v2.1.0/jquery.uploadify.v2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#uploadify").uploadify({
+		'uploader'       : '{dede:global.cfg_cmsurl/}/js/jquery.uploadify-v2.1.0/uploadify.swf',
+		'script'         : '{dede:global.cfg_memberurl/}/inc/uploadify.php',
+		'scriptData'     : {<?php echo $cookies ?>},
+		'cancelImg'      : '{dede:global.cfg_cmsurl/}/js/jquery.uploadify-v2.1.0/cancel.png',
+		'folder'         : '{dede:global.cfg_memberurl/}/uploads',
+		'queueID'        : 'fileQueue',
+		'auto'           : true,
+		'multi'          : true,
+		'fileDesc'       : '支持的文件格式：.doc;*.xls;*.txt;*.pdf;*.jpg;',
+		'fileExt'        : "*.doc;*.xls;*.txt;*.pdf;*.jpg;",
+		'buttonImg'      : 'templets/images/icon-up.gif',
+		'width'          : 190,
+		'height'         : 43,
+		'onComplete'     : function(event, queueID, fileObj, response, data){
+							   var xml = $("<xml>"+response+"</xml>");
+							   result = xml.find("result").text();
+							   //alert(typeof response);
+							   if(result == "0"){
+							       //成功
+								   $("#uploaderContainer").hide();
+								   $(".multi-upload").show();
+								   var title = xml.find("title").text();
+								   $("#docTitle").val(title);
+						       }else{
+							       alert("对不起，文件上传失败！请重试。");   
+							   }
+		                   }
+
+	});
+});
+</script>
+</head>
+<body>
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<div id="wrapper">
+  <div class="nav"> <a href="{dede:global.cfg_cmsurl/}/"> {dede:global.cfg_webname/}</a>&nbsp;&gt;&nbsp;
+    上传文档</div>
+  <div id="main" class="main">
+    <form action="uploadBook.php" method="post">
+      <div id="uploaderContainer">
+        <div id="fileQueue"></div>
+        <input type="file" name="uploadify" id="uploadify" />
+
+		<input type="hidden" name="dopost" value="save" />
+        <input type="hidden" name="channelid" value="<?php echo $channelid; ?>" />
+		<input name="tags" type="hidden" id="tags" maxlength="100" class="intxt"/>
+		<input name="writer" type="hidden" id="writer" value="<?php echo $cfg_ml->M_UserName?>">
+		<input name="filetype" type="hidden" value="pdf">
+		<input name="language" type="hidden" value="简体中文">
+		<input name="softtype" type="hidden" value="国产书籍">
+		<input name="accredit" type="hidden" value="免费软件">
+		<input name="os" type="hidden" value="Win2003,WinXP,Win2000,Win9X">
+		<input name="softrank" type="hidden" value="3">
+		<input name="officialDemo" type="hidden" value="">
+		<input name="officialUrl" type="hidden" value="">
+		<input name="softsize" type="hidden" value="">
+		<input name="source" type="hidden" value="">
+		<input name="needmoney" type="hidden" value="0">
+      </div>
+      <div id="step2" class="multi-upload" style="display:none;">
+        <p class="upload-tips" id="upload-tips">为了方便资料被更多用户浏览和下载，请耐心补充以下信息。</p>
+        <div id="all-fill">
+          <div class="form-holder clearfix">
+         	<dl class="form-category">
+              <dt>标题</dt>
+              <dd>
+                <input type="text" class="input-text" name="title" id="docTitle" />
+                <p class="error-tip"></p>
+              </dd>
+            </dl>
+            <dl class="form-category">
+              <dt>分类</dt>
+              <dd>
+                <?php
+					$typeOptions = GetOptionList(0,$channelid);
+					echo "<select name='typeid' size='1'>\r\n";
+					echo "<option value='0' selected>请选择栏目...</option>\r\n";
+					echo $typeOptions;
+					echo "</select>";
+				?>
+              </dd>
+            </dl>
+            <dl class="form-sumary">
+              <dt>介绍</dt>
+              <dd>
+                <textarea name="intro" class="input-init">简要介绍资料的主要内容，以获得更多的关注</textarea>
+                <p class="error-tip"></p>
+              </dd>
+            </dl>
+            <!--dl class="form-tag">
+              <dt>关键词</dt>
+              <dd>
+                <input type="text" class="input-text input-init" value="选填，多个关键词用逗号分隔" name="keyword" autocomplete="off" />
+                <ul class="clearfix" id="all-sug-tags">
+                </ul>
+                <p class="error-tip"></p>
+              </dd>
+            </dl>
+            <dl class="form-price">
+              <dt>售价</dt>
+              <dd>
+                <input type="radio" name="all-charge" checked="checked" id="all-charge" />
+                <span class="for-free">免费</span>
+                <input type="radio" name="all-charge" id="all-nonFree" />
+                <select id="all-priceList">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="5">5</option>
+                  <option value="8">8</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                </select>
+                <span class="small_score icon"></span> <a href="#" target="_blank" class="how-to-charge">如何合理标价？</a>
+                <p>是指资料每被下载一次，您所获得的积分奖励。</p>
+              </dd>
+            </dl-->
+          </div>
+        </div>
+        <div id="submitHolder">
+          <input type="submit" value="提交文档" class="input-button"  id="submitBtn" />
+        </div>
+      </div>
+      <div id="step1">
+        <h3 class="header">文档上传须知</h3>
+        <p>请上传大小小于10M的附件</p>
+        <p>最多支持每次同时上传10份文档</p>
+        <p>为了保证文档能正常显示，我们支持以下格式的文档上传</p>
+        <table cellpadding="0" width="600" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td class="r">MS Office文档</td>
+              <td valign="top"><span class="icon doc"></span> doc,docx  &nbsp;&nbsp; <span class="icon ppt"></span> ppt,pptx  &nbsp;&nbsp; <span class="icon xls"></span> xls,xlsx&nbsp;&nbsp; <span class="icon vsd"></span> vsd &nbsp;&nbsp; <span class="icon pot"></span> pot&nbsp;&nbsp; <span class="icon pps"></span> pps&nbsp;&nbsp; <span class="icon rtf"></span> rtf&nbsp;&nbsp; </td>
+            </tr>
+            <tr>
+              <td class="r">WPS office系列</td>
+              <td><span class="icon wps"></span> wps  &nbsp;&nbsp; <span class="icon et"></span> et  &nbsp;&nbsp; <span class="icon dps"></span> dps&nbsp;&nbsp; </td>
+            </tr>
+            <tr>
+              <td class="r">PDF</td>
+              <td><span class="icon pdf"></span> pdf</td>
+            </tr>
+            <tr>
+              <td class="r">纯文本</td>
+              <td><span class="icon txt"></span> txt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
+  <div id="aside" class="aside">
+    <div class="guide box">
+      <div class="content">
+      	<h2>声明：</h2>
+        <p>请勿在未经授权的情况下上传任何涉及著作权侵权的文档，除非文档完全由您个人创作</p>
+        <p class="last">点击上传文档即表示您确认该文档不违反文档使用条款，并且您拥有该文档的所有版权或者上传文档的授权</p>
+      </div>
+    </div>
+  <div class="clear"></div>
+</div>
+<?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+</body>
+</html>

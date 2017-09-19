@@ -1,0 +1,486 @@
+<html><HEAD><TITLE>{dede:global.cfg_webname/}</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type><LINK rel=stylesheet type=text/css href="/static/css/popmessage.css">
+<META name=description content={dede:global.cfg_description/}>
+<META name=keywords content={dede:global.cfg_keywords/}>
+
+<LINK rel=stylesheet type=text/css href="/static/css/homeCom.css">
+<SCRIPT type=text/javascript src="static/js/homeCom.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>(function(){var module=function(name,module,owner){var packages=name.split("."),len=packages.length-1,packageName,i=0;if(!owner){try{if(!(new RegExp("^[a-zA-Z_\x24][a-zA-Z0-9_\x24]*\x24")).test(packages[0])){throw""}owner=eval(packages[0]);i=1}catch(e){owner=window}}for(;i<len;i++){packageName=packages[i];if(!owner[packageName]){owner[packageName]={}}owner=owner[packageName]}if(!owner[packages[len]]){owner[packages[len]]=module}};var _info=_info||{};_info.tpl="homenew.tpl";var ts_tpl_cookie="homenew.tpl".split("/")[0]+"_docBubble";ts_tpl_cookie=ts_tpl_cookie.replace(".","-");if(baidu.cookie.get(ts_tpl_cookie)){_info.cookie=baidu.cookie.get(ts_tpl_cookie).split("_")}module("wenku.bubble.info",_info);baidu.dom.ready(function(){baidu.page.loadJsFile("http://img.baidu.com/img/iknow/docshare/js/bubble_data_new.js?t="+Math.round(Math.random()*2147483647))})})();(function(){var A=function(D,I){D=D||{};I=I||1;var C=[],H=baidu.array;if(+I==1){if(D.level1&&D.level1 instanceof Array&&class_level_1&&class_level_1 instanceof Array){for(var E=0,B=class_level_1.length;E<B;E++){if(H.indexOf(D.level1,+class_level_1[E][0])==-1){C.push(class_level_1[E])}}class_level_1=C}}else{if(+I==2){if(D.level2&&D.level2 instanceof Array&&class_level_2&&class_level_2 instanceof Array){D.level1=D.level1&&D.level1 instanceof Array?D.level1:[];for(var E=0,B=class_level_2.length;E<B;E++){var G=class_level_2[E];if(H.indexOf(D.level1,G[0])==-1&&H.indexOf(D.level2,+G[1])==-1){C.push(G)}else{if(H.indexOf(D.level1,G[0]!=-1)){if(H.indexOf(D.level2,G[1]==-1)){D.level2.push(G[1])}}}}class_level_2=C}}else{if(+I==3){if(D.level3 instanceof Array&&class_level_3&&class_level_3 instanceof Array){D.level2=D.level2&&D.level2 instanceof Array?D.level2:[];for(var E=0,B=class_level_3.length;E<B;E++){var F=class_level_3[E];if(H.indexOf(D.level2,F[0])==-1&&H.indexOf(D.level3,+F[1])==-1){C.push(F)}}class_level_3=C}}}}return(+I==1||+I==2)?arguments.callee(D,I+1):true};if(wenku.bubble.info.tpl=="multiupload.tpl"){A({level1:[6,12]})}})();var taskPopLayer=false;</SCRIPT>
+
+<STYLE id=doc-Bubble-stylesheet type=text/css>#docBubble {
+	Z-INDEX: 100; POSITION: absolute; TEXT-ALIGN: left; MAX-WIDTH: 240px; TOP: 31px; RIGHT: 40px
+}
+#docBubble A {
+	MARGIN-LEFT: 0px
+}
+#docBubble .icon {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#docBubble .title A {
+	TEXT-DECORATION: none
+}
+#docBubble .tl {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .tr {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .bl {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .inner {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .triangle-t {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .triangle-b {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .close {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .tl {
+	BACKGROUND-POSITION: -20px 0px; FLOAT: left
+}
+#docBubble .tr {
+	POSITION: absolute; WIDTH: 12px; BACKGROUND-POSITION: 100% 0px; HEIGHT: 12px; TOP: 0px; RIGHT: -12px
+}
+#docBubble .bl {
+	POSITION: absolute; WIDTH: 12px; BOTTOM: -12px; BACKGROUND-POSITION: -20px 100%; HEIGHT: 12px; LEFT: 0px
+}
+#docBubble .inner {
+	POSITION: relative; PADDING-BOTTOM: 12px; MARGIN: 12px 0px -12px; PADDING-LEFT: 2px; WIDTH: 220px; PADDING-RIGHT: 12px; MAX-WIDTH: 220px; BACKGROUND-POSITION: 100% 100%; PADDING-TOP: 0px; LEFT: 12px; _padding-bottom: 12px
+}
+#docBubble .triangle-t {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 15px; HEIGHT: 8px; OVERFLOW: hidden; TOP: -7px
+}
+#docBubble .triangle-b {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 15px; BOTTOM: -18px; BACKGROUND-POSITION: 0px -10px; HEIGHT: 11px; OVERFLOW: hidden
+}
+#docBubble .triangle-t {
+	RIGHT: 20px
+}
+#docBubble .triangle-b {
+	RIGHT: 20px
+}
+#docBubble .close {
+	Z-INDEX: 1; POSITION: absolute; TEXT-INDENT: -99em; WIDTH: 9px; BACKGROUND-POSITION: 0px -25px; HEIGHT: 9px; OVERFLOW: hidden; TOP: 10px; CURSOR: pointer; RIGHT: 2px
+}
+#docBubble .inner .icon {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 2px
+}
+#docBubble .inner .icon IMG {
+	MARGIN-RIGHT: 10px
+}
+#docBubble .inner .cont {
+	ZOOM: 1; OVERFLOW: hidden
+}
+#docBubble .inner .title {
+	MARGIN: 0px 0px 2px; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+#docBubble .inner .lk-btn {
+	TEXT-ALIGN: right
+}
+</STYLE>
+</HEAD>
+<BODY sizcache="2" sizset="0">
+
+<DIV id=wrapper sizcache="2" sizset="11">
+<DIV id=search class=search-box sizcache="2" sizset="11">
+
+<DIV style="CLEAR: both"></DIV></DIV>
+<STYLE type=text/css>
+#page .no4,#page .no5{ width:40px; }
+#page span.no4,#page span.no5{ width:42px; }
+#page .no6,#page .no7{ width:50px; }
+#page span.no6,#page span.no7{ width:52px; }
+</STYLE>
+<!-- /header 开始 -->{dede:include filename="head.htm"/} <!-- /header 结束-->
+<DIV id=wrapper><!-- menu-->{dede:include filename="menu.htm"/} <!-- menu-->
+<SCRIPT type=text/javascript>
+(function(){if(WK_INFO){switch(WK_INFO.tpl){case"homenew":baidu.dom.addClass("nav-index","current");break;case"zone#edu#index":baidu.dom.addClass("nav-edu","current");break;case"zone#ppt#index":baidu.dom.addClass("nav-ppt","current");break;case"zone#pro#index":baidu.dom.addClass("nav-pro","current");break;case"zone#form#index":baidu.dom.addClass("nav-form","current");break;case"org_collect":baidu.dom.addClass("nav-org","current");break}}var a=baidu.g("nav").getElementsByTagName("li");baidu.each(a,function(d,c){var b=d.getElementsByTagName("a");baidu.each(b,function(f,e){baidu.on(f,"click",function(g){log.send("home","topbanner",{from:"all",clk:"link"+(c+1)})})})})})();
+var Navs=T.q("skin-nav");
+if(Navs.length>1){
+Navs[1].style.display="none";
+}
+</SCRIPT>
+
+<DIV id=category-area sizcache="2" sizset="29">
+<DL class="cate-item " sizcache="2" sizset="29">
+<DT class=edu-icon sizcache="2" sizset="29"><A href="/edu/index">Education Section</A> </DT>
+<DD class=cate-dec>从幼儿教育到高等教育，乃至各类专业教辅和学习资料应有尽有，满足求学者各种不同需求。 
+<DD class=more sizcache="2" sizset="30"><A class=in href="/edu/index">进入专区</A> </DD></DL>
+<DL class="cate-item " sizcache="2" sizset="31">
+<DT class=ppt-icon sizcache="2" sizset="31"><A href="/ppt/index">Presentation Reference</A> </DT>
+<DD class=cate-dec>汇聚众多精美的模板、专业系统的策划方案、详实权威的数据报告，各类PPT文档一应俱全。 
+<DD class=more sizcache="2" sizset="32"><A class=in href="/ppt/index">进入专区</A> </DD></DL>
+<DL class="cate-item " sizcache="2" sizset="33">
+<DT class=pro-icon sizcache="2" sizset="33"><A href="/pro/index">Literature Section</A> </DT>
+<DD class=cate-dec>涵盖各行业最丰富完备的资料文献，最前瞻权威的行业动态，是专业人士的不二选择。 
+<DD class=more sizcache="2" sizset="34"><A class=in href="/pro/index">进入专区</A> </DD></DL>
+<DL class="cate-item nobg" sizcache="2" sizset="35">
+<DT class=form-icon sizcache="2" sizset="35"><A href="/form/index">Daily Documents Reference </A></DT>
+<DD class=cate-dec>集结了简历模板、工作总结、项目汇报等工作和学习之必备文档，白领与学生的最佳帮手。 
+<DD class=more sizcache="2" sizset="36"><A class=in href="/form/index">进入专区</A> </DD></DL>
+<DIV style="WIDTH: 175px" class=upload-area sizcache="2" sizset="37">
+<P class=share-number>当前已有<SPAN class=doc-number>29847365</SPAN>份文档</P>
+<P class=share-button sizcache="2" sizset="37"><A id=upload-icon class=upload-btn href="#" rel=log-home-sharebutton-from=index2011></A></P></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV id=main class=main sizcache="2" sizset="38"><!--热门阅读-->
+<DIV id=hot-read class="mod mb10 skin-hot" sizcache="2" sizset="38">
+<DIV class=inner sizcache="2" sizset="38">
+<DIV class="hd clearfix" sizcache="2" sizset="38"><B class=f-green sizcache="2" sizset="38"><A href="/hotlist?l=2.2" target=_blank>热门阅读</A></B><SUP class=hot></SUP><A class="r icon-more" href="/hotlist?l=2.3" target=_blank>更多</A></DIV>
+<DIV class=cd sizcache="2" sizset="40">
+<DIV class=hot-img sizcache="2" sizset="40">
+<DL class=mt5 sizcache="2" sizset="40">
+<DT sizcache="2" sizset="40"><A href="http://wenku.baidu.com/view/800c7ca4284ac850ad0242d5.html?l=2.1.2" target=_blank><IMG title=2011年高级会计师考试答题速度提高技巧 alt=2011年高级会计师考试答题速度提高技巧 src="http://wenku.baidu.com/img/800c7ca4284ac850ad0242d5"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="41"><A title=2011年高级会计师考试答题速度提高技巧 href="http://wenku.baidu.com/view/800c7ca4284ac850ad0242d5.html?l=2.1.1" target=_blank>2011年高级会计师考试答题...</A> </DD>
+<DD class=f-grey>161091人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="42">
+<DT sizcache="2" sizset="42"><A href="http://wenku.baidu.com/view/142bd26b58fafab069dc023f.html?l=2.1.2" target=_blank><IMG title=财务管理公式 alt=财务管理公式 src="http://wenku.baidu.com/img/142bd26b58fafab069dc023f"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="43"><A title=财务管理公式 href="http://wenku.baidu.com/view/142bd26b58fafab069dc023f.html?l=2.1.1" target=_blank>财务管理公式</A> </DD>
+<DD class=f-grey>155903人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="44">
+<DT sizcache="2" sizset="44"><A href="http://wenku.baidu.com/view/caf0858083d049649b6658e3.html?l=2.1.2" target=_blank><IMG title=企业常见财务、金融风险的控制 alt=企业常见财务、金融风险的控制 src="http://wenku.baidu.com/img/caf0858083d049649b6658e3"></A> <SPAN class="docx icon" title=docx></SPAN></DT>
+<DD sizcache="2" sizset="45"><A title=企业常见财务、金融风险的控制 href="http://wenku.baidu.com/view/caf0858083d049649b6658e3.html?l=2.1.1" target=_blank>企业常见财务、金融风险的...</A> </DD>
+<DD class=f-grey>141160人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="46">
+<DT sizcache="2" sizset="46"><A href="http://wenku.baidu.com/view/355c05fb910ef12d2af9e7e1.html?l=2.1.2" target=_blank><IMG title=认识K线 alt=认识K线 src="http://wenku.baidu.com/img/355c05fb910ef12d2af9e7e1"></A> <SPAN class="ppt icon" title=ppt></SPAN></DT>
+<DD sizcache="2" sizset="47"><A title=认识K线 href="http://wenku.baidu.com/view/355c05fb910ef12d2af9e7e1.html?l=2.1.1" target=_blank>认识K线</A> </DD>
+<DD class=f-grey>128904人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="48">
+<DT sizcache="2" sizset="48"><A href="http://wenku.baidu.com/view/fb321c0703d8ce2f006623c5.html?l=2.1.2" target=_blank><IMG title=清理磁盘的最好方法 alt=清理磁盘的最好方法 src="http://wenku.baidu.com/img/fb321c0703d8ce2f006623c5"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="49"><A title=清理磁盘的最好方法 href="http://wenku.baidu.com/view/fb321c0703d8ce2f006623c5.html?l=2.1.1" target=_blank>清理磁盘的最好方法</A> </DD>
+<DD class=f-grey>100183人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="50">
+<DT sizcache="2" sizset="50"><A href="http://wenku.baidu.com/view/8ca1628d84868762caaed5db.html?l=2.1.2" target=_blank><IMG title=怎么用手机wifi上网 alt=怎么用手机wifi上网 src="http://wenku.baidu.com/img/8ca1628d84868762caaed5db"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="51"><A title=怎么用手机wifi上网 href="http://wenku.baidu.com/view/8ca1628d84868762caaed5db.html?l=2.1.1" target=_blank>怎么用手机wifi上网</A> </DD>
+<DD class=f-grey>99204人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="52">
+<DT sizcache="2" sizset="52"><A href="http://wenku.baidu.com/view/133a7d17a21614791711280c.html?l=2.1.2" target=_blank><IMG title=电销问题集锦 alt=电销问题集锦 src="http://wenku.baidu.com/img/133a7d17a21614791711280c"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="53"><A title=电销问题集锦 href="http://wenku.baidu.com/view/133a7d17a21614791711280c.html?l=2.1.1" target=_blank>电销问题集锦</A> </DD>
+<DD class=f-grey>96183人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="54">
+<DT sizcache="2" sizset="54"><A href="http://wenku.baidu.com/view/7557d012866fb84ae45c8d22.html?l=2.1.2" target=_blank><IMG title=证券相关知识 alt=证券相关知识 src="http://wenku.baidu.com/img/7557d012866fb84ae45c8d22"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="55"><A title=证券相关知识 href="http://wenku.baidu.com/view/7557d012866fb84ae45c8d22.html?l=2.1.1" target=_blank>证券相关知识</A> </DD>
+<DD class=f-grey>90136人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="56">
+<DT sizcache="2" sizset="56"><A href="http://wenku.baidu.com/view/82426adcad51f01dc281f12f.html?l=2.1.2" target=_blank><IMG title=驾照考试必备 alt=驾照考试必备 src="http://wenku.baidu.com/img/82426adcad51f01dc281f12f"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="57"><A title=驾照考试必备 href="http://wenku.baidu.com/view/82426adcad51f01dc281f12f.html?l=2.1.1" target=_blank>驾照考试必备</A> </DD>
+<DD class=f-grey>88993人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="58">
+<DT sizcache="2" sizset="58"><A href="http://wenku.baidu.com/view/5059b18dd0d233d4b14e69d7.html?l=2.1.2" target=_blank><IMG title=应聘技巧 alt=应聘技巧 src="http://wenku.baidu.com/img/5059b18dd0d233d4b14e69d7"></A> <SPAN class="rtf icon" title=rtf></SPAN></DT>
+<DD sizcache="2" sizset="59"><A title=应聘技巧 href="http://wenku.baidu.com/view/5059b18dd0d233d4b14e69d7.html?l=2.1.1" target=_blank>应聘技巧</A> </DD>
+<DD class=f-grey>86047人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="60">
+<DT sizcache="2" sizset="60"><A href="http://wenku.baidu.com/view/4f453e48e518964bcf847ca9.html?l=2.1.2" target=_blank><IMG title=Win7如何更新分区大小 alt=Win7如何更新分区大小 src="http://wenku.baidu.com/img/4f453e48e518964bcf847ca9"></A> <SPAN class="docx icon" title=docx></SPAN></DT>
+<DD sizcache="2" sizset="61"><A title=Win7如何更新分区大小 href="http://wenku.baidu.com/view/4f453e48e518964bcf847ca9.html?l=2.1.1" target=_blank>Win7如何更新分区大小</A> </DD>
+<DD class=f-grey>83547人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="62">
+<DT sizcache="2" sizset="62"><A href="http://wenku.baidu.com/view/8da8658d84868762caaed5d2.html?l=2.1.2" target=_blank><IMG title=统计分析报告模板 alt=统计分析报告模板 src="http://wenku.baidu.com/img/8da8658d84868762caaed5d2"></A> <SPAN class="ppt icon" title=ppt></SPAN></DT>
+<DD sizcache="2" sizset="63"><A title=统计分析报告模板 href="http://wenku.baidu.com/view/8da8658d84868762caaed5d2.html?l=2.1.1" target=_blank>统计分析报告模板</A> </DD>
+<DD class=f-grey>79106人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="64">
+<DT sizcache="2" sizset="64"><A href="http://wenku.baidu.com/view/db84c85477232f60ddcca1f6.html?l=2.1.2" target=_blank><IMG title=美术常识 alt=美术常识 src="http://wenku.baidu.com/img/db84c85477232f60ddcca1f6"></A> <SPAN class="doc icon" title=doc></SPAN></DT>
+<DD sizcache="2" sizset="65"><A title=美术常识 href="http://wenku.baidu.com/view/db84c85477232f60ddcca1f6.html?l=2.1.1" target=_blank>美术常识</A> </DD>
+<DD class=f-grey>76953人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="66">
+<DT sizcache="2" sizset="66"><A href="http://wenku.baidu.com/view/568d46fc0242a8956bece4a3.html?l=2.1.2" target=_blank><IMG title=客户类型分析 alt=客户类型分析 src="http://wenku.baidu.com/img/568d46fc0242a8956bece4a3"></A> <SPAN class="ppt icon" title=ppt></SPAN></DT>
+<DD sizcache="2" sizset="67"><A title=客户类型分析 href="http://wenku.baidu.com/view/568d46fc0242a8956bece4a3.html?l=2.1.1" target=_blank>客户类型分析</A> </DD>
+<DD class=f-grey>75514人阅读 </DD></DL>
+<DL class=mt5 sizcache="2" sizset="68">
+<DT sizcache="2" sizset="68"><A href="http://wenku.baidu.com/view/ec72e20090c69ec3d5bb75d1.html?l=2.1.2" target=_blank><IMG title=什么是专业硕士 alt=什么是专业硕士 src="http://wenku.baidu.com/img/ec72e20090c69ec3d5bb75d1"></A> <SPAN class="txt icon" title=txt></SPAN></DT>
+<DD sizcache="2" sizset="69"><A title=什么是专业硕士 href="http://wenku.baidu.com/view/ec72e20090c69ec3d5bb75d1.html?l=2.1.1" target=_blank>什么是专业硕士</A> </DD>
+<DD class=f-grey>71832人阅读 </DD></DL></DIV></DIV></DIV></DIV>
+<DIV class="banner mt20" sizcache="2" sizset="70"><A onMouseDown="log.send('ad','banner')" href="http://wenku.baidu.com/topic/pets.html?fr=wenku_leftbanner" target=_blank><IMG alt=全国英语等级考试专题 src="http://hiphotos.baidu.com/baidu/pic/item/09fa513d269759eedd2c067db2fb43166d22df0c.jpg"></A></DIV>
+<DIV id=hot-cate class="mod mb10 skin-hot skin-hotcate" sizcache="2" sizset="71">
+<DIV class=inner sizcache="2" sizset="71">
+<DIV class=hd sizcache="2" sizset="71"><B class=f-green sizcache="2" sizset="71"><A href="/list/0?l=1" target=_blank>所有分类</A></B><A class="r icon-more" href="/list/0?l=1" target=_blank>更多</A></DIV>
+<DIV class=cd sizcache="2" sizset="73">
+<DIV class=hot-cate sizcache="2" sizset="73">
+<DIV class=cate-header sizcache="2" sizset="73"><SPAN class="cate-title clearafter" sizcache="2" sizset="73"><A href="/edu/index?l=1.1">教育专区</A></SPAN> <!--
+       <div class="cate-tips">
+            <div class="inner"><a href="http://wenku.baidu.com/topic/CET.html?name=CET&fr=wkindexCET&l=1.1.1" target="_blank">英语四六级备考冲刺</a></div>
+        </div>
+--></DIV>
+<DIV class="cate-content clearafter" sizcache="2" sizset="74">
+<DL class=cate-items sizcache="2" sizset="74">
+<DT sizcache="2" sizset="74"><A href="/list/52?l=1.1" target=_blank>幼儿教育</A> </DT>
+<DD sizcache="2" sizset="75"><A href="/list/53?l=1.1&amp;">小学六年级 </A><A class=hot-spot href="/list/100?l=1.1&amp;">小学作文 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="77">
+<DT sizcache="2" sizset="77"><A href="/list/9?l=1.1" target=_blank>中学教育</A> </DT>
+<DD sizcache="2" sizset="78"><A href="/list/103?l=1.1&amp;">中考 </A><A href="/list/107?l=1.1&amp;">中学作文 </A><A href="/list/106?l=1.1&amp;">高考 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="81">
+<DT sizcache="2" sizset="81"><A href="/list/10?l=1.1" target=_blank>高等教育</A> </DT>
+<DD sizcache="2" sizset="82"><A class=hot-spot href="/list/56?l=1.1&amp;">研究生入学考试</A> <A href="/list/109?l=1.1&amp;">工学 </A><A href="/list/108?l=1.1&amp;">理学 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="85">
+<DT sizcache="2" sizset="85"><A href="/list/11?l=1.1" target=_blank>外语学习</A> </DT>
+<DD sizcache="2" sizset="86"><A class=hot-spot href="/list/119?l=1.1&amp;">英语学习</A> <A href="/list/120?l=1.1&amp;">日语学习</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="88">
+<DT sizcache="2" sizset="88"><A href="/list/2?l=1.1" target=_blank>资格考试</A> </DT>
+<DD sizcache="2" sizset="89"><A class=hot-spot href="/list/59?l=1.1&amp;">公务员考试</A> <A href="/list/61?l=1.1&amp;">财会考试</A> <A href="/list/60?l=1.1&amp;">IT认证 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="92">
+<DT sizcache="2" sizset="92"><A href="/lec/index?l=1.1" target=_blank>课件专区</A> </DT>
+<DD sizcache="2" sizset="93"><A href="http://wenku.baidu.com/lec/list?l=1.1&amp;cid=1021">初中地理</A> <A href="http://wenku.baidu.com/lec/list?l=1.1&amp;cid=1011">高中物理</A> </DD></DL></DIV></DIV>
+<DIV class=hot-cate sizcache="2" sizset="95">
+<DIV class=cate-header sizcache="2" sizset="95"><SPAN class="cate-title clearafter" sizcache="2" sizset="95"><A href="/ppt/index?l=1.2">PPT专区</A></SPAN> <!--
+       <div class="cate-tips">
+            <div class="inner"><a href="/ppt/index?l=1.2.1" target="_blank">PPT专区热门新闻配置~</a></div>
+        </div>
+--></DIV>
+<DIV class="cate-content clearafter" sizcache="2" sizset="96">
+<DL class=cate-items sizcache="2" sizset="96">
+<DT sizcache="2" sizset="96"><A href="/list/2028?l=1.2" target=_blank>PPT模板</A> </DT>
+<DD sizcache="2" sizset="97"><A href="/list/2029?l=1.2&amp;">ppt模板素材 </A><A href="/search?l=1.2&amp;word=ppt%CD%BC%B1%EA&amp;lm=0&amp;od=2">ppt图标 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="99">
+<DT sizcache="2" sizset="99"><A href="/list/2030?l=1.2" target=_blank>办公应用</A> </DT>
+<DD sizcache="2" sizset="100"><A href="/list/2031?l=1.2&amp;">调研报告</A> <A href="/list/2032?l=1.2&amp;">计划/总结</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="102">
+<DT sizcache="2" sizset="102"><A href="/list/2002?l=1.2" target=_blank>教育</A> </DT>
+<DD sizcache="2" sizset="103"><A href="/list/2003?l=1.2&amp;">幼儿教辅</A> <A href="/list/2005?l=1.2&amp;">中学教辅</A> <A href="/list/2008?l=1.2&amp;">外语</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="106">
+<DT sizcache="2" sizset="106"><A href="/list/2017?l=1.2" target=_blank>经管/营销</A> </DT>
+<DD sizcache="2" sizset="107"><A href="/list/2020?l=1.2&amp;">广告/传媒</A> <A class=hot-spot href="/list/2018?l=1.2&amp;">经济/管理 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="109">
+<DT sizcache="2" sizset="109"><A href="/list/2021?l=1.2" target=_blank>科技</A> </DT>
+<DD sizcache="2" sizset="110"><A class=hot-spot href="/list/2023?l=1.2&amp;">计算机</A> <A href="/list/2026?l=1.2&amp;">科学与自然 </A><A href="/list/2025?l=1.2&amp;">工业技术 </A></DD></DL>
+<DL class=cate-items sizcache="2" sizset="113">
+<DT sizcache="2" sizset="113"><A href="/list/2011?l=1.2" target=_blank>人文社科</A> </DT>
+<DD sizcache="2" sizset="114"><A href="/list/2012?l=1.2&amp;">哲学/历史</A> <A href="/list/2014?l=1.2&amp;">语言/文化</A> <A href="/list/2016?l=1.2&amp;">教育学</A> </DD></DL></DIV></DIV>
+<DIV class=hot-cate sizcache="2" sizset="117">
+<DIV class=cate-header sizcache="2" sizset="117"><SPAN class="cate-title clearafter" sizcache="2" sizset="117"><A href="/pro/index?l=1.3">专业文献</A></SPAN> <!--
+       <div class="cate-tips">
+            <div class="inner"><a href="http://wenku.baidu.com/album/view/ab3e0ab91a37f111f1855b57?l=1.3.1" target="_blank">毕业论文</a></div>
+        </div>
+--></DIV>
+<DIV class="cate-content clearafter" sizcache="2" sizset="118">
+<DL class=cate-items sizcache="2" sizset="118">
+<DT sizcache="2" sizset="118"><A href="/list/63?l=1.3" target=_blank>计算机</A> </DT>
+<DD sizcache="2" sizset="119"><A href="/search?l=1.3&amp;word=Excel&amp;lm=0&amp;od=2">Excel </A><A href="http://wenku.baidu.com/search?l=1.3&amp;word=PPT+&amp;lm=0&amp;od=0">PPT </A><A href="http://wenku.baidu.com/search?l=1.3&amp;word=PS&amp;lm=0&amp;od=0">PS </A><A href="http://wenku.baidu.com/search?l=1.3&amp;word=SQL%BD%CC%B3%CC&amp;lm=0&amp;od=0">SQL教程</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="123">
+<DT sizcache="2" sizset="123"><A href="/list/64?l=1.3" target=_blank>经济/管理</A> </DT>
+<DD sizcache="2" sizset="124"><A href="http://wenku.baidu.com/search?l=1.3&amp;word=%BA%EA%B9%DB%BE%AD%BC%C3%D1%A7&amp;lm=0&amp;od=0">宏观经济学</A> <A class=hot-spot href="http://wenku.baidu.com/search?l=1.3&amp;word=%B9%AB%CB%BE%B9%DC%C0%ED&amp;lm=0&amp;od=0">公司管理</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="126">
+<DT sizcache="2" sizset="126"><A href="/list/65" target=_blank>法律资料</A> </DT>
+<DD sizcache="2" sizset="127"><A href="http://wenku.baidu.com/search?l=1.3&amp;word=%B9%A4%C9%CB%B1%A3%CF%D5&amp;lm=0&amp;od=0">工伤保险</A> <A class=hot-spot href="http://wenku.baidu.com/search?l=1.3&amp;word=%D0%C2%BB%E9%D2%F6%B7%A8&amp;lm=0&amp;od=0">新婚姻法</A> <A href="/search?l=1.3&amp;word=%B2%F0%C7%A8%B7%A8&amp;lm=0&amp;od=2">拆迁法</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="130">
+<DT sizcache="2" sizset="130"><A href="/list/66?l=1.3" target=_blank>医药</A> </DT>
+<DD sizcache="2" sizset="131"><A href="/search?l=1.3&amp;word=%BB%C6%B5%DB%C4%DA%BE%AD&amp;lm=0&amp;od=2">黄帝内经</A> <A href="http://wenku.baidu.com/search?l=1.3&amp;word=%C8%CB%CC%E5%D1%A8%CE%BB&amp;lm=0&amp;od=0">人体穴位</A> <A class=hot-spot href="/search?l=1.3&amp;word=%D4%D0%B8%BE%20%BD%FB%BC%C9&amp;lm=0&amp;od=2">孕妇禁忌</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="134">
+<DT sizcache="2" sizset="134"><A href="/list/67?l=1.3" target=_blank>哲学/历史</A> </DT>
+<DD sizcache="2" sizset="135"><A href="/search?l=1.3&amp;word=%D7%AF%D7%D3&amp;lm=0&amp;od=2">庄子</A> <A href="/search?l=1.3&amp;word=%C2%D7%C0%ED%D1%A7&amp;lm=0&amp;od=2">伦理学</A> <A href="http://wenku.baidu.com/search?l=1.3&amp;word=%C3%F1%D7%E5%CA%B7&amp;lm=0&amp;od=0">民族史</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="138">
+<DT sizcache="2" sizset="138"><A href="/list/68?l=1.3" target=_blank>基础科学</A> </DT>
+<DD sizcache="2" sizset="139"><A href="/search?l=1.3&amp;word=%C2%DF%BC%AD%D1%A7&amp;lm=0&amp;od=2">逻辑学</A> <A href="http://wenku.baidu.com/search?l=1.3&amp;word=%CC%EC%CE%C4%D1%A7&amp;lm=0&amp;od=0">天文学</A> <A href="/search?l=1.3&amp;word=%C9%FA%C3%FC%BF%C6%D1%A7&amp;lm=0&amp;od=2">生命科学</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="142">
+<DT sizcache="2" sizset="142"><A href="/list/86?l=1.3" target=_blank>语言/文化</A> </DT>
+<DD sizcache="2" sizset="143"><A class=hot-spot href="http://wenku.baidu.com/search?l=1.3&amp;word=%B4%CA%C5%C6&amp;lm=0&amp;od=0">词牌</A> <A href="/search?l=1.3&amp;word=%BA%BA%D3%EF%BD%CC%D1%A7&amp;lm=0&amp;od=0">汉语教学</A> <A href="http://wenku.baidu.com/search?l=1.3&amp;word=%CD%E2%B9%FA%CE%C4%BB%AF&amp;lm=0&amp;od=0">外国文化</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="146">
+<DT sizcache="2" sizset="146"><A href="/list/87" target=_blank>能源/化工</A> </DT>
+<DD sizcache="2" sizset="147"><A href="/search?l=1.3&amp;word=%CC%AB%D1%F4%C4%DC&amp;lm=0&amp;od=2">太阳能</A> <A href="/search?l=1.3&amp;word=%BD%DA%C4%DC%BC%F5%C5%C5&amp;lm=0&amp;od=2">节能减排</A> <A href="/search?l=1.3&amp;word=%CE%DE%BB%FA%BB%AF%D1%A7&amp;lm=0&amp;od=2">无机化学</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="150">
+<DT sizcache="2" sizset="150"><A href="/list/88?l=1.3" target=_blank>通信/电子</A> </DT>
+<DD sizcache="2" sizset="151"><A href="/search?l=1.3&amp;word=%D2%C6%B6%AF+%CD%A8%D0%C5&amp;lm=0&amp;od=0">移动通信</A> <A href="/search?l=1.3&amp;word=3G&amp;lm=0&amp;od=2">3G</A> <A href="/search?l=1.3&amp;word=%B5%E7%C2%B7%CD%BC&amp;lm=0&amp;od=2">电路图</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="154">
+<DT sizcache="2" sizset="154"><A href="/list/89?l=1.3" target=_blank>建筑</A> </DT>
+<DD sizcache="2" sizset="155"><A href="/search?l=1.3&amp;word=%D4%B0%C1%D6%BE%B0%B9%DB&amp;lm=2&amp;od=2">园林景观</A> <A href="http://wenku.baidu.com/search?l=1.3&amp;word=%B9%A4%B3%CC%D4%EC%BC%DB+&amp;lm=2&amp;od=0">工程造价</A> <A href="/search?l=1.3&amp;word=%CA%A9%B9%A4%CD%BC+&amp;lm=2&amp;od=0">施工图</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="158">
+<DT sizcache="2" sizset="158"><A href="/list/90?l=1.3" target=_blank>机械/制造</A> </DT>
+<DD sizcache="2" sizset="159"><A href="/search?l=1.3&amp;word=ProE&amp;lm=0&amp;od=2">ProE</A> <A class=hot-spot href="/search?l=1.3&amp;word=%BB%FA%D0%B5%C9%E8%BC%C6&amp;lm=0&amp;od=2">机械设计</A> <A href="/search?l=1.3&amp;word=CAD&amp;lm=0&amp;od=2">CAD</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="162">
+<DT sizcache="2" sizset="162"><A href="/list/91?l=1.3" target=_blank>地质/水利</A> </DT>
+<DD sizcache="2" sizset="163"><A href="/search?l=1.3&amp;word=%B5%D8%D6%CA%B9%B9%D4%EC&amp;lm=0&amp;od=0">地质构造</A> <A href="/search?l=1.3&amp;word=%CB%AE%C0%FB%CB%AE%B5%E7&amp;lm=0&amp;od=2">水利水电</A> <A href="/search?l=1.3&amp;word=%B9%E0%B8%C8&amp;lm=0&amp;od=2">灌溉</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="166">
+<DT sizcache="2" sizset="166"><A href="/list/92?l=1.3" target=_blank>农业</A> </DT>
+<DD sizcache="2" sizset="167"><A href="/search?l=1.3&amp;word=%D7%AA%BB%F9%D2%F2&amp;lm=0&amp;od=2">转基因</A> <A class=hot-spot href="/search?l=1.3&amp;word=%C5%A9%D2%B5%CB%B0&amp;lm=0&amp;od=0">农业税</A> <A href="/search?l=1.3&amp;word=%C5%A9%D2%B5%CE%DB%C8%BE&amp;lm=0&amp;od=0">农业污染</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="170">
+<DT sizcache="2" sizset="170"><A href="/list/123?l=1.3" target=_blank>航空航天</A> </DT>
+<DD sizcache="2" sizset="171"><A href="/search?l=1.3&amp;word=%D6%B1%C9%FD%BB%FA&amp;lm=0&amp;od=2">直升机</A> <A href="/search?l=1.3&amp;word=%BA%BD%CC%EC%CF%B5%CD%B3&amp;lm=0&amp;od=0">航天系统</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="173">
+<DT sizcache="2" sizset="173"><A href="/list/124?l=1.3" target=_blank>广告/传媒</A> </DT>
+<DD sizcache="2" sizset="174"><A href="/search?l=1.3&amp;word=%B9%E3%B8%E6%B2%DF%BB%AE&amp;lm=0&amp;od=2">广告策划</A> <A class=hot-spot href="/search?l=1.3&amp;word=%CE%A2%B2%A9%D3%AA%CF%FA&amp;lm=0&amp;od=2">微博营销</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="176">
+<DT sizcache="2" sizset="176"><A href="/list/125?l=1.3" target=_blank>心理学</A> </DT>
+<DD sizcache="2" sizset="177"><A href="/search?l=1.3&amp;word=%D0%C4%C0%ED%B0%B5%CA%BE&amp;lm=0&amp;od=2">心理暗示</A> <A href="/search?l=1.3&amp;word=%BE%C5%D0%CD%C8%CB%B8%F1&amp;lm=0&amp;od=2">九型人格</A> <A class=hot-spot href="/search?l=1.3&amp;word=%C1%B5%B0%AE%D0%C4%C0%ED&amp;lm=0&amp;od=2">恋爱心理</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="180">
+<DT sizcache="2" sizset="180"><A href="/list/142?l=1.3" target=_blank>军事/政治</A> </DT>
+<DD sizcache="2" sizset="181"><A href="/search?l=1.3&amp;word=%CB%EF%D7%D3%B1%F8%B7%A8&amp;lm=0&amp;od=2">孙子兵法</A> <A href="/search?l=1.3&amp;word=%CA%AE%C6%DF%B4%F3&amp;lm=0&amp;od=2">十七大</A> <A href="/search?l=1.3&amp;word=%C1%EC%CD%C1%D6%F7%C8%A8&amp;lm=0&amp;od=0">领土主权</A> </DD></DL></DIV></DIV>
+<DIV class="hot-cate no-b" sizcache="2" sizset="184">
+<DIV class=cate-header sizcache="2" sizset="184"><SPAN class="cate-title clearafter" sizcache="2" sizset="184"><A href="/form/index?l=1.4">应用文书</A></SPAN> <!--   
+    <div class="cate-tips">
+            <div class="inner"><a href="###" target="_blank">应用文书专区</a></div>
+        </div>
+--></DIV>
+<DIV class="cate-content clearafter" sizcache="2" sizset="185">
+<DL class=cate-items sizcache="2" sizset="185">
+<DT sizcache="2" sizset="185"><A href="/list/77?l=1.4" target=_blank>工作总结</A> </DT>
+<DD sizcache="2" sizset="186"><A class=hot-spot href="http://wenku.baidu.com/search?l=1.4&amp;word=%C4%EA%D6%D5%B9%A4%D7%F7%D7%DC%BD%E1&amp;lm=0&amp;od=0">年终工作总结</A> <A href="http://wenku.baidu.com/search?l=1.4&amp;word=%B8%F6%C8%CB%D7%DC%BD%E1&amp;lm=0&amp;od=0">个人总结</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="188">
+<DT sizcache="2" sizset="188"><A href="/list/71?l=1.4" target=_blank>求职简历</A> </DT>
+<DD sizcache="2" sizset="189"><A class=hot-spot href="/search?l=1.4&amp;word=%BC%F2%C0%FA%C4%A3%B0%E5&amp;lm=0&amp;od=2">简历模板</A> <A class=hot-spot href="/search?l=1.4&amp;word=%C7%F3%D6%B0%D0%C5&amp;lm=0&amp;od=2">求职信</A> <A href="/search?l=1.4&amp;word=%C3%E6%CA%D4%BC%BC%C7%C9&amp;lm=0&amp;od=2">面试技巧</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="192">
+<DT sizcache="2" sizset="192"><A href="/list/72?l=1.4" target=_blank>通知/申请</A> </DT>
+<DD sizcache="2" sizset="193"><A href="http://wenku.baidu.com/search?l=1.4&amp;word=%C8%EB%B5%B3%C9%EA%C7%EB&amp;lm=0&amp;od=0">入党申请</A> <A class=hot-spot href="/search?l=1.4&amp;word=%C0%EB%D6%B0%D6%A4%C3%F7&amp;lm=0&amp;od=2">离职证明</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="195">
+<DT sizcache="2" sizset="195"><A href="/list/73?l=1.4" target=_blank>思想汇报</A> </DT>
+<DD sizcache="2" sizset="196"><A href="http://wenku.baidu.com/search?l=1.4&amp;word=%D7%AA%D5%FD%BB%E3%B1%A8&amp;lm=0&amp;od=0">转正汇报</A> <A href="/search?l=1.4&amp;word=%D7%D4%CE%D2%BC%F8%B6%A8&amp;lm=0&amp;od=2">自我鉴定</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="198">
+<DT sizcache="2" sizset="198"><A href="/list/74?l=1.4" target=_blank>演讲致辞</A> </DT>
+<DD sizcache="2" sizset="199"><A href="/search?l=1.4&amp;word=%BF%AA%B3%A1%B0%D7&amp;lm=0&amp;od=2">开场白</A> <A href="/search?l=1.4&amp;word=%D6%F7%B3%D6%B4%CA&amp;lm=0&amp;od=2">主持词</A> <A href="/search?l=1.4&amp;word=%D1%DD%BD%B2%B8%E5&amp;lm=0&amp;od=2">演讲稿</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="202">
+<DT sizcache="2" sizset="202"><A href="/list/75?l=1.4" target=_blank>合同协议</A> </DT>
+<DD sizcache="2" sizset="203"><A href="http://wenku.baidu.com/search?l=1.4&amp;word=%BA%CF%D7%F7%D0%AD%D2%E9&amp;lm=0&amp;od=0">合作协议</A> <A href="http://wenku.baidu.com/search?l=1.4&amp;word=%D7%E2%B7%BF%BA%CF%CD%AC&amp;lm=0&amp;od=0">租房合同</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="205">
+<DT sizcache="2" sizset="205"><A href="/list/76?l=1.4" target=_blank>工作计划</A> </DT>
+<DD sizcache="2" sizset="206"><A class=hot-spot href="http://wenku.baidu.com/search?l=1.4&amp;word=%D1%A7%CF%B0%BC%C6%BB%AE&amp;lm=0&amp;od=0">学习计划</A> <A href="http://wenku.baidu.com/search?l=1.4&amp;word=%B2%DF%BB%AE&amp;lm=0&amp;od=0">策划</A> <A href="/search?l=1.4&amp;word=%D6%B0%D2%B5%B9%E6%BB%AE&amp;lm=0&amp;od=2">职业规划</A> </DD></DL>
+<DL class=cate-items sizcache="2" sizset="209">
+<DT sizcache="2" sizset="209"><A href="/list/78?l=1.4" target=_blank>调研报告</A> </DT>
+<DD sizcache="2" sizset="210"><A href="/search?l=1.4&amp;word=%B5%F7%B2%E9%B1%A8%B8%E6&amp;lm=0&amp;od=2">调查报告</A> <A class=hot-spot href="/search?l=1.4&amp;word=%C9%E7%BB%E1%CA%B5%BC%F9&amp;lm=0&amp;od=2">社会实践</A> </DD></DL></DIV></DIV></DIV></DIV></DIV></DIV>
+<DIV id=aside class=aside sizcache="2" sizset="212">
+<DIV id=pub class="mod mb10 skin-default" sizcache="2" sizset="212">
+<DIV class=inner sizcache="2" sizset="212">
+<DIV class=hd sizcache="2" sizset="212"><B class=f-black sizcache="2" sizset="212"><A href="http://hi.baidu.com/du%D0%A1%D4%C4" target=_blank>公告区</A></B><A class="r icon-more" href="http://hi.baidu.com/du%D0%A1%D4%C4" target=_blank>更多</A> </DIV>
+<DIV class="cd c-align" sizcache="2" sizset="214">
+<UL class=dot sizcache="2" sizset="214">
+<LI sizcache="2" sizset="214"><A title=文库新版首页上线啦！ href="http://hi.baidu.com/du%E5%B0%8F%E9%98%85/blog/item/c000790a72e7699fd1581bd7.html?timeStamp=1323316846332" target=_blank>文库新版首页上线啦！</A><SPAN class="icon newred"></SPAN>
+<LI sizcache="2" sizset="215"><A style="COLOR: red" title=共同营造绿色文库 href="http://wenku.baidu.com/event/bqbh" target=_blank>共同营造绿色文库</A>
+<LI sizcache="2" sizset="216"><A title=全国英语等级考试专题 href="http://wenku.baidu.com/topic/pets.html?fr=wkindex" target=_blank>全国英语等级考试专题</A><SPAN class="icon newred"></SPAN>
+<LI sizcache="2" sizset="217"><A style="COLOR: red" title=文库HD客户端上线 href="http://www.baidu.com/search/wenku/kehuduanfabu/APP_ipad.html" target=_blank>文库HD客户端上线</A>
+<LI sizcache="2" sizset="218"><A title=文库帮助 href="http://www.baidu.com/search/wenku/help.html" target=_blank>文库帮助</A> </LI></UL></DIV></DIV></DIV><!--阅读排行top10-->
+<DIV id=rank class="mod mb10 skin-default" sizcache="2" sizset="219">
+<DIV class=inner sizcache="2" sizset="219">
+<DIV class=hd><B class=f-black>文档排行榜</B></DIV>
+<DIV class="cd c-align" sizcache="2" sizset="219">
+<UL class=rank-tab>
+<LI class="tab-1 tab-on">本日 </LI>
+<LI class=tab-2>本周 </LI>
+<LI class=tab-3>本月 </LI></UL>
+<DIV class=clear></DIV>
+<DIV class=rank-content sizcache="2" sizset="219">
+<DIV style="DISPLAY: block" class=rank sizcache="2" sizset="219">
+<UL sizcache="2" sizset="219">
+<LI sizcache="2" sizset="219"><A title=财管公式 href="http://wenku.baidu.com/view/fb3e2c0402020740be1e9b27.html?l=5.1.5.1&amp;" target=_blank>财管公式</A> 
+<LI sizcache="2" sizset="220"><A title=经典毕业论文答辩ppt模板 href="http://wenku.baidu.com/view/92eed4c2aa00b52acfc7ca22.html?l=5.1.5.1&amp;" target=_blank>经典毕业论文答辩ppt模板</A> 
+<LI sizcache="2" sizset="221"><A title=Photoshop实例教程 href="http://wenku.baidu.com/view/5fa075edb8f67c1cfad6b854.html?l=5.1.5.1&amp;" target=_blank>Photoshop实例教程</A> 
+<LI sizcache="2" sizset="222"><A title=质量月策划活动方案 href="http://wenku.baidu.com/view/881364a4284ac850ad0242dc.html?l=5.1.5.1&amp;" target=_blank>质量月策划活动方案</A> 
+<LI sizcache="2" sizset="223"><A title=电话面试三步曲 href="http://wenku.baidu.com/view/d8b35d6ca45177232f60a29b.html?l=5.1.5.1&amp;" target=_blank>电话面试三步曲</A> 
+<LI sizcache="2" sizset="224"><A title=如何提高网络编辑技能 href="http://wenku.baidu.com/view/b1650e91dd88d0d233d46a96.html?l=5.1.5.1&amp;" target=_blank>如何提高网络编辑技能</A> 
+<LI sizcache="2" sizset="225"><A title=英语C级词汇 href="http://wenku.baidu.com/view/d28035ebf8c75fbfc77db2a7.html?l=5.1.5.1&amp;" target=_blank>英语C级词汇</A> 
+<LI sizcache="2" sizset="226"><A title=联大专升本英语考试真题 href="http://wenku.baidu.com/view/732dc605b52acfc789ebc9f5.html?l=5.1.5.1&amp;" target=_blank>联大专升本英语考试真题</A> 
+<LI sizcache="2" sizset="227"><A title=英语警句 href="http://wenku.baidu.com/view/0d0bedc258f5f61fb73666e3.html?l=5.1.5.1&amp;" target=_blank>英语警句</A> 
+<LI sizcache="2" sizset="228"><A title=管理学论文 href="http://wenku.baidu.com/view/61d0c12fcfc789eb172dc8d3.html?l=5.1.5.1&amp;" target=_blank>管理学论文</A> </LI></UL></DIV>
+<DIV style="DISPLAY: none" class=rank sizcache="2" sizset="229">
+<UL sizcache="2" sizset="229">
+<LI sizcache="2" sizset="229"><A title=招聘启事 href="http://wenku.baidu.com/view/91d1323067ec102de2bd8997.html?l=5.1.5.2&amp;" target=_blank>招聘启事</A> 
+<LI sizcache="2" sizset="230"><A title=“微简历”关键有新意 href="http://wenku.baidu.com/view/786d18220722192e4536f685.html?l=5.1.5.2&amp;" target=_blank>“微简历”关键有新意</A> 
+<LI sizcache="2" sizset="231"><A title=毕业论文的选题与写作 href="http://wenku.baidu.com/view/13cbcd3443323968011c9247.html?l=5.1.5.2&amp;" target=_blank>毕业论文的选题与写作</A> 
+<LI sizcache="2" sizset="232"><A title=小房子如何利用空间 href="http://wenku.baidu.com/view/1d8022b465ce0508763213f9.html?l=5.1.5.2&amp;" target=_blank>小房子如何利用空间</A> 
+<LI sizcache="2" sizset="233"><A title=6S管理内容 href="http://wenku.baidu.com/view/b0783519fad6195f312ba696.html?l=5.1.5.2&amp;" target=_blank>6S管理内容</A> 
+<LI sizcache="2" sizset="234"><A title=商业设计 href="http://wenku.baidu.com/view/73e7f9fd941ea76e58fa0426.html?l=5.1.5.2&amp;" target=_blank>商业设计</A> 
+<LI sizcache="2" sizset="235"><A title=电脑一般问题解答 href="http://wenku.baidu.com/view/29efed084a7302768e993918.html?l=5.1.5.2&amp;" target=_blank>电脑一般问题解答</A> 
+<LI sizcache="2" sizset="236"><A title=ppt颜色搭配技巧 href="http://wenku.baidu.com/view/8788eb61783e0912a2162aa3.html?l=5.1.5.2&amp;" target=_blank>ppt颜色搭配技巧</A> 
+<LI sizcache="2" sizset="237"><A title=命题议论文 href="http://wenku.baidu.com/view/ae5cfa54f01dc281e53af08e.html?l=5.1.5.2&amp;" target=_blank>命题议论文</A> 
+<LI sizcache="2" sizset="238"><A title=教师资格考试教育学实用复习资料 href="http://wenku.baidu.com/view/e92c95baf121dd36a32d8208.html?l=5.1.5.2&amp;" target=_blank>教师资格考试教育学实用复...</A> </LI></UL></DIV>
+<DIV style="DISPLAY: none" class=rank sizcache="2" sizset="239">
+<UL sizcache="2" sizset="239">
+<LI sizcache="2" sizset="239"><A title=典当行安全管理制定 href="http://wenku.baidu.com/view/34d5dac74028915f804dc2f0.html?l=5.1.5.3&amp;" target=_blank>典当行安全管理制定</A> 
+<LI sizcache="2" sizset="240"><A title=简论白先勇小说运用现代手法的艺术特色 href="http://wenku.baidu.com/view/26a7497c1711cc7931b716b3.html?l=5.1.5.3&amp;" target=_blank>简论白先勇小说运用现代手...</A> 
+<LI sizcache="2" sizset="241"><A title=红头文件样本 href="http://wenku.baidu.com/view/5dec9a1455270722192ef7e8.html?l=5.1.5.3&amp;" target=_blank>红头文件样本</A> 
+<LI sizcache="2" sizset="242"><A title=机械传动设计 href="http://wenku.baidu.com/view/aa51dc5a804d2b160b4ec07a.html?l=5.1.5.3&amp;" target=_blank>机械传动设计</A> 
+<LI sizcache="2" sizset="243"><A title=中国古代家具简史 href="http://wenku.baidu.com/view/fe48bc03eff9aef8941e0681.html?l=5.1.5.3&amp;" target=_blank>中国古代家具简史</A> 
+<LI sizcache="2" sizset="244"><A title=浅析《傲慢与偏见》中的女性主义 href="http://wenku.baidu.com/view/2df48991daef5ef7ba0d3c0f.html?l=5.1.5.3&amp;" target=_blank>浅析《傲慢与偏见》中的女...</A> 
+<LI sizcache="2" sizset="245"><A title=作文素材 href="http://wenku.baidu.com/view/e26f9deb172ded630b1cb6ad.html?l=5.1.5.3&amp;" target=_blank>作文素材</A> 
+<LI sizcache="2" sizset="246"><A title=工作汇报模板 href="http://wenku.baidu.com/view/df91c54ecf84b9d528ea7a8b.html?l=5.1.5.3&amp;" target=_blank>工作汇报模板</A> 
+<LI sizcache="2" sizset="247"><A title="简易的 LED 驱动电路" href="http://wenku.baidu.com/view/ae3f3a262f60ddccda38a076.html?l=5.1.5.3&amp;" target=_blank>简易的 LED 驱动电路</A> 
+<LI sizcache="2" sizset="248"><A title=无领导小组讨论(群面AC)面试精要总结 href="http://wenku.baidu.com/view/4461811255270722192ef76f.html?l=5.1.5.3&amp;" target=_blank>无领导小组讨论(群面AC)面...</A> </LI></UL></DIV></DIV></DIV></DIV></DIV>
+<DIV id=user-build class="mod mb10 skin-default" sizcache="2" sizset="249">
+<DIV class=inner sizcache="2" sizset="249">
+<DIV class=hd><B class=f-black>用户贡献榜</B> </DIV>
+<DIV class="cd c-align" sizcache="2" sizset="249">
+<UL class=rank-tab sizcache="2" sizset="249">
+<LI id=leftlistbom_tab_1 class="tab-1 tab-on" sizcache="2" sizset="249"><A href="/userlist/0?type=1&amp;l=3.2.1" target=_blank>本周积分排行</A> </LI>
+<LI id=leftlistbom_tab_3 class=tab-3 sizcache="2" sizset="250"><A href="/userlist/0?type=2&amp;l=3.2.2" target=_blank>总积分排行</A> </LI></UL>
+<DIV class=clear></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD style="TEXT-INDENT: 25px" width=124>用户名</TD>
+<TD align=middle>经验值</TD></TR></TBODY></TABLE>
+<DIV class=rank-content sizcache="2" sizset="251">
+<DIV sizcache="2" sizset="251">
+<TABLE class=rank cellSpacing=0 cellPadding=0 width="100%" sizcache="2" sizset="251">
+<TBODY sizcache="2" sizset="251">
+<TR sizcache="2" sizset="251">
+<TD width=124 sizcache="2" sizset="251"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.1'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%D6%D0%B9%CB%B7%A8%C2%C9%CD%F8#7" target=_blank>中顾法律网</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>13508</TD></TR>
+<TR sizcache="2" sizset="252">
+<TD width=124 sizcache="2" sizset="252"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.1'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%B7%B4%B3%E5%C1%A657#7" target=_blank>反冲力57</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>7073</TD></TR>
+<TR sizcache="2" sizset="253">
+<TD width=124 sizcache="2" sizset="253"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.1'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=zhj111666888#7" target=_blank>zhj111666888</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>5288</TD></TR>
+<TR sizcache="2" sizset="254">
+<TD width=124 sizcache="2" sizset="254"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.1'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%C8%F4%CB%AE%B2%C6%BE%AD#7" target=_blank>若水财经</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>4903</TD></TR>
+<TR sizcache="2" sizset="255">
+<TD width=124 sizcache="2" sizset="255"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.1'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%B4%F3%BD%D6%CD%F8_Dajie#7" target=_blank>大街网_Dajie</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>4492</TD></TR></TBODY></TABLE></DIV>
+<DIV style="DISPLAY: none" sizcache="2" sizset="256">
+<TABLE class=rank cellSpacing=0 cellPadding=0 width="100%" sizcache="2" sizset="256">
+<TBODY sizcache="2" sizset="256">
+<TR sizcache="2" sizset="256">
+<TD width=124 sizcache="2" sizset="256"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.2'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%D6%D0%B9%CB%B7%A8%C2%C9%CD%F8#7" target=_blank>中顾法律网</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>741906</TD></TR>
+<TR sizcache="2" sizset="257">
+<TD width=124 sizcache="2" sizset="257"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.2'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=biluowukai#7" target=_blank>biluowukai</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>696716</TD></TR>
+<TR sizcache="2" sizset="258">
+<TD width=124 sizcache="2" sizset="258"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.2'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=%B3%F5%D2%B9%B8%F8%C1%CB%B4%BA%B4%BA#7" target=_blank>初夜给了春春</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>667421</TD></TR>
+<TR sizcache="2" sizset="259">
+<TD width=124 sizcache="2" sizset="259"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.2'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=ziliao51#7" target=_blank>ziliao51</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>602742</TD></TR>
+<TR sizcache="2" sizset="260">
+<TD width=124 sizcache="2" sizset="260"><A class=Author onMouseDown="log.send('view','user',{l:'5.3.2'})" href="http://passport.baidu.com/?business&amp;aid=6&amp;un=chenfoxlord#7" target=_blank>chenfoxlord</A> </TD>
+<TD style="TEXT-INDENT: 0px" class=f-grey align=middle>550423</TD></TR></TBODY></TABLE></DIV></DIV></DIV></DIV></DIV><!--广告右栏-->
+<DIV id=sidebar-ad sizcache="2" sizset="261">
+<DIV class="mod mb10 skin-default" sizcache="2" sizset="261"><A href="http://lvyou.baidu.com/event/s/ztDemo/2012ValentinesDay/index.html?fr=wenku" rel="" target=_blank><IMG title=2012情人节旅行贴心指南 alt=2012情人节旅行贴心指南 src="http://hiphotos.baidu.com/baidu/pic/item/838ba61ea8d3fd1f46223b8e304e251f95ca5f5e.jpg" width=208 height=62></A> </DIV>
+<DIV class="mod mb10 skin-default" sizcache="2" sizset="262"><A href="http://wenku.baidu.com/topic/pets.html?fr=wenku_banner" rel="" target=_blank><IMG title=全国英语等级考试专题 alt=全国英语等级考试专题 src="http://hiphotos.baidu.com/baidu/pic/item/7c1ed21b0ef41bd518dffd4251da81cb38db3df3.jpg" width=208 height=62></A> </DIV></DIV>
+<DIV id=org sizcache="2" sizset="263">
+<DIV class="mod mt20 skin-default" sizcache="2" sizset="263">
+<DIV class=inner sizcache="2" sizset="263">
+<DIV class=hd sizcache="2" sizset="263"><B class=f-black sizcache="2" sizset="263"><A href="/org/index?l=6.5" target=_blank>合作机构</A></B><A class="r icon-more" href="/org/index?l=6.5" target=_blank>更多</A></DIV>
+<DIV class="cd c-align" sizcache="2" sizset="265">
+<DL class=org-list sizcache="2" sizset="265">
+<DT sizcache="2" sizset="265"><A href="http://wenku.baidu.com/org/view?org=cqvip&amp;l=6.5" target=_blank><IMG title=维普网 alt=维普网 src="http://hiphotos.baidu.com/baidu/pic/item/e6cd7b8920c43edc0e244460.jpg"></A> 
+<DD sizcache="2" sizset="266"><A href="http://wenku.baidu.com/org/view?org=cqvip&amp;l=6.5" target=_blank>维普网</A> </DD></DL>
+<DL class=org-list sizcache="2" sizset="267">
+<DT sizcache="2" sizset="267"><A href="http://wenku.baidu.com/org/view?org=shangzheng&amp;l=6.5" target=_blank><IMG title=尚政公考 alt=尚政公考 src="http://hiphotos.baidu.com/baidu/pic/item/d1c8a786bf05306667096e0e.jpg"></A> 
+<DD sizcache="2" sizset="268"><A href="http://wenku.baidu.com/org/view?org=shangzheng&amp;l=6.5" target=_blank>尚政公考</A> </DD></DL>
+<DL class=org-list sizcache="2" sizset="269">
+<DT sizcache="2" sizset="269"><A href="http://wenku.baidu.com/org/view?org=zgjy&amp;l=6.5" target=_blank><IMG title=中公教育 alt=中公教育 src="http://hiphotos.baidu.com/baidu/pic/item/cffc1e17c53e044b4b90a763.jpg"></A> 
+<DD sizcache="2" sizset="270"><A href="http://wenku.baidu.com/org/view?org=zgjy&amp;l=6.5" target=_blank>中公教育</A> </DD></DL>
+<DL class=org-list sizcache="2" sizset="271">
+<DT sizcache="2" sizset="271"><A href="http://wenku.baidu.com/org/view?org=huatu&amp;l=6.5" target=_blank><IMG title=北京华图教育集团 alt=北京华图教育集团 src="http://hiphotos.baidu.com/baidu/pic/item/a61ea8d34330be71970a1611.jpg"></A> 
+<DD sizcache="2" sizset="272"><A href="http://wenku.baidu.com/org/view?org=huatu&amp;l=6.5" target=_blank>北京华图教育集团</A> </DD></DL></DIV></DIV></DIV></DIV>
+<DIV id=tousu class="mod mb10 skin-default" sizcache="2" sizset="273">
+<DIV class=inner sizcache="2" sizset="273">如要投诉或提出意见建议，请到<BR><SPAN id=tousu sizcache="2" sizset="273"><A href="http://tousu.baidu.com/wenku" target=_blank>百度文库投诉吧</A>反馈。</SPAN> </DIV></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV id=footer class=footer sizcache="2" sizset="274">
+<P sizcache="2" sizset="274"><SPAN class=cr>©2012 Baidu</SPAN> <A class=Bidu href="http://www.baidu.com/duty/" target=_blank>使用百度前必读</A>&nbsp;|&nbsp;<A class=Xieyi href="http://www.baidu.com/search/wenku/help.html#文库协议" target=_blank>文库协议</A></P></DIV>
+<SCRIPT type=text/javascript>(function(){global.checkSearchBoxQuery();baidu.each(baidu.dom.q("mn-lk-w"),function(D,C){var B=true;baidu.event.on(D,"mouseenter",function(E){baidu.dom.addClass(D,"mn-lk-w-h");B=false});baidu.event.on(D,"mouseleave",function(E){B=true;setTimeout(function(){if(B){baidu.dom.removeClass(D,"mn-lk-w-h")}},100)})});baidu.on("login","click",function(B){login.check(function(){location.reload(true)});baidu.preventDefault(B)});baidu.on("reg","click",function(B){login.regiest()});baidu.on("login","mousedown",function(B){log.send("view","loginclick",{fr:"home"})});baidu.on("reg","mousedown",function(B){log.send("view","regclick",{fr:"home"})});baidu.on("upload","mouseover",function(){this.className="upload upload_over"});baidu.on("upload","mouseout",function(){this.className="upload"});baidu.on("upload","click",function(B){log.send("submit","submit",{fr:"home"});login.verlogin(function(){location.href="http://wenku.baidu.com/new?fr=home"},null,null,WK_INFO.user.isLimit);baidu.preventDefault(B)});var A=["homeDaren","homeMingren","classDaren","classMingren"];baidu.each(A,function(D){var C=G(D);if(C){var B=baidu.GT("a",C);baidu.breakWord(B,100)}});baidu.on("lecupload","mouseover",function(){this.className="lecupload lecupload_over"});baidu.on("lecupload","mouseout",function(){this.className="lecupload"});baidu.on("lecupload","click",function(B){log.send("submit","submit",{fr:"home"});login.verlogin(function(){location.href="http://wenku.baidu.com/lec/new?fr=home"});baidu.preventDefault(B)});var A=["homeDaren","homeMingren","classDaren","classMingren"];baidu.each(A,function(D){var C=G(D);if(C){var B=baidu.GT("a",C);baidu.breakWord(B,100)}})})();(function(){var A=baidu.GT("a");var B=[];baidu.each(A,function(C){if(/^log-/.test(C.rel)){B.push(C)}});baidu.each(B,function(C){baidu.on(C,"click",function(I){var E=C.rel.split("-");var D={};if(/=/.test(C.rel)){var H=C.rel.match(/(\w+)=(\w+)/g);for(var K=0;K<H.length;K++){var F=H[K].match(/(\w+)=/)[1];var J=H[K].match(/=(\w+)/)[1];D[F]=J}}log.send(E[1],E[2],D)})})})();</SCRIPT>
+
+<SCRIPT type=text/javascript>global.statusMsg("fangyongde");if(G("logout")){G("logout").href="http://passport.baidu.com/?logout&aid=7&u="+escape(location.href)};</SCRIPT>
+</DIV>
+<SCRIPT type=text/javascript>(function(){G("kw").focus();baidu.on("upload-icon","click",function(A){log.send("submit","submit",{fr:""});login.verlogin(function(){location.href="http://wenku.baidu.com/new?fr="},null,null,WK_INFO.user.isLimit);baidu.preventDefault(A)})})();</SCRIPT>
+
+<SCRIPT type=text/javascript>(function(C){if(new Date("2011/11/27").getTime()<new Date().getTime()){return false}if(!taskPopLayer){var B="fangyongde",A="homenew.tpl",D=C.cookie.get("wk_iknow_pop")?C.json.decode(C.cookie.get("wk_iknow_pop")):{U:[]};if(baidu.url.getQueryValue(location.href,"iknowshop")!="wealth_exchange"||A!="usercenter/index.tpl"){return false}C.ajax.get("/book/async?type=trade_info&sp_no=10002",function(H,G){var F=C.json.parse(H.responseText);if(+F.isLogin==1&&+F.error_no==0&&C.array.indexOf(D.U,B+"_"+F.wealth)==-1){D.U.push(B+"_"+F.wealth);C.cookie.set("wk_iknow_pop",baidu.json.stringify(D),'{"path" : "/"}');var E=['<div class="wk-pop-bg" id="wk-ik-jl-bg"></div>','<div class="mod wk-pop" id="wk-ik-jl">','<div class="hd wk-pop-hd">','<span class="act wk-pop-close" id="wk-ik-jl-close">close</span>','<h3 class="wk-pop-h3">Hi, '+B+"</h3>","</div>",'<div class="wk-pop-content">','<h4 class="succ_title">恭喜您！在百度知道成功兑换了'+F.wealth+"个文库财富值！</h4>",'<p class="succ_describe">现在就去百度文库浏览文档吧！百度文库是一个文档分享平台，分享知识，分享快乐！总有一个人你可以帮到Ta。</p>','&nbsp; <a href="###" id="ok-iknow-btn">我知道了</a>',"</div>","</div>"].join("");popMsg=helper.popMessage({content:helper.format(E)});popMsg.onBeforeRender=function(){if(!baidu.g("wenku-iknow-pop-css")){var J=document.createElement("style");J.id="wenku-iknow-pop-css";J.type="text/css";var K=[".wk-pop-wrap { height:220px;}","#wk-ik-jl-bg, #wk-ik-jl{ height:220px;}","#wk-ik-jl .wk-pop-content { height:182px; text-align:center; padding:5px 20px;}","#wk-ik-jl .succ_title { color:#F16101; font-size:14px;}","#wk-ik-jl .succ_describe { color:#949494; font-size:13px; text-align:left;}","#ok-iknow-btn { display:inline-block; background:url(http://img.baidu.com/img/iknow/docshare/ok_iknow.png) no-repeat; width:97px; height:27px; text-indent:-9999px; margin-top:20px;}","#ok-iknow-btn:hover {background-position:0px -30px;}"].join("");try{J.appendChild(document.createTextNode(K))}catch(I){J.styleSheet.cssText=K}document.getElementsByTagName("head")[0].appendChild(J)}};popMsg.onAfterRender=function(){that=this;baidu.on(baidu.g("wk-ik-jl-close"),"click",function(I){that.close();document.getElementsByTagName("head")[0].removeChild(baidu.g("wenku-iknow-pop-css"));baidu.event.preventDefault(I)});baidu.on(baidu.g("ok-iknow-btn"),"click",function(I){that.close();document.getElementsByTagName("head")[0].removeChild(baidu.g("wenku-iknow-pop-css"));baidu.event.preventDefault(I)})};popMsg.create();baidu.g("wk-ik-jl-bg").parentNode.style.height="220px"}})}})(baidu);</SCRIPT>
+
+<SCRIPT type=text/javascript>var _bdhmProtocol=(("https:"==document.location.protocol)?" https://":" http://");document.write(unescape("%3Cscript src='"+_bdhmProtocol+"hm.baidu.com/h.js%3Fd8bfb560f8d03bbefc9bdecafc4a4bf6' type='text/javascript'%3E%3C/script%3E"));</SCRIPT>
+
+<SCRIPT type=text/javascript src=" http://hm.baidu.com/h.js?d8bfb560f8d03bbefc9bdecafc4a4bf6"></SCRIPT>
+
+<DIV style="POSITION: absolute; WIDTH: 408px; DISPLAY: none; TOP: 70px; LEFT: 358px" id=tangram-suggestion--TANGRAM__3-main class=tangram-suggestion-main data-guid="TANGRAM__3">
+<DIV style="POSITION: relative; TOP: 0px; LEFT: 0px" id=tangram-suggestion--TANGRAM__3 class=tangram-suggestion></DIV></DIV></BODY></html>

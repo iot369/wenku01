@@ -1,0 +1,114 @@
+<link href="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/so/img/top.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/baidu/homenew.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/style/common2.css" rel="stylesheet" type="text/css" />
+<SCRIPT type=text/javascript src="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/style/common2.js"></SCRIPT>
+<SCRIPT type=text/javascript src="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/baidu/tangram-1.3.2.js"></SCRIPT>
+<div class="nav_top">
+  <div class="content"><span>欢迎：</span>
+    <div class="quick_link" id="_userlogin"> <strong><a href="<?php echo $cfg_memberurl; ?>/login.php">登录</a></strong> <strong><a href="<?php echo $cfg_memberurl; ?>/login.php">注册</a></strong></div>
+    <div class="userHelp"> <a href="<?php echo $cfg_memberurl; ?>/benefit.php" target="_blank">提现</a> | <a href="<?php echo $cfg_memberurl; ?>/buy.php" target="_blank">充值</a> | <a href="<?php echo $cfg_memberurl; ?>/exchange.php" target="_blank">兑换</a> | <a href="#" target="_blank">帮助</a> | 
+<a href="#" onClick="window.external.addFavorite(location.href, document.title)"><font color="red">加入收藏</font></a>
+ | <a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.szdianda.com');"><font color="red">设为首页</font></a>
+
+ </div>
+  </div>
+</div>
+<DIV id=usrbar> </DIV>
+<DIV id=wrapper>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height="60">
+  <TBODY>
+  <TR>
+    <TD id=logo vAlign=center width=190 align=left><A id=top-logo 
+      href="<?php echo $cfg_weburl; ?>/"><IMG alt={dede:global.cfg_webname/} 
+      src="<?php echo $cfg_cmsurl; ?>/templets/jxdoc/baidu/logo_uui.gif" width=183 height=55></A> </TD>
+    <TD width="773"   vAlign=middle><div><A class=upload 
+title=我要上传 href="<?php echo $cfg_memberurl; ?>/upload_book.php">我要上传</A>
+   <FORM action="/plus/search.php"  method=get name="form1" id="form1">
+	  <input type="hidden" name="kwtype" value="0" />
+  <INPUT id=searchcat 
+type=hidden value=2 name=searchcat> <INPUT id=searchtype disabled 
+type=hidden value=title name=searchtype> 
+<DIV class=sear><SPAN class=rd_l></SPAN>
+<DIV class=sear-sub><INPUT class=listTopDefault id=topsearch 
+onkeydown="if(event.keyCode==13){ return searchNew();}" 
+onblur="if(this.value=='') {this.value='在文档库里搜索文档';this.className='listTopDefault';}" 
+onfocus="if(this.value=='在文档库里搜索文档') this.value='';this.className='listTopInput';" 
+tabIndex=1 maxLength=100 value=在文档库里搜索文档 name=keyword autocomplete="off" 
+baiduSug="2"> 
+<DIV class=sear-btn id="Search-listbtn" onClick="boxSelect()">
+<H5>标题</H5>
+<DIV id="Listtags" style="DISPLAY: none;Z-INDEX: 9999;">
+<UL>
+  <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=true;document.getElementById('searchtype').value='title';" 
+  href="javascript:void (0)">标题</A> </LI>
+   <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=true;document.getElementById('searchtype').value='tag';" 
+  href="javascript:void (0)">标签</A> </LI>
+  <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=false;document.getElementById('searchtype').value='writer';" 
+  href="javascript:void (0)">作者</A> </LI></UL></DIV></DIV><INPUT class=btn title="搜 索" onClick="return searchNew();" tabIndex=2 type=submit value="搜 索"> 
+</DIV><SPAN class=rd_r></SPAN></DIV></FORM></div></TD>
+  </TR></TBODY></TABLE>
+<DIV class="mod shop-navmod" >
+<DIV class=inner>
+<DIV class="bd shop-navbox">
+<UL id=shop-nav class=shop-nav>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_cmsurl; ?>/"><SPAN>首页</SPAN></A></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/content_list.php?channelid=17"><SPAN>我的文档</SPAN></A></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/buy.php"><SPAN>充值/兑换</SPAN></A></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/caicai.php"><SPAN>随便看看</SPAN></a></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/myfriend.php"><SPAN>我的好友</SPAN></a></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/pm.php"><SPAN>短消息</SPAN></a></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/guestbook_admin.php"><SPAN>留言本</SPAN></a></LI>
+  <LI id=nav-index><A class=nav-global href="<?php echo $cfg_memberurl; ?>/edit_baseinfo.php"><SPAN>基本设置</SPAN></a></LI>
+  <LI id=nav-shop><A class=nav-global href="<?php echo $cfg_memberurl; ?>/mystow.php"><SPAN>我的收藏</SPAN></A></LI>
+</UL></DIV></DIV>
+<DIV id=wk-book-banner-clew class=wk-book-banner-clew></DIV>
+<B 
+style="_top: 5px" id=wk-book-xtop class=xtop><B id=wk-book-xtopb1 
+class=xb1></B></B>
+<DIV id=wk-shopserach-banner class=shop_text>
+  <DIV id=word_clew_book class=word_clew></DIV>
+  <SPAN style="DISPLAY: none" id=shop_type>
+  <INPUT id=s_all class=shop_radio 
+value=0 CHECKED type=radio name=st> <LABEL for=s_all>全部</LABEL> <INPUT 
+id=s_author class=shop_radio value=1 type=radio name=st><LABEL 
+for=s_author>作者</LABEL> </SPAN></DIV><B id=wk-book-xbom class=xbom><B 
+id=wk-book-xb1 class=xb1></B></B></DIV>
+
+<SCRIPT type=text/javascript>
+;(function (){
+
+    var navmenu = baidu.q("nav-arrow");
+    baidu.array.each(navmenu,function(item,i){
+        baidu.event.on(item,"mouseover",function(e){
+            baidu.dom.addClass(item,"nav-tab-on");
+            baidu.show(baidu.dom.last(item));
+        })
+        baidu.event.on(item,"mouseout",function(e){
+            baidu.dom.removeClass(item,"nav-tab-on");
+            baidu.hide(baidu.dom.last(item));
+        })
+    })
+    var navbuttons = baidu.g("shop-nav").getElementsByTagName("li");
+    baidu.each(navbuttons,function(buttons,t){
+        var links=buttons.getElementsByTagName("a");
+        baidu.each(links,function(item,i){
+               baidu.on(item,"click",function(e){
+                       //log.send("home","topbanner",{"from":"all","clk":"link"+(t+1)});
+               })
+        })
+    })
+})();
+</SCRIPT>
+<script language="javascript" type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+function CheckLogin(){
+	var taget_obj = document.getElementById('_userlogin');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("<?php echo $cfg_memberurl; ?>/ajax_loginsta.php");
+	DedeXHTTP = null;
+}
+</script>
+<script language="javascript" type="text/javascript">CheckLogin();</script>

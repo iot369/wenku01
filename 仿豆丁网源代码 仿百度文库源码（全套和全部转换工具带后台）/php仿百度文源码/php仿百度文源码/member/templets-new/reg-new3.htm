@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="refresh" content="3;url=index.php">
+<title><?php echo $cfg_webname; ?>- 注册成功</title>
+<link href="templets/style/common.css" rel="stylesheet" type="text/css" />
+<link href="templets/style/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var time = 3;
+function returnUrlByTime() {
+   window.setTimeout('returnUrlByTime()', 1000);
+   time = time - 1;
+   document.getElementById("loadtime").innerHTML = time;
+}
+</script>
+</head>
+<body>
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<div class="bor">
+  <div class="<?php echo ($cfg_mb_reginfo == 'Y')? '' : 's';?>tip3"></div>
+  <p class="success" style="margin-top: 25px;">注册成功！<?php echo $uname=empty($uname)? '' : '您的用户名：<font color="#ff6600">'.$uname.'</font>，';?>您已成为本站的正式会员！<br />
+    <?php if($cfg_mb_spacesta=="-10") echo '<font color="#ff6600">由于系统开启了邮件审核机制，因此你的帐号需要审核后才能发信息！</font><br />';?>
+    <b><font color="#FF0000" id="loadtime">3</font></b>秒钟后自动转到会员中心！<br />
+    <a href="<?php echo $cfg_cmspath; ?>/member/index.php">马上进入会员中心</a>&nbsp;&nbsp;<a href="<?php echo $cfg_cmspath; ?>/">返回网站首页</a></p>
+</div>
+<?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+</body>
+</html>

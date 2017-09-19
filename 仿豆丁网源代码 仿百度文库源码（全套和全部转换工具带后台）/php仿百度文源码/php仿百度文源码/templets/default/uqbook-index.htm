@@ -1,0 +1,248 @@
+<html><HEAD><TITLE>{dede:global.cfg_webname/}</TITLE>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=description content={dede:global.cfg_description/}>
+<META name=keywords content={dede:global.cfg_keywords/}>
+<META content=11773767636512773636 property="qc:admins"><LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/reset.css"><LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/main.css"><LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/style/wenku.css"><!-- /公共js引用 开始 --></HEAD>
+<BODY id=home>{dede:include filename="comm_js.htm"/}
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/js/minmyLazyload.js"></SCRIPT>
+ <!-- /公共js引用 结束-->
+<SCRIPT language=JavaScript type=text/javascript><!--
+$().ready(function(){
+	$(".tabs").each(function(){
+		var titles = $(this).find(".tab-title");
+		var contents = $(this).find(".tab-content");
+		titles.each(function(i){
+			$(this).mouseover(function(){
+				titles.removeClass('tab-on');
+				$(this).addClass('tab-on');
+				contents.hide();
+				contents.eq(i).show();
+			});
+		});
+	});
+	
+	$("#cate-menu .cate-menu-box").mouseenter(function(e){
+		$(this).find('.tab-cate').addClass("cate-menu-on");
+		$(this).find('.popup-cate').show();
+	}).mouseleave(function(e){
+		$(this).find('.tab-cate').removeClass("cate-menu-on");
+		$(this).find('.popup-cate').hide();
+	});
+});
+//--></SCRIPT>
+<STYLE type=text/css>
+#page .no4,#page .no5{ width:40px; }
+#page span.no4,#page span.no5{ width:42px; }
+#page .no6,#page .no7{ width:50px; }
+#page span.no6,#page span.no7{ width:52px; }
+</STYLE>
+<STYLE id=doc-Bubble-stylesheet type=text/css>#docBubble {
+	Z-INDEX: 100; POSITION: absolute; TEXT-ALIGN: left; MAX-WIDTH: 240px; TOP: 31px; RIGHT: 40px
+}
+#docBubble A {
+	MARGIN-LEFT: 0px
+}
+#docBubble .icon {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#docBubble .title A {
+	TEXT-DECORATION: none
+}
+#docBubble .tl {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .tr {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .bl {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .inner {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .triangle-t {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .triangle-b {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .close {
+	BACKGROUND-IMAGE: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip.png); _background-image: url(http://img.baidu.com/img/iknow/docshare/img/spr_bg_tip_ie6.png)
+}
+#docBubble .tl {
+	BACKGROUND-POSITION: -20px 0px; FLOAT: left
+}
+#docBubble .tr {
+	POSITION: absolute; WIDTH: 12px; BACKGROUND-POSITION: 100% 0px; HEIGHT: 12px; TOP: 0px; RIGHT: -12px
+}
+#docBubble .bl {
+	POSITION: absolute; WIDTH: 12px; BOTTOM: -12px; BACKGROUND-POSITION: -20px 100%; HEIGHT: 12px; LEFT: 0px
+}
+#docBubble .inner {
+	POSITION: relative; PADDING-BOTTOM: 12px; MARGIN: 12px 0px -12px; PADDING-LEFT: 2px; WIDTH: 220px; PADDING-RIGHT: 12px; MAX-WIDTH: 220px; BACKGROUND-POSITION: 100% 100%; PADDING-TOP: 0px; LEFT: 12px; _padding-bottom: 12px
+}
+#docBubble .triangle-t {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 15px; HEIGHT: 8px; OVERFLOW: hidden; TOP: -7px
+}
+#docBubble .triangle-b {
+	Z-INDEX: 2; POSITION: absolute; WIDTH: 15px; BOTTOM: -18px; BACKGROUND-POSITION: 0px -10px; HEIGHT: 11px; OVERFLOW: hidden
+}
+#docBubble .triangle-t {
+	RIGHT: 20px
+}
+#docBubble .triangle-b {
+	RIGHT: 20px
+}
+#docBubble .close {
+	Z-INDEX: 1; POSITION: absolute; TEXT-INDENT: -99em; WIDTH: 9px; BACKGROUND-POSITION: 0px -25px; HEIGHT: 9px; OVERFLOW: hidden; TOP: 10px; CURSOR: pointer; RIGHT: 2px
+}
+#docBubble .inner .icon {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 2px
+}
+#docBubble .inner .icon IMG {
+	MARGIN-RIGHT: 10px
+}
+#docBubble .inner .cont {
+	ZOOM: 1; OVERFLOW: hidden
+}
+#docBubble .inner .title {
+	MARGIN: 0px 0px 2px; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+#docBubble .inner .lk-btn {
+	TEXT-ALIGN: right
+}
+</STYLE>
+<!-- /header 开始 -->{dede:include filename="head.htm"/} <!-- /header 结束-->
+<DIV id=wrapper><!-- menu-->{dede:include filename="menu.htm"/} <!-- menu-->
+<DIV id=main class=main><!--大图片-->
+
+<DIV id=category-area sizcache="2" sizset="29">
+<DL class="cate-item " sizcache="2" sizset="29">
+<DT class=edu-icon sizcache="2" sizset="29"><A href="/edu/index">Education Section</A> </DT>
+<DD class=cate-dec>从幼儿教育到高等教育，乃至各类专业教辅和学习资料应有尽有，满足求学者各种不同需求。 
+<DD class=more sizcache="2" sizset="30"><A class=in href="/edu/index">进入专区</A> </DD></DL>
+<DL class="cate-item " sizcache="2" sizset="31">
+<DT class=ppt-icon sizcache="2" sizset="31"><A href="/ppt/index">Presentation Reference</A> </DT>
+<DD class=cate-dec>汇聚众多精美的模板、专业系统的策划方案、详实权威的数据报告，各类PPT文档一应俱全。 
+<DD class=more sizcache="2" sizset="32"><A class=in href="/ppt/index">进入专区</A> </DD></DL>
+<DL class="cate-item " sizcache="2" sizset="33">
+<DT class=pro-icon sizcache="2" sizset="33"><A href="/pro/index">Literature Section</A> </DT>
+<DD class=cate-dec>涵盖各行业最丰富完备的资料文献，最前瞻权威的行业动态，是专业人士的不二选择。 
+<DD class=more sizcache="2" sizset="34"><A class=in href="/pro/index">进入专区</A> </DD></DL>
+<DL class="cate-item nobg" sizcache="2" sizset="35">
+<DT class=form-icon sizcache="2" sizset="35"><A href="/form/index">Daily Documents Reference </A></DT>
+<DD class=cate-dec>集结了简历模板、工作总结、项目汇报等工作和学习之必备文档，白领与学生的最佳帮手。 
+<DD class=more sizcache="2" sizset="36"><A class=in href="/form/index">进入专区</A> </DD></DL>
+<DIV style="WIDTH: 175px" class=upload-area sizcache="2" sizset="37">
+<P class=share-number>当前已有<SPAN class=doc-number>29847365</SPAN>份文档</P>
+<P class=share-button sizcache="2" sizset="37"><A id=upload-icon class=upload-btn href="#" rel=log-home-sharebutton-from=index2011></A></P></DIV></DIV>
+<DIV class=clear></DIV>
+
+<DIV class=clear></DIV><!--中间广告条-->
+<DIV class="banner mt20"><A href="#"><IMG alt=第三届课件大赛 src="{dede:global.cfg_templets_skin/}/images/wenku/banner.gif"></A></DIV><!--中间广告条 结束--><!--分类文档-->{dede:channelartlist typeid=12} 
+<DIV class="mod mt20 skin-category-list">
+<DIV class=inner>
+<DIV class=hd><B class=cate-title>{dede:field name='typename'/}</B><SPAN class=f-grey>共{dede:field.typeid function="GetTotalArc(@me)"/}份</SPAN> <SPAN id=edu-class class=r><A href="{dede:field name='typeurl'/}">更多&gt;&gt;</A></SPAN> </DIV>
+<DIV class="cd c-align">
+<DIV>
+<DIV class=hot-img>{dede:arclist row=5 titlelen=36 noflag='h' imgwidth=99 imgheight=134 addfields='filetype,totalpagenumber' channelid=17} 
+<DL>
+<DT><A title=[field:fulltitle/] href="[field:arcurl/]" target=_blank>[field:pre_image/]</A> <EM>[field:totalpagenumber /]页</EM> <SPAN class="[field:filetype/] icon" title=[field:filetype/]></SPAN>
+<DD><A title=[field:fulltitle/] href="[field:arcurl/]" target=_blank>[field:title/]</A> 
+<DD class=f-grey>[field:click/]人阅读 </DD></DL>{/dede:arclist} </DIV></DIV></DIV></DIV></DIV>{/dede:channelartlist} </DIV>
+<DIV id=aside class=aside>
+<DIV id=pub>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black><A>公告区</A></B><A class=r href="list-mynews.php" target=_blank>更多&gt;&gt;</A> </DIV>
+<DIV class="cd c-align">
+<UL class=dot>{dede:mynews row='10' titlelen='40'} 
+<LI><A title="[field:title /]" href="[field:global.cfg_cmsurl/]mynews.php?aid=[field:aid /]">[field:title /]</A> {/dede:mynews} </LI></UL></DIV></DIV></DIV></DIV><!--阅读排行top10-->
+<DIV id=rank>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black>阅读排行榜</B></DIV>
+<DIV class="cd c-align tabs">
+<UL class=rank-tab>
+<LI class="tab-1 tab-title">本日 
+<LI class="tab-2 tab-title">本周 
+<LI class="tab-3 tab-on tab-title">本月 </LI></UL>
+<DIV class=clear></DIV>
+<DIV class=rank-content>
+<DIV style="DISPLAY: none" class="rank tab-content">
+<UL>{dede:arclist sort='hot' subday='1' titlelen=32 row=10} 
+<LI><A title=[field:fulltitle/] href="[field:arcurl/]">[field:title/]</A> {/dede:arclist} </LI></UL></DIV>
+<DIV style="DISPLAY: none" class="rank tab-content">
+<UL>{dede:arclist sort='hot' subday='7' titlelen=32 row=10} 
+<LI><A title=[field:fulltitle/] href="[field:arcurl/]">[field:title/]</A> {/dede:arclist} </LI></UL></DIV>
+<DIV class="rank tab-content">
+<UL>{dede:arclist sort='hot' subday='30' titlelen=32 row=10} 
+<LI><A title=[field:fulltitle/] href="[field:arcurl/]">[field:title/]</A> {/dede:arclist} </LI></UL></DIV></DIV></DIV></DIV></DIV></DIV><!--下载排行top10-->
+<DIV id=rank>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black>下载排行榜</B></DIV>
+<DIV class="cd c-align tabs">
+<UL class=rank-tab>
+<LI class="tab-1 tab-title">本日 
+<LI class="tab-2 tab-title">本周 
+<LI class="tab-3 tab-on tab-title">本月 </LI></UL>
+<DIV class=clear></DIV>
+<DIV class=rank-content>
+<DIV style="DISPLAY: none" class="rank tab-content">
+<UL>{dede:sql sql='select A.id,A.title,D.downloads from wenku_downloads as D left join wenku_archives as A ON D.id = A.id WHERE pubdate &gt; UNIX_TIMESTAMP( CURDATE() - INTERVAL 1 day) order by downloads DESC limit 0,10;'} 
+<LI><A title=[field:title/] href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</A> {/dede:sql} </LI></UL></DIV>
+<DIV style="DISPLAY: none" class="rank tab-content">
+<UL>{dede:sql sql='select A.id,A.title,D.downloads from wenku_downloads as D left join wenku_archives as A ON D.id = A.id WHERE pubdate &gt; UNIX_TIMESTAMP( CURDATE() - INTERVAL 7 day) order by downloads DESC limit 0,10;'} 
+<LI><A title=[field:title/] href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</A> {/dede:sql} </LI></UL></DIV>
+<DIV class="rank tab-content">
+<UL>{dede:sql sql='select A.id,A.title,D.downloads from wenku_downloads as D left join wenku_archives as A ON D.id = A.id WHERE pubdate &gt; UNIX_TIMESTAMP( CURDATE() - INTERVAL 30 day) order by downloads DESC limit 0,10;'} 
+<LI><A title=[field:title/] href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</A> {/dede:sql} </LI></UL></DIV></DIV></DIV></DIV></DIV></DIV><!--会员top10-->
+<DIV id=rank>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black>会员排行榜</B></DIV>
+<DIV class="cd c-align tabs">
+<UL class=rank-tab>
+<LI class="tab-1 tab-title">积分榜 
+<LI class="tab-2 tab-title">财富榜 
+<LI class="tab-3 tab-on tab-title">文档榜 </LI></UL>
+<DIV class=clear></DIV>
+<DIV class=rank-content>
+<DIV style="DISPLAY: none" class=tab-content>
+<TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD style="TEXT-INDENT: 25px" width=124>用户名</TD>
+<TD align=middle>总积分</TD></TR></TBODY></TABLE>
+<TABLE class=rank cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>{dede:loop table='wenku_member' sort='scores' row='10' orderway='desc' if=''} 
+<TR>
+<TD width=124><SPAN class=Author>[field:uname/]</SPAN> </TD>
+<TD style="TEXT-INDENT: 0pt" class=f-grey align=middle>[field:scores/]</TD></TR>{/dede:loop} </TBODY></TABLE></DIV>
+<DIV style="DISPLAY: none" class=tab-content>
+<TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD style="TEXT-INDENT: 25px" width=124>用户名</TD>
+<TD align=middle>账户额</TD></TR></TBODY></TABLE>
+<TABLE class=rank cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>{dede:loop table='wenku_member' sort='money' row='10' orderway='desc' if=''} 
+<TR>
+<TD width=124><SPAN class=Author>[field:uname/]</SPAN> </TD>
+<TD style="TEXT-INDENT: 0pt" class=f-grey align=middle>[field:money/]</TD></TR>{/dede:loop} </TBODY></TABLE></DIV>
+<DIV class=tab-content>
+<TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD style="TEXT-INDENT: 25px" width=124>用户名</TD>
+<TD align=middle>文档数</TD></TR></TBODY></TABLE>
+<TABLE class=rank cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>{dede:loop table='wenku_member m, wenku_arctiny a' fields='*, count(1) docnum' sort='count(1)' row='10' orderway='desc' if='m.mid = a.mid and a.arcrank = 0 GROUP by a.mid'} 
+<TR>
+<TD width=124><SPAN class=Author>[field:uname/]</SPAN> </TD>
+<TD style="TEXT-INDENT: 0pt" class=f-grey align=middle>[field:docnum/]</TD></TR>{/dede:loop} </TBODY></TABLE></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV><!-- /foot 开始 -->{dede:include filename="footer.htm"/} <!-- /foot 结束-->
+<SCRIPT type=text/javascript>
+$("img.preload").lazyload({ placeholder: "{dede:global.cfg_cmspath/}/images/preload.gif", effect:"fadeIn" }); 
+</SCRIPT>
+</BODY></html>

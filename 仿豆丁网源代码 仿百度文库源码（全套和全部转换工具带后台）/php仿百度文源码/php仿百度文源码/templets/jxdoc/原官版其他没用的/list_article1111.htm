@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>{dede:field.title/}_{dede:global.cfg_webname/}</TITLE>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description function='html2text(@me)'/}" />
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/reset-o.css">
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/lecture.css">
+<LINK  href="{dede:global.cfg_templets_skin/}/baidu/homenew.css" rel="stylesheet" type="text/css" >
+
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+
+
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/tangram-1.3.2.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/home.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/doc.js"></SCRIPT>
+
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16766"></HEAD>
+<BODY>
+{dede:include filename="head.htm"/}
+<!-- /header --><DIV style="CLEAR: both"></DIV>
+
+<DIV id=nav class=nav>{dede:field name='position'/} </DIV>
+
+<DIV class=leftlisttype>
+<!--左侧菜单-->
+<!--左侧菜单-->
+<DIV id=leftlistbom>
+<DIV id=leftlistbomTit><A style="DISPLAY: none" id=listmore_3 class=more 
+href="#" target=_blank>更多</A> </DIV>
+<UL id=leftlistbom_tab>
+  <LI id=leftlistbom_tab_1 class=leftlistbom_tab_on 
+  onmouseover=ShowRank(1)>日</LI>
+  <LI id=leftlistbom_tab_2 onmouseover=ShowRank(2)>周</LI>
+  <LI id=leftlistbom_tab_3 onmouseover=ShowRank(3)>月</LI></UL>
+<DIV class=clear></DIV>
+<DIV id=leftlistbom_list_1>排行 </DIV>
+<DIV id=leftlistbom_list_2>会员</DIV>
+<DIV id=leftlistbom_list_3>文档数 </DIV>
+<DIV id=leftlist_top>
+<UL id=top_list1>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(*) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%Y%m%d' ) = DATE_FORMAT(now(),'%Y%m%d'))docnumber From t_member m order by docnumber desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+  </UL>
+<UL style="DISPLAY: none" id=top_list2>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(*) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%u' ) = DATE_FORMAT(now(),'%u'))docnumber From t_member m order by docnumber desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+ </UL>
+<UL style="DISPLAY: none" id=top_list3>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(*) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%y%m' ) = DATE_FORMAT(now(),'%y%m'))docnumber From t_member m order by docnumber desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+  
+  </UL></DIV></DIV>
+<DIV class=clear></DIV>
+
+
+</DIV>
+<DIV id=rightlist>	 
+<DIV style="CLEAR: both"></DIV>
+<DIV class=right_tit>全部文档 </DIV>
+<DIV style="WIDTH: 100%">
+<DIV id=right_list>
+<DIV id=kj_list>
+{dede:list pagesize='20'}
+<DL class=right_list1>
+  <DT><SPAN class="[field:filetype/] icon" title=ppt></SPAN><A class=font14 title="[field:title/]" href="[field:arcurl/]" target=_blank>[field:title/]</A> 
+  </DT>
+  <DD style="PADDING-LEFT: 21px">
+  <DL style="WIDTH: 120px">
+    <DD>类别：[field:typelink/]</DD></DL>
+  <DL style="WIDTH: 120px">
+    <DD>作者： <A class=Author 
+    href="/member/index.php?uid={dede:field.writer/}" 
+    target=_blank>[field:writer/]</A> </DD></DL>
+	
+    <DL style="WIDTH: 80px">
+    <DD>点击量：[field:click/]次</DD></DL>
+
+    
+	<DL style="WIDTH: 128px">
+    <DD>发表时间：[field:pubdate function="MyDate('Y-m-d',@me)"/]</DD></DL></DD></DL>
+{/dede:list}
+
+
+</DIV>
+<DIV class=page>{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}</DIV>
+<DIV style="HEIGHT: 18px"></DIV>
+<DIV style="CLEAR: both"></DIV></DIV>
+<DIV id=right_list_right>
+<DIV id=right_list_right_bd>
+<DIV style="PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 0px; HEIGHT: 20px; PADDING-TOP: 8px">热门标签</DIV>
+<DIV id=right_list_top>{dede:tag row='40' getall='1' sort='month'}<A onmouseover=ShowClass(this) 
+onmouseout=ReMoveClass(this) 
+href="[field:link/]" target=_blank>[field:tag /]</A> {/dede:tag}
+<DIV class=clear></DIV></DIV>
+<DIV class=clear></DIV></DIV></DIV></DIV>
+ </DIV>
+
+<DIV style="CLEAR: both"></DIV>{dede:include filename="footer.htm"/}
+
+<SCRIPT type=text/javascript>function ShowRank(A){switch(A){case 1:G("leftlistbom_tab_1").className="leftlistbom_tab_on";G("leftlistbom_tab_2").className=G("leftlistbom_tab_3").className="";G("top_list2").style.display=G("top_list3").style.display="none";G("top_list1").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break;case 2:G("leftlistbom_tab_2").className="leftlistbom_tab_on";G("leftlistbom_tab_1").className=G("leftlistbom_tab_3").className="";G("top_list3").style.display=G("top_list1").style.display="none";G("top_list2").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break;case 3:G("leftlistbom_tab_3").className="leftlistbom_tab_on";G("leftlistbom_tab_2").className=G("leftlistbom_tab_1").className="";G("top_list2").style.display=G("top_list1").style.display="none";G("top_list3").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break}}function ShowClass(A){A.className="right_list_top_on"}function ReMoveClass(A){A.className=""}function ChangImg(){G("upimg").src="{dede:global.cfg_templets_skin/}/baidu/up2.png"}function ReturnImg(){G("upimg").src="{dede:global.cfg_templets_skin/}/baidu/up1.png"}</SCRIPT>
+
+</BODY></HTML>

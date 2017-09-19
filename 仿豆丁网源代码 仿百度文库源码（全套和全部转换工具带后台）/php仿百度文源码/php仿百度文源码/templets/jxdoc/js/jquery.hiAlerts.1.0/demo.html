@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>jQuery hiAlerts 文档</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta name="description" content="This is a demonstration page." />
+		<meta name="keywords" content="alert, confirm, prompt, demo" />
+		
+		<style type="text/css">
+			BODY,
+			HTML {
+				padding: 0px;
+				margin: 0px;
+			}
+			BODY {
+				font-family:Verdana,Arial,Tahoma;
+				font-size: 12px;
+				background: #FFF;
+				padding: 15px;
+				line-height:1.5; 
+				background:#333; 
+			}
+			
+			h1{
+			font-size:16px;
+			text-align:center;
+			padding:10px 0; }
+			
+			H2 {
+				font-size: 14px;
+			}
+			
+			FIELDSET {
+				border: solid 1px #CCC;
+				-moz-border-radius: 8px;
+				-webkit-border-radius: 8px;
+				border-radius: 8px;
+				padding: 1em 2em;
+				margin: 1em 0em;
+			}
+			
+			LEGEND {
+				color: #333;
+				font-size: 14px;
+				padding: 0em .5em;
+				font-weight:bold;
+			}
+			
+			PRE {
+				font-size: 12px;
+				color: #AF2D00;
+				background: #f2f2f2;
+				padding: 1em;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+			}
+			
+.wrapper{width:760px;margin:10px auto; background:#fff; padding:20px;  }
+
+.p_intro{
+background:#eee;
+padding:10px 15px;
+line-height:1.8em;
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+border-radius: 8px;}
+.red{color:red;}
+.span_repair{display:block;text-align:right;}
+.orange{color: #DF4E00;}
+
+			/* Custom dialog styles */
+			#popup_container.style_1 {
+				font-family: Georgia, serif;
+				color: #A4C6E2;
+				background: #005294;
+				border-color: #113F66;
+			}
+			
+			#popup_container.style_1 #popup_title {
+				color: #FFF;
+				font-weight: normal;
+				text-align: left;
+				background: #76A5CC;
+				border: solid 1px #005294;
+				padding-left: 1em;
+			}
+
+#popup_container.style_1 #ctl,#popup_container.style_1  #cbl,
+#popup_container.style_1 #ctr,#popup_container.style_1 #cbr{
+display:none; }		
+
+
+
+			#popup_container.style_1 #popup_content {
+				background: none;
+			}
+			
+			#popup_container.style_1 #popup_message {
+				padding-left: 0em;
+			}
+			
+			#popup_container.style_1 INPUT[type='button'] {
+				border: outset 2px #76A5CC;
+				color: #A4C6E2;
+				background: #3778AE;
+			}
+			
+		</style>
+		
+		<!-- Dependencies -->
+
+		<script src="jquery-1.3.2.min.js" type="text/javascript"></script>
+		<script src="js/jquery.corners.min.js" type="text/javascript"></script>
+		<script src="jquery.ui.draggable.js" type="text/javascript"></script><!-- 拖动函数，不需要可以去掉 -->
+		
+		<!-- Core files -->
+		<script src="jquery.hiAlerts-min.js" type="text/javascript"></script>
+		<link href="jquery.hiAlerts.css" rel="stylesheet" type="text/css" media="screen" />
+		
+		<!-- Example script -->
+		<script type="text/javascript">
+			
+			$(document).ready( function() {
+
+				$("#alert_button").click( function() {
+					hiAlert('这是一个常见的警示框，就如一个问好hi', '请注意');
+				});
+				$("#box_button").click( function() {
+					hiBox('#objBox', '重要提示','400','','','.a_close');
+				});
+				$("#overAlert_button").click( function() {
+					hiOverAlert('我默认提示3秒钟');
+				});	
+				$("#overAlert_button2").click( function() {
+					hiOverAlert('我自定义提示1.5秒钟',1500);
+				});	
+				$("#overAlert_button3").click( function() {
+					$.alerts.dialogClass = "over_3";
+					hiOverAlert('我自定义提示<strong>2秒钟</strong>',2000);
+					$.alerts.dialogClass = null;
+				});
+				
+				$("#confirm_button").click( function() {
+					hiConfirm('你确认此操作吗?', '确认框', function(r) {
+					   hiAlert('你的反馈是: ' + r);
+				});
+					});
+				
+				$("#prompt_button").click( function() {
+					hiPrompt('请填写:', '默认值', '输入框', function(r) {
+						 if( r ) alert('你填入的内容是“' + r+'”');
+					});
+				});
+				
+				$("#alert_button_with_html").click( function() {
+					hiAlert('你可以使用HTML标签, 例如 <strong>bold</strong>, <em>italics</em>， 和 <u>underline</u>!');
+				});
+				 
+				$(".alert_style_example").click( function() {
+					$.alerts.dialogClass = $(this).attr('id'); // set custom style class
+					hiAlert('This is the custom class called &ldquo;style_1&rdquo;', 'Custom Styles', function() {
+						$.alerts.dialogClass = null; // reset to default
+					});
+				});
+			});
+			
+		</script>
+
+		
+	</head>
+	
+	<body>
+
+<div class="wrapper">
+
+
+<h1>hiAlerts 使用说明示例</h1>
+<h2>写在最前</h2>
+<p class="p_intro">
+本脚本插件是根据 <a class="red" href="http://abeautifulsite.net/notebook/87">jquery.alerts</a> 改进得来，包括了常用的几种提示框， <br /> 兼容IE6+，及firefox，opera等流行浏览器， <br />
+基于原插件易用和可控能力强的基础上， <br />添加了 <span class="orange">渐变提示效果</span>， <br />
+添加了 <span class="orange">hiBox</span>与<span class="orange">hiOverAlert</span> 方法，（添加了不少代码，不过压缩后才<span class="red">6k</span>，还好了）， <br /> 
+对提示框的<span class="orange"">样式进行了简单的重定义</span>，
+用样式定义了圆角，当然修改起来会麻烦些，<br /> 
+不喜欢或者修改起来觉得费劲的朋友可以修改样式(<span class="red">#ctl, #cbl, #ctr, #cbr{dispaly:none;}</span>)来删除圆角效果<br /><br />
+当然这个插件最大的好处还是可以用样式表能定义出各式各样的提示框， <br />如果你够熟悉样式的话，相信这个插件对你改善提示框及弹出框能有很好的帮助。 <br />
+如下是示例和代码调用方法，详细请看本html源码， <br />
+<b>注：如果提示框不需要拖动效果可以不带 <span class="red">jquery.ui.draggable.js</span></b><br /><br />
+<span class="span_repair">译者及改进： <a href="http://hi.baidu.com/bujichong">不羁虫</a></span></p>
+
+
+		<h2>样例</h2>
+
+		<fieldset>
+			<legend>hiAlert</legend>
+
+<pre>
+hiAlert('这是一个常见的警示框，就如一个问好hi', '请注意');
+</pre>
+			<p>
+				<input id="alert_button" type="button" value="Show Alert" />
+			</p>
+		</fieldset>
+
+
+
+
+		<fieldset>
+			<legend>hiConfirm</legend>
+<pre>
+
+hiConfirm('你确认此操作吗?', '确认框', function(r) {
+    hiOverAlert('你的反馈是: ' + r);
+});
+</pre>
+			<p>
+				<input id="confirm_button" type="button" value="Show Confirm" />
+			</p>
+		</fieldset>
+		
+		<fieldset>
+			<legend>hiPrompt</legend>
+<pre>
+hiPrompt('请填写:', '默认值', '输入框, function(r) {
+	if( r ) alert('你填入的内容是“' + r+'”');
+});
+
+</pre>
+			<p>
+				<input id="prompt_button" type="button" value="Show Prompt" />
+			</p>
+		</fieldset>
+
+
+
+
+		<fieldset>
+			<legend>hiBox</legend>
+
+<pre>
+hiBox('#objBox', '重要提示',400,'','','.a_close');
+
+hiBox参数：
+<b>hiBox(obj,title,w,h,submit,cancel,callback)</b>
+obj: <span class="orange">被指定打开的对象（对象唯一），用css选择器来对应，如：#openBox, .overP</span>
+title: <span class="orange">标题，不设置，默认为“提示”</span>
+w: <span class="orange">hiBox宽度,不设置为auto</span>
+h: <span class="orange">hiBox宽度,不设置为auto</span>
+submit: <span class="orange">可设置内容中的对象为"submit"，如果有callback，点此返回callback行为</span>
+cancel: <span class="orange">可设置内容中的对象为"cancel"，对象方式如'obj'</span>
+callback: <span class="orange">设置返回函数</span>
+</pre>
+			<p>
+				<input id="box_button" type="button" value="Show hibox" />
+			</p>
+		</fieldset>
+
+		<fieldset>
+			<legend>hiOverAlert</legend>
+
+<pre>
+hiOverAlert('我默认提示3秒钟');
+</pre>
+			<p>
+				<input id="overAlert_button" type="button" value="Show overAlert" />
+			</p>
+<pre>
+hiOverAlert('我自定义提示1.5秒钟',1500);
+</pre>
+			<p>
+				<input id="overAlert_button2" type="button" value="Show overAlert" />
+			</p>
+
+<pre>
+$.alerts.dialogClass = "over_3";
+hiOverAlert('我自定义提示< strong>2秒钟< /strong>',2000);
+$.alerts.dialogClass = null;
+</pre>
+			<p>
+				<input id="overAlert_button3" type="button" value="Show overAlert" />
+			</p>
+		</fieldset>
+		
+
+		
+		
+		
+		<h2>其他示例</h2>
+		<fieldset>
+			<legend>可使用HTML标签</legend>
+
+<pre>
+hiAlert('你可以使用HTML标签, 例如 < strong>bold< /strong>, < em>italics< /em>， <br />和 < u>underline< /u>!');
+（去除标签空格）
+</pre>
+			<p>
+				<input id="alert_button_with_html" type="button" value="Show Alert" />
+			</p>
+		</fieldset>
+
+		
+		<fieldset>
+			<legend>可以定义添加class，达到通过不同样式，来丰富提示界面</legend>
+<pre>
+通过给 <samp style="color:red;">$.alerts.dialogClass</samp>  赋值新的class ，
+如：<samp style="color:red;">$.alerts.dialogClass = 'style_1'; </samp>
+你可以通过对新的class如： 
+#popup_container.style_1 #popup_title 进行新的样式定义来赋予hiAlerts系列新的样式，
+使你的提示框可以在一个页面里有更多表现
+</pre>
+			
+			<p>
+				<input id="style_1" class="alert_style_example" type="button" value="Style 1" />
+
+			</p>
+			
+		</fieldset>
+		
+
+<div  id="objBox">
+<p class="p_intro">这是一段用了测试的文字，是为了应用<span class="orange">hiBox</span>而放置在页面底部的， <span class="prange">hiAlerts</span>在 <span class="red">ie6</span>表现还不是很好，如果默认没有宽度的话，宽度将会是css里默认的 <span class="red">320px</span>尤其是对 <span class="orange">hiBox</span>来讲320px可能是不太美观的，所以应用时能设置宽度最好带上宽度，高度可以自适应。当然如果你设置了高度，而文档超出了高度，会自动出现横向及纵向滚动条<br />
+<a href="#" class="span_repair a_close">关闭</a></p>
+</div>
+
+
+
+
+
+</div>
+	</body>
+
+	
+</html>

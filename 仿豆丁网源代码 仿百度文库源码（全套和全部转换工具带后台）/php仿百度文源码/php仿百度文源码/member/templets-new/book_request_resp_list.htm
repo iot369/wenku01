@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档悬赏任务列表 - 会员中心 -<?php echo $cfg_webname; ?></title>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/jquery-1.3.2.min.js"></script>
+<link href="<?php echo $cfg_cmspath; ?>/js/thickbox/css/thickbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/thickbox/js/thickbox.js"></script>
+<script type="text/javascript">
+	var tb_pathToImage = "{dede:global.cfg_cmspath/}/images/loadingAnimation.gif";
+</script>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/zDialog/zDrag.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/zDialog/zDialog.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/jquery.blockUI.js"></script>
+<!-- paste this code into your webpage -->
+<link href="<?php echo $cfg_cmspath; ?>/js/tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/tablecloth/tablecloth.js"></script>
+<style>
+body {
+	margin:0;
+	padding:0;
+	background:#f1f1f1;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#555;
+	line-height:150%;
+	text-align:left;
+}
+a {
+	text-decoration:none;
+	color:#057fac;
+}
+a:hover {
+	text-decoration:none;
+	color:#999;
+}
+</style>
+<!-- end -->
+<script type="text/javascript">
+// unblock when ajax activity stops 
+$(document).ajaxStop($.unblockUI); 
+	
+$().ready(function(){
+	//提示
+	<?php
+    if($isSelected == "1")
+    {
+    ?>
+	$.blockUI({ 
+		css:{
+			border: 'none', 
+            padding: '15px',
+			backgroundColor: '#000'
+		},
+		message: "<h1><span style='color:red; font-weight:bold'>该任务已选标！</span></h1>", 
+		timeout: 2000
+	});
+	<?php
+    }
+    ?>
+});
+
+//判断 v 是否是整数
+function IsInt(v)
+{
+    var vArr = v.match(/^[0-9]+$/);
+    if (vArr == null)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+function viewDoc(respid){
+	
+	var diag = new Dialog();
+	diag.Width = 780;
+	diag.Height =520;
+	diag.Title = "文档预览";
+	diag.URL = "book_request_resp_docview.php?respid="+respid;
+	//diag.OkButtonText = "关闭";
+	//diag.OKEvent=function(){
+	//	diag.close();
+		//diag.openerDialog.close();
+	//}
+	diag.show();
+	
+  //alert(respid);
+  //tb_show('文档预览','book_request_resp_docview.php?TB_iframe=true&height=480&width=680&respid='+respid);
+}
+
+function selectedDoc(respid){
+   //alert(respid);
+	$.blockUI({
+		css:{
+			border: 'none', 
+            padding: '15px'
+		},
+		message: '<h1><img src="<?php echo $cfg_cmspath; ?>/js/busy.gif" />正在处理，请稍后...</h1>'
+	});
+   
+   $.ajax({
+		url: 'book_request_resp_docselect.php',
+		data: {respid: respid},
+		success: function(response) {
+			var obj;
+			try{
+				obj = eval("("+response+")");//转换为json对象 
+			}catch(e){
+				//alert(e);
+				Dialog.alert("选稿失败！请稍后再试。");
+				return;
+			}
+			showSetDocInfo(obj);
+		}
+	});
+   
+}
+
+function showSetDocInfo(obj){
+	var typeidObj = $("#typeid");
+	var needmoneyObj = $("#needmoney");
+	var pagenumber2Obj = $("#pagenumber2");
+	
+	var diag = new Dialog();
+	diag.Width = 600;
+	diag.Height = 50;
+	diag.Title = "文档发布成功，等待管理员审核。";
+	diag.InvokeElementId="Template"
+	diag.Message = "系统从您的账户中扣除【"+obj.score+"】积分给投稿会员【"+obj.respmemname+"】，同时该文档已经以您的身份发布，请补充以下信息：";
+	//点击确定后调用的方法
+	diag.OKEvent = function(){
+		//提交设置
+		if(typeidObj.val() == 0){
+			Dialog.alert("请选择栏目！");
+			return;
+		}
+		if(!IsInt(pagenumber2Obj.val())){
+			Dialog.alert("页码请输入整数！");
+			return;
+		}	
+		$.ajax({
+			url: '<?php echo $cfg_memberurl; ?>/inc/batchup_submitinfo.php',
+			data: {typeid: typeidObj.val(), needmoney: needmoneyObj.val(), pagenumber2: pagenumber2Obj.val(), arcids:obj.arcid},
+			success: function(data) {
+				//alert(data);
+				if(data == "0"){//成功
+					diag.close();
+					window.location.reload();
+				}
+			}
+		});
+	};
+	
+    diag.OnLoad=function(){
+		$("#Template").show();
+	};
+	diag.show();
+}
+</script>
+</head>
+<body>
+<div id="main">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <th width="45%" style="text-align:center;">文档名称</th>
+      <th width="5%" style="text-align:center;">类型</th>
+      <th width="10%" style="text-align:center;">大小</th>
+      <th width="20%" style="text-align:center;">投稿时间 </th>
+      <th width="10%" style="text-align:center;">投稿人 </th>
+      <th width="10%" style="text-align:center;">操作</th>
+    </tr>
+    {dede:datalist}
+    <tr>
+      <td align="left" class="tabTitle"><?php
+          if($fields['status'] == "1")
+          {//已中标
+        ?>
+        <span style="color:#F00;">【已中标】</span>
+        <?php
+          }
+        ?>
+        <?php echo $fields['doctitle']; ?></td>
+      <td style="text-align:center;"><?php echo $fields['filetype']; ?></td>
+      <td style="text-align:center;"><?php echo $fields['filesize']; ?></td>
+      <td style="text-align:center;"><?php echo $fields['uptime']; ?></td>
+      <td style="text-align:center;"><?php echo $fields['uname']; ?></td>
+      <td style="text-align:center;"><a class="view" href="javascript:viewDoc(<?php echo $fields['id']?>);">预览</a>
+        <?php
+        if($isSelected != "1")
+        {
+      ?>
+        | <a href="javascript:selectedDoc(<?php echo $fields['id']?>);">中标</a></td>
+      <?php
+        }
+      ?>
+    </tr>
+    {/dede:datalist}
+  </table>
+  <div>
+    <div style="text-align:right; padding-right:20px;">{dede:pagelist listsize=5 /}</div>
+  </div>
+  <!--主操作区域 -->
+  <!--模板-->
+  <div id="Template" style="display:none; padding-top:15px;">
+    <div class="center">
+      <div class="mo" id="m4">
+        <h1 class="doctitle"></h1>
+        <div class="nr">
+          <input type="hidden" class="arcid" />
+          所属分类：
+          <?php
+                            $typeOptions = GetOptionList(0,$channelid);
+                            echo "<select name='typeid' id='typeid' size='1' class='select'>\r\n";
+                            echo "<option value='0' selected>请选择栏目...</option>\r\n";
+                            echo $typeOptions;
+                            echo "</select>";
+                        ?>
+          文档售价：
+          <select id="needmoney" name="needmoney">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+          <span class="small_score icon"></span> 免费阅读页数：
+          <input type="text" name="pagenumber2" id="pagenumber2" style="width:40px;" value="0" />
+          （<span style="color:#F00;">0表示不限制浏览</span>）
+          <div class="checkinfo" title="保存文档设置"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+IMAGESPATH = "<?php echo $cfg_cmspath; ?>/js/zDialog/images/";
+var images=["icon_alert.gif","icon_dialog.gif","icon_query.gif","window.gif","dialog_cb.gif","dialog_closebtn.gif","dialog_closebtn_over.gif"];
+var dlgimgs=ielt7?["dialog_ct.gif","dialog_lb.gif","dialog_lt.gif","dialog_mlm.gif","dialog_mrm.gif","dialog_rb.gif","dialog_rt.gif"]:["dialog_cb.png",
+"dialog_ct.png","dialog_lb.png","dialog_lt.png","dialog_mlm.png","dialog_mrm.png","dialog_rb.png","dialog_rt.png"]
+var images=images.concat(dlgimgs);
+var imgsHtml=[];
+for(var i=0;i<images.length;i++){
+	imgsHtml.push('<img src="'+IMAGESPATH+images[i]+'"/>')
+}
+document.write('<div id="imgsloader" style="text-align:right; display:none;">'+imgsHtml.join("")+'</div>')
+</script>
+</body>
+</html>

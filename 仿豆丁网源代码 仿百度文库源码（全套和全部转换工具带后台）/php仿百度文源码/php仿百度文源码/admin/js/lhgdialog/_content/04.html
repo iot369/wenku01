@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+var dg = frameElement.dg;
+
+dg.addBtn( 'no', '取消', cancel );
+dg.addBtn( 'close', '确定', close );
+
+function cancel()
+{
+    dg.reload();
+}
+
+function close()
+{
+    dg.reload( '', 'http://www.google.com' );
+}
+    </script>
+</head>
+
+<body style="background-color:#fff;">
+	<p align="center">点取消按钮关闭窗口并刷新调用页面<br/>点确定按钮关闭窗口并跳转调用页面到google</p>
+</body>
+</html>

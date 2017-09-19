@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../lhgcore.min.js"></script>
+<script type="text/javascript">
+var dg = frameElement.dg, cwin;
+
+    dg.addBtn( 'no', '取 消', btn1 );
+	dg.addBtn( 'close', '确 定', btn2 );
+
+J(function(){
+	cwin = dg.win.J('#bc',document).dialog({
+	    id: 'c', 
+		page: '06.html' ,
+		width: 350, 
+		height: 350,
+		parent: dg
+	});
+
+    J('#b2').click(function(){
+            alert(dg.win.J('#a1').val());
+    });
+    
+	J('#b3').click(function(){
+			dg.win.aa();
+    });
+	
+	J('#b4').click(function(){
+			dg.cancel();
+    });
+	
+    J('#b5').click(function(){
+            alert(J('#c1',cwin.inwin.document).val());
+    });
+    
+	J('#b6').click(function(){
+			cwin.inwin.cc();
+    });
+	
+	J('#b7').click(function(){
+			cwin.cancel();
+    });
+});
+
+function bb(){
+  alert("b窗口的函数");
+}
+
+function btn1(){
+    dg.reload( '', 'http://www.google.com' );
+}
+
+function btn2(){
+    dg.reload();
+}
+</script>
+</head>
+
+<body>
+<p>b窗口</p>
+
+<input id="b1" size="40" type="text" value="b窗口的文本框"/><br/>
+<input id="b2" type="button" value="调用a页面的文本框的值"/><br />
+<input id="b3" type="button" value="调用a页面的函数"/><br />
+<input id="b4" type="button" value="关闭b窗口"/><br />
+<hr />
+<input id="bc" type="button" value="打开c窗口"/><br />
+<input id="b5" type="button" value="调用c窗口的文本框的值"/><br />
+<input id="b6" type="button" value="调用c窗口的函数"/><br />
+<input id="b7" type="button" value="关闭c窗口"/><br />
+
+</body>
+</html>

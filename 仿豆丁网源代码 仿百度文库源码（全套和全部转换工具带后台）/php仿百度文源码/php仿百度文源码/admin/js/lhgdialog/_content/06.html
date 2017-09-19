@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="../lhgcore.min.js"></script>
+<script type="text/javascript">
+var dg = frameElement.dg;
+
+J(function(){
+
+    J('#c2').click(function(){
+		alert( J('#b1',dg.opt.parent.inwin.document).val() );
+    });
+    
+	J('#c3').click(function(){
+		dg.opt.parent.inwin.bb();	
+    });
+	
+	J('#c4').click(function(){
+			dg.cancel();
+    });
+	
+    J('#c5').click(function(){
+            alert(J('#a1',dg.win.document).val());
+    });
+    
+	J('#c6').click(function(){
+			dg.win.aa();
+    });
+	
+	J('#c7').click(function(){
+		dg.opt.parent.cancel();
+		dg.cancel();
+    });
+
+});
+
+function cc(){
+  alert("c窗口的函数");
+}
+</script>
+</head>
+
+<body>
+<p>c窗口</p>
+
+<input id="c1" size="40" type="text" value="c窗口的文本框"/><br/>
+<input id="c2" type="button" value="调用b窗口的文本框的值"/><br />
+<input id="c3" type="button" value="调用b窗口的函数"/><br />
+<input id="c4" type="button" value="关闭c窗口"/><br />
+<hr />
+<input id="c5" type="button" value="调用a页面的文本框的值"/><br />
+<input id="c6" type="button" value="调用a页面口的函数"/><br />
+<input id="c7" type="button" value="关闭b和c两个窗口"/><br />
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>{dede:field.title/}_{dede:global.cfg_webname/}</TITLE>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<LINK 
+rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/reset-o.css"><LINK 
+rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/lecture.css">
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/homenew.css">
+<LINK rel=stylesheet type=text/css href="{dede:global.cfg_templets_skin/}/baidu/scroll.css">
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/effect_scroll.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/tangram-1.3.2.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/home.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/doc.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/wk.uc.js"></SCRIPT>
+
+
+
+
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/sugImplement.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16766"></HEAD>
+<BODY>
+{dede:include filename="head.htm"/}
+<!-- /header --><DIV style="CLEAR: both"></DIV>
+<DIV id=wrapper>
+<DIV id=nav class=nav><A href="#">当前位置</A>&nbsp;&gt;&nbsp; 
+{dede:field name='position'/} </DIV>
+<DIV id=kj_banner><A id=banner_link1 
+href="#" 
+target=_blank></A> <A id=banner_link2></A> </DIV>
+<DIV id=kj_up><A style="CURSOR: pointer" href="{dede:global.cfg_memberurl/}/upload_book.php"  id=upid onfocus=this.blur()><IMG 
+id=upimg onmouseover=ChangImg() onmouseout=ReturnImg()  
+alt="" src="{dede:global.cfg_templets_skin/}/baidu/up1.png"></A> 
+<P>当前已有<SPAN>{dede:sql sql="select count(*) as c from t_archives}[field:c function="null2zero(@me)/]{/dede:sql}</SPAN>份文档</P></DIV>
+<DIV class=leftlisttype>
+<!--左侧菜单-->
+<DIV id=all-category>
+<DIV class="mod mt20 skin-category">
+<DIV class=inner>
+<DIV class=hd><B class=f-green><A href="http://wenku.baidu.com/list/0" 
+taget="_blank">全部文档分类</A></B></DIV>
+<DIV class=cd>
+<DIV id=cate-menu class=cate-menu><!--cate list-->
+<!--cate list-->
+{dede:channelartlist typeid='17' row='10'}
+
+<DIV class=cate-menu-box>
+<DIV class=tab-cate>
+<H2><A href="{dede:field name='typeurl'/}" target=_blank>{dede:field name='typename'/}</A></H2>
+</DIV>
+<DIV style="DISPLAY: none" class=popup-cate>
+<UL>{dede:sql sql='Select * from t_arctype where reid=~id~ ORDER BY id limit 0,7'}
+  <LI><A href="[field:typedir function='str_replace("{cmspath}","",@me)'/]" target=_blank>[field:typename/]</A></LI>{/dede:sql}
+
+</UL></DIV></DIV>{/dede:channelartlist}
+
+<!--cate list--></DIV></DIV></DIV></DIV></DIV><!--左侧菜单-->
+<DIV id=leftlistbom>
+<DIV id=leftlistbomTit><A style="DISPLAY: block" id=listmore_3 class=more 
+href="#" target=_blank>更多</A> </DIV>
+<UL id=leftlistbom_tab>
+  <LI id=leftlistbom_tab_1 class=leftlistbom_tab_on 
+  onmouseover=ShowRank(1)>日</LI>
+  <LI id=leftlistbom_tab_2 onmouseover=ShowRank(2)>周</LI>
+  <LI id=leftlistbom_tab_3 onmouseover=ShowRank(3)>月</LI></UL>
+<DIV class=clear></DIV>
+<DIV id=leftlistbom_list_1>排行 </DIV>
+<DIV id=leftlistbom_list_2>会员</DIV>
+<DIV id=leftlistbom_list_3>文档数 </DIV>
+<DIV id=leftlist_top>
+<UL id=top_list1>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%d' ) = date(curdate( )))docnumber From t_member m order by scores desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+  </UL>
+<UL style="DISPLAY: none" id=top_list2>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%w' ) = week(curdate( )))docnumber From t_member m order by scores desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+ </UL>
+<UL style="DISPLAY: none" id=top_list3>
+{dede:sql sql="Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid and FROM_UNIXTIME( pubdate, '%m' ) = month(curdate( )))docnumber From t_member m order by scores desc limit 0,10"}
+  <LI class=no[field:global name=autoindex] title=[field:uname/]><SPAN>[field:docnumber function="null2zero(@me)"/]</SPAN>[field:uname/]</LI>
+  {/dede:sql}
+  
+  </UL></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV style="DISPLAY: none" id=float_left onmousemove=ShowSubJect_1() 
+onmouseout=closeSubJect()><SPAN style="FONT-SIZE: 14px" 
+id=float_left_Sub>其他</SPAN> </DIV>
+<DIV style="DISPLAY: none" id=float_right onmousemove=ShowSubJect_1() 
+onmouseout=closeSubJect()>
+<DL id=float_right_body>
+  <DD id=float_right_con></DD></DL>
+<DIV class=clear></DIV>
+<DIV id=hiddiv></DIV></DIV>
+</DIV>
+<DIV id=rightlist>
+<DIV class=right_tit>热门文档 </DIV>
+<DIV id=right_pic>
+    <DIV class=blk_18><A onmouseup=ISL_StopUp_1() class=LeftBotton 
+onmousedown=ISL_GoUp_1() onmouseout=ISL_StopUp_1() href="javascript:void(0);" 
+target=_self></A>
+<DIV class=pcont id=ISL_Cont_1>
+<DIV class=ScrCont>
+<DIV id=List1_1><!-- piclist begin -->
+{dede:arclist flag='c' titlelen=42 row=20 imgwidth=90 imgheight=120}
+<A class=pl 
+href="[field:arcurl/]" 
+target=_blank><IMG height="120" alt="[field:title/]" 
+src="[field:litpic/]" width="90">[field:title/]</A>&nbsp;&nbsp;&nbsp;{/dede:arclist} <!-- piclist end --></DIV>
+<DIV id=List2_1></DIV></DIV></DIV><A onmouseup=ISL_StopDown_1() 
+class=RightBotton onmousedown=ISL_GoDown_1() onmouseout=ISL_StopDown_1() 
+href="javascript:void(0);" target=_self></A></DIV>
+<SCRIPT type=text/javascript>
+<!--
+picrun_ini()
+//-->
+</SCRIPT>
+	</DIV><DIV style="CLEAR: both"></DIV>
+	  <!--子类-->
+  	  <!--子类-->
+<DIV style="WIDTH: 100%">
+<DIV class="cat bai">
+<DIV class="rc1 rgg_1"></DIV>
+<DIV class="rc2 rgg_2"></DIV>
+<DIV class="rc3 rgg_3"></DIV>
+<DIV class="rc rgg">
+<H2>{dede:field.typename/}<SPAN>{dede:type}[field:id function="GetTotalArc(@me)"/]{/dede:type}</SPAN> </H2>
+<DIV class=bc0>
+{dede:channel type='son' }
+ <A href="[field:typelink/]">[field:typename/]</A> <SPAN>[field:id function="GetTotalArc(@me)"/]</SPAN> 
+     &nbsp;&nbsp;&nbsp;&nbsp;{/dede:channel}</TABLE></DIV></DIV></DIV></DIV>
+<DIV style="CLEAR: both"></DIV>
+<DIV class=right_tit>全部文档 </DIV>
+<DIV style="WIDTH: 100%">
+<DIV id=right_list>
+<DIV style="TEXT-ALIGN: right; MARGIN: 11px 20px 0pt 0pt">最新上传<SPAN 
+class="icon sort" title=按上传时间排序></SPAN> | <A title=按下载量排序 
+href="#">下载最多</A> </DIV>
+<DIV id=kj_list>
+{dede:list pagesize='10'}
+<DL class=right_list1>
+  <DT><SPAN class="[field:filetype/] icon" title=ppt></SPAN><A class=font14 
+  title="[field:title/]" 
+  href="[field:arcurl/]" 
+  target=_blank>[field:title/]</A>&nbsp;&nbsp;<em>[field:pagenumber/]页</em> </DT>
+  <DD style="PADDING-LEFT: 21px">
+  <DL style="WIDTH: 100px">
+    <DD>类别：[field:typelink/]</DD></DL>
+  <DL style="WIDTH: 100px">
+    <DD>上传者： <A class=Author 
+    href="[field:mid function="GetMemberSpaceLink(@me)"/]" 
+    target=_blank>[field:writer/]</A> </DD></DL>
+	
+    <DL style="WIDTH: 100px">
+    <DD>点击量：[field:click/]次</DD></DL>
+  <DL style="WIDTH: 100px">
+    <DD>下载量：[field:downtimes/]次</DD></DL>
+	
+	<DL style="WIDTH: 128px">
+    <DD>上传时间：[field:pubdate function="MyDate('Y-m-d',@me)"/]</DD></DL></DD></DL>
+{/dede:list}
+
+
+</DIV>
+<DIV class=page>{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}</DIV>
+<DIV style="HEIGHT: 18px"></DIV>
+<DIV style="CLEAR: both"></DIV></DIV>
+<DIV id=right_list_right>
+<DIV id=right_list_right_bd>
+<DIV 
+style="PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 0px; HEIGHT: 20px; PADDING-TOP: 8px">热门标签</DIV>
+<DIV id=right_list_top>{dede:tag row='40' getall='1' sort='month'}<A onmouseover=ShowClass(this) 
+onmouseout=ReMoveClass(this) 
+href="[field:link/]" target=_blank>[field:tag /]</A> {/dede:tag}
+<DIV class=clear></DIV></DIV>
+<DIV class=clear></DIV></DIV></DIV></DIV>
+ </DIV>
+{dede:include filename="footer.htm"/}</DIV>
+
+<SCRIPT type=text/javascript>ShowType();function ShowType(){var C="<dt style='height: 26px; margin: 10px 0pt 0pt 10px; font-size: 14px; font-weight: bold; color: White;'>所有分类</dt>";var D=lec_class_level_1.length;for(var B=0;B<D;B++){var A=lec_class_level_1[B].toString().split(",");C+="<dd onmousemove='ShowSubJect("+B+")' style='cursor: pointer;'>"+A[1]+"</dd>"}C+="<dd></dd>";G("type_list").innerHTML=C}function ShowRank(A){switch(A){case 1:G("leftlistbom_tab_1").className="leftlistbom_tab_on";G("leftlistbom_tab_2").className=G("leftlistbom_tab_3").className="";G("top_list2").style.display=G("top_list3").style.display="none";G("top_list1").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break;case 2:G("leftlistbom_tab_2").className="leftlistbom_tab_on";G("leftlistbom_tab_1").className=G("leftlistbom_tab_3").className="";G("top_list3").style.display=G("top_list1").style.display="none";G("top_list2").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break;case 3:G("leftlistbom_tab_3").className="leftlistbom_tab_on";G("leftlistbom_tab_2").className=G("leftlistbom_tab_1").className="";G("top_list2").style.display=G("top_list1").style.display="none";G("top_list3").style.display="block";G("leftlistbom_list_2").innerHTML="会员";break}}function ShowClass(A){A.className="right_list_top_on"}function ReMoveClass(A){A.className=""}function ShowSubJect(A){GetSubData(A);G("float_left").style.display="block";G("float_right").style.display="block"}function closeSubJect(){G("float_left").style.display="none";G("float_right").style.display="none"}function GetSubData(F){var D="";var C=lec_class_level_1[F].toString().split(",");G("float_left_Sub").innerHTML=C[1];G("float_left").className="float_"+(F+1);G("float_right").className="float_"+(F+1);for(var B=0;B<lec_class_level_2.length;B++){if(lec_class_level_2[B][0]==C[0]){D+="<dl class='fr_body'><dt class='fr_body_tit'><a href='/lec/list?cid="+lec_class_level_2[B][1]+"' style='color:Black;'>";D+=lec_class_level_2[B][2]+"></a></dt><dd class='fr_body_con'>";var E=lec_class_level_3.length;for(var A=0;A<E;A++){if(lec_class_level_3[A][0]==lec_class_level_2[B][1]){D+="<dl class='float_list'><dd><a href='/lec/list?cid="+lec_class_level_3[A][1]+"'>";D+=lec_class_level_3[A][2]+"</a></dd></dl>"}}D+="<dl class='float_list_end'><dd class='float_list_end1'></dd></dl></dd></dl>"}}G("float_right_con").innerHTML=D}function ShowSubJect_1(){G("float_left").style.display="block";G("float_right").style.display="block"}function ChangImg(){G("upimg").src="{dede:global.cfg_templets_skin/}/baidu/up2.png"}function ReturnImg(){G("upimg").src="{dede:global.cfg_templets_skin/}/baidu/up1.png"}function gotourl(A){login.verlogin(function(){location.href="/lec/new"});baidu.preventDefault(A)}baidu.on("banner_link2","click",function(){log.send("lec","teacherinfo",{fr:"index"});login.verlogin(function(){location.href="/lec/teacher?act=mod"})});function callback(){var B=Math.ceil(carousel.totalCount/carousel.pageSize),A=Math.ceil((carousel.scrollIndex+1)/carousel.pageSize),D=baidu.g("preButton"),C=baidu.g("nextButton");if(A<=1){baidu.dom.setAttr(D,"class","pre_off")}else{baidu.dom.setAttr(D,"class","pre_on")}if(A>=B){baidu.dom.setAttr(C,"class","next_off")}else{baidu.dom.setAttr(C,"class","next_on")}}var slideInner=baidu.dom.children(baidu.g("slideElement")),str=[];for(i=0;i<slideInner.length;i++){str.push({content:slideInner[i].innerHTML})}var carousel=baidu.ui.carousel.create({target:baidu.g("slideWraper"),pageSize:5,showButton:false,contentText:str,onafterscroll:callback});carousel.scrollTo(0);function ChangeImg(A){A.className="indeximg1"}function RemoveImg(A){A.className="indeximg"}var hotlist=baidu.Q("hotlec","slideWraper","a");baidu.each(hotlist,function(B,A){baidu.on(B,"click",function(){log.send("lec","hotdoc")})});function gotosearch(){if(baidu.string.trim(baidu.g("search_keyword").value)==""){pop.show("提示",{url:"/static/html/lec_emptySearchQuery.html?form=lec_search&dc="+baidu.g("lec_lv3").value+"&lv="+baidu.g("lec_class").value+"&od=0",width:440,height:270})}else{var D=document.createElement("form"),E=document.createElement("input"),C=document.createElement("input"),A=document.createElement("input"),B=document.createElement("input");D.id="wk-lec-searchform";D.name="wk-lec-searchform";D.action="/lec/search";E.name="word";E.type=C.type=A.type=B.type="hidden";E.value=baidu.g("search_keyword").value;document.body.appendChild(D);C.name="dc";C.value=baidu.g("lec_lv3").value;A.name="lv";A.value=baidu.g("lec_class").value;B.name="od";B.value="0";D.appendChild(E);D.appendChild(C);D.appendChild(A);D.appendChild(B);document.forms["wk-lec-searchform"].submit()}}var _tmpsubname="kj_search_text text108 subject_click";var _tmpclassnameon="kj_search_text text108 kj_subject";var _tmpclassnameoff="kj_search_text text108 kj_subclass";var _cln="lv2_on";var _ccln="lv2_off";var _ecln="";var _lecclassmove="kj_search_text text108 ";</SCRIPT>
+
+</BODY></HTML>

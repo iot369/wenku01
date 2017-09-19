@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div class="postForm">
+          <h3 class="meTitle">购买新点卡:</h3>
+          <form name="f1" action="buy_action.php" method="post">
+            <input type="hidden" name="product" value="card" />
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list">
+              <tr style='height:28px;background:#F9FEE9;'>
+                <th width="10%">选择</th>
+                <th >点卡类型</th>
+                <th width="15%">金币数量</th>
+                <th width="15%">购买价格</th>
+              </tr>
+              <tbody>
+                <?php echo $moneycards;?>
+              </tbody>
+            </table>
+            <div align="left"><button class="pn pnc" type="submit"><STRONG>购 买</STRONG></button> </div>
+           
+          </form>
+        </div>
+		<div class="postForm">
+        <h3 class="meTitle">会员升级</h3>
+            <form name="f1" action="buy_action.php" method="post">
+              <input type="hidden" name="product" value="member" />
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list">
+                <thead>
+                <tr>
+                    <th colspan='5' style='text-align:left;padding-left:10px;height:24px;line-height:24px;'>会员升级:</th>
+                 </tr>
+                </thead>
+                <tr style='height:28px;background:#F9FEE9;'>
+                    <th width="10%">选择</th>
+                    <th >产品名称</th>
+                    <th width="12%">会员类型</th>
+                    <th width="12%">时限(天)</th>
+                    <th width="10%">价格</th>
+                 </tr>
+                <tbody>
+                  <?php echo $membertypes?>
+                </tbody>
+              </table>
+              <button class="pn pnc" type="submit"><strong>购买</strong></button>
+            </form>
+          </div>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

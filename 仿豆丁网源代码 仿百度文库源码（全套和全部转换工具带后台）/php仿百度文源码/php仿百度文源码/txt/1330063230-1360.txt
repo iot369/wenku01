@@ -1,0 +1,294 @@
+EPJ Web of Conferences , 0 001 (2011) DOI: 10.1051/epjconf/2011170 001 © Owned by the authors, published by EDP Sciences, 2011
+
+Recent Results on Fusion and Direct Reactions with Weakly Bound Stable Nuclei
+A. Shrivastava1,a Nuclear Physics Division, Bhabha Atomic Research Centre, Mumbai 400085, India
+
+Abstract. Recent measurements of fusion and direct reactions in case of weakly bound stable nuclei at extreme sub-barrier energies using a sensitive oﬀ beam technique are presented. Deviation in slope of the fusion excitation function, as observed in case of medium heavy systems, is absent in the present asymmetric systems at these low energies. These results along with the study of capture reaction of the breakup fragments using particle- gamma coincidences is presented, thereby giving the current status of the ﬁeld.
+
+1 Introduction
+Nuclear reactions at energies near the Coulomb barrier display strong inter connectivity among various reaction channels. In heavy ion fusion studies with stable nuclei, the important observations made in the last few decades are the discovery of sub-barrier fusion enhancement and their theoretical description in terms of the couplings to the intrinsic excitations and nucleon transfer of the participating nuclei. Excellent reviews are given by [1]. Recently observed phenomenon of hindrance in fusion reactions in mediumheavy systems at deep sub barrier energies [2] along with availability of low energy radio active ion beams have revived the ﬁeld of fusion reaction and interest in measurements with weakly bound stable nuclei. The presence of low-lying continuum, short-lived resonance states and low nucleon(s) separation energies in case of weakly bound nuclei, led to the expectation that breakup of the projectile would be a dominant channel to inﬂuence the reaction dynamics. Experiments with weakly bound stable nuclei incident on heavy target nuclei have demonstrated that the above-barrier fusion cross-sections are suppressed compared to the expectations for well-bound nuclei [3]. In case of elastic scattering, optical model analysis shows presence of repulsive component in the real part of the potential at near barrier energies [3]. Study of projectile breakup vs transfer followed by breakup [4–6], breakup fusion mechanism [7–9] and phenomenon of fusion hindrance [2,10] are the topics of current interest with weakly bound nuclei. In this presentation, measurement of fusion cross-section and direct reactions in case of weakly bound stable nuclei using a new sensitive oﬀ beam technique will be discussed. First section deals with deep sub-barrier fusion cross-section measurement for 6,7 Li + 198 Pt followed by the study of fragment capture reaction in case of 7 Li + 198 Pt.
+a
+
+2 Exploring fusion at deep sub barrier with weakly bound nuclei
+Measurements with medium-heavy nuclei highlighted phenomenon of fusion hindrance, observed as a steep change of slope in fusion excitation function and its logarithmic derivative (L(E)) with respect to the coupled channels calculation at deep sub-barrier energies [2]. With the help of a simple and clear picture Dasso and Pollarolo [11] pointed out that the cross-sections at deep sub-barrier energies depend on the shape of the inner part of the inter nuclear potential and could be used as an unique tool to obtain the value of the nuclear potential at small distances (see also [12]). At present there are two successful models that explain a wide range of fusion cross-section data at these low energies. The model proposed by Misicu and Esbensen is ¸ based on the sudden approximation, [13] where a repulsive core is included to take into account the nuclear compressibility arising due to Pauli exclusion principle which modiﬁes the depth and the shape of the minima of the internuclear potential at small distances. Based on an adiabatic picture, a dynamical two-step model via neck formation is proposed by Ichikawa et al. to explain the deep sub-barrier fusion data [14]. Unlike the sharp change in slope of L(E) as observed in symmetric medium-heavy systems, for asymmetric system a saturation in the slope of L(E) was observed that was still higher than the values from the coupled channels calculation at the deep sub-barrier [15]. Very recent measurements with medium-light systems showed unsystematic trend in fusion cross-section in nearby systems at these energies [16,17]. This unexpected observation together with astrophysical interest shows importance of accurate measurements of fusion cross section at energies deep below the barrier with diﬀerent entrance channels to understand the phenomenon of fusion hindrance. The fusion of weakly bound nuclei, which is a subject of current interest, has recently been investigated at energies far below the barrier for the weakly bound projectile 6 Li (Sα/t
+
+e-mail: aradhana@barc.gov.in
+
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-Noncommercial License 3.0, which permits unrestricted use, distribution, and reproduction in any noncommercial medium, provided the original work is properly cited.
+Article available at http://www.epj-conferences.org or http://dx.doi.org/10.1051/epjconf/20111703001
+
+EPJ Web of Conferences = 1.45 MeV) on 198 Pt [10]. This system incidentally also has a positive Q-value (8.5 MeV). A new sensitive oﬀbeam-γ-spectroscopy method to obtain the cross-section of residues from fusion, utilizing a coincidence between characteristic KX-rays and γ-rays from the daughter nuclei, was used [18]. Cross-sections down to a few nano-barns could be measured. Fig. 1 shows fusion cross-sections for 6 Li+198 Pt. The sum of individual cross-sections for residues formed after d-capture (198−200 Au) are also plotted in Fig. 1. The average angular momenta ( l ) derived from the fusion excitation function as suggested in Refs.[19,20] are plotted in Fig. 2(a) along with the logarithmic derivative of the fusion cross-section (L(E) = d[ln(σE)]/dE). Calculations performed using the coupled-channels (CC) code CCFULL [21] with a standard Woods-Saxon potential (WS) reproduced well both the experimental slope L(E) and the l values over the entire range of energy. Thus for 6 Li + 198 Pt, the CC calculations successfully explain the fusion excitation function along with the average angular momentum, consistently implying absence of the fusion hindrance at deep sub-barrier energies. These measurements that extend down to Ecm = 19.8 MeV, were well below the threshold energy for observing the fusion hindrance computed from both the approaches (sudden model and adiabatic model) [10]. Single-channel calculations using the above M3Y potential with a repulsive core were also performed as suggested in Ref.[13]. A shallow potential obtained using the M3Y interaction with a repulsive core successfully describe the fusion cross-sections at deep sub-barrier energies for symmetric, asymmetric and positive reaction Q-valued systems [13,16,22,23]. But for the present system with a weakly bound projectile this potential does not reproduce the trend of the fusion excitation function, L(E) and < l >. It was suggested from the results that the inner part of the interaction potential becomes deeper, going from symmetric to weakly bound asymmetric system, implying reduced contribution of the repulsive core. The actual form of the repulsive core is expected to depend also on the extent of the adiabatic nature of the collision [13]. It is of interest to see whether absence of fusion hindrance in this system arises from the eﬀect of weakly bound cluster structure, transition from the sudden to the adiabatic potential or it is a property of the very asymmetric systems. In order to investigate this, fusion cross-section measurements with 7 Li+198 Pt and 12 C+198 Pt have been carried out. We present results from measurements of 7 Li+198 Pt. Measurement of the excitation function of residues resulting from fusion and direct reactions were performed for 7 Li+198 Pt using oﬀ-beam γ-ray counting method. On-line γ-ray measurement were required to detect residues from α-capture. For the oﬄine measurement, beams of 7 Li (535 pnA) from Pelletron Linac Facility-Mumbai were bombarded on a 198 Pt target in the range of 22 to 45 MeV. The targets were self supporting rolled foils of 198 Pt (95.7% enriched, ∼ 1.3 mg/cm2 thick) followed by an Al catcher foil of thickness ∼ 1 mg/cm2. Two eﬃciency calibrated HPGe detectors with a Be window were used for oﬄine γray counting. The measurements were performed in a low background setup with a graded shielding. The residues in
+
+10 10
+
+3
+
+6
+
+Li +
+
+198
+
+Pt
+
+2 1
+
+10
+σfus(mb)
+
+10 10 10
+
+0
+
+-1
+
+-2 -3
+
+10 10
+
+-4 -5
+
+fusion d-capture coupled no coupling M3Y+rep core
+
+10
+
+20
+
+30 25 Ecm(MeV)
+
+35
+
+Fig. 1. (color on line) Cross-sections for compound-nuclear fusion and d-capture. The arrow indicates value of the Coulomb barrier (VB ). The results of the coupled-channels calculations using the WS potential (solid line) along with single channel calculations using the WS potential (dashed line) and the M3Y potential with a repulsive core (dot-dashed lines) are shown (see the text).
+6 198 15.0 (a) Li + Pt
+
+expt
+
+<l>
+
+10.0 5.0 0.0
+L(E) (MeV )
+(b)
+
+3 2 1 0 20 25 30 35
+
+-1
+
+Ecm(MeV)
+Fig. 2. (color on line) For 6 Li + 198 Pt (a) Average angular momentum and (b) Logarithmic derivative of the fusion excitation function. The results of the coupled-channels calculations using the WS potential (solid line) along with single channel calculations using the WS potential (dashed line) and the M3Y potential with a repulsive core (dot-dashed lines) are shown in panels (a)(b) (see text).
+
+03001-p.2
+
+FUSION11
+10
+4 3
+
+10 10
+
+(a) 7Li + 198Pt
+
+2 1
+7
+
+10 10 10
+
+0
+
+-1
+VB 7 198
+
+Li CN fus t-capture α capture no coupling coupled
+
+10 3 10
+
+-2
+
+σ(mb)
+
+10
+
+2 1
+
+(b) Li +
+
+Pt
+t-capture +1n -1n +2n
+
+10 10 10
+
+0
+
+-1
+
+(c)
+
+6,7
+
+σ(mb)
+
+10
+
+2 1
+
+Li +
+
+198
+
+Pt
+6
+
+10 10
+
+7
+
+Li (d-capture) Li (t-capture)
+
+0
+
+20
+
+25
+
+30
+
+35
+
+40
+
+45
+
+Ecm(MeV)
+Fig. 3. (color on line) (a) Cross-sections for compound-nuclear fusion and t-capture (198−200 Au) for 7 Li + 198 Pt. The arrow indicates value of the Coulomb barrier (VB ). The results of the coupled-channels calculations (solid line) along with single channel calculations (dashed line) are shown. (b) Comparison of cross-sections from t-capture(198−200 Au) , 1n-pickup (197 Pt) and 1n,2n-stripping (199,200 Pt) reactions. (c) Comparison of d-capture and t-capture processes with 6 Li and 7 Li projectile on 198 Pt. The dashed lines in panels (b) and (c) are to guide the eye.
+
+the case of fusion (199−202 Tl) were identiﬁed by performing KX-γ-ray coincidence of the decay radiations from the irradiated sample with detectors placed face to face. Further details of the coincidence method can be found in Ref. [18]. Fusion excitation function for this system is plotted in Fig. 3(a). The γ-ray yields for residues formed after t-capture (198−200 Au) and neutron transfer reactions (197,199,200 Pt) were extracted from inclusive γ-ray measurements. The total t-capture cross-section (sum of individual residue cross-sections) is shown in Fig. 3 along with 1n, 2n pick up and 1n stripping cross-sections. The error on the data points in Fig. 1 is due to the statistics. The crosssections for the t-capture are much larger than those for fusion at deep sub-barrier energies and those for the neutron transfer at all energies. Similar behavior was observed for 6 Li+198 Pt [10] and for 6 Li+nat Pt[24]. The cross-section for α-capture forming 202∗ Hg could not be measured as the resulting residues are stable (except 199m Hg). These crosssections were deduced from the measurement of online prompt gamma transition using four eﬃciency calibrated and Compton suppressed clover detectors placed at 14.3 cm from the target position at beam energies of 29 and
+
+45 MeV. The clover detectors were kept at angles of -55◦ , 35◦ , 80◦ , and 155◦ . Cross-section for the α-capture was obtained by adding yields of 199 Hg and 200 Hg extracted from the γ-γ coincidence matrix. The coincidence condition reduced the overall background especially due to the same γ-ray transitions arising from the nuclei that are radioactive and get populated via diﬀerent channels. The coincidence yield between yrast γ-ray transitions of the cascade (Eg. 368 and 579 keV in 200 Hg) was obtained by selecting the 2+ to 0+ transition in the clover placed at 55◦ and the next γ-ray transition of the cascade in any of the remaining three clovers. The yield was corrected for the angular correlation between the two E2 transitions and the detector eﬃciency. The cross-sections so obtained are plotted in Fig. 3(a). The error on the cross-section includes statistics, ﬁtting the angular correlation and eﬃciency. Cross-section for population of isomeric state of 199 Hg obtained from the oﬄine and online method matched well within the errors. The cross-sections for alpha capture are smaller than those for triton capture at both energies (29 and 45 MeV). This can be understood in terms of breakup fusion picture where interaction barrier between α and target is larger than that for triton after breakup of the 7 Li projectile. A comparison between fragment-capture cross-sections was made between 6 Li + 198 Pt and 7 Li + 198 Pt . Larger cross-section of d -capture with 6 Li compared to t-capture with 7 Li projectile as shown in Fig. 3(c), could be a consequence of the lower breakup threshold of 6 Li. Calculations using the coupled-channels (CC) code CCFULL [21] were performed with the ingoing-wave-boundary condition using a standard Woods-Saxon potential (WS) (V0 =110 MeV, r0 =1.1 fm and a=0.63 fm). The calculations included the quadrupole excitation in 198 Pt, considering coupling in the vibrational model. For 7 Li the ﬁrst excited state was coupled in rotational mode. The results of the calculation with and without the inclusion of the couplings are shown in Fig. 3(a). At energies above the barrier the calculations overestimate the data, as expected from earlier studies involving weakly bound nuclei [25]. As can be seen in the ﬁgure, the CC calculations reproduce the data for energies around and well below the barrier. Fusion hindrance has not been observed in this system in the measured energy range with cross-section at the lowest energy ≈ 2 µb. The threshold energy (VT ) for observing fusion hindrance is ∼ 1-2 MeV below the lowest beam energy in the present measurement. Experiment is planned to extend the fusion cross-section data down to energies below this value.
+
+σ(mb)
+
+3 Fragment capture reaction in 7 Li + 198 Pt
+The process of breakup/incomplete fusion where one of the fragments after breakup of the projectile is captured by the target, has been found to be more dominant over one step transfer in case of 6 Li(7 Li) for deuteron (triton) capture [7–9]. In case of well bound projectile such processes occur only at high energies (≈ 10 MeV/A or more) while for weakly bound nuclei this is the most dominant channel at energies much below the barrier as can be seen in
+
+03001-p.3
+
+EPJ Web of Conferences
+6.00
+
+4.50 ∆ E (MeV)
+
+8Li
+
+151
+
+3.00
+
+6Li
+
+6He
+
+1.50
+4He
+
+200
+
+400
+
+416 470
+
+493 543 596Ge (n,n’)
+
+77
+
+7Li
+
+1800 1600 1400 1200 1000 800 600 400 200 0
+
+215
+
+4
+
+He-gate
+198
+
+180
+
+Au Au Pt
+
+counts/(0.5keV)
+
+199
+
+200
+
+97
+
+199
+
+Pt
+
+287292 317 333
+
+204
+
+600
+
+800
+
+1000
+
+t 0.00 0.0 p 12.5 d 25.0 E (MeV) 37.5 50.0
+
+Fig. 6. (color on line) Prompt γ-ray spectra for Elab =45 MeV obtained in coincidence with outgoing fragment 4 He. The γ-ray transitions originating from the residues from capture of t are marked. The γ-ray arising from 1n and 2n-transfer (199,200 Pt) are also labeled.
+
+Fig. 4. (color on line) Particle identiﬁcation plot of energy loss vs total energy obtained in the telescope placed at θlab = 50◦ for beam energy of 45 MeV. The diﬀerent reaction products are labeled.
+368
+
+700 600 counts/(0.5 keV)
+
+t-gate
+579
+200
+
+500 400
+181 256
+
+Hg Hg Hg
+
+∗ 760
+
+199g
+
+199m
+
+291
+
+300 200 100 0
+
+∗
+
+200
+
+400 600 Eγ(keV)
+
+800
+
+1000
+
+Fig. 5. (color on line) Prompt γ-ray spectra for Elab = 45 MeV obtained in coincidence with outgoing fragments t. The γ-ray transitions originating from the residues from capture of 4 He are labeled.
+
+Figs.1,3. The theoretical description of incomplete fusion for weakly bound nuclei has been incorporated in the three dimensional classical trajectory model [26]. This model has been recently modiﬁed to give the time evolution of incomplete fusion products and a quantitative description of ﬁnal products is possible. The present work is aimed to study the capture reaction for the weakly bound clusters, α and t, of 7 Li using particle-gamma coincidence method. The experiment was performed at 7 Li beam energy of 45 MeV, incident on a 1.3 mg/cm2 thick foil of 198 Pt. Four telescopes (∆E∼25-30µm and E∼1mm) at 50◦ , 60◦ , 120◦ and 130◦ (covering the region near and away from the grazing angle) were used to measure the charged particles produced. Four eﬃciency calibrated and Compton suppressed clover detectors, to record the coincident γ-rays, were placed
+
+at 14.3 cm from the target position at angles of -55◦ , 35◦ , 80◦ , and 155◦ . A fast coincidence between any charged particle detected in the ∆E and γ-rays in any clover detector or a twofold γ-ray coincidence between clover detectors was used as an event trigger. The individual clovers were operated in add-back mode. A typical particle identiﬁcation spectrum for the telescope at forward angle (50◦ ) is shown in Fig. 4. Plotted in Fig. 5,6 is the add-back γ-ray spectra from the clover detectors generated by selecting outgoing particles detected in telescopes near the grazing angle (50◦ and 60◦ ) at the beam energy of 45 MeV. The reaction products arising from diﬀerent channels could be identiﬁed by their characteristic γ-ray transitions. Condition for true coincidence events was obtained using time to amplitude converter spectra between the particle and the γ-ray. By selecting t, γtransitions from residues (199,200 Hg) formed after α-capture are seen, and are labeled in Fig. 5. The high-spin states up to 12− and 14+ respectively for negative and positive parity yrast-levels in 200 Hg are observed as reported in Ref. [27] for α+198 Pt. The γ-transitions populating the isomeric state (13/2+, T1/2 ∼ 42.8 min) in 199 Hg have relative intensities of γ-rays similar to the spectra observed with α beam on 198 Pt [28]. Gamma spectrum observed with proton gate shows indication of 6 He capture. In Fig. 6, contribution from diﬀerent reaction channels can be seen with the α-gate. The major part of the spectrum is due to residues from t-capture (198,199 Au). In case of 198 Au, the observed γ-ray transitions from the levels below the isomeric state at 12− [29] are labeled. Relatively smaller yield of γ-rays from 198,199 Au was observed due to one proton transfer reaction obtained by selecting 6 He. Both 198 Au and 199 Au have isomeric states that result in overall loss of the measured yield. The γ-peaks due to 1n and 2n-transfer, arising from 199 Pt, 200 Pt are also present in the γ-ray spectrum with the α-gate (Fig. 3(c)). The photo peaks of residues from proton pick-up channel could not be detected due to presence of isomeric states in 197 Ir. For this nucleus, transitions reported in literature below these states could not be seen and information on tran-
+
+342 378 387 397
+
+498 533 574 600
+
+111 158 173
+
+749
+
+904
+
+03001-p.4
+
+

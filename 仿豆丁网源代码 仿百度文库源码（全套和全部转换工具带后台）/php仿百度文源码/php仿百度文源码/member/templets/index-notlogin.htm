@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xn="http://www.renren.com/2009/xnml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员登录 -<?php echo $cfg_webname; ?></title>
+<link href="templets/style/common.css" rel="stylesheet" type="text/css" />
+<link href="templets/style/login_new.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<form name="form1" method="post" action="index_do.php">
+  <div id="loginbox">
+    <div id="loginform">
+      <div id="logintheme"></div>
+      <div id="login">
+        <input type="hidden" name="fmdo" value="login">
+        <input type="hidden" name="dopost" value="login">
+        <input type="hidden" name="gourl" value="content_list.php?channelid=17">
+        <p><span >用户名：</span>
+          <input name="userid" type="text" class="logininput"/>
+        </p>
+        <p><span>密&nbsp;&nbsp;码：</span>
+          <input name="pwd" type="password" class="logininput"/>
+        </p>
+        <p><span>验证码：</span>
+          <input name="vdcode" type="text" id="vdcode" class="loginpin"/>
+          <img id="vdimgck" src="../include/vdimgck.php" alt="看不清？点击更换" align="absmiddle" style="cursor:pointer" onClick="this.src=this.src+'?'" /></p>
+        <p>
+          <input type="submit" name="sm1" value="登  录" class="loginbutton"/><span><a href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=user&dopost=regnew" target="_blank" title="" tabIndex="10">立即注册</a></b></span>
+        </p>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>

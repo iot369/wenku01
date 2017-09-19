@@ -1,0 +1,456 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>lhgdialog - samples</title>
+	<style type="text/css">
+.contain{padding:10px 50px;}
+.contain h2{font-size:18px;color:#1E9300;padding-top:8px;margin-bottom:8px;cursor:pointer;}
+.contain h3{margin-top:8px;margin-bottom:8px;FONT:bold 14px 宋体,tahoma,arial,sans-serif;COLOR:#0033CC;}
+.contain span{ color: #00f; }
+.contain b{ color: #f00; }
+.contain div{ line-height: 150%; }
+.contain .code{border:1px solid #ccc;background-color:#f7f7f7;padding:3px 5px;}
+.contain table{font-weight:normal;}
+.contain .content table td{padding:3px;background-color:#fff;}
+.contain th{text-align:center;padding:3px;background-color:#ccc;}
+.contain #headerMain{ font:12px Verdana, Arial, sans-serif; border-bottom:1px dotted #00f; height:20px; }
+	</style>
+	<link type="text/css" href="lhgdialog.css" rel="stylesheet"/>
+	<script type="text/javascript" src="lhgcore.min.js"></script>
+	<script type="text/javascript" src="lhgdialog.js"></script>
+	<script type="text/javascript">
+J(function(){
+    J('#a').dialog({ title: '示例', cover: true, rang: true, resize: false, html: '<p>lhgdialog</p>' });
+	J('#b').dialog({ id: 'd1', title: '外部链接', page: 'http://www.baidu.com', link: true, btns: false, width: 700, height: 500 });
+	J('#c').dialog({ id: 'd2', title: '内部链接', page: '_content/01.html' });
+	J('#d').dialog({ id: 'd3', title: '随屏滚动', html: '<p align="center">lhgdialog</p>', fixed:true, top:'bottom', left:'right', width: 200, height: 100, btns: false });
+	J('#e').dialog({ id: 'd4', page: '_content/02.html' });
+	J('#f').dialog({ id: 'd5', page: '_content/03.html', cover: true });
+	J('#g').dialog({ id: 'd6', page: '_content/04.html' });
+	
+	var resize = function()
+	{
+	    J('#inp',dialog.dlg).click(function(){
+	        dialog.reDialogSize( 300, 200 );
+	    });
+	};
+	var dialog = J('#h').dialog({ id: 'd7', html: '<input id="inp" type="button" value="改变窗口大小"/>', cusfn: resize });
+	
+	var dialog1 = J('#i').dialog({
+	    id: 'd8',
+		html: '<p>lhgdialog</p>',
+		cusfn: function()
+		{
+		    J('#xbtn',dialog1.dlg).click(function(){
+			    alert( '此按钮的函数已被改变，不再关闭窗口了！' );
+			});
+			dialog1.addBtn( 'cancel', '取消', dialog1.cancel );
+		}
+	});
+	
+	ShowIt();
+});
+
+function ShowIt()
+{
+	var h2 = J('h2');
+	for( var i = 0, l = h2.length; i < l; i++ )
+	{
+	    h2[i].cusIndex = i;
+		J(h2[i]).bind( 'click', function(){
+		    setTabs( this.cusIndex );
+		});
+	}
+}
+
+function setTabs(n)
+{
+    var tab = J('.content');
+	for( var i = 0, l = tab.length; i < l; i++ )
+		tab[i].style.display = (i == n) ? '' : 'none';
+}
+	</script>
+</head>
+
+<body>
+	<div class="contain">
+	<div id="headerMain"><strong>lhgcore Dialog Plugin v3.1.3 API说明文档</strong> <span style="color:#f00;font-size:11px;">Copyright lhgcore (c) 2010 All Rights Reserved</span></div>
+	<h2>一、简介</h2>
+	<div class="content">
+		<h3>1. 版本信息 </h3>
+		<div>目前的版本是 3.1.3 发布于2010-06-12</div>
+		<h3>2. 注意事项 </h3>
+		<ul style="margin:0">
+		    <li>lhgdialog目录是一个整体,不可破坏里面的目录结构,也不可对里面的文件改名,可以改目录名</li>
+			<li>lhgcore.min.js文件为插件所用的库文件，此文件可放在其它任意目录里</li>
+			<li>各目录及文件的用途：<br/>
+			    <span>lhgcore.min.js</span>：插件所用的库文件，此库的使用方法与jQuery差不多，可以说是个简化的jQuery，你可以在其它地方象使用jQuery一样使用它<br/>
+				<span>lhgdialog.js</span>：插件的核心文件，使用插件时要引入此文件，<b>此文件是经过压缩的</b><br/>
+				<span>lhgdialog.css</span>：插件的样式表文件，<b>此文件无需引入</b>，插件会自动加载此文件<br/>
+				<span>目录images</span>：窗口插件所使用的图片的文件夹<br/>
+				<span>index.html</span>：示例说明文件，使用中不需要此文件，<b>可删除</b><br/>
+				<span>_lhgdialog.js</span>：插件的核心文件lhgdialog.js的未压缩的源文件，供大家学习使用的，<b>此文件是未经过压缩的，可删除</b><br/>
+				<span>目录_content</span>：内容页示例文件夹，示例中所需的内容页示例文件都在此文件夹中，使用中不需要此文件夹，<b>可删除</b><br/>
+				<span>目录_skins</span>：插件的的皮肤文件目录，插件共提供了5种皮肤，皮肤的使用方法请参考下面的<b>皮肤制作安装使用说明</b>
+			</li>
+		</ul>
+		<h3>3. 支持的浏览器 </h3>
+		<div>IE 6.0+ , Firefox 2.0+ , Chrome, Opera 9.5+ , Safari 3.0+</div>
+	</div>
+	<h2>二、如何使用</h2>
+	<div class="content" style="display:none">
+	    <h3>1. 引入插件的样式表文件 </h3>
+		<div>使用lhgdialog弹出窗口插件要在<b>最顶层</b>的页面中引入<b>lhgdialog.css</b>，示例代码：<br/>
+		    <div class="code">
+			    &lt;head&gt;<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;link type="text/css" href="lhgdialog.css" rel="stylesheet"/&gt;</b><br/>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;lhgcore.min.js&quot;&gt;&lt;/script&gt;<br/>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;lhgdialog.js&quot;&gt;&lt;/script&gt;<br/>
+			    &lt;/head&gt;
+			</div>
+		</div>
+		<div><b>注</b>：最顶层页面就是指：如果你使的插件要跨框架，窗口就会创建在整个框架的最顶层页面，所以lhgdialog.css样式表文件也要写在你整个框架的最顶层页面上</div>
+		<h3>2. 插件所需文件的引入 </h3>
+		<div>使用lhgdialog弹出窗口插件要在你使用此插件的页面中引入<b>lhgcore.min.js</b>和<b>lhgdialog.js</b>，示例代码：<br/>
+		    <div class="code">
+			    &lt;head&gt;<br/>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;lhgcore.min.js&quot;&gt;&lt;/script&gt;<br/>
+			    &nbsp;&nbsp;&nbsp;&nbsp;&lt;script type=&quot;text/javascript&quot; src=&quot;lhgdialog.js&quot;&gt;&lt;/script&gt;<br/>
+			    &lt;/head&gt;
+			</div>
+		</div>
+		<div><b>注</b>：lhgcore.min.js一定要在lhgdialog.js前引入</div>
+		<h3>3. 插件的调用函数说明 </h3>
+		<div>插件的调用函数有2种调用方法，分别用在不同的使用环境中<br/>
+		    <b>第一种为jQ方式调用方法，这种方法主要用在页面中只有一个或少数几个调用插件时，或不需要传参数时，形式如下：</b>
+		    <div class="code">
+			    J(function(){<br/>
+				{<br/>
+			    &nbsp;&nbsp;&nbsp;&nbsp;J('#test').dialog({<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title:'lhgdialog',<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:400,<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:300,<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cover:true,<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;page:'samples.html'<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+			    }
+			</div>
+		</div>
+		<div>
+		    <b>第二种为普通函数式调用方法，这种方法主要用在页面中多个地方调用插件时，或需要传参数时，形式如下：</b>
+		    <div class="code">
+			    function opdlg( args )<br/>
+				{<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;var dlg = <b>new J.ui.dialog({ id: 'd1' .... });<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;dlg.ShowDialog();</b><br/>
+				}
+			</div>
+		</div>
+		<h3>4. 关于在frameset框架集中的使用 </h3>
+		<div>
+		在html中没有任何元素可以浮动在 frameset框架之上的，如果你想要弹窗浮动在 frameset之上， 你必须在 frameset 页面外层在加上 iframe 框架，<br/>
+		然后把frameset页面嵌入到这个iframe里就可以了，这也是目前所有解决 div层浮动在 frameset之上的可行方法。示例代码：<br/>
+		比如你的frameset页为<b>frame.html</b>，代码为：
+		    <div class="code">&lt;frameset rows=&quot;80,*&quot; frameborder=&quot;no&quot; border=&quot;0&quot; framespacing=&quot;0&quot;&gt;<br />
+&lt;frame src=&quot;about:blank&quot; name=&quot;topFrame&quot; scrolling=&quot;No&quot; noresize=&quot;noresize&quot; id=&quot;topFrame&quot; title=&quot;topFrame&quot; /&gt;<br />
+&lt;frame src=&quot;dialog.html&quot; name=&quot;mainFrame&quot; id=&quot;mainFrame&quot; title=&quot;mainFrame&quot; /&gt;<br />
+&lt;/frameset&gt;<br />
+		    </div>
+		</div>
+		<div>其中的dialog.html就为弹窗加载的页面。<span>这时我们就需要再新建一个index.html文件</span>，里面代码为：
+		    <div class="code">
+			    &lt;body&gt;<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe frameborder=&quot;0&quot; style=&quot;width:100%;height:100%&quot; src=&quot;<b>frame.html</b>&quot;&gt;&lt;/iframe&gt; <b style="color:#060"><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;//这里的frame.html就为你的frameset页面</b><br />
+                &lt;/body&gt;
+            </div>
+		</div>
+	</div>
+	<h2>三、内置函数和属性</h2>
+	<div class="content" style="display:none">
+	    <h3>1. 主调函数参数 </h3>
+		说明：J('#id').dialog({ <b>参数</b> })或var d = new J.ui.dialog({ <b>参数</b> })，形式为json形式，键/值 对，所有参数如下：
+		<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000">
+			<tr>
+				<th width="10%">参数名</th>
+				<th width="10%">类型</th>
+				<th width="25%">值形式</th>
+				<th width="55%">描述</th>
+			</tr>
+			<tr>
+				<td align="center"><span>id</span></td>
+				<td align="center">文本</td>
+				<td>lhgdlgId（默认值）</td>
+				<td>创建的弹出窗口的id，如果你的页面只弹出一个窗口的话，这个<b>可以不写</b>。如果一个页面有多个弹出窗口，那这个属性就<b>一定要写</b>，而且不能重复。</td>
+			</tr>
+			<tr>
+				<td align="center"><span>title</span></td>
+				<td align="center">文本</td>
+				<td>lhgdialog（默认值）</td>
+				<td>窗口标题</td>
+			</tr>
+			<tr>
+				<td align="center"><span>width</span></td>
+				<td align="center">数值</td>
+				<td>400（默认值）</td>
+				<td>窗口内容区的宽度</td>
+			</tr>
+			<tr>
+				<td align="center"><span>height</span></td>
+				<td align="center">数值</td>
+				<td>300（默认值）</td>
+				<td>窗口内容区的高度</td>
+			</tr>
+			<tr>
+				<td align="center"><span>html</span></td>
+				<td align="center">文本</td>
+				<td>html代码</td>
+				<td>窗口的内容页为HTML代码，可以是HTML代码或DOM对象</td>
+			</tr>
+			<tr>
+				<td align="center"><span>page</span></td>
+				<td align="center">文本</td>
+				<td>_content/01.html（自定义内容页）<br/>http://www.xxx.com（外部链接）</td>
+				<td>窗口的内容页为一个单独的页面文件，<b>这个文件的路径是内容页面文件相对于调用窗口插件的路径或也可使用绝对路径。</b>如果此参数的值为不同域的外部链接，<b>那一定要使下面的link参数为真</b></td>
+			</tr>
+			<tr>
+				<td align="center"><span>link</span></td>
+				<td align="center">布尔</td>
+				<td>false（默认值）</td>
+				<td>是否为外部链接，如果是此参数一定要为真，不然程序会出错</td>
+			</tr>
+			<tr>
+				<td align="center"><span>cover</span></td>
+				<td align="center">布尔</td>
+				<td>false（默认值）</td>
+				<td>是否打开遮罩层</td>
+			</tr>
+			<tr>
+				<td align="center"><span>event</span></td>
+				<td align="center">文本</td>
+				<td>click（默认值）</td>
+				<td>触发打开窗口的事件类型</td>
+			</tr>
+			<tr>
+				<td align="center"><span>btns</span></td>
+				<td align="center">布尔</td>
+				<td>true（默认值）</td>
+				<td>是否显示窗口按钮栏</td>
+			</tr>
+			<tr>
+				<td align="center"><span>drag</span></td>
+				<td align="center">布尔</td>
+				<td>true（默认值）</td>
+				<td>是否允许拖动窗口</td>
+			</tr>
+			<tr>
+				<td align="center"><span>resize</span></td>
+				<td align="center">布尔</td>
+				<td>true（默认值）</td>
+				<td>是否允许拖动改变窗口大小</td>
+			</tr>
+			<tr>
+				<td align="center"><span>rang</span></td>
+				<td align="center">布尔</td>
+				<td>false（默认值）</td>
+				<td>是否在浏览器可视窗口内拖动</td>
+			</tr>
+			<tr>
+				<td align="center"><span>top</span></td>
+				<td align="center">数值（文本）</td>
+				<td>'top':窗口在浏览器可视区的最上面<br/>'center':窗口在浏览器可视区的中间(默认值)<br/>bottom:窗口在浏览器可视区的最下面<br/>数值:窗口在指定数值的位置</td>
+				<td>窗口在浏览器中的位置，此参数结合下面的left参数可在页面的的四个角进行定位</td>
+			</tr>
+			<tr>
+				<td align="center"><span>left</span></td>
+				<td align="center">数值（文本）</td>
+				<td>'left':窗口在浏览器可视区的最左面<br/>'center':窗口在浏览器可视区的中间(默认值)<br/>bottom:窗口在浏览器可视区的最右面<br/>数值:窗口在指定数值的位置</td>
+				<td>窗口在浏览器中的位置，此参数结合上面的top参数可在页面的的四个角进行定位</td>
+			</tr>
+			<tr>
+				<td align="center"><span>fixed</span></td>
+				<td align="center">布尔</td>
+				<td>false（默认值）</td>
+				<td>是否充许窗口随屏滚动定位</td>
+			</tr>
+			<tr>
+				<td align="center"><span>SetTopWindow</span></td>
+				<td align="center">对象</td>
+				<td>无</td>
+				<td>指定窗口弹出时的页面的window对象，如果是在框架中，你可以指定框架中的任意页面，如不指定则在框架的最顶层页面弹出</td>
+			</tr>
+			<tr>
+				<td align="center"><span>regDragWindow</span></td>
+				<td align="center">数组</td>
+				<td>无</td>
+				<td>注册拖动的页面的window对象数组，这个参数的作用就是拖动时如果滑过没注册的页面时会有停顿的感觉</td>
+			</tr>
+			<tr>
+				<td align="center"><span>parent</span></td>
+				<td align="center">对象</td>
+				<td>无</td>
+				<td>子窗口的父窗口对象，此参数只用在弹出的窗口中再弹出子窗口时指定父窗口对象，具体使用方法参照示例</td>
+			</tr>
+			<tr>
+				<td align="center"><span>cusfn</span></td>
+				<td align="center">函数</td>
+				<td>无</td>
+				<td>自定义函数，<b>注意：只有内容页参数为html时，此参数才可以使用</b>，而使用page参数时此参数不可用</td>
+			</tr>
+		</table>
+		<h3>2. 内置函数说明 </h3>
+		<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000">
+			<tr>
+				<th width="14%">函数名</th>
+				<th width="10%">返回值类型</th>
+				<th width="20%">参数</th>
+				<th width="56%">描述</th>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">cancel</td>
+				<td align="center">void</td>
+				<td>无</td>
+				<td>关闭窗口函数</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">reDialogSize</span></td>
+				<td align="center">void</td>
+				<td>width：窗口的宽度<br/>height：窗口的高度</td>
+				<td>重新指定窗口的大小</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">addBtn</span></td>
+				<td align="center">void</td>
+				<td>id：按钮的id<br/>txt：按钮的文本<br/>fn：按钮绑定的函数</td>
+				<td>创建新的按钮</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">removeBtn</span></td>
+				<td align="center">void</td>
+				<td>id：按钮的id</td>
+				<td>移除窗口中的按钮</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">reload</span></td>
+				<td align="center">void</td>
+				<td>win：指定要刷新或跳转的页面对象<br/>url：跳转的url地址</td>
+				<td>关闭窗口并刷新或跳转指定的页面</td>
+			</tr>
+		</table>
+		<h3>3. 内置对象说明 </h3>
+		<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#000000">
+			<tr>
+				<th width="14%">对象名</th>
+				<th width="10%">类型</th>
+				<th width="76%">描述</th>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">dlg</td>
+				<td align="center">dom</td>
+				<td>窗口元素DOM对象，可通过些对象对窗口和窗口内元素进行操作</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">top</td>
+				<td align="center">window</td>
+				<td>弹出窗口所在的顶层页面的window对象</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">win</td>
+				<td align="center">window</td>
+				<td>加载弹出窗口插件的页面的window对象</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">opt</td>
+				<td align="center">参数对象</td>
+				<td>窗口的参数设置对象，例如：<br/>var dialog = J('#id').dialog();<br/>dialog.opt.title = 'test';</td>
+			</tr>
+			<tr>
+				<td align="center"><span class="STYLE1">inwin</td>
+				<td align="center">window</td>
+				<td>如果内容页为一个文件时，此对象指的是内容页文件的window对象</td>
+			</tr>
+		</table>
+		<h3>4. 在内容页中使用的对象</h3>
+		<div>如果你的内容页不是单个的文件，也就是如果用的<b>html</b>参数就直接使用上面的函数和对象就行了，如果使用<b>page</b>参数，则要在内容页中使用 <b>frameElement.dg</b> 这个全局对象，代表弹出窗口的实例对象，使用方法请参照示例。</div>
+	</div>
+	<h2>四、功能示例</h2>
+	<div class="content" style="display:none">
+	    <h3>1. 常规功能</h3>
+		<div>
+		    <div class="code">
+			<input id="a" type="button" value="打开窗口"/><br/>
+			示例代码：<span>J('#a').dialog({ title: '示例', cover:true, rang: true, html: '&lt;p&gt;lhgdialog&lt;/p&gt;' });</span>
+			</div><br/>
+		    <div class="code">
+			<input id="b" type="button" value="打开窗口"/>&nbsp;外部链接<br/>
+			示例代码：<span>J('#b').dialog({ id: 'd1', title: '外部链接', page: 'http://www.google.com', <b>link: true</b>, btns: false, width: 700, height: 500 });</span>
+			</div><br/>
+		    <div class="code">
+			<input id="c" type="button" value="打开窗口"/>&nbsp;内部单独页面<br/>
+			示例代码：<span>J('#c').dialog({ id: 'd2', title: '内部链接', page: '_content/01.html' });</span>
+			</div><br/>
+		    <div class="code">
+			<input id="d" type="button" value="打开窗口"/>&nbsp;窗口随屏滚动，并在右下角<br/>
+			示例代码：<span>J('#d').dialog({ id: 'd2', title: '随屏滚动', page: '&lt;p&gt;lhgdialog&lt;/p&gt;', fixed:true, top:'bottom', left:'right', width: 200, height: 100, btns: false });<b>其它的代码请参照内容页里的代码</b></span>
+			</div>
+		</div>
+		<h3>2. 其它功能</h3>
+		<div>
+		    <div class="code">
+			<input id="e" type="button" value="打开窗口"/>&nbsp;调用页面与内容页间的传值&nbsp;&nbsp;<input id="txt1" size="40" type="text" value="lhgdialog"/>&nbsp;此输入框的值在窗口打开后传到内容页里<br/>
+			示例代码：<span>J('#e').dialog({ id: 'd3', page: '_content/02.html' }); <b>其它的代码请参照内容页里的代码</b></span>
+			</div><br/>
+		    <div class="code">
+			<input id="f" type="button" value="打开窗口"/>&nbsp;在弹出窗口中创建子窗口<br/>
+			示例代码：<span>J('#f').dialog({ id: 'd4', page: '_content/03.html', width: 400, height: 250, cover: true }); <b>其它的代码请参照内容页里的代码</b></span>
+			</div><br/>
+		    <div class="code">
+			<input id="g" type="button" value="打开窗口"/>&nbsp;关闭窗口并刷新或跳转调用页面<br/>
+			示例代码：<span>J('#g').dialog({ id: 'd5', page: '_content/04.html' }); <b>其它的代码请参照内容页里的代码</b></span>
+			</div><br/>
+		    <div class="code">
+			<input id="h" type="button" value="打开窗口"/>&nbsp;当内容页参数为html时使用自定义函数并控制窗口的大小<br/>
+			示例代码：<span>var dialog = J('#h').dialog({ id: 'd7', html: '&lt;input id="inp" type="button" value="改变窗口大小"/&gt;', cusfn: resize, width: 400, height: 250 }); <b>resize函数代码请看上面调用处的代码</b></span>
+			</div><br/>
+		    <div class="code">
+			<input id="i" type="button" value="打开窗口"/>&nbsp;当内容页参数为html时改变关闭按钮X的事件函数<br/>
+			示例代码：<span><br/>
+var dialog1 = J('#i').dialog({<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;id: 'd8',<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;html: '&lt;p&gt;lhgdialog&lt;/p&gt;',<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;cusfn: function()<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;J('#xbtn',dialog1.dlg).click(function(){<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert( '此按钮的函数已被改变，不再关闭窗口了！' );<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+});
+			</span>
+			</div>
+		</div>
+		<h3>3. 各种内容页间的传值</h3>
+		<div>
+		    <div class="code"><a href="_content/value.html" target="_blank">打开新窗口演示各种传值示例</a></div>
+		</div>
+	</div>
+	<h2>五、皮肤制作安装使用说明</h2>
+	<div class="content" style="display:none">
+	    <div>
+		    插件目录中的_skin目录是插件提供的几款皮肤，由于窗口动态换肤的情况很少，也为了减少插件的大小，所以并没有提供动态换肤的功能。插件中的lhgdialog.css和images目录是皮肤
+			所用到的2个文件，你要想换肤的话，只要把_skin目录里相应皮肤的目录里的lhgdialog.css文件和images目录复制到插件的目录，覆盖原来的文件就可以了。如果你想自己制作皮肤，那
+			你只需要相应修改lhgdialog.css文件和images目录里的图片就可以了。
+		</div>
+	</div>
+	<h2>六、 疑难解答</h2>
+	<div class="content" style="display:none">
+	    <div>
+		    请任何问题请先查看上面的 <b>说明部分</b><br/>
+			如果找不到答案,您可以直接在BLOG留言,或者通过下面的联系方式与我联系<br/>
+			BLOG：<a href="http://www.cnblogs.com/lhgstudio/" target="_blank">http://www.cnblogs.com/lhgstudio/</a><br/>
+			QQ群：72997291 （最好使用此方式） QQ: 34596187 验证写上lhgdialog
+		</div>
+	</div>
+	</div>
+</body>
+</html>

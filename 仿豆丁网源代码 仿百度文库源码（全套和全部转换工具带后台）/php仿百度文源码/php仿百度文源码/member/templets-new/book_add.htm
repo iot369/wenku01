@@ -1,0 +1,413 @@
+<?php
+$cookies .= '"MyCssSkin":'."'".$_COOKIE["MyCssSkin"]."',";
+$cookies .= '"lastCid":'."'".$_COOKIE["lastCid"]."',";
+$cookies .= '"lastCid__ckMd5":'."'".$_COOKIE["lastCid__ckMd5"]."',";
+$cookies .= '"DedeUserID":'."'".$_COOKIE["DedeUserID"]."',";
+$cookies .= '"DedeUserID__ckMd5":'."'".$_COOKIE["DedeUserID__ckMd5"]."',";
+$cookies .= '"DedeLoginTime":'."'".$_COOKIE["DedeLoginTime"]."',";
+$cookies .= '"DedeLoginTime__ckMd5":'."'".$_COOKIE["DedeLoginTime__ckMd5"]."',";
+$cookies .= '"PHPSESSID":'."'".$_COOKIE["PHPSESSID"]."'";
+
+//从配置中取允许上传的文件类型
+$alltypes = explode('|', $cfg_mb_addontype);
+$fileExt = "";
+foreach($alltypes as $type){
+	$fileExt.="*.".$type.";";
+}
+
+//从配置中取允许上传的文件大小，单位（Kb）
+$allfilesize = $cfg_mb_upload_size;
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文档上传 - 会员中心 -<?php echo $cfg_webname; ?></title>
+<meta name="description" content=""/>
+<link href="templets/style/common.css" rel="stylesheet" type="text/css" />
+<link href="templets/style/upload.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_cmsurl; ?>/js/jquery.uploadify-v2.1.0/uploadify.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $cfg_cmsurl; ?>/js/jGrowl-1.2.4/jquery.jgrowl.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/swfobject.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/jquery.uploadify-v2.1.0/jquery.uploadify.v2.1.0.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/jGrowl-1.2.4/jquery.jgrowl_minimized.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/zDialog/zDrag.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/zDialog/zDialog.js"></script>
+<script type="text/javascript">
+function open8(obj)
+{
+	typeidObj = obj;
+	var diag = new Dialog();
+	diag.Width = 600;
+	diag.Height = 300;
+	diag.Title = "选择栏目";
+	diag.URL = "templets/mulu.php";
+	
+	diag.OKEvent = function(){
+		//$id('biao').innerText = diag.innerFrame.contentWindow.document.getElementById('bbb').value; 
+		//$id("typeid").value= diag.innerFrame.contentWindow.document.getElementById('aaa').value;
+		typeidObj.parent().find(".biao").html(diag.innerFrame.contentWindow.document.getElementById('bbb').value);
+		typeidObj.val(diag.innerFrame.contentWindow.document.getElementById('aaa').value);
+		diag.close();
+		
+	};
+	diag.show();
+	var doc=diag.innerFrame.contentWindow.document;
+	doc.open();
+	doc.URL="templets/mulu.php";
+	//doc.write('<html><body><input id="aaa" type="text"/>请在文本框里输入一些值</body></html>') ;
+	doc.close();
+}
+//判断 v 是否是整数
+function IsInt(v)
+{
+    var vArr = v.match(/^[0-9]+$/);
+    if (vArr == null)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+$(document).ready(function(){
+	$('#fileInput').uploadify({
+		'uploader':'<?php echo $cfg_cmsurl; ?>/js/jquery.uploadify-v2.1.0/uploadify.swf',
+		'script':'<?php echo $cfg_memberurl; ?>/inc/uploadify.php',
+		'scriptData': {<?php echo $cookies ?>},
+		'cancelImg':'<?php echo $cfg_cmsurl; ?>/js/jquery.uploadify-v2.1.0/cancel.png',
+		'buttonImg':'templets/images/upload.jpg',
+		'width':158,
+		'height':46,
+		'auto': false,
+		'multi':true,
+		'fileDesc':'<?php echo str_replace("|", ",", $cfg_mb_addontype);?>',
+		'fileExt':'<?php echo $fileExt;?>',
+		'sizeLimit': '<?php echo $allfilesize*1024 ?>',
+		'displayData':'both',
+		queueSizeLimit: 20,
+		'onQueueFull':function(event,queueSizeLimit){
+			var msg='对不起，您当前最多只能上传<font color=red><b>'+queueSizeLimit+'</b></font>份文档将自动去掉多余的文档！';
+			$.jGrowl(msg,{theme:'error',header:'错误提示!',life:6000});
+			return false;
+		},
+		'onSelect':function(e,queueId,fileObj){
+			if(fileObj.size><?php echo $allfilesize*1024 ?>){
+				alert('对不起，您选择的['+fileObj.name+']文档大于<?php echo $allfilesize/1024 ?>M。请重新选择！');
+				$('#fileInput').uploadifyCancel(queueId);
+				return false;
+			}
+			$('#updiv')[0].style.display="";
+		},
+		onError:function(event,queueID,fileObj,errorObj){
+			var msg;
+			/**
+			if(errorObj.status==404){
+				msg='上传失败！';
+			}else if(errorObj.type==="HTTP")
+				msg=errorObj.type+": "+errorObj.status;
+			else if(errorObj.type==="File Size")
+				msg=fileObj.name+'<br>'+errorObj.type+' 限制大小为: '+Math.round(errorObj.sizeLimit/1024)+'KB';
+			else
+				msg=errorObj.type+": "+errorObj.text;
+			*/
+			msg="对不起，服务器允许上传文件的最大大小是：<?php echo ini_get('post_max_size')?>，请联系系统管理员修改环境配置！";
+
+			$.jGrowl(msg,{theme:'error',header:'错误提示!',life:5000});
+			$("#fileInput"+queueID).fadeOut(250,function(){$("#fileInput"+queueID).remove()});
+			return false;
+		},
+		onCancel:function(a,b,c,d){
+			var msg=c.name;
+			$.jGrowl(msg,{theme:'warning',header:'取消上传文档',life:5000,sticky:false});
+		},
+		'onAllComplete':function(event,data){
+			$('#updiv')[0].style.display="none";
+			$("#uploadercontainer").hide();
+			$("#batchSetDiv").show();
+			$("#reUploadDiv").hide();//继续上传
+			//$(".multi-upload").show();
+		},
+		'onComplete':function(e,queueId,fileObj,response,data){
+			//alert(response);
+			var theme='success';
+			var obj;
+			try{
+				obj = eval("("+response+")");//转换为json对象 
+			}catch(e){
+				//alert(e);
+				theme='error';
+				$.jGrowl("文档上传发生异常，请联系系统管理员！",{theme:theme,position:'bottom-right',header:'提醒信息',life:5000,sticky:false});
+				return;
+			}
+			result = obj.result;
+			if(result=="0"){
+				$("#arcids").val($("#arcids").val()+obj.arcid+",");
+				$.jGrowl("文档【"+fileObj.name+"】上传成功！",{theme:theme,position:'bottom-right',header:'提醒信息',life:5000,sticky:false});
+				var info = $($("#Template").html());
+				info.find(".doctitle").html("【"+obj.title+"】的设置：");
+				info.find(".arcid").val(obj.arcid);
+				info.find("#tags").val(obj.tags);
+				info.find("#docname").val(obj.title);
+				info.find("#introduce").val(obj.title);
+				info.find(".checkinfo").click(function(){
+					if($("#typeid", $(this).parent()).val() == 0){
+						alert("请选择栏目！");
+						return;
+					}
+					if(!IsInt($("#pagenumber2", $(this).parent()).val())){
+						alert("页码请输入整数！");
+						return;
+					}
+					var parent = $(this).parent();
+					$.ajax({
+						url: '<?php echo $cfg_memberurl; ?>/inc/batchup_submitinfo.php',
+						type:"POST",
+						data: {typeid: $("#typeid", parent).val(), needmoney: $("#needmoney", parent).val(), pagenumber2: $("#pagenumber2", parent).val(), arcids:obj.arcid, tags:$("#tags", parent).val(), docname:$("#docname", parent).val(), introduce:$("#introduce", parent).val()},
+						success: function(data) {
+						$("#reUploadDiv").show();//继续上传
+						$("#batchSetDiv").hide();
+							//alert(data);
+							if(data == "0"){//成功
+								parent.parent().fadeOut();
+								$.jGrowl("更新文档信息成功！",{theme:"success",position:'center',header:'提醒信息',life:5000,sticky:true});
+							}else{//不正确
+								$.jGrowl("更新文档信息失败，请进入会员中心修改！",{theme:"error",position:'center',header:'提醒信息',life:5000,sticky:false});
+							}
+						}
+					});
+				});
+				$("#setDocInfo").append(info);
+				info.show();
+			}else{
+				theme='error';
+				$.jGrowl("文档【"+fileObj.name+"】上传失败！",{theme:theme,position:'bottom-right',header:'错误提示',life:5000,sticky:false});
+			}
+		}
+	});
+	$('#upload').click(function(){
+		$('#updiv').hide();
+		$("#batchSetDiv").hide();
+		$('#fileInput').uploadifyUpload();
+	});
+
+	$('#submitBtn').click(function(){
+		if($("#typeid").val() == 0){
+			alert("请选择栏目！");
+			return;
+		}
+		$.ajax({
+			url: '<?php echo $cfg_memberurl; ?>/inc/batchup_submitinfo.php',
+			data: {typeid: $("#typeid").val(), needmoney: $("#needmoney").val(), arcids:$("#arcids").val()},
+			success: function(data) {
+				if(data == "0"){//成功
+					//$("#uploadercontainer").show();
+					$("#reUploadDiv").show();//继续上传
+					$("#batchSetDiv").hide();
+					$(".multi-upload").hide();
+					$("#arcids").val("");
+					$.jGrowl("批量更新文档栏目信息成功！",{theme:"success",position:'center',header:'提醒信息',life:5000,sticky:false});
+				}else{//不正确
+					$.jGrowl("批量更新文档栏目信息失败，请进入会员中心修改！",{theme:"error",position:'center',header:'提醒信息',life:5000,sticky:false});
+				}
+			}
+		});
+	});
+});
+
+function checkValidCode(value){
+	if(value.length == 4){
+		$.ajax({
+			url: '<?php echo $cfg_memberurl; ?>/inc/validCode_check.php?vdcode='+value,
+			success: function(data) {
+				if(data == "0"){//验证成功
+					$("#validCodeError").hide();
+					$("#submitBtn").attr("disabled", false);
+				}else{//不正确
+				    $("#validCodeError").show();
+					$("#submitBtn").attr("disabled", true);
+				}
+			}
+		});
+	}
+}
+function checkForm(){
+	var form = document.bookuploadform;
+	//alert(form.typeid.value);
+	if(form.typeid.value == 0){
+		alert("请选择文档所属栏目，方便他人查找！谢谢.");
+		form.typeid.focus();
+		return false;
+	}else if(form.freepagenumber.value == "" || isNaN(form.freepagenumber.value)){
+		alert("请输入正确免费页数（数字）！");
+		form.freepagenumber.focus();
+		return false;
+	}else if(form.vdcode.value == "" || form.vdcode.value.length != 4){
+		alert("请输入正确的验证码！");
+		form.vdcode.focus();
+		return false;
+	}
+	return true;	
+}
+</script>
+<style type="text/css">
+.content .center{float:left;margin:0px;width:100%;}
+.mo{height:auto;border:1px solid #CCC;margin:3px;background:#FFF}
+.mo h1{background:#eee;height:18px;padding:3px;cursor:move}
+.closediv{cursor:default;}
+.minusspan{cursor:default;}
+.mo .nr{border:1px solid #F3F3F3;margin:2px; padding:10px; height:100%;}
+h1{margin:0px;padding:0px;text-align:left;font-size:12px}
+.dragging {FILTER:progid:DXImageTransform.Microsoft.Alpha(opacity=60); opacity: 0.6; moz-opacity: 0.6}
+</style>
+</head>
+<body>
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<div id="wrapper">
+<div class="nav"> <a href="<?php echo $cfg_cmsurl; ?>/"> <?php echo $cfg_webname; ?></a>&nbsp;&gt;&nbsp;
+  上传文档</div>
+<div id="main" class="main">
+	<div id="uploadercontainer" >
+        <div style="margin-left: 30px;margin-bottom: 20px;margin-top: 15px">
+          <input id="fileInput" name="fileInput" type="file" />
+          <div style="display:none;margin-top: 10px" id="updiv" >
+            <center>
+              <input type="image" id="upload" src="templets/images/submitupload.jpg">
+            </center>
+          </div>
+        </div>
+    </div>
+    <!--div id="uploaderContainer">
+      <div id="fileQueue">请选择要上传的文件...</div>
+      <input type="file" name="uploadify" id="uploadify" />
+    </div-->
+    <div id="step2" class="multi-upload" style="display:none;">
+      <input name="arcids" id="arcids" type="hidden" value="">
+      <div style="display:none;">
+        <?php //PrintAutoFieldsAdd($cInfos['fieldset'],'autofield'); ?>
+        <input type='hidden' name='dede_addonfields' value="onlineviewurl,text;pagenumber,int;freepagenumber,int">
+      </div>
+      <p class="upload-tips" id="upload-tips">为了方便资料被更多用户浏览和下载，请为刚才上传的文档耐心补充以下信息。</p>
+      <div id="all-fill">
+        <div class="form-holder clearfix">
+          <dl class="form-category">
+            <dt>所属分类</dt>
+            <dd>
+              <?php
+					//$typeOptions = GetOptionList(0,$channelid);
+					//echo "<select name='typeid' id='typeid' size='1' class='select'>\r\n";
+					//echo "<option value='0' selected>请选择栏目...</option>\r\n";
+					//echo $typeOptions;
+					//echo "</select>";
+				?><label id="biao" class="biao" style="width:350px; cursor:pointer; " onclick="open8($(this).parent().find('.typeid'));">点击我选择栏目</label>
+                &nbsp;<img src="<?php echo $cfg_cmspath; ?>/member/templets/images/right.png" /><input name="typeid" type="hidden" class="typeid"  id="typeid" style="width:300px;"/><input type="hidden" class="typeid2"  id="typeid2"/><input type="image" id="lanmuBtn" src="templets/images/lanmu.jpg" align="absmiddle" onclick="open8($(this).parent().find('.typeid'));">
+            </dd>
+          </dl>
+
+		  <dl class="form-price">
+            <dt>文档售价</dt>
+            <dd>
+              <input type="text" name="needmoney" id="needmoney" style="width:40px;" value="0" /><span class="small_score icon"></span><span style="color:#F00;">是指资料每被下载一次，您所获得的收入。</span>
+            
+              <p></p>
+            </dd>
+          </dl>
+
+        </div>
+      </div>
+      <div id="submitHolder">
+        <input type="submit" value="提交文档" class="input-button"  id="submitBtn" />
+      </div>
+    </div>
+    
+    <div class="content" id="setDocInfo">
+        
+    </div>
+	<div id="batchSetDiv" style="text-align:right; display:none;">
+        <span style="color:#F00; font-size:14px; font-weight:bold; cursor:pointer;" onclick="$('.multi-upload').hide();$('#setDocInfo').show();">分别设置</span>&nbsp;&nbsp;&nbsp;<span style="color:#F00; font-size:14px; font-weight:bold; cursor:pointer;" onclick="$('.multi-upload').show();$('#setDocInfo').hide();">批量设置</span>
+    </div>
+    
+	<!--模板-->
+    <div id="Template">
+    <div class="center" style="display:none;">
+        <div class="mo" id="m4">
+            <h1 class="doctitle"></h1>
+            <div class="nr">
+			<div style="margin-bottom:10px;">文档名称：<input type="text" name="docname" id="docname" style="width:350px;" />
+			</div>
+				<div style="margin-bottom:10px;" >
+            	<input type="hidden" class="arcid" />
+				
+                所属分类：<?php
+                            //$typeOptions = GetOptionList(0,$channelid);
+                            //echo "<select name='typeid' id='typeid' size='1' class='select'>\r\n";
+                           //echo "<option value='0' selected>请选择栏目...</option>\r\n";
+                            //echo $typeOptions;
+                            //echo "</select>";
+                        ?><label id="biao" class="biao" style="width:350px; cursor:pointer; " onclick="open8($(this).parent().find('.typeid'));">点击我选择栏目</label>
+                &nbsp;<img src="<?php echo $cfg_cmspath; ?>/member/templets/images/right.png" /><input name="typeid" type="hidden" class="typeid"  id="typeid" style="width:300px;"/><input type="hidden" class="typeid2"  id="typeid2"/><input type="image" id="lanmuBtn" src="templets/images/lanmu.jpg" align="absmiddle" onclick="open8($(this).parent().find('.typeid'));"></div><div style="margin-bottom:10px;">
+                文档售价：<input type="text" name="needmoney" id="needmoney" style="width:40px;" value="0" /><span class="small_score icon"></span><span style="color:#F00;">是指资料每被下载一次，您所获得的收入。</span></div><div style="display:none">
+                免费阅读页数：<input type="text" name="pagenumber2" id="pagenumber2" style="width:40px;" value="0" />（<span style="color:#F00;">0表示不限制浏览</span>）
+				</div>
+				<div style="margin-bottom:10px;">文档标签：<input name="tags" type="text" id="tags" style="width:350px;" value="标签1,标签2,标签3" size="45" />
+				<span style="color:#F00;">各标签之间请以半角,号分隔！</span></div>
+			  <div>
+			    <table width="100%" border="0">
+                  <tr>
+                    <td width="9%">文档简介：</td>
+                    <td width="91%"><div><textarea name="introduce" cols="45" rows="4" class="center" id="introduce" style="width:350px;"></textarea></div></td>
+                  </tr>
+                </table>
+			  </div>
+                <div class="checkinfo" title="保存文档设置"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+        
+    <div id="step1">
+	<div id="reUploadDiv" style="display:none;" align="center">
+        <input type="image" id="reUploadBtn" src="templets/images/reUploadBtn.jpg" onclick="window.location.reload();">
+    </div>
+	<br/>
+      <h3 class="header">文档上传须知</h3>
+      <p>请上传大小小于<font color=red><b><?php echo $allfilesize/1024 ?>M</b></font>的文档</p>
+      <p>最多支持每次同时上传<font color=red><b>20</b></font>份文档</p>
+      <p>为了保证文档能正常显示，我们仅支持以下格式的文档上传</p>
+      <table cellpadding="0" width="600" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td class="r">MS Office文档</td>
+            <td valign="top"><span class="icon doc"></span> doc  &nbsp;&nbsp; <span class="icon ppt"></span> ppt &nbsp;&nbsp; <span class="icon xls"></span> xls &nbsp;&nbsp; <span class="icon rtf"></span> rtf&nbsp;&nbsp; </td>
+          </tr>
+          <tr>
+            <td class="r">PDF</td>
+            <td><span class="icon pdf"></span> pdf</td>
+          </tr>
+          <tr>
+            <td class="r">纯文本</td>
+            <td><span class="icon txt"></span> txt</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+</div><div id="aside" class="aside">
+  <div class="guide box">
+    <div class="content">
+      <h2>声明：</h2>
+      <p>请勿在未经授权的情况下上传任何涉及著作权侵权的文档，除非文档完全由您个人创作</p>
+      <p class="last">点击上传文档即表示您确认该文档不违反文档使用条款，并且您拥有该文档的所有版权或者上传文档的授权</p>
+    </div>
+  </div>
+  <div class="clear"></div>
+ 
+</div></div>
+ <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+</body>
+</html>

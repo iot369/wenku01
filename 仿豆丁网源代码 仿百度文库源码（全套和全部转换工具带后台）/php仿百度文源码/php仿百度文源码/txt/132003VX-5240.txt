@@ -1,0 +1,36 @@
+选题背景
+
+基于 ASP 的网上书店的设计和实现
+
+[摘要] 目前国内基于 B/S、C/S 结构的网上书店系统产品已经有许多，本文首先 介绍了这些电子商务系统的形成和发展过程，大致结构。然后通过仔细分析，提出了 目前的这些系统还存有系统更新和维护等种种弊端,仍不够成熟。基于对现有产品的 思考，结合 ASP 的成熟技术,我们想到了是否可以将该技术运用在电子商务系统中, 提出了一个基于 ASP 架构的电子商务系统。 通过将该架构与已有结构的电子商务系统 进行比较，分析了该架构的优势,重点介绍了该框架的整体构造以及相关的概念和技 术。 并通过设计了一个基于 ASP 架构的网上书店系统对该架构做了一个比较深入的剖 析。最后，对 ASP 技术做了一个总结性的展望，认为该技术有着良好的发展空间和广 阔的前景。 [关键词] ASP，网上书店系统，B/S，ACCESS，数据库
+
+第 1 页 共 47 页
+
+基于 ASP 的网上书店的设计与实现
+
+Design based on online bookstore of ASP and realizing
+[Abstract] At present, there are many b/s, c/s structure examination systems based on-line, this paper first introduced most of these systems’ formed and developed process, and structures. Then, analysis these systems, and pointed out that there still have many defects about them, just like the update and the service to these systems .Thinking based on these produces, and now the ASP technical is becoming mature, we thinking about is this technical can be used in business systems, so we mentioned a business system based on J2EE structure. Compared to other systems, and also analysis its’ advantages, we introduced this structure’s construction and technical as emphasize. Finally, make ASP technical a expectation and it can progress quiet great and have a nice foreground. [Key Word] ASP , Business system, B/S, ACCESS, Database
+
+第 2 页 共 47 页
+
+选题背景
+
+1 选题背景
+Internet 是目前世界上最大的计算机互联网络，它遍布全球，将世界各地各种 规模的网络连接成一个整体。作为 Internet 上一种先进的，易于被人们所接受的信 息检索手段，World Wide Web(简称 WWW)发展十分迅速，成为目前世界上最大的信息 资源宝库。据估计，目前 Internet 上已有上百万个 Web 站点，其内容范围跨越了教 育科研、文化事业、金融、商业、新闻出版、娱乐、体育等各个领域，其用户群十分 庞大，因此，建设一个好的 Web 站点对于一个机构的发展十分重要。近年来，随着网 络用户要求的不断提高及计算机科学的迅速发展，特别是数据库技术在 Internet 中 的广泛应用，Web 站点向用户提供的服务将越来越丰富，越来越人性化。 我们发现这样一个事实， 一个用户在访问一个网站时一般来讲只对该网站的部分 内容感性趣，而且这种兴趣会持续一段时间。这点启发了我们，如果能根据用户的喜 好为不同的用户显示其个性化的页面，即着重显示该用户感兴趣的内容，将为用户节 约大量的检索时间，而且这样的网页显然是更具有吸引力的。一些站点已经在这方面 作出了一定的尝试，通常采用的方法是，在用户登陆时为其提供一系列的选项，使用 户能够对站点进行一些自主的设置。这样做能够使站点呈现一定程度的个性化，但是 对用户来讲，还是比较烦琐，而且在用户了解一个站点前让其对站点进行设置，其结 果未免有些粗糙。于是我们构想了这样一种方案，对用户登陆后的动作进行跟踪，分 析，发掘用户点击的规律，即用户先后点击的关联规则，这样，在用户点击一个主题 （链接）之后，系统能够自动生成一页面，其中包含了该主题下用户经常关注的内容 （若干链接） ，这样便在无须用户作出任何额外工作的情况下实现了为用户量身订做 的个性化页面。 要实现这样的功能，离不开后台数据库的支持。用户验证信息，收集到的用户点 击信息，主题层次信息，分析得出的关联规则表等大量的数据都由数据库管理系统管 理。 本文中数据库服务器端采用了 Microsoft Access 数据库作为 ODBC(Open DataBase Connectivity )数据源，并以先进的 ADO（ActiveX Data Objects）技术进行数据库 存取等操作，使 Web 与数据库紧密联系起来。 整个个性化页面生成系统主要由使用 Dreamweaver_MX 开发的关联规则采掘系统 和利用 IIS+ASP 技术实现的个性化 Web 页面生成器两部分组成。 关联规则采掘系统对
+
+第 3 页 共 47 页
+
+基于 ASP 的网上书店的设计与实现
+
+数据库中的历史记录进行分析，产生用户关联规则表；页面生成器则负责记录用户行 为和根据关联规则表动态生成用户个性化 Web 页面。二者通过数据库服务器和 Web 服务器连接。 本文作者主要完成 Web 服务器端的用户管理、图书目录管理、图书信息录入管理、 书店定单管理、图书的浏览和查找、书店购物结帐功能模块的设计、实现与完善以及 整个实验网站的组织建立和测试工作。
+
+2 方案论证
+本次 B to C 网上书店需求分析的编写目的在于研究基于 ASP+IIs+ACCES 的 BtoC 网上书店动态网站方案设计，主要对商务网站进行研究，以便更好的设计一个网上书 店动态网站。B to C(Business to Consumer)方式即网上零售，它的主要意义是可以 通过 Internet 为厂商和顾客提供双向互动式的信息交流，开辟新的交易平台，为消 费者提供了一种新的购物方式。 这种方式可以使购物时间随意化， 顾客可以打破地区、 国界的限制，实现商品的全球购买；使购买过程便利、快捷，大大缩短了交易时间； 可以为顾客提供充分的商品信息，从而扩大了选择的余地。通过网上书店，人们可以 方便的查找想要的书籍，并进行网上阅读和购买，给人们带来很多的便利。
+
+3 过程论述
+3.1 ASP 简介
+近年来随着 Internet 技术的飞速发展及用户需求的不断升级，Web 页面技术也 不断的推陈出新， 使得 Web 站点的功能越来越强大， 能够提供的服务种类越来越繁多。 从 HTML、Client Script 到 CGI,从 JAVA 的诞生到 ActiveX, Web 页面设计人员不断 受到冲击，微软公司在总结了以往技术，重新思考 Web 页面设计的真正需要后，推出 了 Active Server Pages (ASP)，一种用以取代 CGI(Common Gateway Interface，通 用网关接口)的技术。 简单讲，ASP 是位于服务器端的脚本运行环境，通过这种环境，用户可以创建和 运行动态的交互式 Web 服务器应用程序，如交互式的动态网页，包括使用 HTML 表 单收集和处理信息，上传与下载等等。更重要的是，ASP 使用的 ActiveX 技术基于开
+
+第 4 页 共 47 页
+
+

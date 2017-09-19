@@ -1,0 +1,27 @@
+<?php
+$myaddons = array();
+$maNum = 0;
+$myaddons[$maNum] = array('180', '/docshare/uploads/userup/8/12T355645-L07.pdf');
+$maNum = 1;
+$myaddons[$maNum] = array('181', '/docshare/uploads/userup/8/12T3B949-1441.pdf');
+$maNum = 2;
+$myaddons[$maNum] = array('182', '/docshare/uploads/userup/8/12T3B950-64V.pdf');
+$maNum = 3;
+$myaddons[$maNum] = array('183', '/docshare/uploads/userup/8/12T3B951-4554.pdf');
+$maNum = 4;
+$myaddons[$maNum] = array('184', '/docshare/uploads/userup/8/12T3B952-10b.pdf');
+$maNum = 5;
+$myaddons[$maNum] = array('185', '/docshare/uploads/userup/8/12T3C002-3U1.pdf');
+$maNum = 6;
+$myaddons[$maNum] = array('186', '/docshare/uploads/userup/8/12T3C003-H45.pdf');
+$maNum = 7;
+$myaddons[$maNum] = array('187', '/docshare/uploads/userup/8/12T3C004-I32.pdf');
+$maNum = 8;
+$myaddons[$maNum] = array('188', '/docshare/uploads/userup/8/12T3C032-9218.pdf');
+$maNum = 9;
+$myaddons[$maNum] = array('189', '/docshare/uploads/userup/8/12T3C033-2Q8.pdf');
+$maNum = 10;
+$myaddons[$maNum] = array('190', '/docshare/uploads/userup/8/12T3C642-B95.pdf');
+$maNum = 11;
+$myaddons[$maNum] = array('191', '/docshare/uploads/userup/8/12T3C643-4a8.pdf');
+$maNum = 12;

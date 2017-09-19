@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>悬赏任务列表_{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<LINK  href="/templets/jxdoc/baidu/homenew.css" rel="stylesheet" type="text/css" >
+<link href="/templets/jxdoc/style/tag.css" rel="stylesheet" type="text/css" />
+
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+<style type="text/css">
+.manu {
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+	margin: 3px;
+	padding-top: 3px;
+	text-align: center
+}
+.manu a {
+	border-right: #eee 1px solid;
+	padding-right: 5px;
+	border-top: #eee 1px solid;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #eee 1px solid;
+	color: #036cb4;
+	padding-top: 2px;
+	border-bottom: #eee 1px solid;
+	text-decoration: none
+}
+.manu a:hover {
+	border-right: #999 1px solid;
+	border-top: #999 1px solid;
+	border-left: #999 1px solid;
+	color: #666;
+	border-bottom: #999 1px solid
+}
+.manu a:active {
+	border-right: #999 1px solid;
+	border-top: #999 1px solid;
+	border-left: #999 1px solid;
+	color: #666;
+	border-bottom: #999 1px solid
+}
+.manu .current {
+	border-right: #036cb4 1px solid;
+	padding-right: 5px;
+	border-top: #036cb4 1px solid;
+	padding-left: 5px;
+	font-weight: bold;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #036cb4 1px solid;
+	color: #fff;
+	padding-top: 2px;
+	border-bottom: #036cb4 1px solid;
+	background-color: #036cb4
+}
+.manu .disabled {
+	border-right: #eee 1px solid;
+	padding-right: 5px;
+	border-top: #eee 1px solid;
+	padding-left: 5px;
+	padding-bottom: 2px;
+	margin: 2px;
+	border-left: #eee 1px solid;
+	color: #ddd;
+	padding-top: 2px;
+	border-bottom: #eee 1px solid
+}
+</style>
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+	$("#l-content ul:first").addClass("block");
+});
+//选项卡
+function setTab(n){
+	var tli=document.getElementById("menu").getElementsByTagName("li");
+	var mli=document.getElementById("l-content").getElementsByTagName("ul");
+	for(i=0;i<tli.length;i++){
+		tli[i].className=i==n?"hover":"";
+		mli[i].style.display=i==n?"block":"none";
+	}
+}
+
+</script>
+</head><body>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<!--content-->
+<div class="content">
+  <!--导航位置-->
+  <div class="position"> <strong>当前位置:</strong>：<a href="{dede:global.cfg_cmsurl/}/">主页</a> &gt; <a href='tags.php'>悬赏任务列表</a> &gt; {dede:field.title /}</div>
+  <!--导航位置 end-->
+  <!--left-->
+  <div class="left">
+    <!--下载排行-->
+    <div class="l-list" >
+      <div class="l-top" id="rotate">
+        <ul class="ui-tabs-nav" id="menu">
+          <li class="hover"><a href="javascript:setTab(0);" >日</a></li>
+          <li><a href="javascript:setTab(1);">周</a></li>
+          <li><a href="javascript:setTab(2);">月</a></li>
+        </ul>
+        下载TOP10 </div>
+      <div class="l-content" style="*padding-top:0px;" id="l-content">
+        <ul id='fragment-1'>
+          {dede:arclist sort='hot' subday='1' titlelen=42 row=6}
+          [field:global runphp='yes' name=autoindex]
+          $a="
+          <li class='r1'><span class='top10'>";
+            $b="</span>";
+            $c="
+          <li><span class='top10'>";
+            if (@me % 2 == 1) @me = $a.@me.$b;
+            else @me = $c.@me.$b;
+            [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+          {/dede:arclist}
+        </ul>
+        <ul id='fragment-2' style='display:none;'>
+          {dede:arclist sort='hot' subday='7' titlelen=42 row=6}
+          [field:global runphp='yes' name=autoindex]
+          $a="
+          <li class='r1'><span class='top10'>";
+            $b="</span>";
+            $c="
+          <li><span class='top10'>";
+            if (@me % 2 == 1) @me = $a.@me.$b;
+            else @me = $c.@me.$b;
+            [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+          {/dede:arclist}
+        </ul>
+        <ul id='fragment-3' style='display:none;'>
+          {dede:arclist sort='hot' subday='30' titlelen=42 row=6}
+          [field:global runphp='yes' name=autoindex]
+          $a="
+          <li class='r1'><span class='top10'>";
+            $b="</span>";
+            $c="
+          <li><span class='top10'>";
+            if (@me % 2 == 1) @me = $a.@me.$b;
+            else @me = $c.@me.$b;
+            [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="l-end"></div>
+    </div>
+    <!--下载排行 end-->
+    <!--推荐内容-->
+    <div class="l-list">
+      <div class="l-top">推荐内容</div>
+      <div class="l-content tips">
+        <ul class="c1 ico2">
+          {dede:arclist flag='c' titlelen=42 row=6}
+          <li><a href="[field:arcurl/]">[field:title/]</a> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="l-end"></div>
+    </div>
+    <!--推荐内容 end-->
+    <!--热门内容-->
+    <div class="l-list">
+      <div class="l-top">热门内容</div>
+      <div class="l-content tips">
+        <ul class="c1 ico2">
+          {dede:arclist row=10 orderby=click}
+          <li><a href="[field:arcurl/]">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="l-end"></div>
+    </div>
+    <!--热门内容 end-->
+  </div>
+  <!--left end-->
+  <!--right-->
+  <div class="right">
+    <!--doc list-->
+    <div class="sort"><span class="list_inf">文档悬赏列表，点击标题投稿！</span> </div>
+    <div class="doc_list"> {dede:list orderby='sortrank' pagesize='10'}
+      <!--文档-->
+      <div class='listcon'>
+        <div class='listnrwz'>
+          <h1><a href="member/book_request_resp.php?reqid=[field:id/]" class="title">[field:doctitle/]</a></h1>
+          <div class='listtips'>
+            <ul>
+              <li>发布人：[field:uname/]<span>|</span></li>
+              <li>悬赏积分：<span style="color:#F00">￥[field:score/]</span><span>|</span></li>
+              <li>发布时间：[field:addtime/]<span>|</span></li>
+              <li>投稿数：[field:respnum/]</li>
+              <!--li>状态：[field:scores/]<span>|</span></li-->
+            </ul>
+          </div>
+        </div>
+        <div class='clear'></div>
+      </div>
+      <!--文档 end-->
+      {/dede:list} </div>
+    <!--doc list end-->
+    <div id="showpage"  style="background-color:#FFF;">
+      <div class="manu"> {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+        <!--a href="./other_1_tag_275_1.html">首页</a> <span class="disabled">上一页</span> <span class="current">1</span> <a href="./other_1_tag_275_2.html">2</a> <a href="./other_1_tag_275_3.html">3</a> <a href="./other_1_tag_275_4.html">4</a> <a href="./other_1_tag_275_5.html">5</a> <a href="./other_1_tag_275_6.html">6</a> <a href="./other_1_tag_275_7.html">7</a> <a href="./other_1_tag_275_8.html">8</a> <a href="./other_1_tag_275_9.html">9</a> <a href="./other_1_tag_275_10.html">10</a> <a href="./other_1_tag_275_2.html">下一页</a> <a href="./other_1_tag_275_329.html">末页</a-->
+        <!--span>
+         跳转至
+        <input type="text" name="textfieldpage" id="textfieldpage" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" onchange="jumptopagecheck(329)"  align="absmiddle"/>
+
+      <button onclick="jumptopage('/colhtml/other_1_tag_275_|pagenowno|.html')" name="buttonpage" id="buttonpage" type="button">go</button>
+      </span-->
+      </div>
+    </div>
+  </div>
+  <!--right end-->
+  <div class="clear"></div>
+</div>
+<!--content end-->
+</div>
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+</body>
+</html>

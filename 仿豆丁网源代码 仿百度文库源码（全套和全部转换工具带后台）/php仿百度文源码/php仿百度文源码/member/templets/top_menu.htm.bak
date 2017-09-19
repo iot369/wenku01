@@ -1,0 +1,18 @@
+<div class="d_submenu_wapper">
+  <div class="d_submenubox">
+    <div class="d_yn-sub-nav">
+      <ul>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/content_list.php?channelid=17">我的文档</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/book_request.php">任务悬赏</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/caicai.php">随便看看</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/myfriend.php">我的好友</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/pm.php">短消息</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/mystow.php">我的收藏</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/buy.php">充值/兑换</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/guestbook_admin.php">留言本</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/edit_baseinfo.php">基本设置</a></li>
+        <li class=""><a href="<?php echo $cfg_memberurl; ?>/edit_space_info.php">空间管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

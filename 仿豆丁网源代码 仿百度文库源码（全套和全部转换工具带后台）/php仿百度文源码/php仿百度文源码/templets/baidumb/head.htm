@@ -1,0 +1,74 @@
+﻿<script language="javascript" type="text/javascript">  
+var childWindow;  
+function toQzoneLogin()  
+{  
+childWindow =window.open("{dede:global.cfg_phpurl/}/qzonelogin/redirect.php?gourl="+document.URL,"TencentLogin","width=450,height=320,menubar=0,scrollbars=1, resizable=1,status=1,titlebar=0,toolbar=0,location=1");  
+}  
+function closeChildWindow()  
+{  
+childWindow.close();  
+}  
+-->  
+</script>
+<link href="/templets/jxdoc/so/img/top.css" rel="stylesheet" type="text/css" />
+<link href="/templets/jxdoc/style/common2.css" rel="stylesheet" type="text/css" />
+<SCRIPT type=text/javascript src="/templets/jxdoc/style/common2.js"></SCRIPT>
+
+<div class="nav_top">
+  <div class="content"><span>欢迎：</span>
+    <div class="quick_link" id="_userlogin"> <strong><a href="{dede:global.cfg_memberurl/}/login.php">登录</a></strong> <strong><a href="{dede:global.cfg_memberurl/}/login.php">注册</a></strong> <a href="javascript:vod(0);" onclick='toQzoneLogin()'><img src="{dede:global.cfg_cmsurl/}/plus/qzonelogin/img/qq_login.png"></a></div>
+    <div class="userHelp"> <a href="{dede:global.cfg_memberurl/}/benefit.php" target="_blank">提现</a> | <a href="{dede:global.cfg_memberurl/}/buy.php" target="_blank">充值</a> | <a href="{dede:global.cfg_memberurl/}/exchange.php" target="_blank">兑换</a> | <a href="#" target="_blank">帮助</a> | 
+<a href="#" onClick="window.external.addFavorite(location.href, document.title)"><font color="red">加入收藏</font></a>
+ | <a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.szdianda.com');"><font color="red">设为首页</font></a>
+
+ </div>
+  </div>
+</div>
+<DIV id=usrbar> </DIV>
+<DIV id=wrapper>
+<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" height="80">
+  <TBODY>
+  <TR>
+    <TD class="logo" width=200 align=left><A title="{dede:global.cfg_webname/}-在线文档分享平台！" href="{dede:global.cfg_cmsurl/}"></A></TD>
+    <TD width="773"  vAlign=center>
+      <div><A class=upload title=我要上传 href="{dede:global.cfg_memberurl/}/upload_book.php">我要上传</A><FORM action="{dede:global.cfg_cmsurl/}/plus/search.php"  method=get name="form1" id="form1">
+	  <input type="hidden" name="kwtype" value="0" />
+  <INPUT id=searchcat 
+type=hidden value=2 name=searchcat> <INPUT id=searchtype disabled 
+type=hidden value=title name=searchtype> 
+<DIV class=sear><SPAN class=rd_l></SPAN>
+<DIV class=sear-sub><INPUT class=listTopDefault id=topsearch 
+onkeydown="if(event.keyCode==13){ return searchNew();}" 
+onblur="if(this.value=='') {this.value='在文档库里搜索文档';this.className='listTopDefault';}" 
+onfocus="if(this.value=='在文档库里搜索文档') this.value='';this.className='listTopInput';" 
+tabIndex=1 maxLength=100 value=在文档库里搜索文档 name=keyword autocomplete="off" 
+baiduSug="2"> 
+<DIV class=sear-btn id="Search-listbtn" onClick="boxSelect()">
+<H5>标题</H5>
+<DIV id="Listtags" style="DISPLAY: none;Z-INDEX: 9999;">
+<UL>
+  <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=true;document.getElementById('searchtype').value='title';" 
+  href="javascript:void (0)">标题</A> </LI>
+   <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=true;document.getElementById('searchtype').value='tag';" 
+  href="javascript:void (0)">标签</A> </LI>
+  <LI><A 
+  onmousedown="document.getElementById('searchtype').disabled=false;document.getElementById('searchtype').value='writer';" 
+  href="javascript:void (0)">作者</A> </LI></UL></DIV></DIV><INPUT class=btn title="搜 索" onClick="return searchNew();" tabIndex=2 type=submit value="搜 索"> 
+</DIV><SPAN class=rd_r></SPAN></DIV></FORM></div>  </TD>
+
+  </TR></TBODY></TABLE>
+  
+<DIV class="mod shop-navmod">
+<DIV class=inner>
+<DIV class="bd shop-navbox">
+<UL id=shop-nav class=shop-nav>
+  <LI id=nav-index class="current"><A class=nav-global href="{dede:global.cfg_cmsurl/}/"><SPAN>首页</SPAN></A></LI>
+  {dede:channel type='top' row='10' currentstyle="<li class=nav-index><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      	{/dede:channel}
+  </UL></DIV></DIV>
+  </DIV>
+
+

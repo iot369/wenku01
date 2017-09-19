@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mainCp">
+        <h3 class="meTitle">我的提现记录</h3>
+        <table width="95%" border="0" cellpadding="0" cellspacing="0" class="list">
+          <thead>
+            <tr>
+              <th width="10%"></th>
+              <th width="20%">申请时间</th>
+              <th width="10%">提现金币</th>
+			  <th width="10%">提现人民币</th>
+              <th width="40%">提现账号</th>
+              <th width="10%">状态</th>
+            </tr>
+          </thead>
+          <form name='form1' action="mypay.php" method="post">
+            <input type='hidden' name='dopost' value='del' />
+            <tbody>
+            
+            {dede:datalist}
+            <tr>
+              <td align="center"><input type="checkbox" name="deleteid" value="{dede:field.id/}"/></td>
+              <td align="center"><?php echo $fields['addtime']; ?></td>
+              <td align="center"><?php echo $fields['money']; ?></td>
+              <td align="center"><?php echo $fields['rmb']; ?></td>
+              <td align="center"><?php echo $fields['account']; ?></td>
+              <td align="center"><?php echo GetSta($fields['status']); ?></td>
+            </tr>
+            {/dede:datalist}
+            
+            </tbody>
+            
+          </form>
+          <tfoot>
+            <tr>
+              <td colspan="7"><div class="pageList">
+                {dede:pagelist listsize=5/}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

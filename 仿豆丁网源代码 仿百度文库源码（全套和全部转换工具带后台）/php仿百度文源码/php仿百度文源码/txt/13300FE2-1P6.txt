@@ -1,0 +1,249 @@
+PHYSICAL REVIEW C 72, 054309 (2005)
+
+Spectroscopy of 90 Nb at high spin
+A. Chakraborty,∗ Krishichayan, S. S. Ghugre, R. Goswami, S. Mukhopadhyay, N. S. Pattabiraman, S. Ray, and A. K. Sinha
+UGC-DAE Consortium for Scientiﬁc Research, Kolkata Center, Sector III/LB-8, Bidhan Nagar, Kolkata 700098, India
+
+S. Sarkar
+Department of Physics, The University of Burdwan, Burdwan 713104, India
+
+P. V. Madhusudhana Rao and U. Garg
+Department of Physics, University of Notre Dame, Notre Dame, Indiana 46556, USA
+
+S. K. Basu
+Variable Energy Cyclotron Center, Sector-I/AF, Bidhan Nagar, Kolkata 700064, India
+
+M. B. Chaterjee and M. Saha Sarkar
+Saha Institute of Nuclear Physics, Sector-I/AF, Bidhan Nagar, Kolkata 700064, India
+
+L. Chaturvedi, A. Dhal, and R. K. Sinha
+Department of Physics, Banaras Hindu University, Varanasi 221005, India
+
+I. M. Govil
+Department of Physics, Panjab University, Chandigarh 160014, India
+
+R. K. Bhowmik, A. Jhingan, N. Madhavan, S. Muralithar, S. Nath, R. P. Singh, and P. Sugathan
+Nuclear Science Center, Aruna Asaf Ali Marg, New Delhi 110067, India (Received 3 November 2004; revised manuscript received 1 August 2005; published 16 November 2005) Excited states of 90 Nb were investigated via prompt and delayed γ decays and the recoil-isomer tagging h technique. The level scheme of 90 Nb has been extended up to J = 19¯ and Ex = 8.4 MeV. Half-lives of the 11− and 17/2− isomeric levels in 90,91 Nb were measured to be 0.47 ± 0.01 and 3.3 ± 0.4 µs, respectively. The results are compared with the predictions of large-basis shell model calculations. The effects of truncation of the valence model space on the calculated results are discussed. DOI: 10.1103/PhysRevC.72.054309 PACS number(s): 27.60.+j, 23.20.Lv, 21.10.Tg, 21.60.Cs
+
+I. INTRODUCTION
+
+The study of odd-odd nuclei offers a scope for investigating the underlying proton-neutron residual interactions. Such nuclei exhibit highly complex level structures because of a large number of possible couplings of the odd proton and neutron to the even-even core. The odd-odd nucleus 90 Nb, with 41 protons and 49 neutrons, is one such interesting candidate in the A ∼ 90 region, with both the proton-particle and the neutron-hole occupying the 1g9/2 orbital. From the shell model point of view, nuclei in this mass region have generally been described in the valence spaces above the 88 Sr50 38 and 76 Sr38 cores for many years. The calculations, involving 38 the (2p1/2 , 1g9/2 )-valence space and assuming Z = N = 38 subshell closure in 76 Sr38 , have been found to be quite 38 successful in describing the low-lying levels for nuclei in this mass region, particularly for 90 Nb up to J ∼ 12¯ [1,2]. h The low-lying level structure of 90 Nb was investigated earlier by several workers using direct reactions [3–5] and
+Present address: Department of Physics, Krishnath College, Berhampore 742101, India. 0556-2813/2005/72(5)/054309(12)/$23.00
+∗
+
+γ -spectroscopic techniques [6,7]. The study by Fields et al. [7] provided information on the level structure of 90 Nb up to an excitation energy of Ex ∼ 3 MeV and spin J ∼ 12¯ . The said h authors also reported an 11− isomeric level with a half-life of 0.44 ± 0.02 µs, using delayed coincidence measurement. Incidentally, the same isomer was studied earlier by H¨ usser a et al. [8]. According to the latest compilations in Nuclear Data Sheets [9], there is hardly any information on the level structure of 90 Nb above the 11− isomeric level. It is, therefore, of interest to investigate the level structure of 90 Nb to a higher spin and excitation energy, where one expects to observe states arising out of the excitation of nucleons across both the Z = 38 subshell and N = 50 shell closure. Similar states have indeed been observed recently by our group [10,11] in 91,92 Mo and by Hausmann et al. [12] in 93 Tc nuclei. Fields et al. [7] has also suggested an additional contribution in the half-life of the 813-keV (9+ → 8+ ) transition, from the decay of the 11− isomeric level. However, the authors could not determine its half-life with certainty because of contamination from another 813-keV γ ray in 89 Mo, produced in their reaction. The additional motivation of this work has
+©2005 The American Physical Society
+
+054309-1
+
+A. CHAKRABORTY et al.
+
+PHYSICAL REVIEW C 72, 054309 (2005)
+
+been to explore this unidentiﬁed isomer and to search for new isomers in the neighboring nuclei. We have measured the half-lives of the 11− and 17/2− isomeric levels in 90,91 Nb, respectively, using the recoilisomer tagging technique. This technique has the advantage of studying the decay of the isomeric levels from speciﬁc nuclei in a low-background environment using the selectivity of a recoilmass analyzer and thereby it eliminates the contributions, if any, from the neighboring nuclei, which was not possible in the work of Fields et al. [7]. Besides, it allows us to correlate the feeding and decay pattern of the tagged isomers. In this work, we used the prompt-delayed coincidences to identify the transitions across the 11− isomeric level in 90 Nb. Prompt γ γ coincidences were, then, used to extend the level scheme above the isomeric level. More than 15 new transitions have been identiﬁed and placed in the level scheme, leading to a considerable extension of the level structure of 90 Nb up to Ex ∼ 8 MeV and J ∼ 19¯ . h The observed level structure is irregular, similar to what is expected for a near-spherical nucleus, and indicates the persistence of single-particle behavior up to the highest observed spin and excitation energy. This makes the spherical shell model an appropriate means to interpret the observed level structure. As mentioned earlier, theoretical studies on the structure of 90 Nb using the shell model have been performed by several authors [1,2]. In this work, shell model calculations have been performed using different Hamiltonians in the subspaces of the model space π (1f5/2 , 2p3/2 , 2p1/2 , 1g9/2 ) and ν(2p1/2 , 1g9/2 , 1g7/2 , 2d3/2 , 2d5/2 , 3s1/2 ). The theoretical predictions have been compared with the experimental observables such as level spectra, electromagnetic transition probabilities, and branching ratios. A reasonable agreement between the experimental and calculated results has been found.
+
+II. EXPERIMENTAL DETAILS AND DATA ANALYSIS
+
+The excited states of 90 Nb were populated using the Cu(31 P, 3p1n) reaction in two separate experiments at beam energies of ∼120 and 125 MeV, respectively. In one of the experiments, we used a ∼1.2 mg/cm2 thick and enriched 63 Cu target on a gold backing of thickness 10 mg/cm2 . The 125-MeV 31 P beam was provided by the 14 UD Pelletron accelerator at the Tata Institute of Fundamental Research (TIFR), Mumbai. The deexciting γ rays were detected using an early implementation of the Indian National Gamma Array (INGA), consisting of eight Compton-suppressed Clover detectors and a 14-element NaI(Tl) multiplicity ﬁlter [10]. The detectors were placed in the median plane at 60◦ , 90◦ , 120◦ , 150◦ , 210◦ , 250◦ , 285◦ , and 325◦ , with respect to the beam direction. The master trigger was generated by a coincidence condition in which three or more Clover detectors had ﬁred, along with a K 2 multiplicity condition for the NaI(Tl) multiplicity ﬁlter. In all, about 205 million γ γ γ coincidence events were accumulated in list mode. In order to conﬁrm the coincidences between the prompt transitions above the 11− isomeric level and the known transitions below this isomer, a second experiment was performed at
+63
+
+the Nuclear Science Centre (NSC), New Delhi, using the 15 UD Pelletron facility. The 63 Cu(31 P, 3p1n) reaction at a beam energy of 120 MeV was employed. The target consisted of a self-supporting foil of 63 Cu with thickness ∼760 µg/cm2 . The experimental arrangement comprised the INGA facility, coupled to the Heavy Ion Reaction Analyzer (HIRA) [13]. The recoil-isomer tagging technique was employed, wherein the γ -ray measurements were made both at the target position and at the focal plane of the HIRA. The prompt γ transitions feeding the isomeric levels were detected in the Clover array at the target position. A standard 23% HPGe detector was placed close to the end ﬂange of the focal plane of the HIRA to detect the delayed γ rays originating from the decay of the isomeric levels in the nuclei, which were selectively transported to the focal plane of the HIRA. The details of the experimental setup are given in a previous work [14]. The data were recorded when either (a) a γ γ coincidence was detected by the Clover array or (b) a γ ray was detected by the array in coincidence with a selected recoiling nucleus at the HIRA focal plane. The arrival of the nuclei in an isomeric state at the focal plane started a time-to-amplitude converter (TAC) which was then stopped by the electronically delayed HPGe signal, indicating the detection of γ rays following the decay of the isomer. This delayed time information t from TAC along with the energy information Edγ from the HPGe detector were recorded in list mode along with the prompt γ γ coincidences between the Clover detectors. The zero time, corresponding to the arrival of the isomeric nucleus at the focal plane of the HIRA, was obtained from the anode signal of a multiwire proportional counter (MWPC). Around 600 million prompt γ γ coincident events and approximately 2 million prompt-delayed γ γ coincident events were recorded. As no in-beam data were recorded in singles mode, the HIRA transmission efﬁciency for 90 Nb could not be experimentally determined. However, simulations [15] have shown that for the HIRA acceptance set with a 5 msr solid angle, the efﬁciency for A = 90 nuclei reaching the focal plane is ∼2.2%. This value increases to about 3.0% for the 10 msr setting. These values have a maximum uncertainty of ±20%. The data have mostly been accumulated using the 5 msr setting. As mentioned earlier, the recoil-isomer tagging technique has a dual advantage. Besides establishing the half-lives of the isomeric levels, it also allows us to correlate between the prompt transitions feeding the isomeric level and the delayed transitions originating from the decay of the isomer. The level scheme for the nuclei of interest could then be developed across the isomeric level from these prompt-delayed coincidences. Indeed, because of the nonavailability of data on the level structure of 90 Nb above the 11− isomeric level prior to this work, the prompt-delayed coincidences were essential for establishing the level scheme across the isomeric level. The data analysis was performed using the Linuxbased γ N analysis software packages IUCSORT [16,17] and RADWARE [18]. Besides the conventional prompt γ N (N = 2, 3) histograms, prompt-delayed and Edγ -t matrices were also constructed. The half-lives of the isomeric levels were obtained from the Edγ -t matrix. One axis of this matrix corresponds
+
+054309-2
+
+SPECTROSCOPY OF 90 Nb AT HIGH SPIN
+
+PHYSICAL REVIEW C 72, 054309 (2005)
+
+Sequence I
+8
+
+19(
+
+)
+
+Proposed Level Scheme of 90Nb
+
+*744 * 282
+6 Excitation Energy (MeV)
+
+* (1026) () 18 17( ) * 587 16( * 598
+)
+
+* (672)
+15(
+)
+
+* 1825 * (721) 14 *676 13 * 1774
+11 1067
+
+* 1903 * 2744
+(13 )
+
+4
+
+* (808)
+2
+
+(12 )
+
+584 607
+
+(13 )
+
+Sequence II
+3 3
+
+* 633 * 300
+
+10 1172 9
+
+71
+
+9 996
+
+* (12 ) 933 0.47(1) s * 425 * 491
+
+* 1455
+
+* 1271
+
+3(
+
+)
+
+* 990
+
+813
+0
+
+8
+
+203 323 43 123
+
+2 3 45 163 6 88 s
+
+FIG. 1. Proposed level scheme for 90 Nb. Newly observed transitions are marked with an asterisk. Widths of arrows connecting the levels are proportional to the relative γ -ray intensities.
+
+to the time difference between the detection of a recoil by the MWPC and that of a decay γ ray in the HPGe detector; and the other axis, to the corresponding γ -ray energy. The delayed γ -ray spectra were then projected with successive time slices on the recoil-γ TAC, having 0.5 and 1.0 µs widths, respectively. Seventeen new γ transitions belonging to 90 Nb were identiﬁed and placed in the decay scheme (Fig. 1). A representative prompt-delayed coincidence spectrum, from the self-supporting target experiment (performed at NSC), with gates on the transitions originating from the decay of the known 11− isomeric level in 90 Nb, is shown in Fig. 2(a); Fig. 2(b) illustrates the γ γ γ coincidence (prompt) spectrum from the backed target experiment (performed at TIFR). Further, Fig. 2(c) depicts the coincidences between the transitions depopulating the high spin states of Sequence I with the newly reported 1774-keV transition which feeds the 11− isomeric
+
+level. Figure 2(d) shows the gated spectrum of the newly observed 2744-keV γ transition. The coincidences between the members of the low-lying Sequence II is indicated in Fig. 2(e). The available data did not indicate any linking transitions between Sequences I and II. The angle-dependent Eγ -Eγ matrices, with the data from the backed-target experiment, were used to obtain the intensity ratios for the γ transitions; these, in turn, were used to assign qualitatively the spin of the proposed levels. These assignments were based on the assumptions of stretched transitions for the gates, and all calculations were performed after incorporating the necessary efﬁciency corrections. The multipolarity assignments were carried out using the procedure described in Ref. [19]. A γ γ matrix was constructed with one axis corresponding to the data recorded in the 150◦ , 210◦ , and 325◦ detectors; the other axis contained the coincidence data from the 90◦ , 250◦ , and 285◦ detectors. We then deﬁne Rint as
+
+Rint =
+
+Iγ1 at 90◦ , 250◦ , and 285◦ ; gatedwith γ2 at 150◦ , 210◦ , and 325◦ . Iγ1 at 150◦ , 210◦ , and 325◦ ; gatedwith γ2 at 90◦ , 250◦ , and 285◦
+
+054309-3
+
+A. CHAKRABORTY et al.
+
+PHYSICAL REVIEW C 72, 054309 (2005)
+633 (a) 676 Gate: 71+813+996+1067 keV 1774 744 1903 933
+
+Counts / 1 keV
+
+584 598 587 607 721
+
+282 300
+
+60 40 20 0
+
+200 282 300
+
+600 587 598 676 607 721 744
+
+1000
+
+1400
+
+1800 100 80 60 40 20 0 45 35 25 15 5 -5
+
+Counts / 2 keV
+
+(b) Sum of double gates between 282, 587,598,744,1774 and 1903 KeV
+1026 1774 1903
+
+200 282
+
+600
+
+1000
+
+1400
+
+1800
+
+2200
+
+200 282 300
+
+600 633 672 744 587 598
+
+1000 933
+
+1400
+
+1800 80 40 0 -40
+
+Counts / 2 keV Counts / 0.8 keV
+
+(d) Gate: 2744 keV
+
+200 163 203 323
+
+600
+
+1000 1271
+
+1400
+
+1800 240 200 160 120 80 40 0
+
+425 491
+
+990
+
+(e) Sum of double gates between 163,203 and 323 keV
+1455
+
+200
+
+600
+
+1000
+
+1400
+
+1800
+
+2200
+
+E (keV)
+Assuming the commonly encountered situation of stretched transitions, the value of Rint for those γ rays having the same multipolarity as the gated γ ray would be ∼1, while the value differs by a factor of ∼2 if the multipolarities of the γ rays are different. The resultant values of Rint for some of the observed transitions are illustrated in Fig. 3(a). The polarization sensitivity of Clover detectors was used to assign qualitatively the parities for some of the observed levels. As described in Refs. [20,21], the asymmetry parameter IPDCO was obtained using the relation
+IPDCO
+
+whereas a negative value corresponds to a magnetic transition. A near-zero value for the asymmetry parameter is indicative of an admixture. Fig. 3(b) illustrates the value of the asymmetry parameter for some of the observed transitions in 90 Nb. For comparison, we have included a few known transitions from 90 Mo [22], which was one of the dominant fusion evaporation residues produced in the present reaction.
+
+1825 1903
+
+(c) Double Gate: (282+587+676+744+1825) and 1774 keV
+
+FIG. 2. (a) Prompt-delay coincidence spectrum (from the NSC experiment). (b) Prompt correlation spectrum of the observed transitions above the 11− isomeric state (from the TIFR experiment) of Sequence I. (c) γ γ γ coincidence spectrum between the 1774-keV and some of the other prompt transitions of Sequence I. (d) γ γ coincidence spectrum gated by the newly observed 2744-keV transition of Sequence I. (e) γ γ γ coincidence spectrum for Sequence II. Peaks labeled by their energy values are assigned to 90 Nb.
+
+Counts / 2 keV
+
+587 598 676 744
+
+III. EXPERIMENTAL RESULTS A. The level scheme of 90 Nb
+
+=
+
+[a(Eγ )N⊥ ] − N , [a(Eγ )N⊥ ] + N
+
+where the γ -ray energy-dependent function a(Eγ ) corresponds to the geometrical asymmetry of the detector array, and N⊥ and N correspond to the number of perpendicular and parallel scatters, respectively, for a given γ ray. An electric transition would result in a positive value for the asymmetry parameter;
+
+As seen from Fig. 1, the level scheme of 90 Nb has been extended up to Ex ∼ 8 MeV and J = 19¯ . The newly h observed transitions have been marked with an asterisk. The level and transition energies, γ -ray intensities, DCO and IPDCO ratios, and deduced spin-parity assignments are summarized in Table I. The intensities of the observed transitions
+
+054309-4
+
+

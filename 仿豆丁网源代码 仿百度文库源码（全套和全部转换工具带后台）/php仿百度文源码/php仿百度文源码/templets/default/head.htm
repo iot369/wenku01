@@ -1,0 +1,43 @@
+<html><HEAD></HEAD>
+<BODY>
+<DIV id=TopNav>
+<DIV id=Personal>您好，欢迎光临{dede:global.cfg_webname/}，<A href="{dede:global.cfg_memberurl/}/login.php">登录</A> <A href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&amp;dopost=regnew">注册</A> <A href="{dede:global.cfg_cmsurl/}/help.html" target=_blank>常见问题</A></DIV>
+</DIV><!--End Top Nav-->
+<DIV id=Head>
+<DIV id=Head-Logo><A title={dede:global.cfg_webname/} href="{dede:global.cfg_cmspath/}/"><IMG border=0 alt={dede:global.cfg_webname/} src="{dede:global.cfg_cmspath/}/images/logo_uui.gif"></A> </DIV>
+
+
+<DIV id=ltsearch>
+<FORM name=formsearch action={dede:global.cfg_cmsurl/}/plus/search.php>
+<P id=ltsearchbar><SPAN></SPAN><INPUT value=0 type=hidden name=kwtype> <INPUT value=titlekeyword type=hidden name=searchtype> <INPUT onblur="if(this.value==''){this.value='输入要查找的文档资料...';}" id=iptSearch onfocus="if(this.value=='输入要查找的文档资料...'){this.value='';}" value=输入要查找的文档资料... name=q> <EM id=btnSearch onclick="if($('#iptSearch').val()=='输入要查找的文档资料...'){return false;}else{document.formsearch.submit();}"></EM><BR class=clear>
+<DIV class=filetypes><INPUT value="" CHECKED type=radio name=filetype> 全部 &nbsp;&nbsp; </DIV>
+<P></P></FORM></DIV>
+</DIV><!-- End Head -->
+<DIV class="mod shop-navmod">
+<DIV class=inner>
+<DIV class="bd shop-navbox">
+<UL id=shop-nav class=shop-nav>
+<LI id=nav-index class=current><A class=nav-global href="{dede:global.cfg_cmspath/}/"><SPAN>文档首页</SPAN></A> 
+<LI><A class=nav-global href="{dede:global.cfg_cmspath/}/html/ranklist.html"><SPAN>分类排行</SPAN></A> 
+<LI><A class=nav-global href="#"><SPAN>文献类型</SPAN></A> </LI></UL></DIV></DIV></DIV>
+<SCRIPT>
+function curMenu(){
+	var nav = $("#shop-nav li");
+    var links = $("#shop-nav li a");
+    //alert(links.size());
+    var currenturl = document.location.href;
+    currenturl=currenturl.toLowerCase(); //转换成小写
+    var last = 0;
+    for (var i=0;i<links.length;i++)
+    {
+        var linkurl = $(links.get(i)).attr("href");
+        if(currenturl.indexOf(linkurl)!=-1){
+            last = i;
+        }
+    }
+    nav.removeClass("current");
+    $(nav[last]).addClass("current");
+}
+curMenu();
+</SCRIPT>
+</BODY></html>

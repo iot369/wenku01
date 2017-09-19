@@ -1,0 +1,64 @@
+{dede:config.pagesize value="20"/}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>QQ登录已绑定会员</title>
+<link href="img/base.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="js/member.js"></script>
+<style type="text/css">
+.rb{ border-right:1px solid #666666 }
+.tb{ border-top:1px solid #666666 }
+</style>
+</head>
+<body background='img/allbg.gif' leftmargin='8' topmargin='8'>
+<table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#cfcfcf">
+  <tr> 
+  <td height="28" colspan="9" background="images/tbg.gif">
+   <table width="99%" border="0" cellspacing="0" cellpadding="0">
+     <tr>
+       <td width="29%" style="padding-left:10px;"><strong>已绑定会员列表</strong></td>
+       <td width="71%" align="right"></td>
+     </tr>
+  </table>
+ </td>
+</tr>
+  <tr bgcolor="#FEFCEF" height="30" align="center"> 
+    <td width="3%">编号</td>
+    <td width="8%">会员名</td>
+    <td width="8%">昵称</td>
+    <td width="18%">OpenId</td>
+    <td width="15%">Token</td>
+    <td width="15%">Secret</td>
+    <td width="5%">当前状态</td>
+    <td width="17%">绑定时间</td>
+    <td>管理操作</td>
+  </tr>
+{dede:datalist} 
+<tr height="26" align="center" bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='#FCFDEE';"
+  	 onMouseOut="javascript:this.bgColor='#FFFFFF';"> 
+  <td>{dede:field.id/}</td>
+  <td>{dede:field.mid function="GetOneMemberInfo(@me,'userid')"/}</td>
+  <td>{dede:field.mid function="GetOneMemberInfo(@me,'uname')"/}</td>
+  <td>{dede:field.openid/}</td>
+  <td>{dede:field.token/}</td>
+  <td>{dede:field.secret/}</td>
+  <td>{dede:field.stat function="GetOneQzoneMemberStat(@me)"/}</td>
+  <td>{dede:field.dtime function="MyDate('Y-m-d H:i:s',@me)"/}</td>
+  <td align="center"><a href="qzonelogin_main.php?dopost=lock&id={dede:field.id/}" title="将该状态设为{dede:field.stat function="GetOneQzoneMemberStat(@me,'action')"/}">{dede:field.stat function="GetOneQzoneMemberStat(@me,'action')"/}</a> | <a href="qzonelogin_main.php?dopost=delete&id={dede:field.id/}">删除</a></td>
+</tr>
+{/dede:datalist} 
+<tr bgcolor="#ffffff"> 
+ <td height="36" colspan="9">
+	&nbsp;
+ （注：本页面的“管理操作”仅是管理QQ绑定相关，并不会锁定或删除其正常会员权限）</td>
+</tr>
+<tr bgcolor="#F9FCEF"> 
+ <td height="36" colspan="9" align="center">
+	{dede:pagelist listsize='6' /}
+ </td>
+</tr>
+</table>
+</form>
+</body>
+</html>

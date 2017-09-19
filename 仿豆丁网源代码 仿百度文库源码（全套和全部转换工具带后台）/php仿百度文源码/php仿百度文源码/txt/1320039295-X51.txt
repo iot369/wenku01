@@ -1,0 +1,22 @@
+目录
+任务书 ...................................................... 错误！未定义书签。 开题报告 .................................................... 错误！未定义书签。 指导教师审查意见 ............................................. 错误！未定义书签。 评阅教师评语................................................. 错误！未定义书签。 答辩记录及成绩评定 ........................................... 错误！未定义书签。 中文摘要 .................................................................... I 英文摘要 ................................................................... II 1 引言 ....................................................................... 1 1.1 课题背景 ............................................................... 1.2 国内外研究现状 ......................................................... 1.3 本课题研究的意义 ....................................................... 1.4 本课题的研究方法 ....................................................... 1 1 2 2
+
+2 系统概述 ................................................................... 3 2.1 总体设计 ............................................................... 2.2 数据库分析 ............................................................. 2.3 运行环境 ............................................................... 2.4 理论基础 ............................................................... 3 4 5 5
+
+3 房屋销售管理系统的设计 ..................................................... 8 3.1 功能概述 ............................................................... 8 3.2 数据库设计 ............................................................. 8 4 房屋销售管理系统的实现 .................................................... 12 4.1 注册登录功能实现 ...................................................... 12 4.2 搜索功能实现 .......................................................... 14 4.3 系统功能管理 .......................................................... 14 5 结论 ...................................................................... 22 参考文献 ................................................................... 23 致 谢 ..................................................................... 24
+
+附录 ....................................................................... 25
+
+I
+
+基于 B/S 模式的售房管理系统的设计与开发
+[摘 要] 我国房地产业随着国家经济的发展正处在一个飞速发展的时代。房屋
+
+销售系统是一个庞大的系统工程，房屋也是一种特殊的商品，如何在买卖双方交易之 前，可以通过某种方式让双方彼此有一定的了解和互信，使房屋销售更方便化，成了 房屋销售管理的核心。以 INTERNET 为代表的信息技术的飞速发展，使房屋销售的 很多问题得到解决，如何应用信息技术快速提升房屋的销售管理水平，成为新一轮市 场竞争的关键因素。 本房屋销售信息管理系统可以显示各种房屋的基本信息和通告信息。 用户可以对 自己喜欢的房屋进行预订，产生预订单，可以通过网上留言与管理员沟通，并且可以 使用搜索功能快速找到自己感兴趣的房屋。系统管理员通过管理界面可以添加、删除 和编辑房屋信息和通告信息，还可以对注册用户进行管理。本系统的最终目的就是加 强用户和销售方的沟通，促进房屋销售。 本系统是使用 ASP.NET 开发语言，使用 Microsoft Visual Studio 2005 作为工具软 件，数据库为 SQL Server 2000。 [关键词] 房屋销售；订单；管理员；通告
+
+I
+
+The Design and Realization of House Selling Management System Based on B/S
+[Abstract] The estate industry is in a rapid development era with the country's economic development. House selling system is a huge project, house is a special commodity. Buyers and sellers can have a certain understanding and trust before house trade, and make the housing more convenient, which have become the core of housing sales management. Many issues in housing sales have been settled by the rapid IT development, how to use information technology to enhance the level of housing sales management using information technology that has become the key factors of a new market competing. The housing sales information management system can show the various housing information and announcement. Users can reserve the housing which they like. They can communicate with the managers by message. Users can search the house by quickly. System administrators can add, delete and edit housing information and announce through the management interface, also, can manage the registered users. The ultimate goal of the system increase communication for sales and users, promotes housing sales. The system is based on Microsoft Visual Studio 2005 with ASP.NET programming language, and the Database is SQL Server2000. [Key words] house selling; order; administrator; announcement
+
+

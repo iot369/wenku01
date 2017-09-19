@@ -1,0 +1,430 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/images/js/ad_member.js"></script>
+<script type="text/javascript">
+TC_PhpDir = '{dede:global.cfg_phpurl/}';
+</script>
+
+<LINK  href="{dede:global.cfg_templets_skin/}/baidu/homebook.css" rel="stylesheet" type="text/css" >
+<LINK  href="{dede:global.cfg_templets_skin/}/baidu/homenew.css" rel="stylesheet" type="text/css" >
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/baidu/tangram-1.3.2.js"></SCRIPT>
+<SCRIPT type=text/javascript src="{dede:global.cfg_templets_skin/}/js/js.js"></SCRIPT>
+
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+<script language="javascript" type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jquery.marquee.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/opendoc/js/thickbox.js"></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/js/opendoc/css/thickbox.css"/>
+<script type="text/javascript">
+	var tb_pathToImage = "{dede:global.cfg_cmspath/}/images/loadingAnimation.gif";
+</script>
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.hiAlerts.1.0/jquery.ui.draggable.js" type="text/javascript"></script>
+<!-- 拖动函数，不需要可以去掉 -->
+<!-- Core files -->
+<script src="{dede:global.cfg_templets_skin/}/js/jquery.hiAlerts.1.0/jquery.hiAlerts-min.js" type="text/javascript"></script>
+<link href="{dede:global.cfg_templets_skin/}/js/jquery.hiAlerts.1.0/jquery.hiAlerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#marquee").marquee({  
+		direction: "left",  
+		step: 1,  
+		pause: 1000  
+	});					   
+});
+
+function CheckCommentLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_memberurl/}/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('vote');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+//登录
+function winLogin(userid, pwd, vdcode, todo){
+	$.ajax({
+		url: '{dede:global.cfg_memberurl/}/login_ajax.php',
+		method:"post",
+		data: {vdcode:vdcode, userid:userid, pwd:pwd},
+		dataType:   "script",
+		success	:function(response) {
+			var obj = eval("("+response+")");//转换为json对象
+			if(obj.code == 0){
+				tb_remove();
+				CheckLogin();
+				doSomeThing(todo);
+			}else{
+				hiAlert("<div style='text-align:left;'>"+obj.msg+"</div>");
+			}
+		}
+	});
+}
+
+function doSomeThing(todo){
+	if(todo == "down"){
+		doDonwLoad();
+	}else if(todo == "favorite"){
+		doFavorite();
+	}
+	else if(todo == "jubao"){
+		doJubao();
+	}
+}
+
+function reguser(){
+	window.location.href = "{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew";	
+}
+
+function showLogin(todo){
+	$('#DocinViewer').css('visibility','hidden');
+	tb_show('用户登录','{dede:global.cfg_templets_skin/}/inc/showLogin.php?TB_iframe=true&todo='+todo+'&height=160;width=400');
+}
+
+function favorite(){
+	$.ajax({
+		url: '{dede:global.cfg_memberurl/}/ajax_islogin.php',
+		dataType:   "script",
+		success	:function(data) {
+			if(data=='0'){
+				showLogin("favorite");
+			}else{
+				doFavorite();
+			}
+		}
+	});
+}
+function jubao(){
+	$.ajax({
+		url: '{dede:global.cfg_memberurl/}/ajax_islogin.php',
+		dataType:   "script",
+		success	:function(data) {
+			if(data=='0'){
+				showLogin("jubao");
+			}else{
+				showFeekback("feekBackDiv","feekback1");
+			}
+		}
+	});
+}
+function download(){
+	$.ajax({
+		url: '{dede:global.cfg_memberurl/}/ajax_islogin.php',
+		dataType:   "script",
+		success	:function(data) {
+			if(data=='0'){
+				showLogin("down");
+			}else{
+				doDonwLoad();
+			}
+		}
+	});
+}
+
+function doDonwLoad(){
+	hiConfirm('<div style="text-align:left;">文档名称：【{dede:field.title/}】<br/>文档大小：【{dede:field.softsize/}】<br/>所需金币：【<span style="color:red; font-weight:bold;">{dede:field.needmoney/}</span>】，确定下载吗？</div>', '文档下载确认：', function(r) {
+		//hiOverAlert('你的反馈是: ' + r);
+		if(r){
+			$('#DocinViewer').css('visibility','visible');
+			window.location.href = "{dede:field name='softlinks'/}";
+		}
+	});
+}
+
+function doFavorite(){
+	window.location.href = "{dede:field name='phpurl'/}/stow.php?aid={dede:field.id/}";
+}
+function doJubao(){
+	window.location.href = "{dede:field name='phpurl'/}/jubao.php?aid={dede:field.id/}";
+}
+</script>
+<!--script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/swfobject.js" ></script-->
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/swfobject/swfobject.js"></script>
+<script type="text/javascript">
+	if(window.addEventListener)
+	window.addEventListener('DOMMouseScroll', handleWheel, false);
+	window.onmousewheel = document.onmousewheel = handleWheel;
+	
+	if (window.attachEvent) 
+	window.attachEvent("onmousewheel", handleWheel);
+	
+	function handleWheel(event){
+		try{
+			if(!window.document.FlexPaperViewer.hasFocus()){return true;}
+			window.document.FlexPaperViewer.setViewerFocus(true);
+			window.document.FlexPaperViewer.focus();
+			
+			if(navigator.appName == "Netscape"){
+				if (event.detail)
+					delta = 0;
+				if (event.preventDefault){
+					event.preventDefault();
+					event.returnValue = false;
+					}
+			}
+			return false;	
+		}catch(err){return true;}		
+	}
+</script>
+
+<SCRIPT type=text/javascript>function ChangImg(){document.getElementById("upimg").src="{dede:global.cfg_templets_skin/}/images/up2.png"}function ReturnImg(){document.getElementById("upimg").src="{dede:global.cfg_templets_skin/}/images/up1.png"}</SCRIPT>
+</HEAD>
+<BODY>
+<!-- /header 开始 -->
+{dede:include filename="head.htm"/}
+<!-- /header 结束-->
+
+<DIV class=nav id=nav>{dede:field name='position'/}</DIV>
+<DIV class=main id=main>
+<DIV id=header>
+<div style="FONT-SIZE:22px; PADDING-BOTTOM:15px; PADDING-TOP:15px; TEXT-ALIGN: center;"><strong>{dede:field.title/}</strong></div>
+<HR>
+<div id="ad_top"><A href="" target=_blank><IMG style="vertical-align:middle;" src="{dede:global.cfg_templets_skin/}/images/top.gif" alt="" width=730 height=60 border="0" title=""></A></div>
+<div style="font-size:16px; text-indent:2em; line-height:200%;">{dede:field.body/}</div><br /></DIV>
+<DIV class=mt id=extra>
+<P><span  style="float:right"><!-- JiaThis Button BEGIN -->
+<div id="jiathis_style_32x32">
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_tqq"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_kaixin001"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+</div>
+<script type="text/javascript" src="http://v2.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END --></span></P>
+<DIV class=download><A style="CURSOR: pointer" href="{dede:global.cfg_memberurl/}/upload_book.php"  id=upid onfocus=this.blur()><IMG id="upimg" onmouseover=ChangImg() onmouseout=ReturnImg() alt="" src="{dede:global.cfg_templets_skin/}/images/up1.png"></A> 
+<P>&nbsp; </P>
+</DIV>
+</DIV>
+<DIV class=recommend>
+<H3>喜欢此文档的人还喜欢</H3>
+<UL>
+{dede:arclist titlelen=80 orderby='rand' row='8' }
+  <LI class=odd><SPAN class=read>[field:pubdate function=MyDate('y-m-d',@me)/]</SPAN> <SPAN class="icon [field:filetype/] icon1">
+  </SPAN>
+  <A title="[field:title]" href="[field:arcurl/]" target=_blank>[field:title function="cn_substr('@me',70)"/] </A></LI>
+  {/dede:arclist}
+  </UL>
+
+</DIV>
+
+    <div id="Comment_box" class="p_box">
+      <div class='text'><b><font color=red>发表评论</font></b></div>
+      <!-- //AJAX评论区 -->
+      {dede:include file='ajaxfeedback.htm' /} </div>
+    <!--发表评论 end-->
+
+<DIV class="mod wk-book-moda mt20" style="DISPLAY: none">
+</DIV></DIV>
+<DIV class=aside id=aside>
+<DIV class=upbox>
+<DIV class=content>
+<A style="CURSOR: pointer" href="{dede:global.cfg_memberurl/}/upload_book.php"  id=upid onfocus=this.blur()><IMG 
+id="upimg" onmouseover=ChangImg() onmouseout=ReturnImg()  
+alt="" src="{dede:global.cfg_templets_skin/}/images/up1.png"></A> </DIV></DIV>
+<DIV class="wenku-join-btn mt10"></DIV>
+<DIV class="mt10 box">
+<DIV class=content>
+<H2>当前文档信息</H2>
+<DIV id=docInfo>
+<HR>
+<P class=view>浏览：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次<SPAN class=ml>下载：<script src="{dede:field.phpurl/}/disdls.php?aid={dede:field.id/}" language="javascript"></script>次</SPAN></P>
+<P>贡献时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</P>
+<SCRIPT type=text/javascript>var isLec=false;</SCRIPT>
+
+<HR>
+
+<P>贡献者： <A href="/member/index.php?uid={dede:field.mid/}" target=_blank>{dede:field.writer/}</A>
+
+<P class=c id=FriendsCor>{dede:field.mid runphp='yes'}    
+    $id = @me;    
+    if($id <> 0){    
+        $sql = "select * from t_member where mid = $id";    
+        $query = mysql_query($sql);    
+        $row = mysql_fetch_array($query);    
+        if($row['face'] == ''){    
+            @me = '<img src="/member/templets/images/dfboy.png" />';    
+        }    
+        else{    
+            $face = $row['face'];    
+            @me = '<img src="'.$face.'" />';    
+        }    
+    }    
+    else{    
+        @me = '游客发表';    
+    }    
+{/dede:field.mid}</P>
+<P class=c></P></DIV></DIV></DIV>
+<DIV class="bbox box">
+<DIV class=content>
+<H2>文档关键词</H2>
+<P class=tag-list id=tagList>{dede:tag row='30' } <a href='[field:link/]'>[field:tag /]</a>{/dede:tag}</P>
+</DIV></DIV>
+<!--作者的其他文档-->
+<DIV class="bbox box">
+<DIV class=content>
+<H2><A class="more relateDocTitle" 
+href="#">更多</A><A 
+class=relateDocTitle 
+href="#">作者其他文档</A> 
+</H2>
+<TABLE class="multi-list-moudle related hotDocListExtra" id=relateDocList 
+cellSpacing=0 cellPadding=0>
+  <TBODY>
+  {dede:sql sql="SELECT * FROM t_archives, t_addonbook WHERE writer=~writer~  and id=aid limit 0, 5"}
+  <TR>
+    <TD class=wk-hotdoc-td vAlign=top width=24><SPAN class="[field:filetype/] icon" 
+      title=[field:filetype/]></SPAN></TD>
+    <TD vAlign=top><A title=[field:title/] 
+      href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]" 
+      target=_blank rel=log-view-relatehot-subtype=relate>[field:title/]...</A> 
+      <P><SPAN class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-half" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class=gray>[field:click/]人阅读</SPAN> <SPAN class=pn>[field:pagenumber/]页</SPAN></P></TD></TR>
+	  {/dede:sql}
+  </TBODY></TABLE></DIV></DIV>
+<!--作者的其他文档-->
+<DIV class="bbox box">
+<DIV class=content>
+<H2><A class="more relateDocTitle" 
+href="#">更多</A><A 
+class=relateDocTitle 
+href="#">相关推荐文档</A> 
+</H2>
+<TABLE class="multi-list-moudle related hotDocListExtra" id=relateDocList 
+cellSpacing=0 cellPadding=0>
+  <TBODY>
+  {dede:likearticle flag='c' titlelen='42' row='5' col=''  infolen='60' orderby='pubdate' } 
+  <TR>
+    <TD class=wk-hotdoc-td vAlign=top width=24><SPAN class="[field:filetype/] icon" 
+      title=[field:filetype/]></SPAN></TD>
+    <TD vAlign=top><A title=[field:title/] 
+      href="[field:arcurl/]" 
+      target=_blank rel=log-view-relatehot-subtype=relate>[field:title function="cn_substr(@me,40)"/]...</A> 
+      <P><SPAN class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-half" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class=gray>[field:click/]人阅读</SPAN> <SPAN class=pn>[field:pagenumber/]页</SPAN></P></TD></TR>
+	  {/dede:likearticle}
+  </TBODY></TABLE></DIV></DIV>
+<DIV class="bbox box">
+<DIV class=content>
+<H2><A class="more hotDocTitle" 
+href="#">更多</A><A class=hotDocTitle 
+href="#">同分类热门文档</A> </H2>
+<TABLE class="multi-list-moudle related hotDocListExtra" id=hotDocList 
+cellSpacing=0 cellPadding=0>
+  <TBODY>
+   {dede:likearticle titlelen='42' row='5' col=''  infolen='60' orderby='click'} 
+  <TR>
+    <TD class=wk-hotdoc-td vAlign=top width=24><SPAN class="[field:filetype/] icon" 
+      title=doc></SPAN></TD>
+    <TD vAlign=top><A title=[field:title/] 
+      href="[field:arcurl/]" 
+      target=_blank rel=log-view-relatehot-subtype=hot>[field:title function="cn_substr(@me,40)"/]...</A> 
+      <P><SPAN class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-on" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class="icon star-small-half" title=文档得分:[field:scores/]分></SPAN><SPAN 
+      class=gray>[field:click/]人阅读</SPAN> <SPAN class=pn>[field:pagenumber/]页</SPAN></P></TD></TR>
+	    {/dede:likearticle}
+</TBODY></TABLE></DIV></DIV>
+<DIV class="mt4 box">
+<DIV class=content>如要投诉或提出意见建议，请到<BR>
+<SPAN id=tousu><A 
+href="#" target=_blank>文库社区</A>反馈。</SPAN> 
+</DIV>
+</DIV></DIV>
+<DIV class=clear></DIV>
+{dede:include filename="footer.htm"/}
+
+
+
+<DIV id=literatureElement style="DISPLAY: none"></DIV>
+
+
+</BODY></HTML>

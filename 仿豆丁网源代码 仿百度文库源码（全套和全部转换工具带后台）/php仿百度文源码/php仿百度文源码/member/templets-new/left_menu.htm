@@ -1,0 +1,220 @@
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/zDialog/zDrag.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/zDialog/zDialog.js"></script>
+<script>
+//menu
+$(document).ready(function(){
+
+  $('.p2').mousemove(function(){
+  $(this).children("div").show();//可以自己修改速度
+ // $(this).find('p2Show').mouseover(function(){$(this).show();};
+  });
+ $('.p2').mouseout(function(){
+  $(this).find('.p2Show').hide();
+  
+});
+ 
+});
+</script>
+<script type="text/javascript">
+	//$(document).ready(function(){
+		//$(".p2").hover(function(){
+			//$(this).addClass("cur");
+			//$(this).children("div").show();
+		//}).mouseout(function(e){
+			//var d = $(this).children("div");
+			//var r = e.relatedTarget||e.toElement;
+			//if (r!==d[0]){
+				//$(".demo li").removeClass("cur");
+				//d.hide();
+			//}//
+		//})
+  // })
+   function del(e){
+e=e||event;
+var obj=e.relatedTarget||e.toElement;
+var div =document.getElementById("div")
+if(div.contains(obj))return;
+document.body.removeChild(div)
+oo=true
+}
+function open22(){
+	var diag = new Dialog();
+		diag.Width = 300;
+	diag.Height = 100;
+	diag.Title = "创建我的分类";
+	diag.URL = "mtypes-add.php";
+	
+	diag.OKEvent=function(){diag.innerDoc.getElementById("mtypename").value||Dialog.alert("栏目不能为空！");diag.innerDoc.getElementById('form1').submit();diag.submited=true;};
+	diag.OnLoad=function(){
+		if(diag.submited){
+			//alert('表单已经提交成功\n'+location+'\n接下来将刷新父窗口。');
+			diag.openerWindow.location.reload();
+            try{
+				diag.close();
+            }catch(e){}
+		}
+	};
+	diag.show();
+}
+function open23(obj,objname){
+	var diag = new Dialog();
+		diag.Width = 300;
+	diag.Height = 100;
+	
+	diag.Title = "修改我的分类";
+	diag.URL = "mtypes-edit.php?id="+obj+"&typename="+objname;
+	
+	diag.OKEvent=function(){diag.innerDoc.getElementById("mtypename").value||Dialog.alert("栏目不能为空！");diag.innerDoc.getElementById('form1').submit();diag.submited=true;};
+	diag.OnLoad=function(){
+		if(diag.submited){
+			//alert('表单已经提交成功\n'+location+'\n接下来将刷新父窗口。');
+			diag.openerWindow.location.reload();
+            try{
+				diag.close();
+            }catch(e){}
+		}
+	};
+	diag.show();
+}
+function open24(obj,objname){
+	var diag = new Dialog();
+		diag.Width = 300;
+	diag.Height = 100;
+	
+	diag.Title = "删除我的分类";
+	diag.URL = "mtypes-del.php?id="+obj+"&typename="+objname;
+	
+	diag.OKEvent=function(){diag.innerDoc.getElementById("mtypename").value||Dialog.alert("栏目不能为空！");diag.innerDoc.getElementById('form1').submit();diag.submited=true;};
+	diag.OnLoad=function(){
+		if(diag.submited){
+			//alert('表单已经提交成功\n'+location+'\n接下来将刷新父窗口。');
+			diag.openerWindow.location.reload();
+            try{
+				diag.close();
+            }catch(e){}
+		}
+	};
+	diag.show();
+}
+function open25(obj){
+	var diag = new Dialog();
+		diag.Width = 300;
+	diag.Height = 100;
+	//var selid = GetCheckfolderItem();
+	diag.Title = "转移我的文档";
+	diag.URL = "bookmove.php?id="+obj;
+	
+	diag.OKEvent=function(){diag.innerDoc.getElementById("name").value||Dialog.alert("栏目不能为空！");diag.innerDoc.getElementById('form1').submit();diag.submited=true;};
+	diag.OnLoad=function(){
+		if(diag.submited){
+			//alert('表单已经提交成功\n'+location+'\n接下来将刷新父窗口。');
+			diag.openerWindow.location.reload();
+            try{
+				diag.close();
+            }catch(e){}
+		}
+	};
+	diag.show();
+}
+</script>
+
+<style>
+.demo{}
+.p2{ line-height:28px;}
+.p2 div{ display:none; position:relative; left:100px; top:-30px; }
+
+.p2Show{ display:none;z-index:2000;PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(templets/images/tips-action.png) no-repeat left top;  PADDING-BOTTOM: 10px; WIDTH: 82px; PADDING-TOP: 10px; HEIGHT: 70px}
+.tips-action {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; BACKGROUND: url(templets/images/tips-action.png) no-repeat left top; LEFT: 30px; PADDING-BOTTOM: 10px; WIDTH: 82px; PADDING-TOP: 10px; POSITION: absolute; TOP: -10px; HEIGHT: 70px
+}
+.tips-action .close {
+	RIGHT: 5px; BACKGROUND: url(templets/images/tips-action.png) no-repeat -5px -93px; WIDTH: 11px; POSITION: absolute; TOP: 5px; HEIGHT: 11px
+}
+</style>
+<DIV class=left>
+<DIV class=left2>
+<DIV class=titlename>用户中心</DIV>
+<DIV class="contbg leftmenu">
+<UL>
+  <LI><IMG align=absMiddle src="35/sy.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="">会员中心首页</A> </LI>
+    <LI><IMG align=absMiddle src="35/tou.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="../member/edit_face.php">修改我的头像</A> </LI>
+  <LI><IMG align=absMiddle src="35/bj.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="../member/edit_baseinfo.php">个人信息编辑</A> </LI>
+  <LI><IMG align=absMiddle 
+  src="35/m_03.gif">&nbsp;&nbsp;&nbsp;<A id=NewMessage 
+  onfocus=this.blur(); 
+  href="<?php echo $cfg_memberurl; ?>/pm.php" 
+  target=_self>站内消息(<font color="#FF0000"><?php $pms = $dsql->GetOne("SELECT COUNT(*) AS nums FROM #@__member_pms WHERE toid='{$cfg_ml->M_ID}' AND `hasview`=0 AND folder = 'inbox'"); echo $pms['nums'];?></font>)</A> </LI>
+  <LI><IMG align=absMiddle src="35/cc.gif">&nbsp;&nbsp;&nbsp;<A onfocus=this.blur(); 
+  href="<?php echo $cfg_memberurl; ?>/myfriend.php" target=_self>我的好友</A> 
+</LI>
+ <LI><IMG align=absMiddle src="35/AD.gif">&nbsp;&nbsp;&nbsp;<A onfocus=this.blur(); 
+  href="<?php echo $cfg_memberurl; ?>/myad.php" target=_self>我的广告管理</A> 
+</LI>
+</UL></DIV>
+<DIV class=bottom></DIV>
+<DIV class="titlename mt5">我的文档</DIV>
+<DIV class="contbg leftmenu">
+<UL>
+  <LI  ><IMG align=absMiddle src="35/fb.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/upload_book.php">发布我的文档</A>  </LI>
+	    <LI><IMG align=absMiddle src="35/scd.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/content_list.php?channelid=17">我上传的文档</A></LI> 
+ 
+    <LI><IMG align=absMiddle 
+  src="35/icon_doc.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/mypay.php">我购买的资料</A> </LI>
+      <LI><IMG align=absMiddle 
+  src="35/icon_doc.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/mydowns.php">我出售的资料</A> </LI>
+  <LI><IMG align=absMiddle src="35/fav.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/mystow.php">我的收藏</A> </LI>
+
+</UL></DIV>
+<DIV class=bottom></DIV>
+<DIV class="titlename mt5">我的账户</DIV>
+<DIV class="contbg leftmenu">
+<UL>
+  <LI><IMG align=absMiddle 
+  src="35/m.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/buy.php">充值中心</A> </LI>
+    <LI><IMG align=absMiddle 
+  src="35/wangy.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/card.php">用点卡充值</A> </LI>
+    <LI><IMG align=absMiddle src="35/2.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/charge.php">&nbsp;兑换金币</A> </LI>
+    <LI><IMG align=absMiddle 
+  src="35/dan.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/operation.php">我的订单</A> </LI>
+    <LI><IMG align=absMiddle 
+  src="35/money.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/benefit.php"> 提现申请</A> </LI>
+
+  <LI><IMG align=absMiddle 
+  src="35/sr.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/incoming.php">提现记录</A> </LI>
+  <LI><IMG align=absMiddle 
+  src="35/1.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/mydowns.php">收入记录</A> </LI>
+    
+    <LI><IMG align=absMiddle 
+  src="35/icon3.png">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/mypay.php">支出记录</A> </LI>
+
+  </UL></DIV>
+<DIV class=bottom></DIV>
+
+<DIV class="titlename mt5">系统管理</DIV>
+<DIV class="contbg leftmenu">
+<UL>
+
+  <LI><IMG align=absMiddle 
+  src="35/cyhf.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/pm.php?dopost=send">意见反馈咨询</A> </LI>
+  <LI><IMG align=absMiddle 
+  src="35/out.gif">&nbsp;&nbsp;&nbsp;<A 
+  href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=login&dopost=exit" target=_blank>离开系统</A> </LI>
+</UL></DIV>
+<DIV class=bottom></DIV></DIV></DIV>

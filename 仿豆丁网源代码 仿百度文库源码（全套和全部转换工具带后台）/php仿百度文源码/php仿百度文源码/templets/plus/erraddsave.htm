@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $htmltitle; ?></title>
+<link href="/templets/jxdoc/style/article.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/templets/jxdoc/style/reset.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/templets/jxdoc/style/message.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="container">
+<div style="width:690px; padding:0; margin-left:auto; margin-right:auto;">
+  <div id="right" style="width:100%;">
+    <!--文档预览 start-->
+    <div id="Preview" class="p_box" style="width:100%;">
+      <div class="title" style="border-bottom:0px;"><span class="doc"><img src="/templets/jxdoc/images/productView-<?php echo $filetype ?>_46x35.gif" align='absmiddle' style='display:block; float:left;' />
+        <h1>文档标题：<?php echo $title; ?></h1>
+        </span> </div>
+      <div class="tl_b"></div>
+      <div class="tr_b"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="p_box"  style="margin-bottom:10px; border-top-width:0; width:100%;">
+      <div class="downloadsite">
+        <div  class="downTips" >
+          <form action="erraddsave.php"  method="post" name="feedback">
+            <input type='hidden' name='dopost' value='saveedit'>
+            <input type="hidden" name="title" value="<?php echo $title?>" />
+            <input type="hidden" name="aid" value="<?php echo $aid?>" />
+            <table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#cccccc">
+              <tr>
+                <td width="100" height="30" align="right" bgcolor="#FFFFFF">标题：</td>
+                <td bgcolor="#FFFFFF"><?php echo $title;?></td>
+              </tr>
+              <tr>
+                <td height="30" align="right" bgcolor="#FFFFFF">错误类型：</td>
+                <td bgcolor="#FFFFFF"><select name="type">
+                    <option value="1">错别字(除的、地、得)</option>
+                    <option value="2">成语运用不当</option>
+                    <option value="3">专业术语写法不规则</option>
+                    <option value="4">产品与图片不符</option>
+                    <option value="5">事实年代以及内容错误</option>
+                    <option value="6">技术参数错误</option>
+                    <option value="7">其他</option>
+                  </select></td>
+              </tr>
+              <tr>
+                <td align="right" bgcolor="#FFFFFF"> 错误内容： </td>
+                <td bgcolor="#FFFFFF"><textarea name="err" cols="40" rows="4" class="ipt-txt"></textarea></td>
+              </tr>
+              <tr>
+                <td align="right" bgcolor="#FFFFFF"> 修正建议： </td>
+                <td bgcolor="#FFFFFF"><textarea name="erradd" cols="40" rows="4" class="ipt-txt"></textarea></td>
+              </tr>
+              <tr>
+                <td height="35" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td bgcolor="#FFFFFF"><input name="提交" type="submit" value="提交" class="btn-2"/>
+                  <input name="重置" type="reset" value="重置" class="btn-2"/></td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <!--下载注意事项 end-->
+      </div>
+    </div>
+  </div>
+  <!--right end-->
+  <div class="clear"></div>
+</div>
+</body>
+</html>

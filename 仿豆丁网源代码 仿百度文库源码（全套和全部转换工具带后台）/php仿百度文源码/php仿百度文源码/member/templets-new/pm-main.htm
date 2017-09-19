@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+ <!---
+  function getNewMessage()
+  {
+    $.get("UserAjax.asp",{action:"GetNewMessage"},function(d){
+	 jQuery("#NewMessage").html(unescape(d));
+	});
+	setTimeout("getNewMessage()", 10000);
+  }
+	setTimeout("getNewMessage()", 1000);
+ 
+  //-->
+</SCRIPT>
+<script type="text/javascript">
+//获得选中文件的文件名
+function GetCheckfolderItem()
+{
+	var allSel='';
+	if(document.form1.deleteid.value) return document.form1.deleteid.value;
+	for(i=0;i<document.form1.deleteid.length;i++)
+	{
+		if(document.form1.deleteid[i].checked)
+		{
+			if(allSel=='')
+			allSel=document.form1.deleteid[i].value;
+			else
+			allSel=allSel+","+document.form1.deleteid[i].value;
+		}
+	}
+	return allSel;
+}
+	
+	function DoSubmit(myfolder)
+	{
+		var selid = GetCheckfolderItem();
+		if(selid=='') {
+			alert("你没选中任何信息！");
+			return false;
+		}
+		if(window.confirm("你确定要删除这些消息么？"))
+		{
+			location = "pm.php?dopost=del&ids="+selid+"&folder="+myfolder;
+		}
+	}
+</script>
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+<SCRIPT type=text/javascript>
+function keyBoxdoit(id, _x, _y){
+      var obj = $("#"+id)[0];
+	  var element = event.srcElement;
+	  var posi = Position.positionedOffset(element);
+	  var left = posi[0];
+	  var top  = posi[1];
+      obj.style.left = left-_x;
+      obj.style.top = top-_y;
+}
+
+function set_liColor(tr_obj,type_value){
+	if(type_value){
+		tr_obj.style.backgroundColor='#BBE0FF';
+	}else{
+		tr_obj.style.background='none';
+	}
+}
+function selectItem(li_obj){
+	$('#keyType')[0].innerHTML=li_obj.txt;
+	$('#searchtype')[0].value=li_obj.v
+	onKeyBox();
+}
+var tmpboon = false;
+function onKeyBox(){
+	tmpboon = !tmpboon
+	if (tmpboon){
+		$('#keywordBox')[0].style.display = 'block';
+		keyBoxdoit('keywordBox',-4,-26);
+	}else{
+		$('#keywordBox')[0].style.display = 'none';
+	}
+}
+</SCRIPT>
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mcpmain">
+      <div id="appTab">
+        <ul>
+          <li><a href="pm.php?dopost=send"><span>写新消息</span></a></li>
+          <li <?php if($folder == "inbox" || empty($folder)) echo 'class="thisTab"'; ?>><a href="pm.php?folder=inbox"><span>收件箱</span></a></li>
+          <li <?php if($folder == "outbox") echo 'class="thisTab"'; ?>><a href="pm.php?folder=outbox"><span>发件箱</span></a></li>
+          <li <?php if($folder == "track") echo 'class="thisTab"'; ?>><a href="pm.php?folder=track"><span>已发出信息</span></a></li>
+        </ul>
+      </div>
+      <?php
+        if($folder == "inbox"){
+       ?>
+      <ul class="tabSub">
+        <li <?php if(empty($state)) echo 'class="thisTab"'; ?>><a href="pm.php?folder=<?php echo $folder;?>"><span>全部</span></a></li>
+        <li <?php if($state == "1") echo 'class="thisTab"'; ?>><a href="pm.php?folder=<?php echo $folder;?>&state=1"><span>已阅读</span></a></li>
+        <li <?php if($state == "-1") echo 'class="thisTab"'; ?>><a href="pm.php?folder=<?php echo $folder;?>&state=-1"><span>未阅读</span></a></li>
+      </ul>
+      <?php
+      }
+      ?>
+      <div id="mainCp">
+        <!--内容消息提示 -->
+        <h3 class="meTitle">短消息列表</h3>
+        <form action="pm.php" method="post" name="form1">
+          <input type='hidden' name='dopost' value='del' />
+          <table width="95%" border="0" cellpadding="0" cellspacing="0" class="list">
+            <thead>
+              <tr>
+                <th align="left" width="5%">&nbsp;</th>
+                <th >标题</th>
+                <th width="10%"><?php
+          	if($folder == "inbox") echo "发件人";
+          	else echo "收件人";
+          	?></th>
+                <th width="10%">状态 </th>
+                <th width="15%">发布时间 </th>
+              </tr>
+            </thead>
+            <tbody>
+            
+            {dede:datalist}
+            <tr>
+              <td><input type="checkbox" name="deleteid" value="{dede:field.id/}" style=" margin-left:5px"/></td>
+              <td class="tabTitle"><?php
+           if($fields['hasview']==0) echo "<a href='pm.php?dopost=read&id={$fields['id']}'>{$fields['subject']}</a>";
+           else echo "<a href='pm.php?dopost=read&id={$fields['id']}'>{$fields['subject']}</a>";
+           ?></td>
+              <td align="center"><?php  if($folder == "inbox") {  ?>
+                <a href="index.php?uid=<?php echo $fields['floginid']; ?>" target="_blank"> <?php echo $fields['floginid']; ?> </a>
+                <?php  }else{  ?>
+                <a href="index.php?uid=<?php echo $fields['tologinid']; ?>" target="_blank"> <?php echo $fields['tologinid']; ?> </a>
+                <?php }  ?></td>
+              <td align="center"><?php
+          $readmsg = ($fields['hasview']==0 ? "<span style='color:red'>未阅读</span>" : '已阅读');
+          echo $readmsg;
+          ?></td>
+              <td align="center"><?php
+          echo MyDate('y-m-d H:i:s',$fields['sendtime']);
+          ?></td>
+            </tr>
+            {/dede:datalist}
+            </tbody>
+            
+            <tfoot>
+              <tr>
+                <td colspan="6"><div class="control fLeft doPost" style="margin-top:10px">
+                    <button type="button" onclick="DoSubmit('<?php echo $folder; ?>')" class="pn pnc"><strong>删除选中</strong></button>
+                  </div>
+                  <div class="pageList">{dede:pagelist listsize=5 /}</div></td>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
+      </div>
+      <!--主操作区域 -->
+    </div>
+
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

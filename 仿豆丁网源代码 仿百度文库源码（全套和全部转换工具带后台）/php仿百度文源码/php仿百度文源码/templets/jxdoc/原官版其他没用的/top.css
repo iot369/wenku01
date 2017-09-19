@@ -1,0 +1,80 @@
+﻿@charset "utf-8";
+
+/* 头部顶部 */
+.nav_top{width:100%;height:32px;text-align:center;background:url(top_bar_bg.gif) top left repeat-x;z-index:8000;position:fixed!important;position:absolute;top:0;left:0;}
+.nav_top .content{width:960px;margin:0 auto;text-align:left;height:32px;line-height:29px!important; line-height:32px;color:#ccc;background:none;position:relative;vertical-align:middle;}
+.nav_top .content .festival{position:absolute;top:0;left:0;}
+.nav_top .content a.strong{font-weight:bold;color:#ff6600; font-size:14px;}
+.nav_top .content a.strong:hover{color:#ff9900;}
+.nav_top .content a{color:#6f6f6f;margin:0 3px;}
+.nav_top .content a:hover{color:#FC6700;}
+.nav_top .content span{color:#6f6f6f;float:left;}
+.userHelp{position:absolute;top:0;right:0;}
+.userHelp a{line-height:29px!important; line-height:32px;color:#6F6F6F;}
+.quick_link{float:left;height:20px;font-family:Arial, Helvetica, sans-serif; margin-top:0px!important; margin-top:2px;}
+.welcome{float:left;padding-left:90px;height:20px;font-family:Arial, Helvetica, sans-serif; margin-top:-23px; }
+/*用于主头*/
+.autumn_head {clear:both;margin:0 0;padding-top:30px;width:960px;height:80px;background:#fff;text-align:left;}
+
+/* 主LOGO */
+.autumn_head .logo{ position:relative;float:left;display:inline;margin:23px 0 0 0;}
+.autumn_head .logo img{position:absolute; left:0; top:10; display:block;}
+
+/* 主搜索条 */
+.autumn_head .main_search_bar {position:relative;float:right;display:inline;margin:0px 0 0 0;width:680px;}
+.autumn_head .main_search_bar .search_tag {width:520px;height:25px;background:url(search_tag_bg.gif) left -50px repeat-x;}/* 搜索条上的Tag */
+.autumn_head .main_search_bar .search_tag ul li {float:left;position:relative;margin-right:4px;}
+.autumn_head .main_search_bar .search_tag ul li a {display:block;padding:0 0 0 14px;line-height:25px;background:url(search_tag_bg.gif) left -50px no-repeat;}
+.autumn_head .main_search_bar .search_tag ul li a em {display:inline-block;padding:0 14px 0 0;font-style:normal;color:#06f;background:url(search_tag_bg.gif) right -50px no-repeat;cursor:pointer;}
+.autumn_head .main_search_bar .search_tag ul li a:hover {background:url(search_tag_bg.gif) left -25px no-repeat;}
+.autumn_head .main_search_bar .search_tag ul li a:hover em {background:url(search_tag_bg.gif) right -25px no-repeat;color:#f60;}
+.autumn_head .main_search_bar .search_tag ul li.focus a {display:block;font-weight:bold;color:#666;background:url(search_tag_bg.gif) left top no-repeat;}
+.autumn_head .main_search_bar .search_tag ul li.focus a em {display:inline-block;background:url(search_tag_bg.gif) right top no-repeat;color:#666;}
+.autumn_head .main_search_bar .search_tag ul li.focus a:hover {background:url(search_tag_bg.gif) left top no-repeat;}
+.autumn_head .main_search_bar .search_tag ul li.focus a:hover em {background:url(search_tag_bg.gif) right top no-repeat;text-decoration:none;color:#f60;}
+.autumn_head .main_search_bar .search_bar {clear:both;padding:2px;height:32px!important;#height:32px!important;_height:31px;border:1px solid #d0d0d0;border-top:none;width:514px;background:#efefef;font-size:0;}/*输入框和按钮条*/
+.autumn_head .main_search_bar .search_bar form {font-size:0;}
+.autumn_head .main_search_bar .search_bar .input {position:relative;float:left;display:inline;font-size:0;}
+.autumn_head .main_search_bar .search_bar .input label {position:absolute;left:0;top:2px;padding:0 14px 0 28px;line-height:32px;background:url(search_input_icon.gif) 10px 50% no-repeat;font-size:14px;color:#BABABA;cursor:text;}
+.autumn_head .main_search_bar .search_bar .input input {width:405px;height:27px!important;#height:28px!important;_height:27px;#margin:-1px 0 0 0;line-height:27px;font-size:14px;border-right:none;background-color:#fbfbfb;}
+.autumn_head .main_search_bar .search_bar button {float:left;border:none;width:102px;height:32px;font-size:0;background:url(btn_search_look.gif) left top no-repeat;text-indent:-99999em;cursor:pointer;}
+.autumn_head .search_right_cl {position:absolute;top:25px;right:0;clear:both;width:auto;}
+.autumn_head .search_right_cl p {text-align:left;line-height:18px;}
+.autumn_head .search_right_cl p a {color:#444;}
+.autumn_head .search_right_cl p a:hover {text-decoration:underline;color:#f60;}
+
+/*主导航*/
+.mainnav {margin:0 auto; margin-bottom:10px; width:960px; height:65px;background:url(mainnav_bg.gif) no-repeat;}
+.mainnav .c{position:relative;padding:5px 0 0 25px; height:35px;}
+.mainnav .nav {float:left; margin-top:-2px; height:35px;}
+.mainnav .nav li { margin-left:10px;  float:left; list-style:none; }
+.mainnav .nav li .v a { position:relative; display:inline-block; float:left; padding:0 0 0 15px; height:35px; line-height:30px; outline:none;}
+.mainnav .nav li .v a strong{ display:inline-block; padding:0 15px 0 0; height:35px; font-size:14px; color:#FFF; cursor:pointer;}
+.mainnav .nav li .v a:hover, .mainnav .nav li .v .sele { background:url(mainnav_navbg_l.gif) no-repeat left;}
+.mainnav .nav li .v a:hover strong, .mainnav .nav li .v .sele strong{ background:url(mainnav_navbg_r.gif) no-repeat right;color:#0066AA;}
+.mainnav .nav .sub_nav { position:absolute; top:37px; left:35px; width:900px; height:26px; line-height:26px!important; line-height:28px; text-align:left; display:none; color:#666;}
+.mainnav .nav .sub_nav a {width:auto; float:left; color:#666;}
+.mainnav .nav .sub_nav a:hover { color:#f60;}
+.mainnav .nav .sub_nav a.focus{ color:#f60; font-weight:bold;}
+.mainnav .nav .sub_nav span { float:left; display:inline-block; padding:0 12px; font-size:10px; color:#ccc;line-height:26px;}
+.mainnav .nav .sub_nav strong{ float:left; font-weight:normal;}
+.mainnav .nav li .v span.new {position:absolute;top:-13px;left:29%; padding:0;width:30px;height:21px;font-size:0;
+background:url(new.png) left top no-repeat!important;
+background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='new.png', sizingMethod='scale');}
+.mainnav .nav li .v span.hot {position:absolute;top:-13px;left:35%; padding:0;width:28px;height:19px;font-size:0;
+background:url(hot.png) left top no-repeat!important;background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='hot1.png', sizingMethod='scale');}
+.mainnav a.faq{ position:absolute;right:13px;bottom:-16px; padding:0;width:14px;height:12px;font-size:0; outline:none; cursor:pointer; line-height:20em; overflow:hidden;
+background:url(mainnav_question.png) left top no-repeat!important;
+background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='mainnav_question.png', sizingMethod='scale');}
+.mainnav .nav_r{ position:absolute; right:0; top:0px; width:260px;padding:8px 0 0 0; height:30px; overflow:hidden;}
+.mainnav .nav_r li{ float:left; display:inline; font-size:0;}
+.mainnav .nav_r li a{ display:block; line-height:20em; font-size:0; overflow:hidden;outline:none;}
+.mainnav .nav_r li a.sell{ width:65px; height:18px; background:url(mainnav_sellexp.gif) no-repeat;}
+.mainnav .nav_r li a.buy{ width:66px; height:17px; background:url(mainnav_buyexp.gif) no-repeat;}
+.mainnav .nav_r li a.write{ width:66px; height:18px; background:url(mainnav_writenotes.gif) no-repeat;}
+.mainnav .nav_r li span{ display:block; margin:2px 12px 0; width:2px; height:15px; background:url(mainnav_path.gif) no-repeat; font-size:0;}
+
+

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+var dg = frameElement.dg;
+
+window.onload = function()
+{
+    var dialog = dg.win.J('#abc',document).dialog({
+	    id: 'abc',
+		html: '<p style="padding:10px;">lhgdialog</p>',
+		title: '我是子窗口',
+		cover: true,
+		width: 300,
+		height: 200,
+		parent: dg
+	});
+	
+	dialog.opt.regDragWindow.push( window );
+}
+	</script>
+</head>
+
+<body style="background-color:#fff;">
+	<input type="button" value="child" id="abc"/>
+</body>
+</html>

@@ -1,0 +1,496 @@
+/* page*/
+
+.social-media-container * {
+	font-family:Arial;
+	font-size:12px;
+	color:#555555;
+}
+.outer {
+	font-family: Arial;
+	font-size: 12px;
+}
+.box {
+	background: url(../images/box_body.gif) repeat-y 0 0;
+	padding: 5px 15px;
+}
+.box-topcap {
+	background: url(../images/box_topcap.png) no-repeat 0 0;
+	height: 7px;
+	overflow: hidden;
+}
+.box-endcap {
+	background: url(../images/box_endcap.png) no-repeat 0 0;
+	height: 7px;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.boxWrapper {
+	width: 980px;
+}
+h3 {
+	font-size: 16px;
+	color: #666;
+	float: left;
+	display:inline;
+}
+/*h3 { font-size: 16px; color: #666; margin: 0; float: left; display:block;width:400px; }*/
+.formLabel {
+	height: 19px;
+	white-space: nowrap;
+	width: 50px;
+}
+.formField {
+	padding-top: 5px;
+}
+#uploadEdit label, .emailSection label {
+	float: left;
+	display: block;
+	padding: 0;
+	margin: 0 0 0 4px;
+	cursor:pointer;
+}
+#btnShowMoreAll {
+	display: none;
+}
+#uploadEdit {
+	width: 947px;
+	height:260px;
+}
+/*#uploadEdit  select, #bulkTags { border: 1px solid #cecece; font-family: Arial; font-size: 12px; padding: 3px; }*/
+#uploadEdit .item-wrapper {
+	background: url(../images/item_topcap.gif) no-repeat #eaeaea 0 0;
+	color: #555;
+	min-height: 10px;
+}
+#uploadEdit .form-unit {
+	padding: 10px 0 0 12px;
+	float: left;
+}
+#uploadEdit .upload-desc {
+	clear: left;
+}
+#uploadEdit .filename {
+	width: 260px;
+}
+#uploadEdit .filename .formField {
+	font-weight: bold;
+}
+#uploadEdit .delete-link {
+	margin: 8px 8px 22px 0;
+	float: right;
+	display: block;
+	width: 53px;
+	height: 16px;
+	background: url(../images/delete.png) no-repeat 0 0;
+}
+#uploadEdit .item-wrapper .endcap {
+	background: url(../images/item_endcap.gif) no-repeat #eaeaea 0 0;
+	width: 947px;
+	height: 4px;
+	overflow: hidden;
+	clear: both;
+}
+#txtImportEmail, #txtImportPassword, #pop_txtImportEmail, #pop_txtImportPassword {
+	border: 1px solid #999999;
+	height:18px;
+	width:130px;
+	float:left;
+	margin-right:7px;
+}
+#uploadEdit h3 {
+	font-size:18px;
+}
+#uploadEdit select.ddlLanguage {
+	height: 25px;
+}
+.emailSection {
+	float:left;
+	display:block;
+	margin: 10px 0px 0px 0px;
+	width:430px;
+	height:180px;
+}
+.emailSection a {
+	color:#2793C9;
+	text-decoration:underline;
+}
+.emailSection .formLabel {
+	float:left;
+	display:block;
+	padding:0px 0px 5px 0px;
+	width:auto;
+}
+.emailSection .inputTextLabel {
+	width:115px;
+}
+.emailSection .userNameLabel {
+	width:65px;
+	display:inline;
+	float:left;
+	padding-top:2px;
+	font-weight:bold;
+}
+.emailSection .inputText {
+	float:left;
+	display:block;
+	padding:0px 0px 0px 5px;
+	width:290px
+}
+;
+.emailSection .inputText input {
+	width:200px;
+	float:left;
+	margin:2px 5px 0px 0px;
+	border: 1px solid #999999;
+	height:22px;
+}
+.emailSection .smallTextArea {
+	width:375px;
+	height:30px;
+	float:left;
+	margin: 5px 0px 10px 0px;
+}
+.emailSection textarea {
+	height: 100px;
+	width:410px;
+	margin:0px 0px 10px 0px;
+	border: 1px solid #999999;
+	font-family:Helvetica, sans-serif;
+	font-size:12px;
+	padding:5px;
+}
+.emailSection .autoTweetSection {
+	float:right;
+	display:block;
+}
+.emailSection .inputContainer {
+	float:left;
+	margin: 5px 0px 5px 0px;
+}
+.emailSectionPad {
+	padding:20px 0 0 25px;
+}
+.emailSectionPad h3 {
+	font-size:18px;
+	color:#666666;
+}
+.bluegrad {
+	background: transparent url(../images/bluegrad.gif) no-repeat scroll 0 0;
+	height:73px;
+	width:947px;
+	overflow:hidden;
+}
+.bluegrad h3 {
+	font-size: 16px;
+	padding: 15px 0px 0px 30px;
+	display:inline;
+	width:700px;
+}
+.bluegrad h3 a {
+	color:#2793C9;
+	text-decoration:none;
+	display:inline;
+	font-size:12px;
+	font-weight:normal;
+}
+.saveButton {
+	width: 52px;
+	height:24px;
+	background: url(../images/btn_save.png) no-repeat 0 0;
+}
+.sendButton {
+	width: 52px;
+	height:24px;
+	background: url(../images/btn_send.png) no-repeat 0 0;
+}
+.getButton {
+	width: 58px;
+	height:24px;
+	background: url(../images/btn_get.png) no-repeat 0 0;
+}
+.postLinkButton {
+	width: 73px;
+	height:24px;
+	background: url(../images/btn_postlink.png) no-repeat 0 0;
+}
+.toolTip {
+	margin: 0px 0px 0px 5px;
+	padding: 0px 0px 0px 0px;
+	float:left;
+	display:inline
+}
+.button_container {
+	padding:15px 25px 0px 0px;
+	display:block;
+}
+.button {
+	cursor: pointer;
+	float: right;
+}
+.buttons {
+	margin-right:5px;
+}
+.emailLink {
+	width:42px;
+	height:42px;
+	margin: 0px 0px 15px 15px;
+	background: url(../images/email.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/email.png', sizingMethod='crop');
+}
+.emailLink:hover {
+	background: url(../images/email_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/email_hover.png', sizingMethod='crop');
+}
+.facebookLink {
+	width:42px;
+	height:42px;
+	margin: 0px 0px 15px 15px;
+	background: url(../images/facebook.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/facebook.png', sizingMethod='crop');
+}
+.facebookLink:hover {
+	background: url(../images/facebook_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/facebook_hover.png', sizingMethod='crop');
+}
+.twitterLink {
+	width:42px;
+	height:42px;
+	margin: 0px 0px 15px 15px;
+	background: url(../images/twitter.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/twitter.png', sizingMethod='crop');
+}
+.twitterLink:hover {
+	background: url(../images/twitter_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/twitter_hover.png', sizingMethod='crop');
+}
+.twitterButton {
+	width: 52px;
+	height:24px;
+	background: url(../images/btn_twit.png) no-repeat 0 0;
+}
+.linkedInLink {
+	width:42px;
+	height:42px;
+	margin: 0px 0px 15px 15px;
+	background: url(../images/linkedin.png) no-repeat 0 0;
+}
+.linkedInLink:hover {
+	background: url(../images/linkedin_hover.png) no-repeat 0 0;
+}
+.diggLink {
+	width:42px;
+	height:42px;
+	margin: 0px 0px 15px 15px;
+	background: url(../images/digg.png) no-repeat 0 0;
+}
+.diggLink:hover {
+	background: url(../images/digg_hover.png) no-repeat 0 0;
+}
+.address-list {
+	border:1px solid #999999;
+	height:100px;
+	display:none;
+	margin-bottom:10px;
+}
+.address-list .alt-row {
+	background-color:#D9E6EE;
+	border-bottom: 1px solid #999999;
+}
+.address-list div, .address-list #import-container div, .address-list #adressbook-container div {
+	border:medium none;
+	clear:both;
+	height:22px;
+	overflow:hidden;
+	padding:5px 0 0 5px;
+}
+.address-list #import-container, #pop_import-container {
+	height:80px;
+	overflow-x:hidden;
+	overflow-y:auto;
+	padding:0;
+}
+.chk {
+	float:left;
+	height:auto;
+	width:auto;
+	cursor:pointer;
+}
+.emailSection .selEmailProviders {
+	border: 1px solid #999999;
+	height:22px;
+}
+.address-list h1, .address-list h2 {
+	float:left;
+	overflow:hidden;
+	padding:1px 0 0 4px;
+	width:175px;
+	font-size: 12px;
+}
+.viewMyDocs {
+	display: block;
+	float: right;
+	width: 138px;
+	height: 24px;
+	background: url(../images/btn_viewMyDocs.png) no-repeat 0 0;
+	margin: 15px 0 15px 10px;
+}
+.completeMyProfile {
+	display: block;
+	float: right;
+	width: 146px;
+	height: 24px;
+	background: url(../images/btn_complete_profile.png) no-repeat 0 0;
+	margin: 15px 0 15px 10px;
+}
+.backToCollection {
+	display: block;
+	float: right;
+	width: 138px;
+	height: 24px;
+	background: url(../images/btn_back_to_collection.png) no-repeat 0 0;
+	margin: 15px 0 15px 10px;
+}
+.requiredField {
+	color: #FF0000;
+}
+#statusMsg {
+	background-color:#e2f5d7;
+	margin:0 0 15px 0;
+	padding:3px 0 3px 5px;
+	border: 1px solid #B8B8B8;
+	display:none;
+	overflow:hidden;
+	height:0px;
+	float:left;
+	width:100%;
+}
+#pop_statusMsg {
+	background-color:#e2f5d7;
+	margin:25px 0 0 0;
+	padding:3px 0 3px 5px;
+	border: 1px solid #B8B8B8;
+	display:none;
+	overflow:hidden;
+	height:0px;
+	float:left;
+	width:900px;
+}
+#pop_email_section {
+	padding-left:20px;
+	font-size:12px;
+	font-family:Arial;
+	color:#555555;
+}
+.userNamePassSection {
+	padding-right:10px;
+	margin-bottom:6px;
+}
+.mailIcons {
+	margin-top:5px;
+	margin-bottom:69px;
+	display:block;
+	height:22px;
+	float:left;
+	width:100%;
+}
+.mailIcons b {
+	margin-top:5px;
+	display:inline;
+	float:left;
+}
+.mailIcons a {
+	display:inline;
+	float:left;
+	margin-left:6px;
+	cursor:pointer;
+}
+.mailIcons .yahooMail {
+	width:89px;
+	height:26px;
+	background: url(../images/yahoomail.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/yahoomail.png', sizingMethod='crop');
+}
+.mailIcons .yahooMail:hover, .mailIcons .yahooMail_active {
+	width:89px;
+	height:26px;
+	background: url(../images/yahoomail_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/yahoomail_hover.png', sizingMethod='crop');
+}
+.mailIcons .hotMail {
+	width:89px;
+	height:26px;
+	background: url(../images/hotmail.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/hotmail.png', sizingMethod='crop');
+}
+.mailIcons .hotMail:hover, .mailIcons .hotMail_active {
+	width:89px;
+	height:26px;
+	background: url(../images/hotmail_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/hotmail_hover.png', sizingMethod='crop');
+}
+.mailIcons .gMail {
+	width:89px;
+	height:26px;
+	background: url(../images/gmail.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gmail.png', sizingMethod='crop');
+}
+.mailIcons .gMail:hover, .mailIcons .gMail_active {
+	width:89px;
+	height:26px;
+	background: url(../images/gmail_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/gmail_hover.png', sizingMethod='crop');
+}
+.mailIcons .aolMail {
+	width:89px;
+	height:26px;
+	background: url(../images/aolMail.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/aolMail.png', sizingMethod='crop');
+}
+.mailIcons .aolMail:hover, .mailIcons .aolMail_active {
+	width:89px;
+	height:26px;
+	background: url(../images/aolMail_hover.png) no-repeat 0 0;
+	-background-image:none;
+ -filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/aolMail_hover.png', sizingMethod='crop');
+}
+.adSenseConfirm {
+	width:778px;
+	height:86px;
+	background: url(../images/confirmed_banner.png) no-repeat 0 0;
+	float:left;
+	display:block;
+	margin:15px 0;
+	color:#FFFFFF;
+	font-family: Arial;
+	padding-left:200px;
+}
+.adSenseConfirm h1 {
+	font-size:19px;
+	font-weight:500;
+	width:750px;
+}
+.adSenseConfirm span {
+	font-size:13px;
+	font-weight:500;
+	display:block;
+	width:750px;
+	padding-top:5px;
+}
+.adSenseConfirm span a {
+	color:#FFFFFF;
+	text-decoration: underline;
+	font-weight:500;
+}

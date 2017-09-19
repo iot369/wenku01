@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:var.spacename /} {dede:var.curtitle /}</title>
+<meta name="author" content="{dede:var.uname /}"/>
+<link href="space/person/css/template-new-stretch.css" rel="stylesheet" type="text/css" />
+<link href="space/person/css/profile.css" rel="stylesheet" type="text/css" />
+<link href="space/person/css/uploadshare.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/js/jquery-1.3.2.min.js"></script>
+<script language="javascript" type="text/javascript">
+$().ready(function(){
+	$("#tabContent").load("index.php?uid={dede:var.userid_e /}&action=archives&channelid=17");
+	var tabs = $("#profile-tabs>dd");
+	$("#profile-tabs>dd>a").click(function(e) {
+		e.preventDefault();
+		tabs.removeClass();
+		$(this).parent().addClass("selected");
+		$("#tabContent").load(this.href);
+	});
+});
+</script>
+<style type="text/css">
+.visitor .imageface {
+	width:50px;
+	height:50px;
+	float:left;
+	margin-bottom:10px;
+}
+.visitor .visitor-info {
+	float:left;
+}
+.visitor .visitor-info ul {
+	list-style:none;
+}
+.visitor .visitor-info ul li {
+	list-style:none;
+	padding-left:5px;
+}
+.visitor .visitor-info ul li.uname {
+	font-size:14px;
+	font-weight:bold;
+}
+ul.mylink {
+	list-style:none;
+}
+</style>
+<style type="text/css">
+<!--
+.tableBorder
+{
+border: 1px #89C3E4 solid ; background-color: #FFFFFF;
+}
+
+TD{
+font-family:宋体; font-size: 12px; line-height: 22px; height:22px;
+}
+th{
+background-color: #89C3E4; color: #FFFFFF; font-size: 12px; font-weight:bold; height: 25px; line-height:25px; text-align: center;letter-spacing:0.2mm;
+}
+.tableBorder td{
+background-color:#E9F5F5; color:#333333
+}
+-->
+</style>
+</head>
+<body id="body">
+<div id="site-container">
+  <!-- google_ad_section_start(weight=ignore) -->
+  <div id="header"> <span class="logo" id="logo"><a href="/" title=""></a></span>
+    <div id="login-info"><a href="">my cart</a><img src="space/person/images/cart_icon.jpg"> <span>|</span> <a href="" rel="nofollow"><img src="space/person/images/facebook_icon.png"></img></a> <span>|</span><a href="" rel="nofollow"> Sign In</a> <span>|</span> <a href="" rel="nofollow">Register</a></div>
+  </div>
+  <div class="nav-container">
+    <div class="nav-inner">
+      <ul class="top" style="padding-left:240px;" id="top-nav">
+        <li><span class=""><a href="/" class="home"></a></span></li>
+        <li id="ddTarget"> <a href="/documents/" class="documents"></a></li>
+        <li><span class=""><a href="/tools/" id="tools" class="tools"></a></span></li>
+        <li><span class=""><a href="/upload/" class="upload"></a></span></li>
+        <li><span class=""><a href="/store" id="store" class="store"></a></span></li>
+      </ul>
+      <div id="top-search">
+        <div class="top-search-inner">
+          <div class="search-box">
+            <div class="search-box-inner">
+              <div class="search-box-padder">
+                <input type="text" id="txtSearch" onfocus="this.value=''" value="请输入要查找的文档名称" />
+              </div>
+            </div>
+          </div>
+          <div class="search-btn"><a href="javascript:doSearch('cat')"></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- google_ad_section_end -->
+  <div id="content-body">
+    <div id="content-padding">
+      <div id="statusMsg"></div>
+      <div id="ctl00_ContentPlaceHolder1_profile">
+        <!-- START: Left Side -->
+        <div id="profile_left">
+          <div id="profile_left_top"></div>
+          <div id="profile_left_middle">
+            <div id="user-name-wrapper">
+              <div id="user-name"> {dede:var.uname /} </div>
+              <div id="update-profile"> </div>
+            </div>
+            <div id="user-img-wrapper"> {dede:if $_vars['face']=='' } <img src="space/person/common/images/noavatar.gif" alt="<?php echo $row['uname']; ?>还没设置头像" /> {else} <img src="{dede:var.face/}" alt="{dede:var.uname/}的头像" class="user-img" /> {/dede:if}
+              <div class="short-info"> 会员等级：{dede:var.membername/}<br />
+                会员积分：{dede:var.scores/}分<br />
+                空间访问：{dede:var.homecount/}次<br />
+                {dede:var.msg /}<br />
+              </div>
+              <div class="badges"> </div>
+            </div>
+            <div class="divider"></div>
+            <div id="about-me-wrapper">
+              <div class="pod-top"></div>
+              <div class="action-buttons"> <a href="/login/?returnUrl=%2fprofile%2fmarks&action=7"> <img alt="" src="space/person/images/addfriend_lrg.png"> 添加为好友 </a> <a href"/login/?returnUrl=%2fprofile%2fmarks&action=8"> <img alt="" src="space/person/images/message_lrg.png"> 发送消息 </a> </div>
+              <div class="pod-bottom"></div>
+            </div>
+            <div id="about-me-wrapper">
+              <div class="pod-top"></div>
+              <div class="about-me">
+                <div class="section-title">公告：</div>
+                &nbsp;&nbsp;{dede:var.spacenews /} </div>
+              <div class="pod-bottom"></div>
+            </div>
+            <div id="stats-wrapper">
+              <div class="pod-top"></div>
+              <div class="stats">
+                <div class="section-title">空间数据统计:</div>
+                <div class="stats-docs">文档数: </div>
+                <div class="stats-views">浏览次数: </div>
+              </div>
+              <div class="pod-bottom"></div>
+            </div>
+            <div class="divider"></div>
+            <div id="about-me-wrapper">
+              <div class="pod-top"></div>
+              <div class="about-me">
+                <div class="section-title">最近访客：</div>
+                {dede:newvisitor row=6}
+                <div class="visitor">
+                  <div class="imageface"><a href="{dede:field.url/}" target="_blank"><img src="{dede:field.face/}" width="50" height="50" alt="{dede:field.uname/}的头像" /></a></div>
+                  <div class="visitor-info">
+                    <ul>
+                      <li class="uname"><a href="{dede:field.url/}" target="_blank" title="{dede:field.uname/}">{dede:field.uname/}</a></li>
+                      <li>{dede:field.sign function="cn_substr(@me,60)" /}</li>
+                      <li>访问：{dede:var.logintime function="MyDate('m-d h:i',@me)" /}</li>
+                    </ul>
+                  </div>
+                </div>
+                <div style="clear:both;"></div>
+                {/dede:newvisitor} </div>
+              <div class="pod-bottom"></div>
+            </div>
+            <div class="divider"></div>
+            <div id="about-me-wrapper">
+              <div class="pod-top"></div>
+              <div class="about-me">
+                <div class="section-title">个人书签：</div>
+                <ul class="mylink">
+                  <?php
+                        $dsql->Execute('fl',"Select * From `#@__member_flink` where mid='{$_vars['mid']}' ");
+                            while($arr = $dsql->GetArray('fl'))
+                                {echo "<li><a href='{$arr['url']}' target='_blank'>{$arr['title']}</a></li>\r\n";}
+                    ?>
+                </ul>
+              </div>
+              <div class="pod-bottom"></div>
+            </div>
+            <div class="divider"></div>
+          </div>
+          <div id="profile_left_bottom"></div>
+        </div>
+        <!-- END: Left Side -->
+        <!-- START: Right Side -->
+        <div id="profile_right">
+          <!-- tabs -->
+          <div id="tabs">
+            <dl id="profile-tabs">
+              <dd class="selected"><a href="index.php?uid={dede:var.userid_e /}&action=archives&channelid=17" class="static">我的文档</a></dd>
+              <dd><a href="index.php?uid={dede:var.userid_e /}&action=friend" class="static">我的好友</a></dd>
+              <dd><a href="index.php?uid={dede:var.userid_e /}&action=infos" class="static">个人资料</a></dd>
+              <dd><a href="index.php?uid={dede:var.userid_e /}&action=guestbook" class="static">留言板</a></dd>
+            </dl>
+          </div>
+          <div id="tabContentBorder">
+            <div id="tabContent">
+              
+            </div>
+          </div>
+        </div>
+        <!-- END: Right Side -->
+      </div>
+    </div>
+  </div>
+  <div class="cls"></div>
+  <!-- google_ad_section_start(weight=ignore) -->
+  <div id="footer-wrap">
+    <div id="footer">
+      <div class="l-cap"></div>
+      <div class="inner">
+        <dl>
+          <dt>关于：</dt>
+          <dd></dd>
+        </dl>
+        <dl>
+          <dt>链接：</dt>
+          <dd></dd>
+        </dl>
+        <dl>
+          <dt>技术支持：</dt>
+          <dd>QQ：153710139</dd>
+        </dl>
+      </div>
+      <div class="r-cap"></div>
+      <div class="copyright">&copy; 在线文档分享 2010. All rights reserved.</div>
+    </div>
+  </div>
+  <!-- google_ad_section_end -->
+  <br />
+</div>
+</form>
+<div id="fb-root"></div>
+</body>
+</html>

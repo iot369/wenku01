@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+
+<LINK rel=stylesheet type=text/css href="35/css.css">
+
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+
+<SCRIPT type=text/javascript>
+function keyBoxdoit(id, _x, _y){
+      var obj = $("#"+id)[0];
+	  var element = event.srcElement;
+	  var posi = Position.positionedOffset(element);
+	  var left = posi[0];
+	  var top  = posi[1];
+      obj.style.left = left-_x;
+      obj.style.top = top-_y;
+}
+
+function set_liColor(tr_obj,type_value){
+	if(type_value){
+		tr_obj.style.backgroundColor='#BBE0FF';
+	}else{
+		tr_obj.style.background='none';
+	}
+}
+function selectItem(li_obj){
+	$('#keyType')[0].innerHTML=li_obj.txt;
+	$('#searchtype')[0].value=li_obj.v
+	onKeyBox();
+}
+var tmpboon = false;
+function onKeyBox(){
+	tmpboon = !tmpboon
+	if (tmpboon){
+		$('#keywordBox')[0].style.display = 'block';
+		keyBoxdoit('keywordBox',-4,-26);
+	}else{
+		$('#keywordBox')[0].style.display = 'none';
+	}
+}
+</SCRIPT>
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+<SCRIPT type=text/javascript>
+function keyBoxdoit(id, _x, _y){
+      var obj = $("#"+id)[0];
+	  var element = event.srcElement;
+	  var posi = Position.positionedOffset(element);
+	  var left = posi[0];
+	  var top  = posi[1];
+      obj.style.left = left-_x;
+      obj.style.top = top-_y;
+}
+
+function set_liColor(tr_obj,type_value){
+	if(type_value){
+		tr_obj.style.backgroundColor='#BBE0FF';
+	}else{
+		tr_obj.style.background='none';
+	}
+}
+function selectItem(li_obj){
+	$('#keyType')[0].innerHTML=li_obj.txt;
+	$('#searchtype')[0].value=li_obj.v
+	onKeyBox();
+}
+var tmpboon = false;
+function onKeyBox(){
+	tmpboon = !tmpboon
+	if (tmpboon){
+		$('#keywordBox')[0].style.display = 'block';
+		keyBoxdoit('keywordBox',-4,-26);
+	}else{
+		$('#keywordBox')[0].style.display = 'none';
+	}
+}
+</SCRIPT>
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV class=maincontent id=mainFrameContainer>
+<DIV id=toptext 
+style="BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; PADDING-LEFT: 4px; FONT-WEIGHT: bold; BACKGROUND: url(/images/rei.jpg) repeat-x; BORDER-LEFT: #bbd1de 1px solid; LINE-HEIGHT: 33px; BORDER-BOTTOM: #bbd1de 1px solid; HEIGHT: 33px"><FONT 
+color=green>&nbsp;&nbsp;&nbsp;&nbsp;初级卖家</FONT> <FONT color=red>123456</FONT> 
+，您当前的销售分成比例：<FONT color=green>50%</FONT>&nbsp;&nbsp;下载账户余额：<IMG 
+src="35/money3.gif" align=absMiddle>&nbsp;<FONT 
+color=red>0.00</FONT> 元 收入账户余额：<IMG src="35/money3.gif" 
+align=absMiddle>&nbsp;<FONT color=red>0.00</FONT> 元 &nbsp;&nbsp;<A 
+href="http://www.doc35.com/User/user_payonline.asp"><IMG 
+src="35/wycz.gif" align=absMiddle border=0></A> 
+&nbsp;&nbsp;&nbsp;<A 
+href="http://wpa.qq.com/msgrd?v=3&amp;uin=8988893&amp;site=qq&amp;menu=yes" 
+target=_blank><IMG title=点击这里给我发消息 alt=点击这里给我发消息 
+src="35/pa.gif" align=absMiddle border=0></A> </DIV>
+<SCRIPT type=text/javascript>$('#locationid').html("会员首页");</SCRIPT>
+
+<STYLE type=text/css>#toptext {
+	DISPLAY: none
+}
+#main .left {
+	FLOAT: left; WIDTH: 795px
+}
+#main .right {
+	MARGIN-TOP: 10px; FLOAT: right; WIDTH: 230px
+}
+#main .userinfo {
+	BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; MARGIN-TOP: 10px; BORDER-LEFT: #bbd1de 1px solid; BORDER-BOTTOM: #bbd1de 1px solid
+}
+#main .userinfo H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(/images/rei.jpg) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #206c9e; LINE-HEIGHT: 33px; PADDING-TOP: 0px; HEIGHT: 33px
+}
+#main .userborder {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px
+}
+#main .dt TD {
+	PADDING-TOP: 5px; HEIGHT: 20px
+}
+#main .dt A {
+	COLOR: #1f7abc
+}
+#main .dt SPAN {
+	COLOR: #999
+}
+#main .user_a {
+	BORDER-RIGHT: #bbd1de 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #bbd1de 1px solid; PADDING-LEFT: 8px; BACKGROUND: url(/images/rei.jpg) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #bbd1de 1px solid; LINE-HEIGHT: 33px; PADDING-TOP: 0px; BORDER-BOTTOM: #bbd1de 1px solid; HEIGHT: 33px
+}
+#main .user_a SPAN.t {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 14px; FLOAT: left; WIDTH: 85px; COLOR: #206c9e; _padding-top: 8px
+}
+#main .user_b {
+	MARGIN-TOP: 10px; HEIGHT: 173px
+}
+#main .user_b .user_bl {
+	BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; FLOAT: left; BORDER-LEFT: #bbd1de 1px solid; WIDTH: 266px; BORDER-BOTTOM: #bbd1de 1px solid
+}
+#main .user_b .user_br {
+	BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; FLOAT: right; BORDER-LEFT: #bbd1de 1px solid; WIDTH: 480px; BORDER-BOTTOM: #bbd1de 1px solid
+}
+#main .user_b .user_bl .user_b_title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(/images/rei.jpg) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #206c9e; LINE-HEIGHT: 33px; PADDING-TOP: 0px; HEIGHT: 33px; _height: 25px; _padding-top: 8px; _line-height: 25px
+}
+#main .user_b .user_bl .user_b_box {
+	HEIGHT: 140px
+}
+#main .user_b .user_bl .user_b_box UL {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px
+}
+#main .user_b .user_bl .user_b_box UL LI {
+	MARGIN-LEFT: -12px; BORDER-BOTTOM: #cccccc 1px dashed
+}
+#main .user_c {
+	BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; MARGIN-TOP: 10px; OVERFLOW: hidden; BORDER-LEFT: #bbd1de 1px solid; BORDER-BOTTOM: #bbd1de 1px solid; HEIGHT: 200px; _height: 195px
+}
+#main .user_c .user_c_title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(/images/rei.jpg) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #206c9e; LINE-HEIGHT: 33px; PADDING-TOP: 0px; HEIGHT: 33px; _height: 25px; _padding-top: 8px; _line-height: 25px
+}
+#main .user_c .user_c_box {
+	
+}
+#main .user_c .user_c_box .c_boxl {
+	FLOAT: left; WIDTH: 500px
+}
+#main .user_c .user_c_box .c_boxl UL {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px
+}
+#main .user_c .user_c_box .c_boxl LI {
+	FLOAT: left; WIDTH: 50%
+}
+#main .user_c .user_c_box .c_boxl SPAN {
+	FONT-WEIGHT: bold; COLOR: #555
+}
+#main .user_c .user_c_box .c_boxr {
+	FLOAT: right; MARGIN: 28px; WIDTH: 110px; TEXT-ALIGN: center
+}
+#main .user_d {
+	BORDER-RIGHT: #bbd1de 1px solid; BORDER-TOP: #bbd1de 1px solid; MARGIN-TOP: 10px; OVERFLOW: hidden; BORDER-LEFT: #bbd1de 1px solid; BORDER-BOTTOM: #bbd1de 1px solid; HEIGHT: 185px; _height: 205px
+}
+#main .user_d .user_d_title {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(/images/rei.jpg) repeat-x; PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #206c9e; LINE-HEIGHT: 33px; PADDING-TOP: 0px; HEIGHT: 33px; _height: 25px; _padding-top: 8px; _line-height: 25px
+}
+#main .user_d .user_d_box {
+	
+}
+#main .user_d .user_d_box UL {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px
+}
+</STYLE>
+
+<DIV id=main>
+<DIV class=user_a><SPAN class=t><IMG src="35/lb.gif" 
+align=absMiddle> &nbsp;网站公告</SPAN> <SPAN id=marquee1 
+style="DISPLAY: block; FLOAT: left; WIDTH: 650px"> 
+            <?php
+				foreach ($mynews as $mynew)
+				{
+			 ?>                 
+            <span class="name"><a target="_blank" href="/mynews.php?aid=<?php echo $mynew['aid'];?>"><?php echo $mynew['title'];?></a></span>【<?php echo strftime("%Y-%m-%d %H:%M:%S",$mynew['senddate']);?>】&nbsp;&nbsp;
+             <?php
+                }
+              ?></SPAN>
+<SCRIPT defer>
+         var marquee1 = new Marquee("marquee1")	
+		marquee1.Direction = "left"
+		marquee1.Step = 1;
+		marquee1.Width = 650;
+		marquee1.Height = 32;
+		marquee1.Timer = 50;
+		marquee1.DelayTime = 0;
+		marquee1.WaitTime = 0;
+		marquee1.ScrollStep = 52;
+		marquee1.Start();
+       </SCRIPT>
+</DIV>
+<DIV class=clear></DIV>
+<DIV class=user_b>
+<DIV class=user_bl>
+<DIV class=user_b_title><IMG src="35/dot.gif" 
+align=absMiddle>&nbsp;&nbsp;欢迎新朋友</DIV>
+<DIV class=user_b_box>
+<UL>
+  <DIV id=marqueebox0 
+  style="FONT-SIZE: 12px; OVERFLOW: hidden; LINE-HEIGHT: 23px; HEIGHT: 120px">
+
+            <?php
+				foreach ($newfriends as $newfriend)
+				{
+			 ?>
+            <li class="pic"><a target="_blank" href="/member/index.php?uid=<?php echo $newfriend['userid'];?>">
+            <?php
+            if(!$newfriend['face']==""){
+             echo "<img src=".$newfriend['face']." width='48' height='48' />";
+            }else{
+             if($newfriend['sex']=='女') echo "<img src='templets/images/dfgirl.png' width='48' height='48' />";
+             else echo "<img src='templets/images/dfboy.png' width='48' height='48' />";
+            }
+            ?>
+            </a><span class="name"><a target="_blank" href="/member/index.php?uid=<?php echo $newfriend['userid'];?>"><?php echo $newfriend['uname'];?></a></span></li>
+             <?php
+                }
+              ?></DIV>
+  <SCRIPT> 
+			function startmarquee(lh,speed,delay,index){ 
+			var t; 
+			var p=false; 
+			var o=document.getElementById("marqueebox"+index); 
+			o.innerHTML+=o.innerHTML; 
+			o.onmouseover=function(){p=true} 
+			o.onmouseout=function(){p=false} 
+			o.scrollTop = 0; 
+			function start(){
+			t=setInterval(scrolling,speed); 
+			if(!p) o.scrollTop += 2; 
+			} 
+			function scrolling(){ 
+			if(o.scrollTop%lh!=0){ 
+			o.scrollTop += 2; 
+			if(o.scrollTop>=o.scrollHeight/2) o.scrollTop = 0; 
+			}else{ 
+			clearInterval(t); 
+			setTimeout(start,delay); 
+			} 
+			} 
+			setTimeout(start,delay); 
+			} 
+			  startmarquee(24,80,1000,0);
+		</SCRIPT>
+</UL></DIV></DIV>
+<DIV class=user_br><A href="http:\\www.free100.org" target=_blank><IMG src="35/banner2.gif" width=480 
+height=173 border="0"></A></DIV>
+</DIV>
+<DIV class=clear></DIV>
+<DIV class=user_c>
+<DIV class=user_c_title><IMG src="35/dot.gif" align=absMiddle> 
+&nbsp;个人信息 <A style="FONT-WEIGHT: normal; FONT-SIZE: 12px" 
+href="#" 
+target=_blank>[我的销售资料主页]</A></DIV>
+<DIV class=user_c_box>
+<DIV class=c_boxl>
+<UL>
+  <LI><SPAN>会员名称：</SPAN><?php echo $cfg_ml->M_LoginID; ?><span> </LI>
+  <LI><SPAN>网站积分：</SPAN><?php echo $cfg_ml->M_Scores; ?></LI>
+  <LI><SPAN>会员级别：</SPAN><FONT color=green><?php echo $cfg_ml->M_MbType; ?></FONT> </LI>
+  <LI><SPAN>注册时间：</SPAN><?php echo GetDateTimeMk($cfg_ml->M_Jointime); ?> </LI>
+  <LI><SPAN>账户余额：</SPAN><IMG alt=元 src="35/money(1).gif" 
+  align=absMiddle border=0>&nbsp;<FONT color=#ff6600><?php echo $cfg_ml->M_Money; ?></FONT>&nbsp;元 </LI>
+  <LI><SPAN>最近登录：</SPAN><?php echo GetDateTimeMk($cfg_ml->M_LoginTime); ?></LI>
+  <LI><SPAN>上传资料：</SPAN><?php $pms = $dsql->GetOne("SELECT COUNT(*) AS nums FROM #@__archives WHERE writer='{$cfg_ml->M_UserName}' "); echo $pms['nums'];?> 份</LI>
+  <LI><SPAN>首次注册IP：</SPAN><?php echo $cfg_ml->M_Joinip; ?></LI>
+  <LI><SPAN>下载资料：</SPAN><?php $pms = $dsql->GetOne("SELECT COUNT(*) AS nums FROM #@__member arc left join #@__member_download mem on mem.mid=arc.mid WHERE userid='{$cfg_ml->M_LoginID}' "); echo $pms['nums'];?> 份</LI>
+  <LI><SPAN>上次登录IP：</SPAN><?php echo $cfg_ml->M_Loginip; ?></LI>
+  <LI><SPAN>文档被阅读：</SPAN><?php echo $minfos['pagecount']; ?>次 </LI>
+  <LI class="p2"><SPAN>管理员邮箱：</SPAN><A href="mailto:55746862@qq.com">55746862@qq.com</A> 
+
+       </LI></UL></DIV>
+<DIV class=c_boxr><a href="/member/index.php?uid=<?php echo $cfg_ml->M_LoginID; ?>"><!--img src="<?php echo $cfg_ml->fields['face']; ?>" width="100" height="100" alt="您的形象"/--><img src="/bbs/uc_server/avatar.php?uid=<?php
+             include_once DEDEROOT.'/uc_client/client.php'; 
+
+             list($uid, $username, $password, $email) = uc_get_user($cfg_ml->M_LoginID); 
+             echo $uid;
+             ?>&size=small" border="0" width="48" height="48" alt="您的形象" /></a>
+	  </DIV></DIV></DIV>
+<DIV class=clear></DIV>
+<DIV class=user_d>
+<DIV class=user_d_title><IMG src="35/dot.gif" align=absMiddle> 
+&nbsp;网站最新活动</DIV>
+<DIV class=user_d_box>
+<UL>
+  <SCRIPT type=text/javascript>
+						  function copyToClipboard(txt) {
+							 if(window.clipboardData) {
+									 window.clipboardData.clearData();
+									 window.clipboardData.setData("Text", txt);
+							 } else if(navigator.userAgent.indexOf("Opera") != -1) {
+								  window.location = txt;
+							 } else if (window.netscape) {
+								  try {
+									   netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+								  } catch (e) {
+									   alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
+								  }
+								  var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+								  if (!clip)
+									   return;
+								  var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+								  if (!trans)
+									   return;
+								  trans.addDataFlavor('text/unicode');
+								  var str = new Object();
+								  var len = new Object();
+								  var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+								  var copytext = txt;
+								  str.data = copytext;
+								  trans.setTransferData("text/unicode",str,copytext.length*2);
+								  var clipid = Components.interfaces.nsIClipboard;
+								  if (!clip)
+									   return false;
+								  clip.setData(trans,null,clipid.kGlobalClipboard);
+							 }
+								  alert("复制成功！")
+						}
+		 </SCRIPT>
+
+  <TABLE style="WIDTH: 100%" align=center border=0>
+    <TBODY>
+    <TR>
+      <TD>
+        <TABLE>
+          <TBODY>
+          <TR>
+            <TD height=32><STRONG>活动名称：</STRONG></TD>
+            <TD><SPAN class=red>将本站推荐给朋友将获得积分，兑换成下载账户可免费下载资料！</SPAN></TD></TR>
+          <TR>
+            <TD height=32><STRONG>活动介绍：</STRONG></TD>
+            <TD>成功推荐一个访问者,您就可以增加 <FONT color=red>1</FONT> 个积分。赶快行动吧！</TD></TR>
+          <TR>
+            <TD colSpan=2 height=32><BUTTON style="border:none" class="pn pnc" onclick="copyToClipboard('http://www.free100.org?uid=<?php echo $cfg_ml->M_LoginID; ?>.');"><STRONG>复制代码</STRONG></BUTTON> 
+            </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></UL></DIV></DIV></DIV></DIV>
+</DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

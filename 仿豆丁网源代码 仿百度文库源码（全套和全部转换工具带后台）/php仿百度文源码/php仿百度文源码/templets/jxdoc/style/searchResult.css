@@ -1,0 +1,123 @@
+/* CSS Document */
+
+.wapper{ width:960px; margin:0 auto 0; color:#666;overflow:hidden; }
+.result-list{float:right; width:768px;padding:0 0 0 25px;border-left:1px solid #F2F2F2;  }
+.side{float:left; width: 160px; color:#000;padding-bottom:30000px;margin-bottom:-30000px;}
+.result-list-tips{padding-bottom:30000px;margin-bottom:-30000px;  }
+
+
+h2.tit-main,h2.tar,h2.tit-thr,h2.tit-four{padding:20px 0 10px 7px; font:normal 14px/1 "宋体";border-bottom:1px solid #C6C6C6; color:#333}
+h2.tar{text-align:right; font-size:13px}
+h2.tit-thr{padding-top:0;font-size:12px;}
+h2.tit-four{padding-top:0;font-size:12px;}
+h2.tit-four a{color:#c00}
+.fc-baidu a,.fc-baidu a:hover,.doc-list .fc-baidu a,.doc-list .fc-baidu a{ color:#00c;}
+.margin-top{margin-top:20px; }
+
+/*doc-list*/
+.doc-list{ width:100%; padding:0 0 20px}
+.doc-list dt span.s{ color:#c00; text-decoration:underline}
+.doc-list dd span.s{ color:#c00;}
+.doc-list dl{ padding:16px 0 1px 10px; width:680px;}
+.doc-list dt{ position:relative; float:left;font-weight:normal; font-size:16px;}
+.doc-list dt a{ text-decoration:underline; color:#175A9D}
+.doc-list dd{ float:left; clear:both; width:100%; max-height:60px; color:#000; overflow:hidden}
+.doc-list dd li{ float:left; margin:0 10px 0 0;color:#666}
+.doc-list dd .fcg{ color:#666; text-decoration:underline}
+
+/*doc-list-style2*/
+.doc-list-style2{ width:100%; padding:0 0 20px}
+.doc-list-style2 dd.title span.s{ color:#c00; text-decoration:underline}
+.doc-list-style2 dd span.s{ color:#c00;}
+.doc-list-style2 dl{ padding:15px 0 15px 10px; border-bottom:1px #E6E6E6 solid}
+.doc-list-style2 dt{ float:left; width:120px; height:130px; text-align:center}
+.doc-list-style2 dt span{ display:block;}
+.doc-list-style2 dt a{ position:relative; z-index:2; display:block; width:100%;}
+.doc-list-style2 dt a img{ border:1px solid #ccc;padding:2px; max-height:140px; max-width:110px; overflow:hidden}
+.doc-list-style2 dt a:hover img{ border:2px solid #86abd1;padding:1px}
+
+.doc-list-style2 dt img.hide{position:absolute;top:-10px;left:-5%;filter: Alpha(opacity=0);-moz-opacity:0;opacity:0}
+.doc-list-style2 dt a:hover img.hide{ border:#86abd1 2px solid;padding:1px;cursor:pointer; clear:both; background:#fff}
+
+.doc-list-style2 dd{ float:left; list-style:none; margin:0px; width:640px; padding:0 0 0 10px; color:#000}
+.doc-list-style2 dd.title{ position:relative; font-size:16px;}
+.doc-list-style2 dd.title a{ text-decoration:underline;}
+.doc-list-style2 dd.summary{height:50px; line-height:18px; overflow:hidden; margin:8px 0}
+.doc-list-style2 dd li{ float:left;position:relative; color:#666}
+.doc-list-style2 dd li img{ width:13px; height:13px; overflow:hidden;position:absolute;top:3px;}
+.doc-list-style2 dd li span{ margin:0 3px 0 5px}
+.doc-list-style2 dd li a{ color:#666; text-decoration:underline}
+.doc-list-style2 dd li a.tips{color:#002EEA;text-decoration:none; }
+.doc-list-style2 dd li.padding-l{ padding:0 0 0 20px;}
+.doc-list-style2 dd li.padding-l em{ left:0}
+
+/*doc-mark*/
+
+.doc-mark em{ background:url(../images/doc-icon.png) no-repeat 0 0; float:left; position:absolute;top:3px;*top:1px;left:-23px; width:16px; height:16px; line-height:50px; overflow:hidden}
+.doc-mark dd li .viewhot1,.doc-mark dd li .viewhot2,.doc-mark dd li .viewhot3,.doc-mark dd li .viewhot4,.doc-mark dd li .viewhot5{position:relative;+top:2px;_top:2px;+margin:4px 0;_margin:5px 0;}
+
+.doc-mark em{ background-position:-16px 0px}
+.doc-mark em.doc{ background-position:-16px 0px}
+.doc-mark em.ppt{ background-position:-32px 0px}
+.doc-mark em.pps{ background-position:-48px 0px}
+.doc-mark em.pot{ background-position:-64px 0px}
+.doc-mark em.xls{ background-position:-80px 0px}
+.doc-mark em.pdf{ background-position:-96px 0px}
+.doc-mark em.txt{ background-position:-112px 0px}
+.doc-mark em.rtf{ background-position:-128px 0px}
+.doc-mark em.mpp{ background-position:-144px 0px}
+.doc-mark em.vsd{ background-position:-160px 0px}
+.doc-mark em.pub{ background-position:0px -16px}
+.doc-mark em.docx{ background-position:-16px -16px}
+.doc-mark em.xlsx{ background-position:-32px -16px}
+.doc-mark em.wps{ background-position:-48px -16px}
+.doc-mark em.et{ background-position:-64px -16px}
+.doc-mark em.dps{ background-position:-80px -16px}
+.doc-mark em.bmp{ background-position:-96px -16px}
+.doc-mark em.gif{ background-position:-112px -16px}
+.doc-mark em.jpg{ background-position:-128px -16px}
+.doc-mark em.jpeg{ background-position:-128px -16px}
+.doc-mark em.tif{ background-position:-144px -16px}
+.doc-mark em.tiff{ background-position:-144px -16px}
+.doc-mark em.pptx{ background-position:-160px -16px}
+.doc-mark em.ppsx{ background-position:0px -32px}
+.doc-mark em.potx{ background-position:-16px -32px}
+.doc-mark em.pdw{ background-position:-32px -32px}
+.doc-mark em.pxl{ background-position:-48px -32px}
+.doc-mark em.psw{ background-position:-64px -32px}
+.doc-mark em.xml{ background-position:-80px -32px}
+.doc-mark em.eml{ background-position:-96px -32px}
+.doc-mark em.ps{ background-position:-112px -32px}
+.doc-mark em.top{ background-position:-128px -32px}
+.doc-mark em.comments{ background-position:-144px -32px}
+.doc-mark em.favorites{ background-position:-160px -32px}
+/*sitesearch*/
+.sitesearch{ text-align:center; width:100%;margin:20px auto;}
+.sitesearch label{ font-size:14px; font-weight:bold; color:#000; margin:0 12px}
+.sitesearch input{ width:400px; border:1px #ccc inset;height:18px}
+.sitesearch input.btn{ width:44px; height:22px; line-height:22px; border:1px #ccc outset; background:#d4d0c5; margin:0 0 0 7px; cursor:pointer}
+.text-l{text-align:left; }
+/*side-list*/
+.side-list{padding:0 0 10px; }
+.side-list li{padding:0 0 5px 53px;font-size:14px;line-height:30px;background:url(../images/sear-side.png) no-repeat ; }
+.side-list li.c1{background-position: 11px 3px ;}
+.side-list li.c2{background-position: 11px -31px ;}
+.side-list li.c3{background-position: 11px -65px ;}
+.side-list li.c4{background-position: 11px -99px ;}
+.side-list li.c5{background-position: 11px -133px ;}
+.side-list li.c6{background-position: 11px -167px ;}
+.side-list li.c7{background-position: 11px -201px ;}
+.side-list li.cur a{color:#000;font-weight:700}
+
+.side-list1{border-top:1px solid #F2F2F2;padding:10px 0;line-height:24px;  }
+.side-list1 li{padding:0 0 0 22px; }
+.side-list1 li.cur{background:url(../images/sear-side.png) no-repeat 10px -234px;}
+.side-list1 li.cur a{color:#000;font-weight:700}
+
+/*more-sear*/
+.more-sear{background:#EFF2FB;padding:6px 12px;font-size:14px; }
+.more-sear dt,.more-sear dd{float:left; }
+.more-sear dt{ font-size:14px; font-weight:bold; color:#000; margin:1px 13px 0 0}
+.more-sear dd{width: 671px; }
+.more-sear dd table{width:100%;table-layout:fixed;}
+.more-sear dd a{color:#0000CA;text-decoration:underline; }

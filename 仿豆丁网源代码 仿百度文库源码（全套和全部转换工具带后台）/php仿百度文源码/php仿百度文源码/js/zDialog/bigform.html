@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<title>新建站点</title>
+<style>
+body { background: #ffffff; color: #444; }
+a { color: #07c; text-decoration: none; border: 0; background-color: transparent; }
+body, div, q, iframe, form, h5 { margin: 0; padding: 0; }
+img, fieldset { border: none 0; }
+body, td, textarea { word-break: break-all; word-wrap: break-word; line-height:1.6; }
+body, input, textarea, select, button { margin: 0; font-size: 12px; font-family: Tahoma, SimSun, sans-serif; }
+div, p, table, th, td { font-size:1em; font-family:inherit; line-height:inherit; }
+h5 { font-size:12px; }
+ol li,ul li{ margin-bottom:0.5em;}
+pre, code { font-family: "Courier New", Courier, monospace; word-wrap:break-word; line-height:1.4; font-size:12px;}
+pre{background:#f6f6f6; border:#eee solid 1px; margin:1em 0.5em; padding:0.5em 1em;}
+hr { clear:both; margin:7px 0; +margin: 0;
+border:0 none; font-size: 1px; line-height:1px; color: #069; background-color:#069; height: 1px; }
+.formTip{ border:1px solid #FFCB57; background-color:#FFFCCD; padding:0.2em 0.5em;}
+</style>
+<script type="text/javascript">
+var getDom = function (id) {
+    return typeof id == "string" ? document.getElementById(id) : id;
+};
+var $topWindow = function () {
+    var parentWin = window;
+    while (parentWin != parentWin.parent) {
+        if (parentWin.parent.document.getElementsByTagName("FRAMESET").length > 0) break;
+        parentWin = parentWin.parent;
+    }
+    return parentWin;
+};
+step=[];
+currentStep=null;
+var topWin = $topWindow();
+/*******************************************
+表单分步填写
+1、把指定元素（wrapId）内的表单按指定标签（splitTag）拆分，然后隐藏；
+2、在当前弹出窗（Dialog）的说明栏生成导航链接，
+3、结合表单验证（Verify），对表单的显示与隐藏进行控制。
+/*******************************************/
+var stepFormInit=function(wrapId,splitTag){
+	if(!wrapId||!splitTag||!ownerDialog)return;
+	var wrapChild=getDom(wrapId).childNodes;
+	if(wrapChild.length<1)return;
+	for(var i=0,len=wrapChild.length;i<len;i++){
+		var child=wrapChild[i];
+		if(child.tagName==splitTag){
+			var tempObj={};
+			tempObj.form=child;
+			var title=child.getElementsByTagName("H5")[0];
+			tempObj.title=title?(!+'\v1'?title.innerText:title.textContent):"第"+i+"步";
+			child.style.display="none";
+			step.push(tempObj)
+		}
+	}
+	child=null;
+	var msgEle=topWin.getDom("_Message_"+ownerDialog.ID);
+	if(step.length){
+		var msgHtml=[];
+		for(var j=0,leng=step.length;j<leng;j++){
+			msgHtml.push('<a href="#;" onclick="Dialog.getInstance('+ownerDialog.ID+').innerWin.go('+j+')">'+step[j].title+'</a>')
+		}
+	}
+	msgEle.innerHTML=msgHtml.join(" -> ");
+	var OKBtnEle=topWin.getDom("_ButtonOK_"+ownerDialog.ID);
+	OKBtnEle.value="下一步";
+	if (typeof OKBtnEle.onclick == 'function') {
+	  	OKBtnEle.oldonclick = OKBtnEle.onclick;
+		OKBtnEle.onclick = function(){
+			go();
+		};
+	}
+
+	for(var k=0,lengt=step.length;k<lengt;k++){
+		step[k].link=msgEle.getElementsByTagName("A")[k];
+	}
+	msgEle=null;
+	go(0);
+};
+go=function(index){
+	var n=index;
+	if(n!==undefined&&n==currentStep)return false;
+	if(n===undefined&&currentStep!==null)n=1+currentStep;
+	//console.log("跳转到步骤: ",n)
+	if(n>step.length||n<0)return false;
+	if(n>0 && n>currentStep){
+		for(var i=0;i<n;i++){
+			if(Verify.hasError(null,step[i].form)){
+				go(i);
+				return false;
+			}
+		}
+	}
+	if(currentStep!==null){
+		var cur=step[currentStep];
+		cur.form.style.display="none";
+		cur.link.style.color="#669900";
+		cur.link.style.fontWeight="normal";
+	}
+	var to=step[n];
+	to.form.style.display="";
+	to.link.style.color="#EE6600";
+	to.link.style.fontWeight="bold";
+	currentStep=n;
+	var OKBtnEle=topWin.getDom("_ButtonOK_"+ownerDialog.ID);
+	if(currentStep==step.length-1){
+		OKBtnEle.value="确定";
+		if (typeof OKBtnEle.oldonclick == 'function') {
+			OKBtnEle.onclick = OKBtnEle.oldonclick;
+		}
+	}else{
+		OKBtnEle.value="下一步";
+		OKBtnEle.onclick = function(){go();};
+
+	}
+	//console.log("当前步骤: ",currentStep)
+	return false;
+}
+//stepFormInit("wrap","TABLE");
+
+Verify={}
+Verify.hasError=function(noCheckArr,ele){
+	var arr;
+	if(ele){
+		ele = getDom(ele);
+		arr = ele.getElementsByTagName("INPUT");
+	}else{
+		arr = document.getElementsByTagName("INPUT");
+	}
+	var firstEle = false;
+	for(var i=0,len=arr.length;i<len;i++){
+		var c = arr[i];
+		var id = c.id;
+		var flag = false;
+		if(noCheckArr){
+			for(var j=0;j<noCheckArr.length;j++){
+				if(id==getDom(noCheckArr[j]).id){
+					flag = true;
+				}
+			}
+		}
+		if(flag){
+			Verify.closeTip(ele);
+			continue;
+		}
+		Verify.check(null,c);
+		if(!firstEle&&c._VerifyTip){
+			firstEle = c;
+		}
+	}
+	if(firstEle){
+		topWin.Dialog.alert("还有未正确填写的项，请参照提示修改!",function(){
+			getDom(firstEle).focus();	
+		});
+		return true;
+	}
+	return false;
+}
+Verify.closeTip = function(ele,evt){
+	if(!ele){
+		evt = getEvent(evt);
+		ele = evt.srcElement;
+	}
+	if(ele.type == "blur"){
+		ele = ele.srcElement;
+	}
+	if(ele._VerifyTip){
+		ele._VerifyTip.close();
+		ele._VerifyTip = null;
+		ele._VerifyMsg = null;
+	}
+}
+
+Verify.check = function(evt,ele){//evt,ele二者只填一个
+	if(!ele){
+		evt = getEvent(evt);
+		ele = evt.srcElement;
+	}
+	var v = ele.getAttribute("verify");
+	if(!v){//verify属性可能有变动
+		Verify.closeTip(ele);
+		return;
+	}
+	var msg = [];
+
+	var anyFlag = false;
+	var Features = v.split("\&\&");		
+	var value = getDom(ele).value;
+	if(value){
+		value = (""+value).replace(/(^\s*)|(\s*$)/g,"");
+	}
+	for(var i = 0; i < Features.length; i++) {
+		var arr = Features[i].split("\|");
+		var name = "";
+		var rule;
+		if(arr.length==2){
+			name = arr[0];
+			rule = arr[1];
+		}else{
+			rule = Features[i];
+		}
+		var op = "=";
+		var fName = null;
+		var fValue = null;
+		if(rule.indexOf(op)>0) {
+			fName = rule.substring(0,rule.indexOf(op));
+			fValue = rule.substring(rule.indexOf(op)+1);
+		}else{
+			fName = rule;
+		}
+		if(fName=="Any") {
+			anyFlag = true;
+		}else if (fName=="Regex") {
+			fValue = rule.substring(6);
+			if (value==null||value==""||!fValue) {continue;}
+			var reg = fValue;
+			if(window.console)console.log(new RegExp(reg));
+			if(!new RegExp(reg).test(value)){
+				msg.push(name);
+			}
+		}else if (fName=="Script") {
+			if (!fValue) {continue;}
+			if(!eval(fValue)){
+				msg.push(name);
+			}
+		}else if (fName=="NotNull") {
+			if (value==null||value=="") {
+					msg.push(name+"不能为空");
+			}
+		}else if(fName=="Email") {
+			if (value==null||value=="") {continue;}
+			var pattern = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+			if(value&&value.match(pattern)==null){
+			  msg.push(name+"不是正确的电子邮箱地址");
+			}
+		}
+	}
+	if(msg.length>0){
+		var txt = msg.join("<br>");
+		if(txt!=ele._VerifyMsg){
+			Verify.closeTip(ele);
+			var tip;
+			var afterEle = ele.getAttribute("element");
+			if(afterEle){
+				tip = Verify.tipShow(getDom(afterEle),txt);
+			}else{
+				tip = Verify.tipShow(ele,txt);
+			}
+			
+			ele._VerifyTip = tip;
+			ele._VerifyMsg = txt;
+		}
+	}else{
+		Verify.closeTip(ele);
+	}
+}
+Verify.tipShow=function(ele,message){
+	var id = ele.id+"_Tip";
+	var tip = getDom(id);
+	if(tip){
+		tip.innerHTML = message;
+		tip.style.display="";
+	}else{
+		message = " <span id='"+id+"' class='formTip'>"+message+"</span>";
+		if(ele.insertAdjacentHTML){
+			ele.insertAdjacentHTML("afterEnd",message);
+		}else{
+			var r = ele.ownerDocument.createRange();
+			r.setStartBefore(ele);
+			var node = r.createContextualFragment(message);
+			 if(ele.nextSibling){
+		      ele.parentNode.insertBefore(node,ele.nextSibling);
+		    }else{
+		      ele.parentNode.appendChild(node);
+		    }
+		}
+		tip = getDom(id);
+	};
+	return {close:function(){
+		tip.innerHTML="";
+		tip.style.display="none";
+	}}
+}
+
+</script>
+</head>
+<body>
+  <form id="form1" method="post">
+<div style="padding:10px 0; margin:0 10px;" id="wrap">
+    <table width="100%" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="111" align="right"><h5>站点名称</h5></td>
+        <td width="22">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="111" align="right">站点名称：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="Name" type="text" class="input1" id="Name"
+				value=""
+				size="40" verify="站点名称|NotNull" /> <span style="color:#F36">*</span>
+          <input name="ID" type="hidden"
+				id="ID" value="" /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">英文名称：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="Alias" type="text" class="input1" id="Alias"
+				value="" size="40"
+				verify="英文名称|NotNull&&只允许大小写字母、数字、英文句号、下划线及英文破折线|Regex=^[\w\.\_\-]+$" /> <span style="color:#F36">*</span></td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="111" align="right"><h5>基本信息</h5></td>
+        <td width="22">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="111" align="right">站点描述：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="Info" type="text" class="input1" id="Info"
+				value="" size="40" /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">站点URL：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="URL" type="text" class="input1" id="URL" value="" size="40" verify="站点URL|NotNull&&URL格式不正确|Regex=^http://[\w\.\-]+$" /> <span style="color:#F36">*</span></td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="111" align="right"><h5>模板设置</h5></td>
+        <td width="22">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="111" align="right">首页模板：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="IndexTemplate" type="text" class="input1"
+				id="IndexTemplate" value="" size="30" />
+          <input
+				type="button" class="input2" onClick="browse('IndexTemplate');"
+				value="浏览..." /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">列表页模板：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="ListTemplate" type="text" class="input1"
+				id="ListTemplate" value="" size="30" />
+          <input
+				type="button" class="input2" onClick="browse('ListTemplate');"
+				value="浏览..." /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">详细页模板：</td>
+        <td width="22">&nbsp;</td>
+        <td><input name="DetailTemplate" type="text" class="input1"
+				id="DetailTemplate" value="" size="30" />
+          <input
+				type="button" class="input2" onClick="browse('DetailTemplate');"
+				value="浏览..." /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">编辑器样式：</td>
+        <td width="22">&nbsp;</td>
+        <td><input id="EditorCss" name="EditorCss" type="text"
+				class="input1" value="" size="30" />
+          <input
+				type="button" class="input2" onClick="browseFile('EditorCss');"
+				value="浏览..." />
+		</td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="111" align="right"><h5>扩展选项</h5></td>
+        <td width="22">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="111" align="right">是否自动索引：</td>
+        <td width="22">&nbsp;</td>
+        <td><input type='radio' name='AutoIndexFlag' id='AutoIndexFlag_0' value='Y' checked >
+          <label for='AutoIndexFlag_0'>是</label>
+          <input type='radio' name='AutoIndexFlag' id='AutoIndexFlag_1' value='N' >
+          <label for='AutoIndexFlag_1'>否</label></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">是否自动统计：</td>
+        <td width="22">&nbsp;</td>
+        <td><input type='radio' name='AutoStatFlag' id='AutoStatFlag_0' value='Y' checked >
+          <label for='AutoStatFlag_0'>是</label>
+          <input type='radio' name='AutoStatFlag' id='AutoStatFlag_1' value='N' >
+          <label for='AutoStatFlag_1'>否</label></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">评论是否需审核：</td>
+        <td width="22">&nbsp;</td>
+        <td><input type='radio' name='CommentAuditFlag' id='CommentAuditFlag_0' value='Y' checked >
+          <label for='CommentAuditFlag_0'>是</label>
+          <input type='radio' name='CommentAuditFlag' id='CommentAuditFlag_1' value='N' >
+          <label for='CommentAuditFlag_1'>否</label></td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0">
+      <tr>
+        <td width="111" align="right"><h5>其它</h5></td>
+        <td width="22">&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="111" align="right">排序权值：</td>
+        <td width="22">&nbsp;</td>
+        <td><input id="OrderFlag" name="OrderFlag" type="text"
+				class="input1" value="" /></td>
+      </tr>
+      <tr>
+        <td width="111" align="right">留言板标志：</td>
+        <td width="22">&nbsp;</td>
+        <td><label>
+            <input type="radio" name="MessageBoardFlag" value="Y"  />
+            是</label>
+          <label>
+            <input type="radio" name="MessageBoardFlag" value="N" checked/>
+            否</label></td>
+      </tr>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0" style="display:none">
+      <tr>
+        <td align="center" height="50"><h5 style="display:none">提交</h5>必填项已经填写必，现在可以提交表单了。</td>
+      </tr>
+    </table>
+</div>
+  </form>
+</body>
+</html>

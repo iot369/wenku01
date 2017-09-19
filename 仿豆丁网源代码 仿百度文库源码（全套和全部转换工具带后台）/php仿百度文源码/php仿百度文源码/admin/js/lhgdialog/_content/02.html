@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript">
+var dg = frameElement.dg;
+
+window.onload = function()
+{
+	document.getElementById('a').innerHTML = dg.win.document.getElementById('txt1').value;
+}
+function ok()
+{
+    dg.win.document.getElementById('txt1').value = document.getElementById('b').value;
+	dg.cancel();
+}
+	</script>
+</head>
+
+<body style="background-color:#fff;">
+	<p>调用页面输入框的值显示在这里：<span id="a" style="color:#f00"></span></p>
+	<input id="b" type="text" value="test"/>&nbsp;<input type="button" value="确定" onclick="ok();"/><br/>
+	点确定按钮后会把输入框中的值传回到调用页面的输入框里并关闭打开的窗口
+</body>
+</html>

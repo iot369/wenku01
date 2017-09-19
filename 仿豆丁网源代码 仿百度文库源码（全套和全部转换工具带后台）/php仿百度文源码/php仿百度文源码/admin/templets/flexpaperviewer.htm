@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>文档缩略图提取</title>
+<script type="text/javascript" src="<?php echo $cfg_templets_skin;?>/js/swfobject.js" ></script>
+<script type="text/javascript">
+	if(window.addEventListener)
+	window.addEventListener('DOMMouseScroll', handleWheel, false);
+	window.onmousewheel = document.onmousewheel = handleWheel;
+	
+	if (window.attachEvent) 
+	window.attachEvent("onmousewheel", handleWheel);
+	
+	function handleWheel(event){
+		try{
+			if(!window.document.FlexPaperViewer.hasFocus()){return true;}
+			window.document.FlexPaperViewer.setViewerFocus(true);
+			window.document.FlexPaperViewer.focus();
+			
+			if(navigator.appName == "Netscape"){
+				if (event.detail)
+					delta = 0;
+				if (event.preventDefault){
+					event.preventDefault();
+					event.returnValue = false;
+					}
+			}
+			return false;	
+		}catch(err){return true;}		
+	}
+</script>
+<script type="text/javascript"> 
+	<!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
+	var swfVersionStr = "9.0.124";
+	<!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+	var xiSwfUrlStr = "${expressInstallSwf}";
+	var flashvars = { 
+		  aid : "<?php echo $aid;?>",
+		  SwfFile: "<?php echo $onlineviewurl;?>",
+		  cmsUrl : "<?php echo $cfg_cmsurl;?>",
+		  Scale : 0.6, 
+		  ZoomTransition : "easeOut",
+		  ZoomTime : 0.5,
+		  ZoomInterval : 0.1,
+		  FitPageOnLoad : false,
+		  FitWidthOnLoad : true,
+		  PrintEnabled : false,
+		  FullScreenAsMaxWindow : false,
+		  ProgressiveLoading : true,
+		  localeChain: "en_US"
+		  };
+	 var params = {
+		
+		}
+	params.quality = "high";
+	params.bgcolor = "#ffffff";
+	params.allowscriptaccess = "sameDomain";
+	params.allowfullscreen = "true";
+	var attributes = {};
+	attributes.id = "FlexPaperViewer";
+	attributes.name = "FlexPaperViewer";
+	swfobject.embedSWF(
+		"js/FlexPaperSnapshot.swf", "flashContent", 
+		"740", "530", 
+		swfVersionStr, xiSwfUrlStr, 
+		flashvars, params, attributes);
+	swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+</script>
+<style type="text/css">
+<!--
+body {
+	background-image: url(img/allbg.gif);
+}
+.STYLE1 {
+	color: #555
+}
+-->
+</style>
+</head>
+<body>
+<!--doc-player-->
+<div class="doc-player" id="DocinViewer">
+  <div id="flashContent"> </div>
+</div>
+<!--doc-player end-->
+</body>
+</html>

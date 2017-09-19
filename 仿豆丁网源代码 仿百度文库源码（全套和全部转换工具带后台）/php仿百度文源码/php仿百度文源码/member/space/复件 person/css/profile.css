@@ -1,0 +1,809 @@
+#profile {
+	/* for testing -- border: solid 2px #000000; */
+	clear: both;
+}
+#profile_left {
+	position: relative;
+	float: left;
+	margin: 10px 0 0 0;
+	width: 294px;
+	border: 0px dashed green;
+}
+#profile_left_top {
+	background: url(../images/left-bg-top.png) no-repeat;
+	margin: 0;
+	padding: 0;
+	width: 294px;
+	height: 14px;
+}
+#profile_left_middle {
+	background: #eaecec url(../images/profile-middle-bg.png) repeat-x 0 0;
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+	width: 290px;
+	overflow:hidden;
+	min-height:1030px;
+}
+#profile_left_bottom {
+	background:url(../images/left-bg-bottom.png) no-repeat;
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 294px;
+	height: 14px;
+}
+#profile_left #user-name-wrapper {
+	margin: 0px 0px 0px 10px;
+	overflow: auto;
+}
+#profile_left #user-name {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+#profile_left #update-profile {
+	float: right;
+	width: 125px;
+}
+#profile_left #user-img-wrapper {
+	padding: 10px 0 0 10px;
+	width:294px;
+}
+#profile_left .user-img {
+	float: left;
+	width:120px;
+	margin:0px 8px 4px 0px;
+	border:solid 0px red;
+}
+#profile_left .short-info {
+	float: left;
+	overflow:hidden;
+	border:solid 0px red;
+	width:146px;
+}
+#profile_left .badges {
+	float: left;
+	margin-top:50px;
+	width: 105px;
+}
+/* START: Progress Bar */
+#profile_left #progress-bar-wrapper {
+	position: relative;
+	margin: 0px 15px;
+}
+#profile_left #progress-bar {
+	position: relative;
+	background: url(../images/profile-progress-bar-bg.gif) no-repeat;
+	margin: 0;
+	padding: 5px 0px 0 5px;
+	width: 262px;
+	height: 27px;
+}
+#profile_left .progress-percentage {
+	position: absolute;
+	top: 5px;
+	left: 190px;
+}
+#profile_left .progress-bar-left {
+	position: absolute;
+	top: 6px;
+	left: 5px;
+	width: 8px;
+	height: 14px;
+}
+#profile_left .progress-bar-right {
+	position: absolute;
+	top: 6px;
+	left: 168px;
+	width: 8px;
+	height: 14px;
+}
+#profile_left .progress-bar-unit {
+	position: absolute;
+	top: 6px;
+	left: 13px;
+	height: 14px;
+}
+#profile_left .info-icon {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+/* END: Progress Bar */
+
+
+/* START: About Me */
+#profile_left #about-me-wrapper {
+	margin: 10px 15px;
+	width: 261px;
+}
+#profile_left .about-me {
+	clear:both;
+	/*background-image: url(../images/pod-middle.png);
+	background-repeat: repeat-y;*/
+	background-color:#FFF;
+	border:solid 1px #d9dbdb;
+	border-bottom:0px;
+	border-top:0px;
+	padding-left:15px;
+	padding-right:30px;
+}
+/* END: About Me */
+
+
+/* START: generic pod */
+#profile_left .pod-top {
+	background: url(../images/pod-top.png) no-repeat;
+	width: 261px;
+	height: 12px;
+}
+#profile_left .pod-bottom {
+	background: url(../images/pod-bottom.png) no-repeat;
+	width: 263px;
+	height: 14px;
+}
+/* END: generic pod */
+
+
+
+/* START: stats */
+#profile_left #stats-wrapper {
+	margin: 0px 15px;
+	width: 261px;
+	margin-top: 5px;
+}
+#profile_left .stats {
+	position: relative;
+	/*background-image: url(../images/pod-middle.png);
+	background-repeat: repeat-y;*/
+	background-color:#FFF;
+	border:solid 1px #d9dbdb;
+	border-bottom:0px;
+	border-top:0px;
+	padding:0px 50px 0px 15px;
+}
+#profile_left .stats .stats-minus {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+#profile_left .stats .stats-docs {
+	background-image: url(../images/stats-docs.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+#profile_left .stats .stats-views {
+	background-image: url(../images/stats-views.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+#profile_left .stats .stats-avg-rank {
+	background-image: url(../images/stats-avg-rank.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+#profile_left .stats .stats-reviews {
+	background-image: url(../images/stats-reviews.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+#profile_left .stats .stats-downloads {
+	background-image: url(../images/stats-downloads.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+#profile_left .stats .stats-profile-visits {
+	background-image: url(../images/stats-profile-visits.png);
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-left: 30px;
+	height: 25px;
+}
+/* END: stats */
+
+
+/* START: Professional Info */
+#profile_left #prof-info-wrapper {
+	margin: 0px 15px;
+}
+/* END: Professional Info */
+
+
+/* START: Address */
+#profile_left #address-wrapper {
+	margin: 0px 15px;
+}
+/* END: Address */
+
+
+/* START: Education */
+#profile_left #education-wrapper {
+	margin: 0px 15px;
+}
+/* END: Education */
+
+
+/* START: My Blog */
+#profile_left #my-blog-wrapper {
+	position: relative;
+	margin: 0px 0px 0px 10px;
+}
+#profile_left #my-blog-wrapper #add-my-blog-btn {
+	position: absolute;
+	top: 0px;
+	left: 150px;
+}
+/* END: My Blog */
+
+
+
+#profile_left .section-title {
+	/*
+	clear: left;
+	border-top-color: #ddecf8;
+	border-top-width: thin;
+	border-top-style: solid;
+	
+	color: #006699;
+	font-size:14px;
+	font-weight:900;
+	
+	width: 267px;
+	margin: 10px 0 0 5px;
+	padding: 10px 0 0 0;
+*/
+	display: block;
+	color: #4ea6d3;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	height:12px;
+}
+#profile_left .section-body {
+	margin-left: 20px;
+}
+/* START profile_right */
+#profile_right {
+	position: relative;
+	float: left;
+	margin: 10px 0 0 10px;
+	width: 676px;
+}
+/* END profile_right */
+
+
+.divider {
+	clear: both;
+	margin: 10px 10px;
+	border-bottom: 1px solid #ccc;
+	height: 1px;
+}
+/*-- START: TABS CSS --*/
+#profile_right #tabs {
+	position: relative;
+	margin-left: 0px;
+}
+#profile-tabs {
+	margin: 0px 0px 0px 4px;
+	clear: both;
+}
+#profile-tabs dt {
+	display: none;
+}
+#profile-tabs dd {
+	height: 25px;
+	float: left;
+	margin: 0px;
+	margin-left:0px;
+}
+#profile-tabs dd {
+	width: 100px;
+	height: 25px;
+	background: url(../images/profile-tab.png);
+}
+#profile-tabs .selected {
+	background: url(../images/profile-tab-selected.png);
+	background-repeat: no-repeat;
+	color: #609ebe;
+}
+#profile-tabs dd .static {
+	text-align: center;
+	display: block;
+	padding-top: 5px;
+	height:22px;
+	text-decoration:none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+}
+#profile-tabs dd .static:hover, #profile-tabs .selected .static {
+	text-align:center;
+	color: #609ebe;
+	background-image: url(../images/profile-tab-selected.png);
+	background-repeat: no-repeat;
+}
+/*-- END: TABS CSS --*/
+
+
+/* START: Tab Content */
+#profile_right #tabContentBorder {
+	clear: left;
+	padding-bottom: 4px;
+}
+#profile_right #tabContent {
+	background-color: #FFFFFF;
+	margin: 0px 4px 0px 4px;
+	overflow: hidden;
+	font-family:Arial;
+}
+#profile_right #tabContent .sort-by {
+	background: url(../images/sort-nav-bg.gif) repeat-x;
+	height: 40px;
+	font-weight: bold;
+	color:#5a5a5a
+}
+#profile_right #tabContent .sort-by a {
+	color:#5a5a5a;
+	font-size:11px;
+}
+#profile_right #tabContent .sort-icon {
+	position: relative;
+	top: -7px;
+}
+#profile_right #tabContent .sort-title {
+	float: left;
+	margin: 14px 0 0 12px;
+	font-size: 13px;
+}
+#profile_right #tabContent .sort-item {
+	float: left;
+	margin: 15px 4px 0 10px;
+	font-weight: 900;
+}
+#profile_right #tabContent .sort-item img {
+	margin-top: 5px;
+}
+#profile_right #tabContent .header {
+}
+#profile_right #tabContent .paging {
+	float: right;
+	margin-top: 2px;
+	height: 20px;
+}
+#profile_right #tabContent .results-per-page {
+	float: left;
+	margin-top: 3px;
+	height: 20px;
+}
+#profile_right #tabContent .page-size-on {
+	color: #000;
+	padding: 0 5px;
+	font-weight: bold;
+}
+#profile_right #tabContent .page-size-off {
+	color: #2593c8;
+	padding: 0 5px;
+	font-weight: bold;
+}
+#profile_right #tabContent .page-num-of-pages {
+	float: left;
+	margin: 6px 0 6px 150px;
+}
+#profile_right #tabContent .pager-label {
+	color: #fff;
+	background: #494949;
+	padding: 3px 5px;
+	text-align: center;
+	font-weight: bold;
+}
+#profile_right #tabContent .pager-link {
+	color: #fff;
+	background: #2593c8;
+	padding: 3px 5px;
+	text-align: center;
+	font-weight: bold;
+}
+#profile_right #tabContent .pager-crement-on {
+	color: #000;
+	background: transparent;
+	font-weight: bold;
+	margin: 0px 5px;
+}
+#profile_right #tabContent .pager-crement-off {
+	color: #aaa;
+	background: transparent;
+	font-weight: bold;
+	margin: 0px 10px;
+}
+#profile_right #tabContent .footer {
+	position: relative;
+	clear: both;
+	border: 1px solid #c1c1c1;
+	border-bottom: 1px solid #d4d4d4;
+	overflow: hidden;
+	padding: 7px 0px 3px 10px;
+	margin: 10px 0 10px 0;
+	height:23px;
+}
+#profile_right #tabContent .search-within-results {
+	position: relative;
+	height: 20px;
+	width: 220px;
+	overflow: auto;
+	float: left;
+}
+#profile_right #tabContent .search-within-results .search-box-left {
+	position: absolute;
+	left: 50px;
+}
+#profile_right #tabContent .search-within-results .search-box {
+	background: transparent url(../images/search-box-bg.png) repeat-x;
+	border: 0px none;
+	left: 55px;
+	position: absolute;
+	top: 0px;
+	width: 124px;
+	height: 20px;
+}
+#profile_right #tabContent .search-within-results .search-go-btn {
+	background: transparent url(../images/btn-go.png) no-repeat;
+	border: 0px none;
+	height: 18px;
+	left: 171px;
+	position: absolute;
+	top: 0px;
+	width: 35px;
+	cursor: pointer;
+}
+#profile_right #tabContent .edit-buttons {
+	background: url(../images/doc-details-bg.png) repeat-x;
+	height: 25px;
+	border-top: 1px solid #ccc;
+	margin: 0;
+}
+#profile_right #tabContent .edit-buttons img {
+	margin: 4px 0 0 4px;
+}
+#profile_right #tabContent .edit-buttons .edit-info-icon {
+	float: left;
+	margin: 1px 0 0 4px;
+}
+#profile_right #tabContent .edit-buttons .edit-info-text {
+	margin: 5px 0 0 4px;
+	height: 25px;
+	float: left;
+}
+#profile_right #tabContent .edit-buttons .edit-buttons-left {
+	float: left;
+}
+#profile_right #tabContent .edit-buttons .finish-button {
+	float: right;
+	margin: 4px 6px 0 0;
+}
+/*
+#profile_right #tabContent .doc-icon
+{
+	width: 50px;
+	height: 40px;
+	float: left;
+}*/
+#profile_right #tabContent .doc-details-none {
+	float: left;
+	clear: none;
+	width: 595px;
+}
+#profile_right #tabContent .doc-details-edit {
+	float: left;
+	clear: none;
+	width: 475px;
+}
+#profile_right #tabContent .doc-edit-buttons {
+	float:right;
+	width: 100px;
+	padding: 10px 0 0 0;
+}
+#profile_right #tabContent .doc-edit-buttons a {
+	margin-right:2px;
+}
+#profile_right #tabContent .doc-edit-buttons img {
+	margin: 0px !important;
+}
+/* My Contacts */
+#contacts .listitem {
+	clear: both;
+	margin: 0 4px 5px 4px;
+	height: 135px;
+	color: #58585a;
+	line-height: 19px;
+}
+#contacts .listitem a {
+	color: #319bcd;
+	font-weight: 900;
+}
+#contacts .listitem .photo {
+	float: left;
+	margin: 10px 0 0 1px;
+	width: 111px;
+	position: relative;
+}
+#contacts .listitem .friend-info {
+	float: left;
+	overflow: hidden;
+	margin: 10px 0 10px 20px;
+	width: 223px;
+	height: 115px;
+}
+#contacts .listitem .friend-info .username {
+	color:#064a6d;
+	font-size:14px;
+	font-weight:bold;
+}
+#contacts .listitem span {
+	color:#064a6d;
+	font-weight:bold;
+}
+#contacts .listitem .actions {
+	float:right;
+	padding-top:24px;
+	border:solid 0px red;
+}
+#contacts .listitem .actions div {
+	width:122px;
+	height:24px;
+	cursor:pointer;
+	cursor:hand;
+}
+#contacts .listitem .actions .subscribe {
+	background: url(../images/btn-subscribe.png) no-repeat;
+}
+#contacts .listitem .actions .friend {
+	background: url(../images/btn-add-contact.png) no-repeat;
+}
+#contacts .listitem .actions .message {
+	background: url(../images/btn-send-message.png) no-repeat;
+}
+/*#profile_right #tabContent .friend-list-item .friend-about-me
+{
+	float: left;
+	overflow: hidden;
+	border-left-color: #ababab;
+	border-left-style: solid;
+	border-left-width: 1px;
+	
+	width: 150px;
+	height: 115px;
+	margin: 10px 0 10px 20px;
+	padding: 0 0 0 10px;
+}
+#profile_right #tabContent .friend-list-item .friend-documents-activity
+{
+	float: left;
+	margin: 10px 1px 10px 10px;
+	width: 122px;
+	height: 115px;
+	padding: 0 0 0 20px;
+}
+#profile_right #tabContent .friend-list-item .docsters-action-buttons
+{
+	display:none; 
+	position:absolute; 
+	
+	padding-top:75px; 
+	margin-left: -20px;
+	width:94px;
+	
+	line-height: 18px;
+}
+#profile_right #tabContent .friend-list-item .docsters-action-buttons a
+{
+	font-weight: normal;
+	color: #b4b4b4;
+}*/
+
+#profile_right #tabContent .no-doc-reviews {
+	margin: 80px 5px 0px 0;
+	padding-bottom: 50px;
+	overflow:hidden;
+	text-align:center;
+	font-weight: bold;
+	font-size: 20px;
+	color: #319bcd;
+}
+/* END: Tab Content */
+
+
+
+#profile_left .action-buttons {
+	clear:both;
+	background-color:#FFF;
+	border:solid 1px #d9dbdb;
+	border-bottom:0px;
+	border-top:0px;
+	padding-left:15px;
+}
+#profile_left .action-buttons a {
+	margin: 0px 10px 0px 0px;
+}
+#profile_left .action-buttons img {
+	margin: 0px 5px 10px 0px;
+}
+/* START: Tab 2 */
+#profile_right #tabContent .instructions {
+	background-color: #cdebfb;
+	padding: 10px;
+	clear: both;
+	margin: 0 0 10px 0;
+	height:30px;
+}
+#profile_right #tabContent #show-hide-wrapper {
+	margin-bottom: 10px;
+}
+#profile_right #tabContent .mpd-body {
+	padding: 10px 0px 10px 0px;
+	width: 668px;
+	overflow:hidden;
+	border:0px;/*
+    background:green;
+	width: inherit;
+	border: 0px;
+	overflow: auto;
+	clear: both;*/
+}
+#profile_right #tabContent .mpd-bodyA {
+	padding: 10px 0px 10px 0px;
+	width: 668px;
+	overflow:hidden;
+	/*
+	border: 0px;
+	overflow: auto;
+	clear: both;*/
+	background: #f0f1f1;
+	border:0px;
+}
+#profile_right #tabContent .tab-documents-items {
+	margin-left: 10px;
+}
+#profile_right #tabContent #mydocster-content-wrapper {
+	border: 5px solid #999a9a;
+	padding: 0px 2px 2px 2px;
+	position: relative;
+	top: -10px;
+}
+.browse-item {
+	/*background-color:blue;*/
+    width:668px;
+	border:0px;
+}
+.browse-item .text-col {
+	width: 510px;
+	padding:0px;
+}
+.browse-item .text-col h4 {
+	width:500px;
+}
+.browse-item .text-col h4 a {
+	color:#4e4e4e;
+}
+#profile_right #tabContent .doc-reviews {
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+#profile_right #tabContent .doc-review {
+	clear: both;
+	overflow: auto;
+	background: url(../images/user-review-bg.png) repeat-x;
+	margin-bottom: 5px;
+	border-top: 1px solid #a1cee5;
+	padding: 5px;
+}
+#profile_right #tabContent .my-review-doc-info {
+	clear: both;
+	padding: 5px;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+#profile_right #tabContent .my-review-doc-info .icon-col {
+	float: left;
+	padding: 5px;
+}
+#profile_right #tabContent .my-review-doc-info .text-col {
+	float: left;
+	padding: 5px;
+}
+#profile_right #tabContent .my-review-doc-info .text-col h4 a {
+	color: #054b6e;
+	font-size: 16px;
+}
+#profile_right #tabContent .doc-reviewer-image {
+	width: 100px;
+	float: left;
+}
+#profile_right #tabContent .doc-reviewer-info-text {
+	width: 150px;
+	float: left;
+}
+#profile_right #tabContent .doc-review-body {
+	float: left;
+	width: 400px;
+}
+#profile_right #tabContent .doc-review-date {
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+}
+#profile_right #tabContent .reviewer-name {
+	color: #054b6e;
+	font-size: 14px;
+	font-weight: bold;
+}
+#profile_right #tabContent .my-documents-items {
+	margin-left: 15px;
+}
+/* END: Tab 2 */
+
+
+.browse-item .doc-stats {
+	clear:none;
+}
+.browse-item .text-col {
+	float:left;
+	clear:none;
+}
+.browse-item .icon-col {
+	width:50px;
+	border:solid 0px red;
+	height:32px;
+	float:left;
+	position:static;
+}
+.actions {
+	padding: 0px 1px;
+}
+.networkIcons {
+	display:block;
+	margin-right:10px;
+	margin-top:10px;
+	width:85px;
+}
+.networkIcons a {
+	cursor: pointer;
+}
+.thumb-text-layout .c {
+	float:left;
+	overflow:hidden;
+	width:530px;
+}
+.thumb-text-layout .di .d {
+	font-size:13px;
+	height:20px;
+	overflow:hidden;
+	width:530px;
+}
+.thumb-text-layout .di p {
+	overflow:hidden;
+	width:530px;
+	height:50px;
+	padding:5px;
+}
+#icon-premium {
+	background-image: url(../images/icon-premiumseller.jpg);
+	margin-top:14px;
+	width:127px;
+	height:26px;
+}
+div.profilepro {
+	background: url(../images/ico-proprofile.png) no-repeat;
+	width:85px;
+	height:42px;
+	float:right;
+}

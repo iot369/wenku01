@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+
+
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="templets/js/load.js"></script>
+
+
+
+<script type="text/javascript">
+function open3()
+{
+	var diag = new Dialog();
+	diag.Width = 300;
+	diag.Height = 150;
+	diag.Title = "创建我的文件夹";
+	diag.URL = "mtypes-add.php";
+	diag.show();
+}
+
+  function viewArc(aid){
+	  window.open("{dede:global.cfg_phpurl /}/view.php?aid="+aid);
+  }
+  function editArc(aid,channelid){
+	  location = "archives_do.php?dopost=edit&channelid="+channelid+"&aid="+aid;
+  }
+  function delArc(aid){
+	  if(window.confirm('你确定要删除这篇文档吗?')) location="archives_do.php?aid="+aid+"&dopost=delArc";
+  }
+</script>
+<script type="text/javascript">
+//获得选中文件的文件名
+function checkAll() 
+{ 
+var deleteids = document.all['deleteid']; 
+if(deleteids.length){ 
+for(var i=0;i<deleteids.length;i++) 
+{ 
+deleteids[i].checked = true; 
+} 
+}else{ 
+deleteids.checked = true; 
+} 
+
+}
+//反选
+function checkSome() 
+{ 
+var code_Values = document.all['deleteid']; 
+if(code_Values.length){ 
+for(var i=0;i<code_Values.length;i++) 
+{ 
+ if(code_Values[i].checked) {
+code_Values[i].checked= false;
+}
+else{ 
+code_Values[i].checked = true; 
+}
+} 
+}
+}
+//全部选
+function uncheckAll() 
+{ 
+var code_Values = document.all['deleteid']; 
+if(code_Values.length){ 
+for(var i=0;i<code_Values.length;i++) 
+{ 
+code_Values[i].checked = false; 
+} 
+}else{ 
+code_Values.checked = false; 
+} 
+} 
+
+//获得选中文件的文件名
+function GetCheckfolderItem()
+{
+	var allSel='';
+	if(document.form2.deleteid.value) return document.form2.deleteid.value;
+	for(i=0;i<document.form2.deleteid.length;i++)
+	{
+		if(document.form2.deleteid[i].checked)
+		{
+			if(allSel=='')
+			allSel=document.form2.deleteid[i].value;
+			else
+			allSel=allSel+","+document.form2.deleteid[i].value;
+		}
+	}
+	return allSel;
+}
+
+function DoSubmit()
+{
+	var selid= GetCheckfolderItem();
+	
+	if(selid=='') {
+		Dialog.alert("提示：你没选中任何文档！");
+		return false;
+	}
+	else//if(window.confirm("你确定要删除这些文档么？"))
+	{
+		//location = "archives_do.php?aid="+aid+"&dopost=delArc";
+		
+		open25(selid);
+	}
+}
+</script>
+<style>
+body { background: #ffffff; color: #444; }
+a { color: #07c; TEXT-DECORATION: none! important;  border: 0; background-color: transparent; }
+
+</style>
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mcpmain">
+      <div id="appTab">
+        <ul>
+        <li <?php echo ($arcrank=='1')? "class='thisTab'" : "";?>><a href="content_list.php?channelid=<?php echo $channelid;?>&arcrank=1"><span>已审核</span></a></li>
+        <li <?php echo ($arcrank=='-1')? "class='thisTab'" : "";?>><a href="content_list.php?channelid=<?php echo $channelid;?>&arcrank=-1"><span>未审核</span></a></li>
+        <li <?php echo ($arcrank=='-2')? "class='thisTab'" : "";?>><a href="content_list.php?channelid=<?php echo $channelid;?>&arcrank=-2"><span>被退回</span></a></li>
+
+        </ul>
+      </div>
+      
+      <div id="mainCp">  </LI><!--内容消息提示 -->
+        <h3 class="meTitle">已发布<?php echo $positionname; ?><small>(曾经发布的所有<?php echo $positionname; ?>)</small></h3>
+        <form name="form2" id="form2">
+          <table width="90%" border="0" cellpadding="0" cellspacing="0" class="list">
+        
+		   <tr>
+              <td colspan="7"><div class="toolbar" id="favorite-toolbar">
+              <span class="gray"><A class="button-icons"  href="#" onclick="checkAll()" ><span>选中全部</span></A><A class="button-icons"  href="#" onclick="uncheckAll()" ><span>全部取消</span></A><A class="button-icons"href="#" onclick="checkSome()" ><span>反向选择</span></A><A class="button-icons"  href="#" onclick="DoSubmit()" ><span>转移文档至</span></A><A class="button-icons"href="#" onclick="open22()" ><span>创建文件夹</span></A>
+     </div></td>
+            </tr>
+         
+		     <thead>
+	          <th width="4%">&nbsp;</th>
+              <th width="33%"><div align="center">文章标题</div></th>
+              <th width="12%"><div align="center">类目 </div></th>
+              <th width="9%"><div align="center">状态 </div></th>
+              <th width="11%"><div align="center">阅读</div></th>
+              <th width="12%"><div align="center">发布时间 </div></th>
+              <th width="19%"><div align="center">操作</div></th>
+            </tr>
+          </thead>
+          <tbody>
+          {dede:datalist}
+          <tr>
+            <td class="tabTitle"><div align="center">
+              <input name="deleteid" type="checkbox" class="selectedfd" id="deleteid" value="<?php echo $fields['id']; ?>"/>
+            </div></td>
+            <td class="tabTitle"><div align="left"><a href='<?php echo $cfg_phpurl; ?>/view.php?aid=<?php echo $fields['id']; ?>' target='_blank'><?php echo $fields['title']; ?><?php echo IsPicArchives($fields['litpic']); ?></a></div></td>
+            <td align="center"><div align="center"><?php echo $fields['typename']; ?></div></td>
+            <td align="center">
+              <div align="center">
+                <?php
+if($fields['arcrank']>=0) echo "已审核";
+else if($fields['arcrank']==-2) echo "<font color='blue'>被退回</font>";
+else echo "<font color='red'>未审核</font>";
+?>
+                </div></td><td align="center"><div align="center"><?php echo $fields['click']; ?></div></td>
+            <td><div align="center"><?php echo GetDateMk($fields['senddate']); ?></div></td>
+            <td align="center" class="doPost"><div align="center">
+              <?php
+if($fields['arcrank']<0 || $dtime - $fields['senddate'] < $maxtime)
+{
+?>
+              <a href="javascript:editArc(<?php echo $fields['id']?>,<?php echo $fields['channel']?>);">修改</a>|<a href="javascript:delArc(<?php echo $fields['id']?>);">删除</a>|
+              <?php
+}
+else
+{
+	echo "<span class='gray'>修改| 删除| </span>";
+}
+?>
+              <a href="javascript:viewArc(<?php echo $fields['id']; ?>);">预览</a></div></td>
+          </tr>
+          {/dede:datalist}
+          <tfoot> 
+		   <tr>
+              <td colspan="7"><div class="toolbar" id="favorite-toolbar">
+              <span class="gray"><A class="button-icons"  href="#" onclick="checkAll()" ><span>选中全部</span></A><A class="button-icons"  href="#" onclick="uncheckAll()" ><span>全部取消</span></A><A class="button-icons"href="#" onclick="checkSome()" ><span>反向选择</span></A><A class="button-icons"  href="#" onclick="DoSubmit()" ><span>转移文档至</span></A><A class="button-icons"href="#" onclick="open22()" ><span>创建文件夹</span></A>
+     </div></td>
+            </tr>
+            <tr>
+              <td colspan="7"><div class="pageList">{dede:pagelist listsize=5/}</div></td>
+            </tr>
+          </tfoot>
+        </table>
+        </form>
+      </div>
+      <!--主操作区域 -->
+    </div>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

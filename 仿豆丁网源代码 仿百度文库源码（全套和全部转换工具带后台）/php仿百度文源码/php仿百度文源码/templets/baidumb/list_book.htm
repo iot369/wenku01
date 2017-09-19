@@ -1,0 +1,191 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML>
+<HEAD>
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.16766">
+<TITLE>{dede:field.title/}_{dede:global.cfg_webname/}</TITLE>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description function='html2text(@me)'/}" />
+<LINK rel=stylesheet type=text/css href="/templets/jxdoc/baidu/homenew.css">
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+
+<SCRIPT type=text/javascript src="/templets/jxdoc/baidu/tangram-1.3.2.js"></SCRIPT>
+<SCRIPT type=text/javascript src="/templets/jxdoc/baidu/home.js"></SCRIPT>
+
+<style type="text/css">
+.dede_pages{
+}
+.dede_pages ul{
+	float:left;
+	padding:12px 0px 12px 16px;
+}
+.dede_pages ul li{
+	float:left;
+	font-family:Tahoma;
+	line-height:17px;
+	margin-right:6px;
+	border:1px solid #E9E9E9;
+}
+.dede_pages ul li a{
+	float:left;
+	padding:2px 4px 2px;
+	color:#555;
+	display:block;
+}
+.dede_pages ul li a:hover{
+	color:#690;
+	text-decoration:none;
+	padding:2px 4px 2px;
+}
+.dede_pages ul li.thisclass,
+.dede_pages ul li.thisclass a,.pagebox ul li.thisclass a:hover{
+	background-color:#F8F8F8;
+	padding:2px 4px 2px;
+	font-weight:bold;
+}
+.dede_pages .pageinfo{
+	line-height:21px;
+	padding:12px 10px 12px 16px;
+	color:#999;
+}
+.dede_pages .pageinfo strong{
+	color:#555;
+	font-weight:normal;
+	margin:0px 2px;
+}
+#right_list_top {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 28px; PADDING-LEFT: 5px; WIDTH: 225px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; FONT-WEIGHT: normal; PADDING-TOP: 10px
+}
+#right_list_top A {
+	PADDING-BOTTOM: 1px; LINE-HEIGHT: 14px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; WHITE-SPACE: nowrap; MARGIN-BOTTOM: 10px; FLOAT: left; COLOR: #333; WORD-BREAK: keep-all; MARGIN-RIGHT: 11px; PADDING-TOP: 2px
+}
+#right_list_top A:hover {
+	PADDING-BOTTOM: 1px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #000; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+</style>
+</HEAD>
+<BODY>
+{dede:include filename="head.htm"/}
+<!-- /header -->
+<DIV style="CLEAR: both"></DIV>
+<DIV id=nav style="PADDING-BOTTOM: 0px; PADDING-LEFT: 15px; PADDING-RIGHT: 0px; HEIGHT: 20px; PADDING-TOP: 0px">当前位置：{dede:field name='position'/}</DIV>
+
+
+
+<DIV style="CLEAR: both"></DIV>
+
+<!--列表开始-->
+<DIV id=main class=main>
+<DIV id=hot-recommend>
+<DIV class="skin-hot">
+<DIV class=inner>
+<DIV class=cd>
+<DIV class=hot-img>
+{dede:list pagesize='35'}
+<DL class=mt5>
+  <DT><A href="[field:arcurl/]" target=_blank><IMG title=[field:title/] alt=[field:title/] src="[field:litpic/]"></A><em>[field:pagenumber /]页</em> <SPAN class="[field:filetype/] icon" title=[field:filetype/]></SPAN></DT>
+  <DD><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:title function="cn_substr('@me',14)"/]</A></DD>
+  <DD class=f-grey>[field:pubdate function=MyDate('y-m-d',@me)/]</DD>
+</DL>{/dede:list}
+</DIV>
+<!-- /pages开始 -->
+<div class="dede_pages">
+<ul class="pagelist">
+{dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="5"/}
+</ul>
+</div>
+<!-- /pages结束 -->
+</DIV></DIV></DIV></DIV></DIV>
+<!--列表end-->
+
+<!--左侧开始-->
+<DIV id=aside class=aside>
+<!--阅读排行top10-->
+<DIV id=rank>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black>阅读排行榜</B></DIV>
+<DIV class="cd c-align">
+<UL class=rank-tab>
+  <LI class="tab-1 tab-on">本年</LI>
+  <LI class=tab-2>本月</LI>
+  <LI class=tab-3>本周</LI></UL>
+<DIV class=clear></DIV>
+<DIV class=rank-content>
+<DIV style="DISPLAY: block" class=rank>
+<UL>
+{dede:arclist orderby='click' subday='365'  titlelen='24' row='10'}<LI><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:title/]</A></LI> {/dede:arclist}
+
+</UL></DIV>
+<DIV style="DISPLAY: none" class=rank>
+<UL>
+{dede:arclist orderby='click' subday='30'  titlelen='24' row='10'}<LI><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:title/]</A></LI> {/dede:arclist}
+
+</UL></DIV>
+<DIV style="DISPLAY: none" class=rank>
+<UL>
+{dede:arclist orderby='click' subday='7'  titlelen='24' row='10'}<LI><A title=[field:title/] href="[field:arcurl/]" target=_blank>[field:title/]</A></LI> {/dede:arclist}
+
+</UL></DIV></DIV></DIV></DIV></DIV></DIV>
+<!--下载排行top10-->
+    <div id="rank">
+      <div class="mod mt20 skin-default">
+        <div class="inner">
+          <div class="hd"><b class="f-black">下载排行榜</b></div>
+          <div class="cd c-align tabs">
+            <ul class="rank-tab">
+              <li class="tab-1 tab-on tab-title">本年</li>
+              <li class="tab-2 tab-title">本月</li>
+              <li class="tab-3 tab-title">本周</li>
+            </ul>
+            <div class="clear"></div>
+            <div class="rank-content" style="width:190px;overflow:hidden;white-space:nowrap;">
+              <div style="" class="rank tab-content">
+                <ul>
+                  {dede:sql sql='select A.id,A.title,D.downloads from t_downloads as D left join t_archives as A ON D.id = A.id WHERE pubdate > UNIX_TIMESTAMP( CURDATE() - INTERVAL 365 day) order by downloads DESC limit 0,10;'}
+                  <li><a title="[field:title/]" href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</a></li>
+                  {/dede:sql}
+                </ul>
+              </div>
+              <div style="display: none;" class="rank tab-content">
+                <ul>
+                  {dede:sql sql='select A.id,A.title,D.downloads from t_downloads as D left join t_archives as A ON D.id = A.id WHERE pubdate > UNIX_TIMESTAMP( CURDATE() - INTERVAL 30 day) order by downloads DESC limit 0,10;'}
+                  <li><a title="[field:title/]" href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</a></li>
+                  {/dede:sql}
+                </ul>
+              </div>
+              <div style="display: none;" class="rank tab-content">
+                <ul>
+                  {dede:sql sql='select A.id,A.title,D.downloads from t_downloads as D left join t_archives as A ON D.id = A.id WHERE pubdate > UNIX_TIMESTAMP( CURDATE() - INTERVAL 7 day) order by downloads DESC limit 0,10;'}
+                  <li><a title="[field:title/]" href="[field:id runphp='yes'] $id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]">[field:title/]</a></li>
+                  {/dede:sql}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--热门标签开始-->
+<DIV id=pub>
+<DIV class="mod mt20 skin-default">
+<DIV class=inner>
+<DIV class=hd><B class=f-black>热门标签</B></DIV>
+<DIV id=right_list_top style="width:215px;overflow:hidden;white-space:nowrap;">
+{dede:tag row='99' getall='1' sort='month'}<A href="[field:link/]" target=_blank>[field:tag /]</A> {/dede:tag}
+</DIV>
+
+</DIV>
+</DIV>
+</DIV>
+<!--热门标签结束-->
+</DIV>
+<!--左侧结束-->
+
+
+<DIV style="CLEAR: both"></DIV>
+{dede:include filename="footer.htm"/}
+</BODY>
+</HTML>

@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>自动更新HTML文档</title>
+<link href="img/base.css" rel="stylesheet" type="text/css">
+<?php
+if(file_exists(DEDEMEMBER."/js/webcalendar.js")){
+	echo "<script src=\"../member/js/webcalendar.js\" type=\"text/javascript\"></script>";
+}else{
+	echo "<script type=\"text/javascript\">\r\nfunction SelectDate(){}\r\n</script>";
+}
+?>
+<style type="text/css">
+	.selectt a:hover ,.dmjj a{ background-color: #D1DDAA;padding:5px; }
+</style>
+</head>
+<body background='img/allbg.gif' leftmargin='8' topmargin='8'>
+<table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA" align="center">
+  <form name="form1" action="autohtml_admin.php" method="get" target='stafrm'>
+    <tr> 
+      <td height="28" colspan="2" background='img/tbg.gif'>
+      	<table width="98%" border="0" cellpadding="0" cellspacing="0">
+          <tr> 
+            <td width="30%" height="18"><strong>自动更新HTML文档：</strong></td>
+            <td width="70%" align="right"></td>
+          </tr>
+        </table></td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">插件说明：
+      </td>
+      <td>&nbsp;
+      有问题请在织梦技术论坛PM&nbsp;<a title='织梦技术论坛-溪梦缘曦' href="http://bbs.dedecms.com/message.php?action=write&touid=27121" target="_blank">溪梦缘曦</a>
+	现在时间: <?php echo(date("Y-m-d H:i:s",Time())) ?>
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">插件说明： </td>
+      <td width="75%">
+	<table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF" align="center">
+	   <tr class="selectt" width="98%">
+		<td width="20%"><a title='插件使用方法' href="?dopost=view&mod=<?php echo($mod); ?>" target="stafrm">点这里查看插件使用方法</a></td>
+		<td width="20%"><a title='查看版本信息' href="?dopost=checkver" target="stafrm">版本信息</a></td>
+	   </tr>
+	</table> 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">选择要设置的项目：
+      </td>
+      <td width="75%">
+	<table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFFFF" align="center">
+	   <tr class="selectt">
+		<td width="20%" class="<?php if($mod=='index') echo 'dmjj';?>"><a href="?mod=index">首&nbsp;页</a></td>
+		<td width="20%" class="<?php if($mod=='list') echo 'dmjj';?>"><a href="?mod=list">列&nbsp;表</a></td>
+		<td width="20%" class="<?php if($mod=='freelist') echo 'dmjj';?>"><a href="?mod=freelist">自由列表</a></td>
+		<td width="20%" class="<?php if($mod=='rss') echo 'dmjj';?>"><a href="?mod=rss">ＲＳＳ</a></td> 
+		<td width="20%" class="<?php if($mod=='arc') echo 'dmjj';?>"><a href="?mod=arc">内容页</a></td>
+	   </tr>
+	</table> 
+      </td>
+    </tr>
+
+<?php if($mod=='index'){ ?>
+
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">启用首页自动更新：</td>
+      <td>
+	<input name="auto_index_open" type="radio" id="auto_index_open" class="np" value="Y" <?php if($auto_index_open=='Y'){echo("checked");} ?>>是
+	<input name="auto_index_open" type="radio" id="auto_index_open" class="np" value="N" <?php if($auto_index_open=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">更新后立即刷新首页：</td>
+      <td>
+	<input name="auto_index_reload" type="radio" id="auto_index_reload" class="np" value="Y" <?php if($auto_index_reload=='Y'){echo("checked");} ?>>是
+	<input name="auto_index_reload" type="radio" id="auto_index_reload" class="np" value="N" <?php if($auto_index_reload=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">首页更新时间间隔(分钟)：</td>
+      <td>
+        &nbsp;每隔&nbsp;<input name="auto_index_uptime" type="text" id="auto_index_uptime" size="6" value="<?php echo($auto_index_uptime); ?>">&nbsp;分钟更新一次首页
+      </td>
+    </tr>
+
+<?php }else if($mod=='list'){ ?>
+
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">启用(文章/图集/软件)列表更新：</td>
+      <td>
+	<input name="auto_list_open" type="radio" id="auto_list_open" class="np" value="Y" <?php if($auto_list_open=='Y'){echo("checked");} ?>>是
+	<input name="auto_list_open" type="radio" id="auto_list_open" class="np" value="N" <?php if($auto_list_open=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">更新立即刷新列表页：</td>
+      <td>
+	<input name="auto_list_reload" type="radio" id="auto_list_reload" class="np" value="Y" <?php if($auto_list_reload=='Y'){echo("checked");} ?>>是
+	<input name="auto_list_reload" type="radio" id="auto_list_reload" class="np" value="N" <?php if($auto_list_reload=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">列表更新时间间隔/数量：</td>
+      <td>
+         &nbsp;每隔&nbsp;<input name="auto_list_uptime" type="text" id="auto_list_uptime" size="6" value="<?php echo($auto_list_uptime); ?>">&nbsp;分钟更新一次列表前&nbsp;
+	<input name="auto_list_pages" type="text" id="auto_list_pages" size="3" value="<?php echo($auto_list_pages); ?>">&nbsp;页
+      </td>
+    </tr>
+
+<?php }else if($mod=='rss'){ ?>
+
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">启用(文章/图集/软件)ＲＳＳ更新：</td>
+      <td>
+	<input name="auto_rss_open" type="radio" id="auto_rss_open" class="np" value="Y" <?php if($auto_rss_open=='Y'){echo("checked");} ?>>是
+	<input name="auto_rss_open" type="radio" id="auto_rss_open" class="np" value="N" <?php if($auto_rss_open=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">RSS单个类目最大记录数：</td>
+      <td>
+	&nbsp;索引栏目前&nbsp;<input name="auto_rss_max" type="text" id="auto_rss_max" size="6" value="<?php echo($auto_rss_max); ?>">&nbsp;条记录
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">更新时间间隔：</td>
+      <td>
+         &nbsp;每隔&nbsp;<input name="auto_rss_uptime" type="text" id="auto_rss_uptime" size="6" value="<?php echo($auto_rss_uptime); ?>">&nbsp;分钟更新一次ＲＳＳ前&nbsp;
+	<input name="auto_rss_max" type="text" id="auto_rss_max" size="3" value="<?php echo($auto_rss_max); ?>">&nbsp;页
+      </td>
+    </tr>
+
+<?php }else if($mod=='freelist'){ ?>
+
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">启用自由列表自动更新：</td>
+      <td>
+	<input name="auto_freelist_open" type="radio" id="auto_freelist_open" class="np" value="Y" <?php if($auto_freelist_open=='Y'){echo("checked");} ?>>是
+	<input name="auto_freelist_open" type="radio" id="auto_freelist_open" class="np" value="N" <?php if($auto_freelist_open=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">是否立即刷新页面：</td>
+      <td>
+	<input name="auto_freelist_reload" type="radio" id="auto_freelist_reload" class="np" value="Y" <?php if($auto_freelist_reload=='Y'){echo("checked");} ?>>是
+	<input name="auto_freelist_reload" type="radio" id="auto_freelist_reload" class="np" value="N" <?php if($auto_freelist_reload=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">列表更新时间间隔/数量：</td>
+      <td>
+         &nbsp;每隔&nbsp;<input name="auto_freelist_uptime" type="text" id="auto_freelist_uptime" size="6" value="<?php echo($auto_freelist_uptime); ?>">&nbsp;分钟更新一次自由列表前&nbsp;
+	<input name="auto_freelist_pages" type="text" id="auto_freelist_pages" size="3" value="<?php echo($auto_freelist_pages); ?>">&nbsp;页
+      </td>
+    </tr>
+
+<?php }else if($mod=='arc'){ ?>
+
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">启用文档自动更新：</td>
+      <td>
+	<input name="auto_arc_open" type="radio" id="auto_arc_open" class="np" value="Y" <?php if($auto_arc_open=='Y'){echo("checked");} ?>>是
+	<input name="auto_arc_open" type="radio" id="auto_arc_open" class="np" value="N" <?php if($auto_arc_open=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">是否立即刷新内容页：</td>
+      <td>
+	<input name="auto_arc_reload" type="radio" id="auto_arc_reload" class="np" value="Y" <?php if($auto_arc_reload=='Y'){echo("checked");} ?>>是
+	<input name="auto_arc_reload" type="radio" id="auto_arc_reload" class="np" value="N" <?php if($auto_arc_reload=='N'){echo("checked");} ?>>否 
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">更新文章ID范围：</td>
+      <td>&nbsp;
+        <input name="auto_arc_startid" type="text" id="auto_arc_startid" size="10" value="<?php echo($auto_arc_startid); ?>"> - 
+	<input name="auto_arc_endid" type="text" id="auto_arc_endid" size="10" value="<?php echo($auto_arc_endid); ?>"> ( 0 - 0 表示全部 )
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">文章更新时间范围：</td>
+      <td>&nbsp;
+        <input name="auto_arc_starttime" type="text" id="auto_arc_starttime" value="<?php echo date("Y-m-d",$auto_arc_starttime);?>" onclick="SelectDate(this,'yyyy-MM-dd',80,0)" > - 
+	<input name="auto_arc_endtime" type="text" id="auto_arc_endtime" value="<?php echo date("Y-m-d",$auto_arc_endtime);?>" onclick="SelectDate(this,'yyyy-MM-dd',80,0)" >
+	(当前时间不在时间范围将不更新)
+      </td>
+    </tr>
+    <tr height="20" bgcolor="#FFFFFF"> 
+      <td width="25%">更新时间间隔：</td>
+      <td>
+         &nbsp;每隔&nbsp;<input name="auto_arc_uptime" type="text" id="auto_arc_uptime" size="6" value="<?php echo($auto_arc_uptime); ?>">&nbsp;分钟更新一次文档&nbsp;
+      </td>
+    </tr>
+
+<?php } ?>
+
+    <tr> 
+      <td height="20" colspan="2" bgcolor="#FAFAF1" align="center">
+	<input name="mod" type="hidden" value="<?php echo $mod;?>">
+	<input name="dopost" type="hidden" value="save">
+      	<input name="b112" type="button" class="coolbg np" value="确定提交" onclick="document.form1.submit();" style="width:100px"> 
+      </td>
+    </tr>
+  </form>
+  <tr bgcolor="#E6F3CD"> 
+    <td height="20" colspan="2"> <table width="100%">
+        <tr> 
+          <td width="74%">进行状态： </td>
+          <td width="26%" align="right"> <script language='javascript'>
+            	function ResizeDiv(obj,ty)
+            	{
+            		if(ty=="+") document.all[obj].style.pixelHeight += 50;
+            		else if(document.all[obj].style.pixelHeight>80) document.all[obj].style.pixelHeight = document.all[obj].style.pixelHeight - 50;
+            	}
+            	</script>
+            [<a href='#' onClick="ResizeDiv('mdv','+');">增大</a>] [<a href='#' onClick="ResizeDiv('mdv','-');">缩小</a>] 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr bgcolor="#FFFFFF"> 
+    <td colspan="2" id="mtd">
+    	<div id='mdv' style='width:100%;height:350px;'> 
+        <iframe name="stafrm" frameborder="0" id="stafrm" width="100%" height="100%"></iframe>
+      </div>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

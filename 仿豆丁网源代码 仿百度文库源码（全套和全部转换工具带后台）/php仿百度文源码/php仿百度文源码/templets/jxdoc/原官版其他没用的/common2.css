@@ -1,0 +1,170 @@
+
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BLOCKQUOTE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; LIST-STYLE: none none outside; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+LI {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; LIST-STYLE: none none outside; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.head {
+	Z-INDEX: 1000; MARGIN: 0px auto; WIDTH: 960px; POSITION: relative
+}
+.head .rd_l {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 5px; POSITION: absolute; HEIGHT: 38px
+}
+.head .rd_r {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 5px; POSITION: absolute; HEIGHT: 38px
+}
+.head .rd_l {
+	BACKGROUND-POSITION: -140px -40px; LEFT: 0px; TOP: 0px
+}
+.head .rd_r {
+	BACKGROUND-POSITION: -145px -40px; RIGHT: 0px; TOP: 0px
+}
+.logo {
+	FLOAT: left
+}
+.logo IMG {
+	DISPLAY: block
+}
+.quick-help {
+	RIGHT: 10px; POSITION: relative; TOP: 80px
+}
+.upload {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.head .rd_l {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.head .rd_r {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.sear-btn {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+
+.sear .btn {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.nav-main LI.cur A {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.nav-main LI.cur A SPAN {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.nav-main .padBtn {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.nav-menu LI {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.nav-menu LI SPAN {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.headEnd-wapper {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.headEnd .upload {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.addFollow {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.Following {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.Followed {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.eachFollowed {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.cancelFollow {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.my-level LI.l-list SPAN {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.doc-mark EM {
+	BACKGROUND: url(nav.png) no-repeat 0px 0px
+}
+.head-wapper {
+	MIN-WIDTH: 960px; Z-INDEX: 20; WIDTH: 100%; POSITION: relative; HEIGHT: auto; BACKGROUND-COLOR: #fff
+}
+.head {
+	Z-INDEX: 10; MARGIN: 0px auto; WIDTH: 960px; POSITION: relative
+}
+.head .rd_l {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 5px; POSITION: absolute; HEIGHT: 38px
+}
+.head .rd_r {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 5px; POSITION: absolute; HEIGHT: 38px
+}
+.head .rd_l {
+	BACKGROUND-POSITION: -140px -40px; LEFT: 0px; TOP: 0px
+}
+.head .rd_r {
+	BACKGROUND-POSITION: -145px -40px; RIGHT: 0px; TOP: 0px
+}
+.logo {
+	FLOAT: left
+}
+.logo IMG {
+	DISPLAY: block
+}
+.upload {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -40px; PADDING-LEFT: 37px; FONT-WEIGHT: 700; FONT-SIZE: 14px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 11px 0px 0px; WIDTH: 69px; COLOR: #333; LINE-HEIGHT: 34px; PADDING-TOP: 0px; HEIGHT: 34px
+}
+.upload:hover {
+	COLOR: #333
+}
+.quick-help {
+	RIGHT: 178px; POSITION: absolute; TOP: 21px
+}
+.sear {
+	Z-INDEX: 20; FLOAT: right; MARGIN: 10px 111px 0px 0px; POSITION: relative
+}
+.sear-sub {
+	BORDER-RIGHT: #ddd 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #ddd 1px solid; PADDING-LEFT: 5px; BACKGROUND: #f6f6f8; FLOAT: left; PADDING-BOTTOM: 0px; BORDER-LEFT: #ddd 1px solid; WIDTH: 478px; PADDING-TOP: 6px; BORDER-BOTTOM: #ddd 1px solid; HEIGHT: 30px
+}
+.sear INPUT {
+	BORDER-RIGHT: #326fa6 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #326fa6 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 14px; BACKGROUND: #fff; FLOAT: left; PADDING-BOTTOM: 0px; MARGIN: 0px 5px 0px 0px; BORDER-LEFT: #326fa6 1px solid; WIDTH: 327px; COLOR: #ccc; PADDING-TOP: 3px; BORDER-BOTTOM: #326fa6 1px solid; HEIGHT: 19px
+}
+.sear .listTopDefault {
+	COLOR: #ccc
+}
+.sear .listTopInput {
+	COLOR: #000
+}
+.sear .btn {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 14px; FLOAT: left; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 5px; WIDTH: 71px; CURSOR: pointer; COLOR: #000; LINE-HEIGHT: 28px; PADDING-TOP: 0px; HEIGHT: 25px; BORDER-RIGHT-WIDTH: 0px
+}
+.sear-btn {
+	BORDER-RIGHT: #326fa6 1px solid; PADDING-RIGHT: 16px; BACKGROUND-POSITION: right 0px; BORDER-TOP: #326fa6 1px solid; PADDING-LEFT: 7px; FLOAT: left; PADDING-BOTTOM: 0px; BORDER-LEFT: #326fa6 1px solid; WIDTH: 41px; CURSOR: pointer; COLOR: #000; LINE-HEIGHT: 22px; PADDING-TOP: 0px; BORDER-BOTTOM: #326fa6 1px solid; HEIGHT: 22px; BACKGROUND-COLOR: #fff; z-index:200
+}
+.sear-btn H5 {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px
+}
+.sear-btn DIV {
+	BORDER-RIGHT: #09e 1px solid; BORDER-TOP: #09e 1px solid; DISPLAY: none; Z-INDEX: 199; BACKGROUND: #fff; MARGIN: 1px 0px 0px -7px; BORDER-LEFT: #09e 1px solid; WIDTH: 64px; BORDER-BOTTOM: #09e 1px solid; POSITION: absolute
+}
+.sear-btn DIV LI {
+	FLOAT: left
+}
+.sear-btn A {
+	PADDING-RIGHT: 7px; DISPLAY: block; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; WIDTH: 50px; COLOR: #79a2bd; LINE-HEIGHT: 20px; PADDING-TOP: 0px
+}
+.sear-btn A:hover {
+	BACKGROUND: #f5f5f5; COLOR: #1a6fc0; TEXT-DECORATION: none
+}

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mainCp">
+        <h3 class="meTitle">订单确认</h3>
+        <div class="postForm">
+          <h3 class="meTitle">购买点卡/会员服务</h3>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <thead>
+              <tr>
+                <td colspan="6">确认订单并付款</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td width="180" class="td1">订单编号:</td>
+                <td><strong>{dede:var.carts.orders_id/}</strong></td>
+              </tr>
+              <tr>
+                <td width="180" class="td1">商品总数:</td>
+                <td><strong>{dede:var.carts.cart_count/}件</strong></td>
+              </tr>
+              <tr>
+                <td width="180" class="td1">商品名称:</td>
+                <td><strong>{dede:var.pay_name/}</strong></td>
+              </tr>
+              <tr>
+                <td width="180" class="td1">订单价格:</td>
+                <td><strong class="fc-f60" id="priceCount" style="color:#F00; font-weight:bold;">{dede:var.carts.price_count/}</strong> 元</td>
+              </tr>
+              <tr>
+                <td width="180" class="td1">支付方式:</td>
+                <td><img src="templets/images/pay/{dede:var.pay_logo/}" alt="{dede:var.pay_way/}" /></td>
+              </tr>
+              <tr>
+                <td width="180" class="td1">支付信息:</td>
+                <td><strong>{dede:var.description/}</strong></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"> {dede:var.button/} </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

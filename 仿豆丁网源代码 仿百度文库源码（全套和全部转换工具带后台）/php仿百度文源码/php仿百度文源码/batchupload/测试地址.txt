@@ -1,0 +1,7 @@
+writer：文档上传者姓名
+mid：文档上传者ID
+title：文档名称
+description：文档描述
+softurl1：文档物理文件路径
+
+http://localhost/docshare/batchupload/index.php?writer=admin&mid=1&title=cctesttest&description=kltlsf&softurl1=/docshare/uploads/userup/8/12N1I961-13Q.doc

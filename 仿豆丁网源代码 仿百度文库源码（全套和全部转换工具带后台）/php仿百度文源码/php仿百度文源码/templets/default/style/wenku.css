@@ -1,0 +1,824 @@
+#wrapper {
+	width:986px;
+	margin:0 auto;
+	font-size:12px;
+	line-height:18px;
+	text-align:left;
+}
+.clear {
+	clear:both;
+}
+.mt12 {
+	margin-top:12px;
+}
+.ml12 {
+	margin-left:12px;
+}
+.mt4 {
+	margin-top:4px;
+}
+.c {
+	text-align:center;
+}
+.icon {
+	background:url(../images/wenku/icons.gif) 0 0 no-repeat;
+	padding:2px 10px;
+	zoom:1;
+	font-size:12px;
+	cursor:default;
+}
+.hot {
+	padding:2px 10px;
+	background-position:-34px -30px;
+}
+.new {
+	padding:2px 10px;
+	background-position:-2px -30px;
+}
+.newred {
+	padding:2px 10px;
+	background-position:-64px -139px;
+}
+.xls,.xlsx {
+	background-position:-105px 1px;
+}
+.ppt,.pptx {
+	background-position:-139px 1px;
+}
+.doc,.docx {
+	background-position:-72px 1px;
+}
+.txt {
+	background-position:-36px 1px;
+}
+.pdf {
+	background-position:0 1px;
+}
+.vsd {
+	background-position:-173px 1px;
+}
+.rtf {
+	background-position:-140px -27px;
+}
+.pot {
+	background-position:-209px -27px;
+}
+.pps {
+	background-position:-209px 1px;
+}
+.wps {
+	background-position:-106px -26px;
+}
+.et {
+	background-position:-73px -26px;
+}
+.dps {
+	background-position:-174px -27px;
+}
+.epub {
+	background-position:-42px -142px;
+}
+.f-grey {
+	color:#757575;
+}
+ul {
+	list-style:none;
+}
+.l {
+	float:left;
+}
+.r {
+	float:right;
+}
+#wrapper:after,.hot-img:after,.cd:after,.cate-doclist:after {
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+#main {
+	width:756px;
+	float:left;
+}
+#all-category {
+	width:178px;
+	float:left;
+}
+#hot-recommend {
+	width:568px;
+	float:right;
+}
+#aside {
+	width:220px;
+	float:right;
+}
+.f-grey {
+	color:#626262;
+}
+.f-green {
+	color:#245c45;
+}
+.f-orange {
+	color:#e87301;
+}
+a.black {
+	color:#000;
+}
+.scroll-text {
+	line-height:180%;
+}
+.scroll-text p {
+	padding:5px 0;
+	border-bottom:1px dotted #b8c7c3;
+	width:100%;
+	height:35px;
+}
+.share-title {
+	font-family:微软雅黑;
+	font-size:15px;
+	font-weight:bold;
+	margin-top:17px;
+}
+.share-button {
+	width:100%;
+}
+.share-number {
+	color:#888;
+	line-height:24px;
+	margin:7px 0 8px 0;
+	text-align:center;
+}
+.doc-number {
+	color:#e87301;
+	font-size:20px;
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+}
+a.share-button {
+	width:144px;
+	height:37px;
+	display:block;
+	margin:0 auto;
+	background:url(../images/wenku/share-buttons.png) no-repeat 0 0;
+}
+a.share-button:hover {
+	background:url(../images/wenku/share-buttons.png) no-repeat 0 -37px;
+}
+.skin-hot .hot-img dl dd {
+	padding-top:5px;
+}
+.skin-hot .hot-img dl dd.f-grey {
+	padding:0;
+}
+.skin-hot .hd .f-green a {
+	color:#245C45;
+}
+.hot-img {
+	width:100%;
+}
+.hot-img dl {
+	float:left;
+	margin-left:26px;
+	display:inline;
+	height:210px;
+}
+.hot-img dl.mt17 {
+	margin-bottom:6px;
+	*margin-bottom:7px;
+}
+.hot-img dl dt {
+	float:left;
+	margin:5px 0 3px 0;
+	display:inline;
+	position:relative;
+}
+.hot-img dl dt span {
+	position:absolute;
+	right:2px;
+	bottom:3px;
+	width:1px;
+	height:17px;
+}
+.hot-img dl dt em {
+	position:absolute;
+	left:5px;
+	bottom:5px;
+	height:17px;
+	color:#E87301;
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+}
+.hot-img dl dt a {
+	border:3px solid #f2f2f2;
+	float:left;
+}
+.hot-img dl dt a:hover {
+	border:3px solid #f37e03;
+}
+.hot-img dl dt a:hover img {
+	border:1px solid #d75303;
+}
+.hot-img dl dt img {
+	float:left;
+	width:99px;
+	height:134px;
+	border:1px solid #9ec7c8;
+}
+.hot-img dl dd {
+	clear:both;
+	width:120px;
+}
+.hot-img dl dd a {
+	font-size:14px;
+}
+.hot-img dl dd.f-grey {
+	color:#888;
+}
+.week-star {
+	float:left;
+	margin-bottom:5px;
+}
+.week-star img {
+	float:left;
+	border:1px solid #e3e3e3;
+}
+.week-star dd {
+	float:left;
+	padding-left:8px;
+	width:100px;
+}
+#sidebar-ad .mod {
+	height:60px;
+	font-size:0;
+}
+.clear {
+	clear:both;
+}
+.hd {
+	font-size:14px;
+}
+.hd b,.hd span {
+	float:left;
+}
+.hd span.r {
+	float:right;
+	color:#dedddd;
+}
+.hd .r {
+	font-size:12px;
+}
+.cd {
+	font-size:12px;
+	zoom:1;
+}
+.dot li {
+	background:url(../images/wenku/li_dot.gif) 0 center no-repeat;
+	text-indent:10px;
+}
+.rank {
+	background:url(../images/wenku/rank-bar.png) no-repeat 0 0;
+	text-indent:25px;
+	line-height:25px;
+}
+.rank-tab .tab-on {
+	background:#fff;
+	border-bottom:0 solid #DFDFDF;
+	border-top:2px solid #31845f;
+	color:#000;
+}
+.rank-tab {
+	float:left;
+	padding-bottom:10px;
+}
+.rank-tab li {
+	cursor:pointer;
+	float:left;
+	font-size:12px;
+	height:23px;
+	line-height:25px;
+	text-align:center;
+	padding:0 14px;
+	background:#fafdfc;
+	color:#626262;
+	border-bottom:1px solid #95c3bd;
+}
+.tab-1 {
+	border-left:1px solid #95c3bd;
+	border-right:1px solid #95c3bd;
+	border-top:1px solid #c9dad8;
+}
+.tab-2 {
+	border-top:1px solid #c9dad8;
+	border-right:1px solid #c9dad8;
+	border-bottom:1px solid #95c3bd;
+}
+.tab-3 {
+	border-right:1px solid #c9dad8;
+	border-top:1px solid #c9dad8;
+	border-bottom:1px solid #95c3bd;
+}
+.tab-1,.tab-2,.tab-3 {
+	width:35px;
+}
+#leftlistbom_tab_1,#leftlistbom_tab_3 {
+	width:auto;
+}
+.cate-l {
+	width:163px;
+	float:left;
+	padding-left:9px;
+	text-align:left;
+}
+.hot-keyword {
+	width:100%;
+	height:118px;
+}
+.hot-keyword dt {
+	height:25px;
+	line-height:25px;
+	border-bottom:1px solid #f1f1f1;
+	margin-bottom:12px;
+	font-size:14px;
+}
+.hot-keyword dd a {
+	background:#f8f8f8;
+	padding:0 10px;
+	color:black;
+	padding:0 7px;
+	margin:0 1px 5px 0;
+	text-decoration:none;
+	display:inline-block
+}
+.hot-keyword dd a:hover {
+	background:#dbeeea;
+	color:black;
+	text-decoration:none;
+}
+.hot-album {
+	width:100%;
+}
+.hot-album dt {
+	height:25px;
+	line-height:25px;
+	border-bottom:1px solid #f1f1f1;
+	margin-bottom:12px;
+}
+.hot-album dt b {
+	font-size:14px;
+	font-weight:normal;
+}
+.hot-album dd {
+	width:100%;
+	line-height:180%;
+}
+.cate-r {
+	width:558px;
+	float:right;
+	text-align:left;
+	padding:0 0 0 6px;
+}
+.cate-doclist {
+	padding:10px 0 0 25px;
+	zoom:1;
+}
+.cate-doclist li {
+	float:left;
+	width:240px;
+	line-height:200%;
+	margin-right:26px;
+	display:inline;
+}
+.org-list {
+	padding:2px 0;
+	text-align:center;
+}
+.org-list img {
+	border:1px solid #c0d9cf;
+	width:160px;
+	height:52px;
+}
+.org-list dd {
+	line-height:22px;
+}
+.mt20 {
+	margin-bottom:10px;
+}
+.skin-category {
+	border:1px solid #c0d9cf;
+}
+.skin-category .hd {
+	height:30px;
+	line-height:30px;
+	background:url(../images/wenku/t-green-bg.png) repeat-x 0 0;
+	padding:0 10px;
+}
+.skin-category .cd {
+	background:white;
+}
+.skin-category .inner {
+	background:#ddf3ea;
+}
+.skin-category .hd a {
+	color:#245C45;
+}
+.skin-hot {
+	border:1px solid #c0d9cf;
+}
+.skin-hot .hd {
+	height:30px;
+	line-height:30px;
+	background:url(../images/wenku/t-green-bg.png) repeat-x 0 0;
+	padding:0 10px
+}
+.skin-hot .cd {
+	margin:0 3px;
+	background:white;
+	padding:10px 0;
+	border:1px solid #ceebdf;
+}
+.skin-hot .inner {
+	background:#ddf3ea;
+	padding-bottom:3px;
+}
+.skin-category-list {
+	border:1px solid #c0d9cf;
+}
+.skin-category-list .hd {
+	font-size:12px;
+	height:31px;
+	line-height:31px;
+	background:url(../images/wenku/t-green-list-bg.png) repeat-x 0 0;
+	padding-right:10px;
+}
+.skin-category-list .hd .r a {
+	font-size:13px;
+}
+.skin-category-list .cd {
+	margin:0 3px;
+	background:white;
+	padding:10px 0;
+}
+.skin-category-list .inner {
+	background:#ecf9f3;
+	padding-bottom:3px;
+	border:1px solid white;
+}
+.skin-category-list .f-orange {
+	font-size:16px;
+}
+.skin-upload {
+	border:1px solid #d0e1da;
+}
+.skin-upload .hd {
+	height:30px;
+	line-height:30px;
+}
+.skin-upload .cd {
+	margin:auto 0;
+}
+.skin-upload .inner {
+	background:url(../images/wenku/upload-i-bg.png) repeat-x 0 0;
+	border:1px solid white;
+	padding:10px 17px 5px 17px;
+}
+.skin-si {
+	border:1px solid #dcdbdb;
+}
+.skin-si .hd {
+	height:30px;
+	line-height:30px;
+}
+.skin-si .inner {
+	padding:4px 6px;
+}
+.skin-default {
+	border:1px solid #dcdbdb;
+}
+.skin-default .hd {
+	height:30px;
+	line-height:30px;
+}
+.skin-default .hd b a {
+	font-size:14px;
+	color:black;
+}
+.skin-default .hd a {
+	font-size:12px;
+}
+.skin-default .cd {
+	margin:0 3px;
+	text-align:left;
+	line-height:180%;
+	zoom:1;
+	width:100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.skin-default .inner {
+	border:1px solid white;
+	padding:5px 8px;
+}
+a {
+	color:#0455a1;
+	text-decoration:none;
+}
+a:hover {
+	color:#e67201;
+	text-decoration:underline;
+}
+.cate-menu-box {
+	position:relative;
+	z-index:1;
+}
+.tab-cate {
+	padding:7px 10px;
+	position:relative;
+	z-index:4;
+}
+.tab-cate h2,.tab-cate p {
+	height:18px;
+	position:relative;
+}
+.tab-cate p {
+	background:url(../images/wenku/class-arrow.png) no-repeat 152px center;
+}
+.cate-menu-on {
+	border:1px solid #2a654d;
+	padding:6px 9px;
+	border-right:0;
+	background:#fafefc;
+}
+.cate-menu-on p {
+	background:none;
+}
+.cate-menu-box h2 {
+	font-weight:bold;
+	font-size:14px;
+}
+.popup-cate {
+	position:absolute;
+	border:1px solid #2a654d;
+	width:185px;
+	padding:10px 15px;
+	background:#fbfffe;
+	z-index:2;
+	right:-216px;
+	top:0;
+	padding-top:22px;
+}
+.popup-cate ul {
+	float:left;
+}
+.popup-cate ul li {
+	float:left;
+	width:90px;
+	line-height:25px;
+}
+.tangram-carousel {
+	position:relative;
+	overflow:hidden;
+}
+.tangram-carousel .tangram-carousel-scroll {
+	position:absolute;
+	width:100%;
+}
+.tangram-carousel .tangram-carousel-scroll .tangram-carousel-item {
+	position:relative;
+	text-align:left;
+	cursor:pointer;
+	height:55px;
+}
+.tangram-carousel-btn-base {
+	float:left;
+	font-size:0;
+	text-align:center;
+	margin-left:45px;
+	position:absolute;
+}
+.cate-icon {
+	background:url(../images/wenku/class-text.png) no-repeat;
+	height:31px;
+	padding:0 5px;
+}
+.cate-title {
+	font-size:14px;
+	padding:0 5px;
+	color:#E46B1C;
+}
+/*.cate-icon {
+	color:#cc0000;
+	height:31px;
+	padding:0 5px;
+}
+*/
+.cate-edu {
+	background-position:0 0;
+}
+.cate-language {
+	background-position:0 -35px;
+	width:107px;
+}
+.cate-exam {
+	background-position:0 -70px;
+	width:107px;
+}
+.cate-speciality {
+	background-position:0 -105px;
+	width:107px;
+}
+.cate-instrument {
+	background-position:0 -140px;
+	width:107px;
+}
+.cate-literature {
+	background-position:0 -175px;
+	width:107px;
+}
+.cate-life {
+	background-position:0 -210px;
+	width:107px;
+}
+.cate-doc {
+	background-position:0 -245px;
+	height:18px;
+	margin-top:5px;
+}
+.shop-navmod {
+	background:url(../images/wenku/shop-navmod_blue.png) repeat-x 0 0;
+	height:33px;
+	margin:10px 0;
+	position:relative;
+	z-index:10;
+}
+.shop-navbox .shop-nav {
+	float:left;
+	margin:4px 0 0 16px;
+}
+.shop-navbox .shop-na {
+	float:left;
+	margin:4px 0 0 16px;
+}
+.shop-nav li {
+	background:url(../images/wenku/shop-nav_item_green.png) no-repeat right bottom;
+	float:left;
+	height:29px;
+	line-height:29px;
+	margin-left:-2px;
+	padding:0 28px 0 26px;
+	position:relative;
+	z-index:100;
+}
+.shop-nav li.nav-arrow {
+	background:url(../images/wenku/nav-arrow-bg.png) no-repeat right bottom;
+	padding-right:32px;
+	height:29px;
+}
+.shop-nav li a span {
+	display:inline-block;
+	cursor:pointer;
+}
+.shop-nav li.nav-arrow a {
+	color:#fff;
+}
+.shop-nav li.nav-arrow a:hover,.shop-nav li.nav-arrow a:acitve {
+	color:#245C45;
+}
+.shop-nav a:hover,.shop-nav .current a:link,.shop-nav .current a:visited {
+	background:url("../images/wenku/shop-nav_current_white.png") no-repeat scroll 0 0 #FFF;
+	color:#245C45;
+	margin:0 -11px 0 -11px;
+	padding-left:11px;
+	text-decoration:none;
+}
+.shop-nav li.current a.nav-global:hover {
+	background:url("../images/wenku/shop-nav_current_white.png") no-repeat scroll 0 0 #FFF;
+	color:#245C45;
+}
+.shop-nav a.nav-global:hover {
+	background:url("../images/wenku/shop-nav_current_green.png") no-repeat scroll 0 0 #FFF;
+	color:#245C45;
+	margin:0 -11px 0 -11px;
+	padding-left:11px;
+	text-decoration:none;
+}
+.shop-nav a.nav-global:hover span {
+	background:url(../images/wenku/shop-nav_current_green.png) no-repeat 100% 0 #FFF;
+	padding-right:11px;
+}
+.shop-nav li.nav-tab-on a.nav-global {
+	background:url("../images/wenku/shop-nav_current_green.png") no-repeat scroll 0 0 #FFF;
+	color:#245C45;
+	margin:0 -11px 0 -11px;
+	padding-left:11px;
+	text-decoration:none;
+	position:relative;
+	z-index:6;
+}
+.shop-nav li.nav-tab-on a.nav-global:hover {
+	background:url("../images/wenku/shop-nav_current_green.png") no-repeat scroll 0 0 #FFF;
+	position:relative;
+	z-index:6;
+}
+.shop-nav li.nav-arrow a.nav-global:hover,.shop-nav .current a.nav-global,.shop-nav li.nav-arrow .current a.nav-global:link,.shop-nav li.nav-arrow .current a.nav-global:visited,.shop-nav li.nav-tab-on a.nav-global {
+	margin:0 -18px 0 -11px;
+}
+.shop-nav a:hover,.shop-nav .current a,.shop-nav .current a:link,.shop-nav .current a:visited {
+	color:#245C45;
+}
+.shop-nav a:hover span {
+	background:url("../images/wenku/shop-nav_current_white.png") no-repeat scroll 100% 0 #FFF;
+	padding-right:11px;
+}
+.shop-nav .current a span {
+	background:url("../images/wenku/shop-nav_current_white.png") no-repeat scroll 100% 0 #FFF;
+	padding-right:11px;
+}
+.shop-nav .current a:hover span {
+	background:url("../images/wenku/shop-nav_current_white.png") no-repeat scroll 100% 0 #FFF;
+	padding-right:11px;
+}
+.shop-nav li.nav-arrow a:hover span {
+	background:url(../images/wenku/shop-nav_current_arrow_green.png) no-repeat 100% 0 #FFF;
+	padding-right:18px;
+}
+.shop-nav li.nav-tab-on a span {
+	background:url(../images/wenku/shop-nav_current_arrow_green.png) no-repeat 100% 0 #FFF;
+	padding-right:18px;
+}
+.shop-nav a span {
+	display:block;
+}
+.shop-nav li.nav-tab-on .nav-box a {
+	display:inline-block;
+	font-size:12px;
+	background:none;
+	color:#0455a1;
+	font-weight:normal;
+	margin:0;
+	padding:0 5px;
+}
+.shop-nav li.nav-arrow .nav-box a:hover,.shop-nav li.nav-tab-on .nav-box a:hover {
+	color:#F98200;
+	text-decoration:underline;
+}
+.shop-nav li.nav-tab-on {
+	z-index:101;
+}
+.shop-nav a {
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	color:#fff;
+}
+.shop-nav a:hover {
+	color:#245C45;
+}
+.nav-box {
+	position:absolute;
+	border:1px solid #2a654d;
+	left:15px;
+	padding:5px;
+	background:#FBFFFE;
+	z-index:5;
+	width:200px;
+	margin-top:-1px;
+}
+.nav-box .more {
+	float:right;
+	width:auto;
+	display:inline;
+	line-height:29px;
+	height:29px;
+}
+.nav-box p {
+	clear:both;
+	float:left;
+	width:494px;
+	padding-left:6px;
+}
+.area-box-w {
+	width:165px;
+	padding:10px 10px 10px 12px;
+}
+.cate-box-w {
+	width:500px;
+	padding:5px;
+}
+.bg-blue {
+	background:#fff;
+}
+.shop-nav .nav-box a.f-red {
+	color:red;
+}
+.shop-nav {
+	overflow:inherit;
+}
+.nav-box .l {
+	padding:0;
+	float:left;
+}
+.shop-nav li.nav-arrow a b {
+	font-weight:bold;
+}

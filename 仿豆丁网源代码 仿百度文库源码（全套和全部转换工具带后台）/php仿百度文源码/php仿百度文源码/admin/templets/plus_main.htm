@@ -1,0 +1,47 @@
+{dede:config.pagesize value="50"/}
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>插件管理</title>
+<link href='img/base.css' rel='stylesheet' type='text/css'>
+</head>
+<body background='img/allbg.gif' leftmargin='8' topmargin='8'>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+  <tr> 
+    <td height="28" colspan="5" background="img/tbg.gif">
+    	<table width='96%' cellpadding='0' cellspacing='0'>
+    		<tr>
+    		<td width='30%'><b>插件管理</b></td>
+        <td align='right'>
+    	  [<a href="module_main.php?moduletype=plus"><u>安装新插件</u></a>]
+        </td>
+      </tr>
+     </table>
+    </td>
+  </tr>
+  <tr align="center" bgcolor="#F9FCEF" height="24"> 
+      <td width="10%">ID号</td>
+      <td width="40%">插件名称</td>
+      <td width="20%">插件作者</td>
+      <td width="30%">管理</td>
+   </tr>
+   {dede:datalist}
+    <tr align="center" bgcolor="#FFFFFF" height="24" onMouseMove="javascript:this.bgColor='#f4fbf4';" 
+    	onMouseOut="javascript:this.bgColor='#FFFFFF';"> 
+        <td>{dede:field.aid /}</td>
+        <td>{dede:field.plusname /}</td>
+        <td>{dede:field.writer /}</td>
+        <td>{dede:field.isshow function="GetSta(@me,$fields['aid'],$fields['plusname'])"/}</td>
+     </tr>
+		{/dede:datalist}
+     <tr align="center" bgcolor="#F9FCEF" height="36"> 
+      <td colspan="5">
+      	{dede:pagelist listsize=6/}
+      </td>
+     </tr>
+   </table>
+   </td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,754 @@
+@charset "utf-8";
+BODY {
+	BACKGROUND: #fff; MARGIN: 0px auto; FONT: 12px/1.5em Arial Helvetica "sans-serif"; COLOR: #434343; HEIGHT: 100%
+}
+HTML {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; LIST-STYLE-TYPE: none
+}
+DIV {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+P {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; COLOR: #555; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+A:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #555
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TABLE {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+TR {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.clear {
+	CLEAR: both; OVERFLOW: hidden; HEIGHT: 0px
+}
+.faceborder {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/facebg.gif); WIDTH: 46px; HEIGHT: 46px
+}
+.d_default {
+	COLOR: #999999
+}
+.d_on {
+	COLOR: #999999
+}
+.d_ok {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 24px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/ok.gif) no-repeat 4px 50%; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+.d_err {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 24px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/error.gif) no-repeat 4px 50%; PADDING-BOTTOM: 2px; COLOR: #ffaa71; PADDING-TOP: 2px
+}
+.rl {
+	WIDTH: 90px; POSITION: relative; _margin-top: 5px
+}
+.abs {
+	BORDER-RIGHT: #a5d9f0 1px solid; BORDER-TOP: #a5d9f0 1px solid; DISPLAY: none; Z-INDEX: 999; BACKGROUND: #f0f9ff; LEFT: 0px; MARGIN: -5px 0px 0px; BORDER-LEFT: #a5d9f0 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #a5d9f0 1px solid; WHITE-SPACE: nowrap; POSITION: absolute; TOP: 26px
+}
+.abs DL {
+	PADDING-LEFT: 10px; HEIGHT: 25px
+}
+.abs DL A {
+	
+}
+.bl {
+	DISPLAY: block; PADDING-TOP: 4px
+}
+#menu .channel_nav .rl .abs DL {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/topline_bg.gif) no-repeat 8px 8px; BORDER-BOTTOM: #fff 1px solid
+}
+#menu .channel_nav .rl .abs A {
+	PADDING-LEFT: 5px; FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #666; HEIGHT: 23px; TEXT-ALIGN: left
+}
+.textbox {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; COLOR: #555; LINE-HEIGHT: 22px; BORDER-BOTTOM: #999 1px solid; HEIGHT: 22px
+}
+.textarea {
+	BORDER-RIGHT: #999 1px solid; BORDER-TOP: #999 1px solid; BORDER-LEFT: #999 1px solid; WIDTH: 300px; COLOR: #555; BORDER-BOTTOM: #999 1px solid
+}
+.button {
+	BORDER-LEFT-COLOR: #3366cc; BACKGROUND: #3366cc; BORDER-BOTTOM-COLOR: #3366cc; COLOR: #fff; BORDER-TOP-COLOR: #3366cc; MARGIN-RIGHT: 1em; BORDER-RIGHT-COLOR: #3366cc
+}
+.button {
+	BORDER-TOP-WIDTH: 1px; PADDING-RIGHT: 1em; PADDING-LEFT: 1em; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 9pt; BORDER-BOTTOM-WIDTH: 1px; PADDING-BOTTOM: 0px; OVERFLOW: visible; CURSOR: pointer; LINE-HEIGHT: 130%; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 1px
+}
+.clefttitle {
+	WIDTH: 80px
+}
+.clefttitle STRONG {
+	FONT-WEIGHT: normal
+}
+.msgtips {
+	COLOR: #999999
+}
+.regbox .rank {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/images/rank.gif) no-repeat; VERTICAL-ALIGN: middle; WIDTH: 125px; CURSOR: default; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 22px; BORDER-BOTTOM-STYLE: none
+}
+.regbox .r0 {
+	BACKGROUND-POSITION: 0px 0px
+}
+.regbox .r1 {
+	BACKGROUND-POSITION: 0px -22px
+}
+.regbox .r2 {
+	BACKGROUND-POSITION: 0px -44px
+}
+.regbox .r3 {
+	BACKGROUND-POSITION: 0px -66px
+}
+.regbox .r4 {
+	BACKGROUND-POSITION: 0px -88px
+}
+.regbox .r5 {
+	BACKGROUND-POSITION: 0px -110px
+}
+.regbox .r6 {
+	BACKGROUND-POSITION: 0px -132px
+}
+.regbox .r7 {
+	BACKGROUND-POSITION: 0px -154px
+}
+#regmain {
+	MARGIN-TOP: 10px; TEXT-ALIGN: center
+}
+.regbox .st1 {
+	BORDER-RIGHT: #d3e3eb 1px solid; BORDER-TOP: #d3e3eb 1px solid; PADDING-LEFT: 20px; FONT-SIZE: 14px; BACKGROUND: #ebeff3; MARGIN: 20px; BORDER-LEFT: #d3e3eb 1px solid; LINE-HEIGHT: 26px; BORDER-BOTTOM: #d3e3eb 1px solid; HEIGHT: 26px; TEXT-ALIGN: left
+}
+.regbox .st1 A {
+	FONT-SIZE: 14px; COLOR: #ff6600
+}
+.regbox {
+	MARGIN: 0px auto; WIDTH: 796px; TEXT-ALIGN: left
+}
+.regbox #regtop {
+	FONT-SIZE: 1px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/bj_top.jpg) no-repeat; HEIGHT: 1px
+}
+.regbox #regbottom {
+	FONT-SIZE: 1px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/images/bj_bottom.jpg) no-repeat; HEIGHT: 12px
+}
+.regbox #regcenter {
+	BORDER-RIGHT: #037ec9 1px solid; PADDING-BOTTOM: 20px; BORDER-LEFT: #037ec9 1px solid; PADDING-TOP: 10px! important; HEIGHT: auto
+}
+.regbox DL {
+	LINE-HEIGHT: 30px
+}
+.regbox DT {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 30px; FONT-WEIGHT: bold; FONT-SIZE: 12px; FLOAT: left; MARGIN: 0px; WIDTH: 20%; HEIGHT: 30px; TEXT-ALIGN: left
+}
+.regbox DD {
+	PADDING-RIGHT: 2em; FLOAT: left; MARGIN: 0px; WIDTH: 25%
+}
+.regbox DD.Tips {
+	PADDING-RIGHT: 0px; MARGIN: 0px; WIDTH: 44%; HEIGHT: 30px; TEXT-ALIGN: left
+}
+.regbox .cc {
+	CLEAR: both
+}
+.regbox .cc DT {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px
+}
+.regbox .input {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: #ccc 1px solid; WIDTH: 200px; LINE-HEIGHT: 25px; BORDER-BOTTOM: #ccc 1px solid; HEIGHT: 25px
+}
+.ml {
+	CLEAR: both; BORDER-RIGHT: #e0f1ff 1px solid; BORDER-TOP: #e0f1ff 1px solid; PADDING-LEFT: 10px; BACKGROUND: #f0f8ff; BORDER-LEFT: #e0f1ff 1px solid; BORDER-BOTTOM: #e0f1ff 1px solid; HEIGHT: 35px
+}
+.f14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 20px 20px 8px; LINE-HEIGHT: 35px
+}
+.typetips {
+	BORDER-RIGHT: #ffcc00 2px solid; PADDING-RIGHT: 6px; BORDER-TOP: #ffcc00 2px solid; PADDING-LEFT: 6px; PADDING-BOTTOM: 6px; MARGIN: 8px; BORDER-LEFT: #ffcc00 2px solid; WIDTH: 600px; PADDING-TOP: 6px; BORDER-BOTTOM: #ffcc00 2px solid; HEIGHT: 36px
+}
+#loading {
+	BORDER-RIGHT: #ffcc00 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ffcc00 1px solid; DISPLAY: none; PADDING-LEFT: 2px; FONT-SIZE: 12px; RIGHT: 0px; BACKGROUND: #f8f2da; PADDING-BOTTOM: 2px; BORDER-LEFT: #ffcc00 1px solid; WIDTH: 160px; COLOR: #ff6600; LINE-HEIGHT: 23px; PADDING-TOP: 2px; BORDER-BOTTOM: #ffcc00 1px solid; POSITION: absolute; TOP: 0px; HEIGHT: 23px
+}
+.regusertype {
+	BORDER-RIGHT: #fedada 1px solid; BORDER-TOP: #fedada 1px solid; PADDING-LEFT: 20px; FONT-SIZE: 14px; BACKGROUND: #fff0f0; PADDING-BOTTOM: 10px; MARGIN: 20px; BORDER-LEFT: #fedada 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #fedada 1px solid; TEXT-ALIGN: left; line-heihgt: 30px
+}
+#userDetail {
+	PADDING-RIGHT: 20px; MARGIN: 20px
+}
+#userDetail LI {
+	LINE-HEIGHT: 32px; HEIGHT: 32px; TEXT-ALIGN: left
+}
+#userDetail .clefttitle {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; COLOR: #555
+}
+.mt5 {
+	MARGIN-TOP: 5px
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "lucida Grande",Verdana
+}
+INPUT {
+	FONT-SIZE: 12px; FONT-FAMILY: "lucida Grande",Verdana
+}
+BUTTON {
+	FONT-SIZE: 12px; FONT-FAMILY: "lucida Grande",Verdana
+}
+SELECT {
+	FONT-SIZE: 12px; FONT-FAMILY: "lucida Grande",Verdana
+}
+BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: "lucida Grande",Verdana
+}
+DIV {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.topline_height {
+	OVERFLOW: hidden; HEIGHT: 11px
+}
+.topline {
+	OVERFLOW: hidden; HEIGHT: 11px
+}
+.maincontent {
+	PADDING-LEFT: 5px; MARGIN-LEFT: 185px; HEIGHT: 100%; _margin-left: 175px
+}
+.leftcontent {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 188px; HEIGHT: 100%
+}
+.fdbody {
+	HEIGHT: 100%
+}
+.topbg {
+	FLOAT: right; WIDTH: 486px; HEIGHT: 66px
+}
+.lgoo {
+	Z-INDEX: 1; POSITION: absolute
+}
+.topdata {
+	HEIGHT: 66px
+}
+.imglogo {
+	DISPLAY: block; FLOAT: left
+}
+.switch {
+	DISPLAY: block; FLOAT: left; MARGIN: 12px 0px 0px 40px; LINE-HEIGHT: 23px
+}
+.switch LI {
+	DISPLAY: block; FLOAT: left
+}
+.setinfo {
+	MARGIN: 8px 8px 0px 0px; HEIGHT: 23px; TEXT-ALIGN: right
+}
+.toplineimg {
+	WIDTH: 184px; HEIGHT: 22px
+}
+LI.fs {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 13px; MARGIN: 0px 5px 3px; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+LI.fn {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 13px; MARGIN: 0px 5px 3px; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+LI.f_calender {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 13px; MARGIN: 0px 5px 3px; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+.leftpanel {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 14px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.search_subject {
+	PADDING-RIGHT: 6px; MARGIN-TOP: 8px; PADDING-LEFT: 0px; Z-INDEX: 11; RIGHT: 0px; PADDING-BOTTOM: 0px; WIDTH: 284px; PADDING-TOP: 0px; POSITION: absolute; HEIGHT: 22px
+}
+.search_subject DIV.addrtitle {
+	Z-INDEX: 1; FLOAT: right; MARGIN: 4px -2px 0px 0px; POSITION: relative
+}
+.newskinbody LI.fs {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px
+}
+.newskinbody LI.fn {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px
+}
+.newskinbody LI.fs A {
+	DISPLAY: block; PADDING-LEFT: 13px; FONT-SIZE: 14px; OVERFLOW: hidden; HEIGHT: 22px
+}
+.newskinbody LI.fn A {
+	DISPLAY: block; PADDING-LEFT: 13px; FONT-SIZE: 14px; OVERFLOW: hidden; HEIGHT: 22px
+}
+.fss {
+	PADDING-LEFT: 13px; HEIGHT: 26px
+}
+.fss A {
+	FONT-SIZE: 14px; COLOR: #006699
+}
+LI.fs A.fdleft {
+	COLOR: #006699
+}
+LI.fs A.fdleft:link {
+	COLOR: #006699
+}
+LI.fs A.fdleft:visited {
+	COLOR: #006699
+}
+LI.fs A.fdleft:active {
+	COLOR: #006699
+}
+LI.fd_mg A.fdleft {
+	COLOR: #006699
+}
+LI.fd_mg A.fdleft:link {
+	COLOR: #006699
+}
+LI.fd_mg A.fdleft:visited {
+	COLOR: #006699
+}
+LI.fd_mg A.fdleft:active {
+	COLOR: #006699
+}
+LI.fs A.fdleft:hover {
+	COLOR: #fff
+}
+LI.fd_mg A.fdleft:hover {
+	COLOR: #fff
+}
+.topdata {
+	COLOR: #006699
+}
+.topdata A {
+	COLOR: #006699
+}
+.topdata A:link {
+	COLOR: #006699
+}
+.topdata A:visited {
+	COLOR: #006699
+}
+A.onlineman {
+	COLOR: #006699
+}
+.newskinbody LI.fs A:hover {
+	BORDER-RIGHT: #555 1px solid; BORDER-TOP: #555 1px solid; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/go.gif) #fff no-repeat right 50%; BORDER-LEFT: #555 1px solid; BORDER-BOTTOM: #555 1px solid; TEXT-DECORATION: none
+}
+.newskinbody LI.fs_sep A:hover {
+	BORDER-RIGHT: #555 1px solid; BORDER-TOP: #555 1px solid; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/go.gif) #fff no-repeat right 50%; BORDER-LEFT: #555 1px solid; BORDER-BOTTOM: #555 1px solid; TEXT-DECORATION: none
+}
+.frame_class {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.getuserdata {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/top_bg.jpg) repeat-x
+
+}
+.topdata {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/top_data.gif) no-repeat
+
+}
+.topline {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/topline_bg.gif) repeat-x
+
+}
+.toplineimg {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/topline.gif) no-repeat; WIDTH: 197px; HEIGHT: 11px
+}
+.leftcontent {
+	WIDTH: 192px
+}
+.newskinbody {
+	PADDING-LEFT: 8px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/left_normal_bg.jpg) no-repeat
+
+}
+.fdbody {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/left_bottom_bg.jpg) #96cce4 0px 596px
+
+}
+.readmailinfo .fdbody {
+	BACKGROUND-IMAGE: none
+}
+LI.fs A:link {
+	COLOR: #000
+}
+LI.fs A:visited {
+	COLOR: #000
+}
+LI.fd_mg A:link {
+	COLOR: #000
+}
+LI.fd_mg A:visited {
+	COLOR: #000
+}
+LI.fn A:link {
+	COLOR: #ffffff
+}
+LI.fn A:visited {
+	COLOR: #ffffff
+}
+.mem_left_top {
+	
+}
+.mem_left_photo {
+	MARGIN-TOP: 20px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/bg-frame.jpg); FLOAT: left; WIDTH: 67px; HEIGHT: 67px; _width: 58px
+}
+.mem_left_photo IMG {
+	WIDTH: 62px; HEIGHT: 58px; _width: 58px
+}
+.mem_left_name {
+	PADDING-LEFT: 4px; FLOAT: right; WIDTH: 120px; TEXT-ALIGN: left
+}
+.mem_left_name LI {
+	LINE-HEIGHT: 20px; LIST-STYLE-TYPE: none
+}
+.mem_left_ad {
+	FONT-WEIGHT: bold; COLOR: red; LINE-HEIGHT: 37px; HEIGHT: 37px
+}
+BUTTON:unknown {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.pn {
+	BORDER-RIGHT: #cfcfcf 1px; PADDING-RIGHT: 0px; BORDER-TOP: #cfcfcf 1px; PADDING-LEFT: 20px; FONT-SIZE: 14px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/pnp.png) no-repeat 0px 0px; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: middle; OVERFLOW: visible; BORDER-LEFT: #cfcfcf 1px; CURSOR: pointer; COLOR: #666; LINE-HEIGHT: 30px; MARGIN-RIGHT: 3px; PADDING-TOP: 0px; BORDER-BOTTOM: #cfcfcf 1px; POSITION: relative; HEIGHT: 30px; -moz-border-radius: 30px; -webkit-border-radius: 30px; border-radius: 30px
+}
+
+@media Unknown    
+{
+.pn {
+	FONT-FAMILY: "Microsoft YaHei","Hiragino Sans GB",STHeiti,SimHei,sans-serif
+}
+    }
+.pn * {
+	PADDING-RIGHT: 20px; DISPLAY: block; FONT-WEIGHT: 700; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/pnp.png) no-repeat 100% -40px; LINE-HEIGHT: 30px; WHITE-SPACE: nowrap; POSITION: relative; HEIGHT: 30px; text-shadow: 1px 1px 1px #EEE
+}
+.pn STRONG {
+	PADDING-LEFT: 0px; FONT-WEIGHT: normal; LETTER-SPACING: 0px
+}
+.pnc {
+	BACKGROUND-POSITION: 0px -240px; BORDER-LEFT-COLOR: #10297b; BORDER-BOTTOM-COLOR: #10297b; COLOR: #fff; BORDER-TOP-COLOR: #10297b; BORDER-RIGHT-COLOR: #10297b
+}
+.pnc * {
+	BACKGROUND-POSITION: 100% -280px; text-shadow: 1px 1px 1px #10297B
+}
+.pnp {
+	BACKGROUND-POSITION: 0px -80px; BORDER-LEFT-COLOR: #f0f3e6; BORDER-BOTTOM-COLOR: #f0f3e6; BORDER-TOP-COLOR: #f0f3e6; BORDER-RIGHT-COLOR: #f0f3e6
+}
+.pnp * {
+	BACKGROUND-POSITION: 100% -120px; text-shadow: 1px 1px 1px #F0F3E6
+}
+.STYLE1 {
+	FONT-SIZE: 14px; COLOR: #ffffff
+}
+.tbox {
+	BORDER-RIGHT: #a5d9f0 1px solid; BORDER-TOP: #a5d9f0 1px solid; PADDING-BOTTOM: 10px; BORDER-LEFT: #a5d9f0 1px solid; BORDER-BOTTOM: #a5d9f0 1px solid
+}
+.tabs {
+	MARGIN-TOP: 10px; MARGIN-BOTTOM: 5px; WIDTH: 100%; BORDER-BOTTOM: #ccc 1px solid; HEIGHT: 35px
+}
+.tabs UL {
+	MARGIN-TOP: 3px; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 2px; BOTTOM: -1px; POSITION: relative
+}
+.tabs LI {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 1px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/t2.gif) no-repeat; FLOAT: left; PADDING-BOTTOM: 0px; WIDTH: 116px; CURSOR: pointer; COLOR: #2c602f; LINE-HEIGHT: 32px; PADDING-TOP: 0px; HEIGHT: 32px; TEXT-ALIGN: center
+}
+.tabs LI A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.tabs LI.select {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/t1.gif) no-repeat; WIDTH: 116px; CURSOR: auto; LINE-HEIGHT: 32px; HEIGHT: 32px
+}
+.content {
+	MARGIN: 10px auto 0px; WIDTH: 987px
+}
+.content .left {
+	FLOAT: left; WIDTH: 180px
+}
+.content .right {
+	
+}
+.left1 {
+	
+}
+.titlename {
+	PADDING-LEFT: 26px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/nav_title_bg.jpg) no-repeat; COLOR: #fff; LINE-HEIGHT: 31px; PADDING-TOP: 4px; HEIGHT: 31px; TEXT-ALIGN: left
+}
+.contbg {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 8px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/nav_bg.gif) repeat-y; PADDING-BOTTOM: 8px; PADDING-TOP: 8px; HEIGHT: auto
+}
+.contbg UL {
+	TEXT-ALIGN: left
+}
+.contbg LI {
+	LINE-HEIGHT: 23px; LIST-STYLE-TYPE: none; HEIGHT: 23px
+}
+.leftmenu LI {
+	MARGIN-BOTTOM: 0px; _margin-bottom: 0px
+}
+.left1 .contbg {
+	OVERFLOW: hidden; HEIGHT: 100%
+}
+.contbg A {
+	
+}
+.left1 .contbg .gengxin {
+	PADDING-LEFT: 10px; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/btn_normal.gif) no-repeat; LINE-HEIGHT: 28px; HEIGHT: 28px
+}
+.left1 .contbg .gengxin A {
+	COLOR: red
+}
+.left1 .bottom {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/nav_bg_bottom.gif) no-repeat; HEIGHT: 9px
+}
+.left1 .contbg .mem_left_ad A {
+	FONT-WEIGHT: bold; COLOR: #fb7300; TEXT-ALIGN: center
+}
+.left2 {
+	
+}
+.left2 .contbg {
+	OVERFLOW: hidden; HEIGHT: 100%
+}
+.left2 .contbg UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.left2 .contbg LI {
+	 LINE-HEIGHT: 22px; HEIGHT: 22px; 
+}
+.left2 .contbg LI A {
+	TEXT-DECORATION: none! important
+}
+.appl IMG {
+	MARGIN: 5px 5px -4px 0px
+}
+.left2 .contbg SPAN {
+	VISIBILITY: hidden; MARGIN-LEFT: 3px
+}
+.left2 .contbg .hvr SPAN {
+	VISIBILITY: visible
+}
+.left2 .contbg SPAN A {
+	COLOR: #999
+}
+.left2 .contbg SPAN A:hover {
+	COLOR: #06c
+}
+.left2 .bottom {
+	BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/nav_bg_bottom.gif) no-repeat; HEIGHT: 9px
+}
+.t_head {
+	PADDING-LEFT: 10px; FONT-WEIGHT: bold; BACKGROUND: #a5d9f0; LINE-HEIGHT: 25px; HEIGHT: 25px
+}
+.message {
+	LINE-HEIGHT: 30px
+}
+.message A {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #005599; TEXT-DECORATION: underline
+}
+.contenttitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #6699cc
+}
+.contenttitle A {
+	FONT-SIZE: 14px
+}
+.contenttitle A:link {
+	COLOR: #006699; TEXT-DECORATION: underline
+}
+.contenttitle A:visited {
+	COLOR: #006699; TEXT-DECORATION: underline
+}
+.contenttitle A:hover {
+	COLOR: #6699cc; TEXT-DECORATION: underline
+}
+.Contenttips SPAN {
+	COLOR: #999999
+}
+.Contenttips SPAN A:link {
+	COLOR: #999999
+}
+.Contenttips SPAN A:visited {
+	COLOR: #999999
+}
+.Contenttips SPAN A:hover {
+	COLOR: #ff6600
+}
+A.box {
+	BORDER-RIGHT: #a5d9f0 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #a5d9f0 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #a5d9f0 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #a5d9f0 1px solid; HEIGHT: 23px
+}
+A.box:link {
+	COLOR: #2c602f; TEXT-DECORATION: none
+}
+A.box:visited {
+	COLOR: #2c602f; TEXT-DECORATION: none
+}
+A.box:hover {
+	COLOR: #2c602f; TEXT-DECORATION: none
+}
+.jobname {
+	PADDING-LEFT: 10px
+}
+#fenye {
+	CLEAR: both
+}
+#fenye A {
+	
+}
+#fenye .prev {
+	WIDTH: 52px; TEXT-ALIGN: center
+}
+#fenye .next {
+	WIDTH: 52px; TEXT-ALIGN: center
+}
+#fenye A.curr {
+	BORDER-RIGHT: #dcdddd 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #dcdddd 1px solid; PADDING-LEFT: 6px; FONT-WEIGHT: bold; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/tagbg.gif); PADDING-BOTTOM: 0px; BORDER-LEFT: #dcdddd 1px solid; COLOR: red; PADDING-TOP: 0px; BORDER-BOTTOM: #dcdddd 1px solid; TEXT-ALIGN: center
+}
+#fenye A.curr:visited {
+	COLOR: #fff
+}
+#fenye A {
+	BORDER-RIGHT: #dcdddd 1px solid; BORDER-TOP: #dcdddd 1px solid; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/tabs_bg.jpg); FLOAT: left; MARGIN: 5px 4px 0px 0px; BORDER-LEFT: #dcdddd 1px solid; COLOR: #1e50a2; LINE-HEIGHT: 22px; BORDER-BOTTOM: #dcdddd 1px solid; HEIGHT: 22px; TEXT-ALIGN: center
+}
+#fenye A.num {
+	PADDING-RIGHT: 6px; PADDING-LEFT: 6px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#fenye A:visited {
+	COLOR: #1f3a87
+}
+#fenye A:hover {
+	BORDER-RIGHT: #97aff3 1px solid; BORDER-TOP: #97aff3 1px solid; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/tagbg.gif); FLOAT: left; BORDER-LEFT: #97aff3 1px solid; BORDER-BOTTOM: #97aff3 1px solid
+}
+#fenye SPAN {
+	DISPLAY: block; MARGIN: 10px
+}
+.tbox {
+	BORDER-RIGHT: #e5e5e5 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #e5e5e5 1px solid; PADDING-LEFT: 1px; PADDING-BOTTOM: 1px; BORDER-LEFT: #e5e5e5 1px solid; PADDING-TOP: 1px; BORDER-BOTTOM: #e5e5e5 1px solid
+}
+.tbox .t_head {
+	PADDING-LEFT: 30px; FONT-WEIGHT: bold; BACKGROUND: url(file:///C|/Documents%20and%20Settings/Administrator/Local%20Settings/Temporary%20Internet%20Files/Content.IE5/002EXT41/left_01.jpg) #dbe9f6; COLOR: #fff; LINE-HEIGHT: 37px; HEIGHT: 37px
+}
+.maincontent .navigation {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000; LINE-HEIGHT: 35px; HEIGHT: 35px
+}
+.maincontent .navigation A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000
+}
+.visitor .user_name {
+	COLOR: #005599
+}
+.userborder .userview {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+.userborder .userview:hover {
+	COLOR: #000; TEXT-DECORATION: none
+}
+.usertitle {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: #f1f1f1; COLOR: #000; LINE-HEIGHT: 26px; HEIGHT: 26px; TEXT-ALIGN: left
+}
+.border .chargetitle {
+	PADDING-LEFT: 20px; FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: #f1f1f1; COLOR: #000; LINE-HEIGHT: 26px; HEIGHT: 26px; TEXT-ALIGN: left
+}
+.border .titlename {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; BACKGROUND: #f1f1f1; COLOR: #000; LINE-HEIGHT: 26px; HEIGHT: 26px; TEXT-ALIGN: center
+}
+.trbg TD {
+	BACKGROUND-COLOR: #f4fafc
+}
+#copyright {
+	BACKGROUND: #f1f1f1; MARGIN: 10px auto 0px; WIDTH: 970px; COLOR: #999; LINE-HEIGHT: 26px; HEIGHT: 26px; TEXT-ALIGN: center
+}
+.header {
+	MARGIN: 0px auto; WIDTH: 987px
+}
+.logo {
+	FLOAT: left; WIDTH: 256px; HEIGHT: 70px
+}
+.header_r {
+	FLOAT: right; WIDTH: 725px; TEXT-ALIGN: right
+}
+.welcome {
+	LINE-HEIGHT: 35px; HEIGHT: 35px
+}
+.welcome SPAN {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #ff6600
+}
+.menu {
+	MARGIN-TOP: 5px; FLOAT: right; HEIGHT: 35px; TEXT-ALIGN: right
+}
+.menu UL {
+	
+}
+.menu LI {
+	FLOAT: left; WIDTH: 86px; LINE-HEIGHT: 30px; TEXT-ALIGN: center
+}
+.menu LI.menu_h {
+	BACKGROUND: url(/images/top_bg.jpg) no-repeat; HEIGHT: 31px
+}
+.menu LI.menu_a {
+	BACKGROUND: url(/images/top_bg0.jpg) no-repeat; HEIGHT: 31px
+}
+.menu A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+.foot {
+	BORDER-TOP: #ccc 1px solid; MARGIN: 8px auto 0px; WIDTH: 987px; LINE-HEIGHT: 28px; HEIGHT: 28px; TEXT-ALIGN: center
+}
+.copyright {
+	MARGIN: 0px auto; WIDTH: 987px; LINE-HEIGHT: 24px; HEIGHT: 24px; TEXT-ALIGN: center
+}

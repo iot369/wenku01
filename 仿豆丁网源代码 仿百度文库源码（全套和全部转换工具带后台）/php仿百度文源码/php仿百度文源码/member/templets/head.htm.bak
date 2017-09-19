@@ -1,0 +1,23 @@
+<div id="head_k">
+  <div class="headBox">
+    <div class="logo_k" id="logo_common"><a href="<?php echo $cfg_memberurl; ?>/"><img src="templets/images/doc_logo.gif" alt="优客书吧"/></a></div>
+    <div class="quick_link" id="_userlogin"> <a href="<?php echo $cfg_memberurl; ?>/login.php">登录</a> <a href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=user&dopost=regnew">注册</a> <a href="<?php echo $cfg_cmsurl; ?>/" target="_blank">常见问题</a> </div>
+    <ul id="nav">
+      <li><a href="<?php echo $cfg_cmsurl; ?>/" class=""><span>首页</span></a></li>
+      <li><a href="<?php echo $cfg_cmsurl; ?>/html/docs/" class=""><span>浏览文档</span></a></li>
+	  <li><a href="<?php echo $cfg_cmsurl; ?>/book_reqlist.php" class=""><span>悬赏文档</span></a></li>
+      <li><a href="<?php echo $cfg_memberurl; ?>/content_list.php?channelid=17" class="on"><span>我的文档</span></a></li>
+      <li class="upload"><a href="<?php echo $cfg_memberurl; ?>/upload_book.php"><span>我要上传</span></a></li>
+    </ul>
+  </div>
+</div>
+<script language="javascript" type="text/javascript" src="<?php echo $cfg_cmsurl; ?>/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+function CheckLogin(){
+	var taget_obj = document.getElementById('_userlogin');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("<?php echo $cfg_memberurl; ?>/ajax_loginsta.php");
+	DedeXHTTP = null;
+}
+</script>
+<script language="javascript" type="text/javascript">CheckLogin();</script>

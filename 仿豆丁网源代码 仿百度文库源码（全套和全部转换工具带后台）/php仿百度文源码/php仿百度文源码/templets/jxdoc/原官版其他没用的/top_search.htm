@@ -1,0 +1,17 @@
+<form action="{dede:global.cfg_cmsurl/}/plus/search.php" method="get">
+  <input type="hidden" name="kwtype" value="0" />
+  <!--input type="hidden" name="searchtype" value="titlekeyword" />-->
+  <div class="searchBox" id="searchBox">
+    <div class="searchNew">
+      <div class="searchbar">
+        <input id="topsearch" type="text" maxlength="100" class='listTopDefault' name="keyword" onkeydown="if(event.keyCode==13){ return searchNew()}"/>
+        <select id="searchtype" name="searchtype">
+        	<option value="title">文档标题</option>
+            <option value="writer">文档上传者</option>
+            <option value="tag">文档标签</option>
+        </select>
+        <input type="submit" class="btn" value="搜索" onclick="return searchNew();" />
+        <!--a href="{dede:global.cfg_cmsurl/}/plus/heightsearch.php" title="高级">高级</a--> </div>
+    </div>
+  </div>
+</form>

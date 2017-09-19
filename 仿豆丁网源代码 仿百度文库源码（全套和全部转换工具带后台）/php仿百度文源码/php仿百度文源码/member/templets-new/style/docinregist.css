@@ -1,0 +1,770 @@
+#tips SPAN {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+#outer INPUT.btn {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+#main2 INPUT.btn {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+#main2 INPUT.btn_login {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+H1 {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+#main2 {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+#main2 .bottom {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+.active-re {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+.active-re EM {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+.col-tips SPAN {
+	BACKGROUND: url(../images/login/reg_bg.png) no-repeat 0px 0px
+}
+.personal_skills BUTTON {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+.personal_skills A.close_skills {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+.msnbtn A {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+.msnbtn A SPAN {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+#outer A.msn_btn {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+#outer A.msn_btn SPAN {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+#outer .msnbtn A.jump {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+#outer .msnbtn A.jump SPAN {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat
+}
+.dpn {
+	DISPLAY: none
+}
+.float-r {
+	FLOAT: right
+}
+.tac {
+	TEXT-ALIGN: center
+}
+H1 {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: -275px 0px; PADDING-LEFT: 60px; FONT-SIZE: 16px; PADDING-BOTTOM: 0px; COLOR: #333; LINE-HEIGHT: 39px; PADDING-TOP: 0px
+}
+H2 {
+	FONT-SIZE: 16px; COLOR: #000; LINE-HEIGHT: 24px
+}
+H3 {
+	FONT-SIZE: 14px; COLOR: #444
+}
+H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; FONT-SIZE: 22px; PADDING-BOTTOM: 10px; COLOR: #000; PADDING-TOP: 17px; BORDER-BOTTOM: #ccc 1px solid
+}
+H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; PADDING-BOTTOM: 5px; COLOR: #333; PADDING-TOP: 0px
+}
+#main2 .login H4 {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: 17px; BORDER-RIGHT-WIDTH: 0px
+}
+#main2 .bottom {
+	BACKGROUND-POSITION: 0px -482px; DISPLAY: block; LEFT: 0px; OVERFLOW: hidden; WIDTH: 100%; BOTTOM: -1px; POSITION: absolute; HEIGHT: 10px
+}
+#outer {
+	MARGIN: 40px auto; OVERFLOW: hidden; WIDTH: 960px; POSITION: relative; HEIGHT: auto
+}
+#main2 {
+	MARGIN: 40px auto; OVERFLOW: hidden; WIDTH: 960px; POSITION: relative; HEIGHT: auto
+}
+#main2 {
+	BACKGROUND-POSITION: 0px -42px
+}
+#shop {
+	Z-INDEX: 10; FLOAT: left; POSITION: relative; width:400
+}
+#main2 #shop {
+	LEFT: 354px
+}
+#shop TABLE {
+	MARGIN: 10px 0px 0px 20px
+}
+#shop TH {
+	TEXT-ALIGN: right
+}
+#shop TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 14px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px
+}
+#shop TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: normal; FONT-SIZE: 14px; PADDING-BOTTOM: 12px; PADDING-TOP: 12px
+}
+#main2 TABLE {
+	MARGIN: 10px 0px 0px
+}
+#main2 .login TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 5px; TEXT-ALIGN: left
+}
+#main2 .login TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.login-db TD .fortips {
+	POSITION: relative
+}
+.login-db TD INPUT {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; PADDING-BOTTOM: 4px; WIDTH: 260px; PADDING-TOP: 4px; HEIGHT: 18px
+}
+.login-db TD INPUT#login_name {
+	COLOR: #c5c5c5
+}
+.login-db TD INPUT.validator {
+	IME-MODE: disabled; WIDTH: 40px
+}
+.login-db TD INPUT.selectd {
+	MARGIN: 0px 5px 0px 0px; VERTICAL-ALIGN: middle; WIDTH: auto
+}
+#outer INPUT.btn {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 26px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; WIDTH: 170px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#main2 INPUT.btn {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 26px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; WIDTH: 170px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#main2 INPUT.btn_login {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 26px; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOTTOM: 0px; WIDTH: 170px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center; BORDER-RIGHT-WIDTH: 0px
+}
+#main2 INPUT.btn_login {
+	BACKGROUND-POSITION: -170px 0px; WIDTH: 93px
+}
+.login-db TD .low {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; LEFT: 0px; WIDTH: 267px; COLOR: #fff; POSITION: absolute; TOP: 35px; HEIGHT: 20px; TEXT-ALIGN: center
+}
+.login-db TD .nor {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; LEFT: 0px; WIDTH: 267px; COLOR: #fff; POSITION: absolute; TOP: 35px; HEIGHT: 20px; TEXT-ALIGN: center
+}
+.login-db TD .high {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; LEFT: 0px; WIDTH: 267px; COLOR: #fff; POSITION: absolute; TOP: 35px; HEIGHT: 20px; TEXT-ALIGN: center
+}
+#main2 TD .fortips {
+	WIDTH: 270px
+}
+.login-db TD .low {
+	BACKGROUND: #f00
+}
+.login-db TD .nor {
+	BACKGROUND: #f80
+}
+.login-db TD .high {
+	BACKGROUND: #0c6
+}
+#shop TD IMG.vor {
+	MARGIN: 0px 6px; POSITION: relative; TOP: 0px
+}
+#shop TD SPAN {
+	CURSOR: pointer
+}
+#outer A.fz12 {
+	FONT-SIZE: 12px
+}
+#main2 A.fz12 {
+	FONT-SIZE: 12px
+}
+#shop TD DIV.tips {
+	FONT-SIZE: 12px; FLOAT: left; MARGIN: 0px 0px 0px 12px; COLOR: #555; LINE-HEIGHT: 24px
+}
+#shop TD DIV.tips_error {
+	FONT-SIZE: 12px; FLOAT: left; MARGIN: 0px 0px 0px 12px; COLOR: #555; LINE-HEIGHT: 24px
+}
+#shop TD DIV.tips_error {
+	BORDER-RIGHT: #f3d5b3 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #f3d5b3 1px solid; PADDING-LEFT: 25px; BACKGROUND: url(../images/login/reg_icon_cw.gif) #fff6ed no-repeat 3px 3px; PADDING-BOTTOM: 0px; BORDER-LEFT: #f3d5b3 1px solid; COLOR: #fe7600; PADDING-TOP: 0px; BORDER-BOTTOM: #f3d5b3 1px solid
+}
+#tips {
+	DISPLAY: block; Z-INDEX: 20; RIGHT: 0px; BACKGROUND: #edf7ff; OVERFLOW: hidden; WIDTH: 215px; COLOR: #444; POSITION: absolute; TOP: 10px; HEIGHT: auto
+}
+#tips OL LI {
+	FONT: 12px/30px "ËÎÌו",simsun
+}
+#tips SPAN {
+	FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 6px; LINE-HEIGHT: 0; POSITION: absolute; HEIGHT: 6px
+}
+#tips SPAN.lt {
+	BACKGROUND-POSITION: -263px 0px; LEFT: 0px; TOP: 0px
+}
+#tips SPAN.rt {
+	BACKGROUND-POSITION: -269px 0px; RIGHT: -1px; TOP: 0px
+}
+#tips SPAN.lb {
+	BACKGROUND-POSITION: -263px -6px; LEFT: 0px; BOTTOM: -1px
+}
+#tips SPAN.rb {
+	BACKGROUND-POSITION: -269px -6px; RIGHT: -1px; BOTTOM: -1px
+}
+.login {
+	DISPLAY: block; Z-INDEX: 20; LEFT: 0px; OVERFLOW: hidden; WIDTH: 326px; COLOR: #444; POSITION: absolute; TOP: 0px; HEIGHT: auto
+}
+#main2 .login TABLE {
+	MARGIN: 10px 0px 0px 25px
+}
+.tipsbox {
+	BORDER-RIGHT: #e2e9ef 1px solid; PADDING-RIGHT: 12px; BORDER-TOP: #e2e9ef 1px solid; PADDING-LEFT: 15px; PADDING-BOTTOM: 18px; FONT: 14px/30px ""; BORDER-LEFT: #e2e9ef 1px solid; PADDING-TOP: 15px; BORDER-BOTTOM: #e2e9ef 1px solid
+}
+.tips_suc {
+	FONT-SIZE: 14px; MARGIN: 30px 0px 60px; WIDTH: 535px; COLOR: #414544; LINE-HEIGHT: 24px
+}
+.tips_suc P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 0px
+}
+.tips_suc STRONG {
+	COLOR: #008102
+}
+.view-link {
+	FONT-SIZE: 14px; MARGIN: 22px 0px 0px 5px; COLOR: #666; POSITION: absolute
+}
+.active-re {
+	BACKGROUND-POSITION: 0px -492px; DISPLAY: inline-block; FONT-SIZE: 12px; CURSOR: pointer; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+.active-re EM {
+	BACKGROUND-POSITION: 0px -492px; DISPLAY: inline-block; FONT-SIZE: 12px; CURSOR: pointer; LINE-HEIGHT: 23px; HEIGHT: 23px
+}
+.active-re {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 8px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.active-re EM {
+	PADDING-RIGHT: 8px; BACKGROUND-POSITION: right -492px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer .msn TABLE {
+	CLEAR: both; MARGIN: 0px 0px 0px 250px; WIDTH: 100%; POSITION: relative
+}
+#outer .msn H2 {
+	CLEAR: both; MARGIN: 0px 0px 0px 250px; WIDTH: 100%; POSITION: relative
+}
+#outer #msn_login TH {
+	WIDTH: 70px
+}
+#outer .msn TD INPUT.input_msn {
+	WIDTH: 200px
+}
+#outer A.msn_btn SPAN {
+	CURSOR: pointer; COLOR: #fff
+}
+#outer .msn H2 A {
+	FONT-WEIGHT: normal; FONT-SIZE: 14px; LEFT: 580px; WORD-BREAK: keep-all; POSITION: absolute; TOP: 0px
+}
+#outer .tips_msn {
+	BORDER-RIGHT: #fbdbaa 1px solid; PADDING-RIGHT: 15px; BORDER-TOP: #fbdbaa 1px solid; PADDING-LEFT: 15px; FONT-SIZE: 12px; BACKGROUND: #fffbf2; FLOAT: left; PADDING-BOTTOM: 0px; BORDER-LEFT: #fbdbaa 1px solid; WIDTH: 320px; CURSOR: auto; COLOR: #444; LINE-HEIGHT: 25px; PADDING-TOP: 5px; BORDER-BOTTOM: #fbdbaa 1px solid; POSITION: relative; HEIGHT: 55px
+}
+#outer .tips_msn SPAN {
+	BACKGROUND: url(/images_cn/personal/personal_bg.gif) no-repeat -24px 0px; LEFT: 27px; WIDTH: 15px; POSITION: absolute; TOP: -12px; HEIGHT: 12px
+}
+#outer .msn TABLE#msn_list {
+	MARGIN: 0px
+}
+#outer .msn #msn_list TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left
+}
+#outer .msn .nvitecont1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 250px; PADDING-TOP: 10px
+}
+#outer .msn .nvitecont1 TD SPAN.tips {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 5px; MARGIN: 10px 0px 0px; WIDTH: 325px; LINE-HEIGHT: 22px; PADDING-TOP: 5px; HEIGHT: 44px
+}
+#outer .msn .nvitecont1 TD SPAN.tips SPAN {
+	BACKGROUND-POSITION: -24px 0px; LEFT: 27px; WIDTH: 15px; TOP: -12px; HEIGHT: 12px
+}
+#outer .msn .nvitecont1 LABEL {
+	WIDTH: 70px
+}
+#outer .msn .nvitecont1 P.fcqh {
+	COLOR: #666
+}
+#outer .msn .nvitecont1 .list {
+	BORDER-RIGHT: #808080 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #808080 1px solid; OVERFLOW-Y: scroll; PADDING-LEFT: 1px; OVERFLOW-X: hidden; PADDING-BOTTOM: 1px; MARGIN: 15px 0px 0px; BORDER-LEFT: #808080 1px solid; WIDTH: 460px; PADDING-TOP: 1px; BORDER-BOTTOM: #808080 1px solid; POSITION: relative; HEIGHT: 260px
+}
+#outer .msn #msn_list {
+	BORDER-RIGHT: #ddd 0px solid; BORDER-TOP: #ddd 1px solid; BORDER-LEFT: #ddd 0px solid; WIDTH: 100%; BORDER-BOTTOM: #ddd 1px solid
+}
+#outer .msn #msn_list TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #ddd 1px solid
+}
+#msn_list TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BORDER-BOTTOM: #ddd 1px solid
+}
+#outer .msn #msn_list TH {
+	BACKGROUND: #f3f3f3; MARGIN: 0px 0px 2px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; LINE-HEIGHT: 28px; HEIGHT: 28px; TEXT-ALIGN: left
+}
+#outer .msn #msn_list .colone {
+	BACKGROUND: #f3f3f3; WIDTH: 24px
+}
+#outer .msn #msn_list .coltwo {
+	
+}
+#outer .msn #msn_list TD A {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px; COLOR: #000; BORDER-RIGHT-WIDTH: 0px
+}
+#outer .msn #msn_list TD INPUT {
+	WIDTH: 13px
+}
+#outer .msn #msn_list TD IMG {
+	FLOAT: left; MARGIN: 8px 20px 16px
+}
+#outer .msn #msn_list TD P {
+	FLOAT: right; WIDTH: 345px; COLOR: #000; LINE-HEIGHT: 30px
+}
+#outer .msn #msn_list TD P SPAN {
+	MARGIN: 0px 20px 0px 0px; COLOR: #666
+}
+.nvitecont TD A {
+	MARGIN: 10px 0px 0px
+}
+.msnbtn A {
+	MARGIN: 10px 0px 0px
+}
+#outer A.msn_btn {
+	MARGIN: 10px 0px 0px
+}
+#outer .nvitecont TD A:hover {
+	TEXT-DECORATION: none
+}
+#outer .msnbtn A:hover {
+	TEXT-DECORATION: none
+}
+#outer A.msn_btn:hover {
+	TEXT-DECORATION: none
+}
+#outer .nvitecont TD A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer .nvitecont TD A SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer .msnbtn A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer .msnbtn A SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer A.msn_btn {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer A.msn_btn SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 31px; FONT-WEIGHT: bold; FONT-SIZE: 26px; FLOAT: left; PADDING-BOTTOM: 0px; CURSOR: pointer; COLOR: #fff; LINE-HEIGHT: 42px; PADDING-TOP: 0px; HEIGHT: 42px; TEXT-ALIGN: center
+}
+#outer .nvitecont TD A {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -182px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer .nvitecont TD A SPAN {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -182px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer .msnbtn A {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -182px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; WIDTH: 171px; LINE-HEIGHT: 43px; PADDING-TOP: 0px; HEIGHT: 43px
+}
+#outer .msnbtn A SPAN {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -182px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; WIDTH: 171px; LINE-HEIGHT: 43px; PADDING-TOP: 0px; HEIGHT: 43px
+}
+#outer .msnbtn A.jump {
+	BACKGROUND-POSITION: -171px -182px; WIDTH: 97px
+}
+#outer .msnbtn A.jump SPAN {
+	BACKGROUND-POSITION: -171px -182px; WIDTH: 97px
+}
+#outer .nvitecont TD A SPAN {
+	PADDING-RIGHT: 31px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer .msnbtn A SPAN {
+	PADDING-RIGHT: 31px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer A.msn_btn SPAN {
+	PADDING-RIGHT: 31px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#outer A.msn_btn {
+	BACKGROUND-POSITION: 0px -140px
+}
+#outer A.msn_btn SPAN {
+	BACKGROUND-POSITION: right -289px
+}
+.nvitecont TD A.fornoborder {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#outer #msn_list P A {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#outer #msn_list P A {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: none
+}
+#outer #msn_list P A SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: none
+}
+#outer #msn_list P A SPAN {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.msnbtn A {
+	MARGIN: 15px 0px 0px 105px
+}
+#outer A.msn_btn {
+	MARGIN: 15px 0px 0px 105px
+}
+#outer A.msn_btn {
+	MARGIN: 0px 0px 0px 35px
+}
+#outer IMG.loading {
+	MARGIN: 5px 0px 0px 10px
+}
+.msnbtn A.jump {
+	MARGIN: 15px 0px 0px 15px
+}
+.personal_skills {
+	BORDER-RIGHT: #b6bdc3 3px solid; BORDER-TOP: #ebeffe 1px solid; LEFT: 50%; MARGIN: 20px 0px 0px -233px; OVERFLOW: hidden; WIDTH: 466px; COLOR: #000; BORDER-BOTTOM: #9fa4a7 4px solid; POSITION: absolute; HEIGHT: auto
+}
+.personal_skills DD A {
+	MARGIN: 0px 8px
+}
+.p_box {
+	BORDER-RIGHT: #95d4f7 1px solid; BORDER-TOP: #95d4f7 1px solid; BACKGROUND: #f1faff; BORDER-LEFT: #95d4f7 1px solid; BORDER-BOTTOM: #95d4f7 1px solid
+}
+.p_box H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-SIZE: 16px; PADDING-BOTTOM: 0px; LINE-HEIGHT: 28px; PADDING-TOP: 0px; HEIGHT: 28px
+}
+.personal_skills .p_box H2 A {
+	DISPLAY: block; RIGHT: 7px; FLOAT: right; OVERFLOW: hidden; WIDTH: 12px; TEXT-INDENT: -999px; POSITION: relative; TOP: 7px; HEIGHT: 12px
+}
+.personal_skills A.close_skills {
+	DISPLAY: block; RIGHT: 7px; FLOAT: right; OVERFLOW: hidden; WIDTH: 12px; TEXT-INDENT: -999px; POSITION: relative; TOP: 7px; HEIGHT: 12px
+}
+.personal_skills A.close_skills {
+	RIGHT: -1px; TOP: -5px
+}
+.skills_cont {
+	PADDING-RIGHT: 53px; PADDING-LEFT: 43px; BACKGROUND: #e2efff; PADDING-BOTTOM: 0px; MARGIN: 0px 1px 1px; PADDING-TOP: 15px
+}
+.skills_cont DL {
+	DISPLAY: block; MARGIN: 5px 0px; OVERFLOW: hidden; WIDTH: 100%; HEIGHT: auto
+}
+.skills_cont DT {
+	FLOAT: left
+}
+.skills_cont DD {
+	FLOAT: left
+}
+.skills_cont DT {
+	MARGIN: 0px 22px 0px 0px
+}
+.skills_cont DD {
+	FONT-SIZE: 14px; MARGIN: 0px 0px 5px; WIDTH: 250px; LINE-HEIGHT: 25px
+}
+.skills_cont P TEXTAREA {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-BOTTOM: 5px; MARGIN: 10px 0px 0px; WIDTH: 350px; PADDING-TOP: 5px; HEIGHT: 65px
+}
+.success {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 65px; PADDING-TOP: 55px; TEXT-ALIGN: center
+}
+.success_skills {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 35px; PADDING-TOP: 40px
+}
+.success H3 {
+	FONT-SIZE: 28px; LINE-HEIGHT: 40px
+}
+.success_skills H3 {
+	FONT-SIZE: 14px; LINE-HEIGHT: 25px
+}
+.success P {
+	FONT-SIZE: 12px; MARGIN: 10px 0px
+}
+.personal_skills BUTTON {
+	BORDER-TOP-WIDTH: 0px; FONT-WEIGHT: bold; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 16px; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 15px 0px; CURSOR: pointer; BORDER-RIGHT-WIDTH: 0px
+}
+.personal_skills BUTTON.btn {
+	BACKGROUND-POSITION: 0px -56px; MARGIN-LEFT: 35px; WIDTH: 148px; HEIGHT: 42px
+}
+.personal_skills BUTTON.btnclose {
+	BACKGROUND-POSITION: 0px -98px; MARGIN-LEFT: 19px; WIDTH: 92px; HEIGHT: 42px
+}
+#outer .wid-850 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 50px; MARGIN: 0px auto; WIDTH: 850px; PADDING-TOP: 50px
+}
+#outer .wid-850 A {
+	FONT-SIZE: 100%
+}
+#outer .wid-850 A:hover {
+	FONT-SIZE: 100%
+}
+#outer .wid-850 H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 60px; FONT-SIZE: 26px; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 200px; PADDING-TOP: 0px
+}
+#outer .wid-850 H2 {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 15px; FONT-SIZE: 16px; BACKGROUND: url(../images/login/h4_qt.gif) no-repeat 4px 11px; PADDING-BOTTOM: 8px; PADDING-TOP: 8px; BORDER-BOTTOM: #e6e6e6 1px solid
+}
+#regist-suc-090812 {
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 20px 0px 0px; PADDING-TOP: 0px
+}
+#regist-suc-090812 .hot {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 10px
+}
+#regist-suc-090812 .hot LI IMG {
+	MARGIN: 0px 0px 5px
+}
+#outer .wid-850 .item-cover-main {
+	MARGIN: 20px 0px 0px
+}
+#outer .wid-850 .item-cover-main DL {
+	BORDER-BOTTOM: #cdcdcd 1px dashed
+}
+#outer .wid-850 .item-cover-main DD A {
+	FONT-SIZE: 16px
+}
+#outer .wid-850 .item-cover-main DD A:hover {
+	FONT-SIZE: 16px
+}
+#outer .wid-850 H1 A {
+	TEXT-DECORATION: underline
+}
+.list-shop A {
+	TEXT-DECORATION: underline
+}
+#outer .wid-850 H1 A:hover {
+	TEXT-DECORATION: none
+}
+.list-shop A:unknown {
+	TEXT-DECORATION: none
+}
+.dpn-renren {
+	
+}
+.dpn-renren TH IMG {
+	MARGIN: 0px 0px 10px; CURSOR: pointer
+}
+H2 IMG {
+	MARGIN: 0px 0px 0px 13px; VERTICAL-ALIGN: middle; CURSOR: pointer
+}
+H2 SPAN {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; MARGIN: 0px 0px 0px 73px; COLOR: #555
+}
+.formtab-wel A {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.formtab .btn INPUT {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.fl-lt {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.fl-rt {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.fl-lb {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.fl-rb {
+	BACKGROUND: url(../images/login/bg-renren.png) no-repeat 0px 0px
+}
+.fl-lt {
+	DISPLAY: block; FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 3px; POSITION: absolute; HEIGHT: 3px
+}
+.fl-rt {
+	DISPLAY: block; FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 3px; POSITION: absolute; HEIGHT: 3px
+}
+.fl-lb {
+	DISPLAY: block; FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 3px; POSITION: absolute; HEIGHT: 3px
+}
+.fl-rb {
+	DISPLAY: block; FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 3px; POSITION: absolute; HEIGHT: 3px
+}
+.fl-lt {
+	BACKGROUND-POSITION: -151px 0px; LEFT: -1px; TOP: -1px
+}
+.fl-rt {
+	BACKGROUND-POSITION: right 0px; RIGHT: -1px; TOP: -1px
+}
+.fl-lb {
+	BACKGROUND-POSITION: -151px -3px; LEFT: -1px; BOTTOM: -1px
+}
+.fl-rb {
+	BACKGROUND-POSITION: right -3px; RIGHT: -1px; BOTTOM: -1px
+}
+.formtab-wel .fl-lt {
+	BACKGROUND-POSITION: -151px -6px
+}
+.formtab-wel .fl-rt {
+	BACKGROUND-POSITION: right -6px
+}
+.formtab-wel .fl-lb {
+	BACKGROUND-POSITION: -151px -9px
+}
+.formtab-wel .fl-rb {
+	BACKGROUND-POSITION: right -9px
+}
+.user-info {
+	FLOAT: left; WIDTH: 258px; TEXT-ALIGN: center
+}
+.user-info IMG {
+	DISPLAY: block; MARGIN: 0px auto 10px
+}
+.user-info DT IMG {
+	OVERFLOW: hidden; WIDTH: 100px; HEIGHT: 100px
+}
+.formtab-wapper {
+	FLOAT: right; WIDTH: 702px
+}
+.formtab {
+	FONT-SIZE: 14px; POSITION: relative
+}
+.formtab-wel {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 19px; MARGIN: 0px 0px 10px; PADDING-TOP: 0px; BORDER-BOTTOM: #d5ddea 1px solid; POSITION: relative
+}
+.formtab-wel H4 {
+	FLOAT: left
+}
+.formtab-wel A {
+	FLOAT: left
+}
+.formtab-wel H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 16px; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; LINE-HEIGHT: 28px; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.formtab-wel A {
+	FONT-SIZE: 14px; FLOAT: left; MARGIN: 0px 0px 0px 10px; WIDTH: 85px; COLOR: #fff; LINE-HEIGHT: 28px; HEIGHT: 28px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.formtab-wel A:hover {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+.formtab .float-l {
+	FLOAT: left; WIDTH: 260px
+}
+.formtab .float-r {
+	PADDING-RIGHT: 0px; DISPLAY: none; PADDING-LEFT: 30px; BACKGROUND: url(../images/login/skill-renren.gif) no-repeat 0px 20px; FLOAT: left; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.formtab P A {
+	FONT-WEIGHT: bold
+}
+.formtab P.caption {
+	MARGIN: 10px 0px 20px; COLOR: #666; LINE-HEIGHT: 1.8
+}
+.formtab A.faq {
+	FONT-SIZE: 12px
+}
+.formtab H5 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; PADDING-TOP: 17px
+}
+.formtab TABLE TH {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%; TEXT-ALIGN: left
+}
+.formtab TABLE TD {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%; TEXT-ALIGN: left
+}
+.formtab INPUT.txt {
+	BORDER-RIGHT: #7e9db9 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #7e9db9 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #7e9db9 1px solid; WIDTH: 210px; PADDING-TOP: 5px; BORDER-BOTTOM: #7e9db9 1px solid
+}
+.formtab .float-r INPUT.txt {
+	WIDTH: 250px
+}
+.formtab .float-r INPUT.validator {
+	IME-MODE: disabled; WIDTH: 40px
+}
+.formtab .btn INPUT {
+	BORDER-TOP-WIDTH: 0px; BACKGROUND-POSITION: 0px -56px; BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 14px; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 10px; WIDTH: 101px; CURSOR: pointer; COLOR: #fff; HEIGHT: 28px; BORDER-RIGHT-WIDTH: 0px
+}
+.formtab .float-r TH {
+	TEXT-ALIGN: right
+}
+.formtab .float-l TH {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+.formtab .float-l TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.formtab .float-l TD SPAN.tips {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 0px; FONT-SIZE: 12px; BACKGROUND: url(../images/login/icon_next.gif) no-repeat right center; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 0px 15px; PADDING-TOP: 0px
+}
+.formtab .float-l .btn INPUT {
+	BACKGROUND-POSITION: 0px -28px; MARGIN: 10px 0px 0px; WIDTH: 85px
+}
+.col-tips {
+	DISPLAY: block; Z-INDEX: 20; RIGHT: 0px; BACKGROUND: #fff; OVERFLOW: hidden; WIDTH: 280px; COLOR: #444; POSITION: absolute; TOP: 5px; HEIGHT: auto
+}
+.col-tips OL LI {
+	FONT: 12px/30px "ËÎÌו",simsun
+}
+.col-tips SPAN {
+	FONT-SIZE: 0px; OVERFLOW: hidden; WIDTH: 6px; LINE-HEIGHT: 0; POSITION: absolute; HEIGHT: 6px
+}
+.col-tips SPAN.lt {
+	BACKGROUND-POSITION: -263px 0px; LEFT: 0px; TOP: 0px
+}
+.col-tips SPAN.rt {
+	BACKGROUND-POSITION: -269px 0px; RIGHT: 0px; TOP: 0px
+}
+.col-tips SPAN.lb {
+	BACKGROUND-POSITION: -263px -6px; LEFT: 0px; BOTTOM: 0px
+}
+.col-tips SPAN.rb {
+	BACKGROUND-POSITION: -269px -6px; RIGHT: 0px; BOTTOM: 0px
+}
+.col-tips .colTips-box {
+	BORDER-RIGHT: #d5e5f0 2px solid; PADDING-RIGHT: 6px; BORDER-TOP: #d5e5f0 2px solid; PADDING-LEFT: 6px; PADDING-BOTTOM: 9px; FONT: 12px/30px ""; BORDER-LEFT: #d5e5f0 2px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #d5e5f0 2px solid
+}
+.col-tips .colTips-top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 7px; PADDING-BOTTOM: 5px; PADDING-TOP: 0px; BORDER-BOTTOM: #d5e5f2 1px solid
+}
+.colTips-login {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+.colTips-login LI {
+	FLOAT: left
+}
+.colTips-login LI A {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 22px; BACKGROUND: url(../images/login/icon-sina.png) no-repeat 0px 6px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.colTips-login .colTips-rr {
+	MARGIN: 0px 28px 0px 0px
+}
+.colTips-login .colTips-rr A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 19px; BACKGROUND: url(../images/login/icon-renren.gif) no-repeat 0px 6px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.colOhter-login .colTips-login {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 14px; PADDING-BOTTOM: 0px; PADDING-TOP: 8px
+}
+.colOhter-login .colTips-login LI {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; FLOAT: left; MARGIN: 8px 10px 0px 0px
+}
+.colOhter-login .colTips-login LI A {
+	BACKGROUND-POSITION: 0px 0px
+}
+.colOhter-login .colTips-login .colTips-rr A {
+	BACKGROUND-POSITION: 0px 0px
+}
+#footer {
+	BORDER-TOP: #014a8f 5px solid; MARGIN: 10px auto 0px; WIDTH: 980px; PADDING-TOP: 10px
+}
+#footer .link {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; TEXT-ALIGN: center
+}
+#footer .link A {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; COLOR: #666; PADDING-TOP: 0px
+}
+#footer .copyright A {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; COLOR: #666; PADDING-TOP: 0px
+}
+#footer .copyright {
+	MARGIN-TOP: 5px
+}
+#footer .link {
+	COLOR: #666
+}
+#footer .link A:hover {
+	COLOR: #f30; TEXT-DECORATION: underline
+}
+#footer .copyright A:hover {
+	COLOR: #f30; TEXT-DECORATION: underline
+}
+#footer .foot-list {
+	BACKGROUND: url(dotted_footer.gif) repeat-x 0px bottom; PADDING-BOTTOM: 5px; TEXT-ALIGN: center
+}
+#footer UL LI {
+	DISPLAY: inline; MARGIN: 0px 15px

@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/table_function.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script>
+<script type="text/javascript">
+	//获得选中文件的文件名
+		function checkAll() 
+{ 
+var deleteids = document.all['deleteid']; 
+if(deleteids.length){ 
+for(var i=0;i<deleteids.length;i++) 
+{ 
+deleteids[i].checked = true; 
+} 
+}else{ 
+deleteids.checked = true; 
+} 
+
+}
+	function GetCheckfolderItem()
+	{
+		var allSel='';
+		if(document.form1.deleteid.value) return document.form1.deleteid.value;
+		for(i=0;i<document.form1.deleteid.length;i++)
+		{
+			if(document.form1.deleteid[i].checked)
+			{
+				if(allSel=='')
+				allSel=document.form1.deleteid[i].value;
+				else
+				allSel=allSel+","+document.form1.deleteid[i].value;
+			}
+		}
+		return allSel;
+	}
+	
+	function DoSubmit()
+	{
+		var selid = GetCheckfolderItem();
+		if(selid=='') {
+			alert("你没选中任何信息！");
+			return false;
+		}
+		if(window.confirm("你确定要删除这些消息么？"))
+		{
+			location = "operation.php?dopost=del&ids="+selid;
+		}
+	}
+</script>
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mainCp">
+        <!--内容消息提示 -->
+        <h3 class="meTitle">点卡/会员定单</h3>
+        <table width="90%" border="0" cellpadding="0" cellspacing="0" class="list">
+          <thead>
+              <tr>
+                <th width="25%" colspan="2">订单号</th>
+                <th width="25%">产品</th>
+                <th>详细状态信息</th>
+                <th width="10%">状态</th>
+                <th width="10%">时间</th>
+              </tr>
+            </thead>
+            <tbody>
+            <form name='form1' action="operation.php" method="post">
+            <input type='hidden' name='ftype' value='del' />
+            {dede:datalist}
+            <tr>
+              <td align="center"><input type="checkbox" id="deleteid" name="deleteid" value="{dede:field.aid/}"/></td>
+              <td align="center">{dede:field.buyid/}</td>
+              <td align="center"><?php echo $fields['pname']; ?></td>
+              <td align="center"><?php	echo $fields['oldinfo']; ?></td>
+              <td align="center">{dede:field.sta function="GetSta(@me)" /}</td>
+              <td align="center">{dede:field.mtime function="GetDateMk(@me)" /}</td>
+            </tr>
+            {/dede:datalist}
+            <tr>
+            <td colspan="6"><button id="checkedClick" type="button" class="pn pnc" onclick="checkAll()"><STRONG>全 选</STRONG></button>
+              　
+              <button type="button" onclick="DoSubmit()" class="pn pnc"><STRONG> 删 除</STRONG></button> 　 
+              </td>
+            </tr>
+            </form>
+            </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="7"><div class="pageList">{dede:pagelist listsize=5/}</div></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

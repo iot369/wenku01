@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xn="http://www.renren.com/2009/xnml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/style/common.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/docin_indexv7.css" type="text/css" rel="stylesheet"/>
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/docin_index.js"></script>
+
+<script language="javascript" type="text/javascript">
+jQuery().ready(function(){
+	jQuery.ajax({
+		url: '{dede:global.cfg_cmspath/}/member/ajax_islogin.php',
+		success: function(data) {
+			if(data == "1"){
+				
+			}else{
+				jQuery("div .loginbox_new").show();	
+			}
+		}
+	});
+});
+</script>
+</head>
+<body>
+<!-- /header 开始 -->
+{dede:include filename="head.htm"/}
+<!-- /header 结束-->
+<!-- /search 开始 -->
+{dede:include filename="top_search.htm"/}
+<!-- /search 结束-->
+<div id="outer">
+  <div class="boxleft">
+    <!--阅读什么-->
+    <div id="readcolumn" class="box"> <span class="rd_tl"></span><span class="rd_tr"></span>
+      <div class="readbox" id="allreadDiv1">
+        <h2>最新分享...</h2>
+        <div id="hot_wrapper" class="hot"> <span id="next" class="right" title="下一页">下一页</span> <span id="stepup" class="noleft" title="上一页">上一页</span>
+          <div class="outer_container" >
+            <ul id="hot_container" >
+              {dede:arclist row=14 titlelen=32 noflag='h' imgwidth=122 imgheight=132}
+              <li> <a href="[field:arcurl/]">[field:image/]</a>
+                <p><a onMouseDown="return inpmv(731);" href="[field:arcurl/]" title="[field:title/]" target="docin_p_end">[field:title/]</a></p>
+              </li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <span class="rd_bl"></span><span class="rd_br"></span> </div>
+    <!--阅读什么end-->
+    <!-- *************************************************************************** -->
+    <!--分类阅读-->
+    <div id="classread" class="box">
+      <div class="classbox">
+        <div class="classcolumn">
+          <h3>精品资料专区<span><a class="fr" onMouseDown="return inpmv(732);" href="/docshare/html/docs/">更多>></a></span></h3>
+          <ul class="clear">
+            {dede:channel type='son' typeid="17"}
+            <li ><a href="[field:typelink/]">[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </div>
+        <span class="class_l"></span><span class="class_r"></span> </div>
+    </div>
+    <!--分类阅读end-->
+    <!-- *************************************************************************** -->
+    <!--广告-->
+    <!--广告end-->
+  </div>
+  <!-- *************************************************************************** -->
+  <div class="boxright">
+    <!--登录与注册-->
+    <!--登录与注册-->
+    <div class="box loginbox_new" style="display:none;">
+      <ul id="login_tag">
+        <li class="selectTag"> <a onfocus="this.blur()"  href="javascript:void(0)">登录</a> </li>
+        <!--
+        <li class=""> <a onfocus="this.blur()" onclick="selectSearchLoginDiv('login_tagnum1',this)" href="javascript:void(0)">注册</a> </li>-->
+      </ul>
+      <div id="login_tagnum">
+        <!-- 登陆 -->
+        <div id="login_tagnum0" class="login_tagnum login_fillet selectSearch" style="display: block;"> <span class="rd_bl"></span><span class="rd_br"></span><span class="rd_tr"></span>
+          <div class="login_new">
+            <form onsubmit="return check();" id="login" name="login" method="post" action="{dede:global.cfg_memberurl/}/index_do.php">
+              <input type="hidden" name="fmdo" value="login">
+              <input type="hidden" name="dopost" value="login">
+              <input type="hidden" name="gourl" value="content_list.php?channelid=17">
+              <p class="dl_box mttips">
+                <label for="username">用户名</label>
+              </p>
+              <p class="dl_box mttips fortext_mail">
+                <input value="" id="userid" name="userid" type="text">
+              </p>
+              <p class="dl_box">
+                <label for="password">登录密码</label>
+              </p>
+              <p class="dl_box mttips">
+                <input onkeydown="if(event.keyCode==32) return false" id="pwd" name="pwd" type="password">
+              </p>
+              <p class="dl_box checkcode">
+                <label for="yanzhengma">验证码:</label>
+                <span class="tips">
+                <input value="" id="vdcode" name="vdcode" maxlength="4" type="text">
+                <img id="vdimgck" align="absmiddle" onclick="this.src=this.src+'?'" style="cursor: pointer;" alt="看不清？点击更换" src="{dede:global.cfg_cmsurl/}/include/vdimgck.php"/></p>
+              <p class="dl_box checkcode login_rem"><a title="忘记密码" href="{dede:global.cfg_memberurl/}/resetpassword.php" class="forget-password">忘记密码？</a>
+              </p>
+              <p class="skills mttips10">
+                <input value="登录" title="登录" class="btn" type="submit" align="bottom">
+                <span>或&nbsp;<a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew" title="马上注册">马上注册</a></span> </p>
+            </form>
+          </div>
+        </div>
+        <!-- 注册 -->
+        <!--
+        <div id="login_tagnum1" class="login_tagnum login_fillet" style="display: none;">
+          <div class="login_new reg_new">
+            <form id="loginForm" name="loginForm" method="post" action="/app/createUser">
+              <p class="dl_box mttips">
+                <label for="regloginname">用户名:</label>
+                <input value="支持英文及数字组合" id="regloginname" class="regloginname" name="login_name" onfocus="if(this.value=='支持英文及数字组合') this.value='';this.className='foroldname'" onblur="javascript:index_checkRegName('blur');" type="text">
+                <img class="val" id="showBlurUserName" src="{dede:global.cfg_templets_skin/}/images/reg_icon_cw.gif" alt=""></p>
+              <p class="dl_box mttips fortext_mail">
+                <label for="regloginemail">邮箱:</label>
+                <input value="" id="regloginemail" name="login_email" onblur="javascript:index_checkRegEmail('blur');" type="text">
+                <img class="val" id="showBlurEmail" src="{dede:global.cfg_templets_skin/}/images/reg_icon_cw.gif" alt=""></p>
+              <p class="dl_box">
+                <label for="regpassword">密码:</label>
+                <input onkeydown="if(event.keyCode==32) return false" id="regpassword" name="password" onblur="javascript:index_checkRegPassword('blur');" type="password">
+                <img class="val" id="showBlurPwd" src="{dede:global.cfg_templets_skin/}/images/reg_icon_cw.gif" alt=""></p>
+              <p class="dl_box checkcode">
+                <label for="yanzhengma">验证码:</label>
+                <span class="tips">
+                <input value="" id="yanzhengma" name="yanzhengma" maxlength="4" type="text">
+                &nbsp;<img onclick="javascript:refCode();" style="cursor: pointer;" id="regimg" name="regimg" src="/servlet/getimg" alt="">&nbsp;<a title="换张图片" href="javascript:refCode();">换张图</a></span></p>
+              <p class="mttips">
+                <input value="确定注册" title="确定注册" onclick="javascript:index_createuser();" class="reg regtips" type="button">
+              </p>
+            </form>
+          </div>
+        </div>
+        -->
+        <!-- 注册 end-->
+      </div>
+    </div>
+    <!--登录end-->
+    <!--用户排行-->
+    <div id="userrank" class="box slills fr"> <span class="rd_tl"></span><span class="rd_tr"></span>
+      <div class="userbox">
+        <div class="forboxbg clear">
+          <!-- 消息 -->
+          <h4>新闻公告</h4>
+          <div class="recombox">
+            <ul class="announce">
+              {dede:mynews row='5' titlelen='40'}
+              <li><a href="mynews.php?aid=[field:aid /]">[field:title /]</a> 
+              {/dede:mynews}
+            </ul>
+          </div>
+          <!--消息end-->
+        </div>
+      </div>
+      <span class="rd_bl"></span><span class="rd_br"></span> </div>
+    <!--用户排行end-->
+  </div>
+  <!--精选和最新文档-->
+  <div id="lowercont" class="box slills"> <span class="rd_tl"></span><span class="rd_tr"></span>
+    <div class="lowerbox">
+      <div class="lowercolumn borderskills">
+        <h4>特别推荐<span>
+          <!-- <a href="#" class="fr">更多&gt;&gt;</a> -->
+          </span></h4>
+        {dede:arclist flag='a' row='6' orderby='pubdate' imgwidth=40 imgheight=50}
+        <dl>
+          <dt><a href="[field:arcurl/]">[field:image/]</a></dt>
+          <dd class="first"> <a title="[field:title/]" href="[field:arcurl/]" target="docin_p_end">[field:title/]</a> </dd>
+          <dd>上传人：&nbsp;<a href="/[field:writer/]">[field:writer/]</a> </dd>
+          <dd>发布时间：[field:pubdate function="GetDateMk(@me)"/]</dd>
+        </dl>
+        {/dede:arclist} </div>
+      <div class="lowercolumn borderskills">
+        <h4>最新文档<span><a href="/list-0-0-1.html" onMouseDown="return inpmv(739);" class="fr">更多&gt;&gt;</a></span></h4>
+        {dede:arclist row=14 titlelen=32 noflag='h' imgwidth=40 imgheight=50}
+        <dl>
+          <dt><a href="[field:arcurl/]">[field:image/]</a></dt>
+          <dd class="first"> <a title="[field:title/]" href="[field:arcurl/]" target="docin_p_end">[field:title/]</a> </dd>
+          <dd>上传人：&nbsp<a href="/[field:writer/]">[field:writer/]</a> </dd>
+          <dd>发布时间：[field:pubdate function="GetDateMk(@me)"/]</dd>
+        </dl>
+        {/dede:arclist} </div>
+      <div class="rightcolumn fr">
+        <!--阅读排行-->
+        <h4>阅读TOP10</h4>
+        <div class="recombox">
+          <ul class="date_new">
+            <li id="monthLi" class="ahover"><a onMouseOver="javascript:changeDayNum('month');" href="#">月</a></li>
+            <li id="weekLi" class="ahover"><a onMouseOver="javascript:changeDayNum('week');" href="#">周</a></li>
+            <li id="todayLi" class="active"><a onMouseOver="javascript:changeDayNum('today');" href="#">日</a></li>
+          </ul>
+          <ol id="readToday">
+            {dede:arclist sort='hot' subday='1' titlelen=42 row=6}
+            <li> [field:global runphp='yes' name=autoindex]
+              $a="<SPAN class='num active'>";
+              $b="</SPAN>";
+              $c="<SPAN class='num'>";
+              if (@me > 3) @me = $c.@me.$b;
+              else @me = $a.@me.$b;
+              [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+            {/dede:arclist}
+          </ol>
+          <ol id="readWeek" style="display:none;">
+            {dede:arclist sort='hot' subday='7' titlelen=42 row=6}
+            <li> [field:global runphp='yes' name=autoindex]
+              $a="<SPAN class='num active'>";
+              $b="</SPAN>";
+              $c="<SPAN class='num'>";
+              if (@me > 3) @me = $c.@me.$b;
+              else @me = $a.@me.$b;
+              [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+            {/dede:arclist}
+          </ol>
+          <ol id="readmonth" style="display:none;">
+            {dede:arclist sort='hot' subday='30' titlelen=42 row=6}
+            <li> [field:global runphp='yes' name=autoindex]
+              $a="<SPAN class='num active'>";
+              $b="</SPAN>";
+              $c="<SPAN class='num'>";
+              if (@me > 3) @me = $c.@me.$b;
+              else @me = $a.@me.$b;
+              [/field:global] <a title="[field:title/]" href="[field:arcurl/]">[field:title/]</a> </li>
+            {/dede:arclist}
+          </ol>
+        </div>
+        <!--阅读排行-->
+        <!-- 标签 start -->
+        <h4><a href="{dede:global.cfg_cmsurl/}/tags.php" class="fr">更多&gt;&gt;</a>热门Tag</h4>
+        <div class="recombox" >
+          <ul id="tags">
+            {dede:tag row='20' getall='1' sort='month'}
+            <li><a href='[field:link/]'>[field:tag /]</a></li>
+            <li class=""><a href="[field:link/]" title="Linux">[field:tag /]</a></li>
+            {/dede:tag}
+          </ul>
+        </div>
+        <!-- 标签 end -->
+      </div>
+    </div>
+    <span class="rd_bl"></span><span class="rd_br"></span> </div>
+  <div class="box column-yqlj">
+    <dl>
+      <dt>友情链接：</dt>
+      <dd><a href="#">Test</a><a href="#" title="更多&gt;&gt;">更多&gt;&gt;</a></dd>
+    </dl>
+  </div>
+  <!--友情链接-->
+</div>
+<!-- /foot 开始 -->
+{dede:include filename="footer.htm"/}
+<!-- /foot 结束-->
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/docindex.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/index.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/pagemodulestat.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/common.js"></script>
+</body>
+</html>

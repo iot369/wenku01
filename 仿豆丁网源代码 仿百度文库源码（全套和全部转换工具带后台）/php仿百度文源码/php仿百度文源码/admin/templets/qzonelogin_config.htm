@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>QQ互联参数配置 - 验证安全设置</title>
+<link href="img/base.css" rel="stylesheet" type="text/css">
+</head>
+<body background='img/allbg.gif' leftmargin='8' topmargin='8'>  
+<form action="qzonelogin_config.php" method="post" name="form1">
+<input type="hidden" name="dopost" value="save">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D6D6D6">
+
+    <tr>
+      <td height="26" colspan="2" bgcolor="#FFFFFF" background="images/tbg.gif" style="padding-left:10px;"><b>QQ互联参数设置</b></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td height="24">AppID：</td>
+      <td><input name="appid" type="text" id="appid" value="<?php echo empty($appid)? "" :$appid ;?>">
+        请填写您的QQ登录AppID（申请地址：<a href="http://connect.opensns.qq.com/apply" target="_blank">http://connect.opensns.qq.com/apply</a>）</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td height="24">AppKey：</td>
+      <td><input name="appkey" type="text" id="appkey" value="<?php echo empty($appkey)? "" :$appkey ;?>"> 同上</td>
+    </tr>
+	
+    <tr> 
+      <td height="26" colspan="2" bgcolor="#F9FCEF" style="padding-left:10px;">
+    </tr>
+    <tr bgcolor="#F9FCEF">
+      <td height="37" colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="7%">&nbsp;</td>
+            <td width="93%" align="center"><input name="imageField" class="np" type="image" src="img/button_ok.gif" width="60" height="22" border="0">
+              &nbsp; <img src="img/button_reset.gif" width="60" height="22"></td>
+          </tr>
+        </table></td>
+    </tr>
+</table>  
+</form>
+</body>
+</html>

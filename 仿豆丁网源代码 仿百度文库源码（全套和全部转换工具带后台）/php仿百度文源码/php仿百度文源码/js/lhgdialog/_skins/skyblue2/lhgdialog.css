@@ -1,0 +1,39 @@
+﻿/*!
+ * lhgcore Dialog Plugin StyleSheet
+ * Copyright (c) 2009 - 2010 By Li Hui Gang
+ * 此皮肤由网友Mr.Simple提供
+ */
+
+*{margin:0;padding:0}
+* html{ie6PngRepair:true;}
+.lhgdig{position:absolute;margin:0;padding:0;}
+.lhgdig table{font:12px Verdana,Arial,sans-serif;}
+.lhgdig_content{ vertical-align:middle;background-color:#fff; }
+.lhgdig_inbox,.lhgdig_throbber{height:100%;width:100%;background-color:#fff;overflow:auto;}
+.lhgdig_throbber span{display:block;background:url(images/wait.gif) no-repeat 0 0;position:relative;width:65px;height:16px;top:45%;padding-left:20px;font-weight:bold;}
+.lhgdig_btns{height:29px;background-color:#f6f6f6;border-top:1px solid #dadee5;}
+.lhgdig_bDiv{display:inline-block;float:right;}
+
+a.lhgdig_button{color:#000;outline:medium none;text-decoration:none;background:url(images/d_btn.gif) no-repeat right 0;display:inline-block;height:21px;padding-right:13px;margin:1px 4px 0 4px;cursor:default;}
+a.lhgdig_button em{background:url(images/d_btn.gif) no-repeat left 0;display:inline-block;font-style:normal;letter-spacing:2px;height:21px;line-height:21px;line-height:24px\9;padding-left:14px;overflow:hidden;_position:relative;}
+a.lhgdig_button:hover{text-decoration:none;background-position:right -21px;}
+a.lhgdig_button:hover em{text-decoration:none;background-position:left -21px;}
+
+.lhgdig_xbtn{position:absolute;cursor:default;top:8px;right:15px;width:28px;height:17px;background-image:url(images/dialog_closebtn.png);}
+.lhgdig_xbtnover{background-image:url(images/dialog_closebtn_over.png);}
+.lhgdig_leftTop,.lhgdig_rightTop{width:13px;height:33px;}
+.lhgdig_leftTop{background-image:url(images/dialog_lt.png);}
+.lhgdig_rightTop{background-image:url(images/dialog_rt.png);}
+.lhgdig_leftBottom,.lhgdig_rightBottom{width:13px;height:13px;font-size:0;}
+.lhgdig_leftBottom{background-image:url(images/dialog_lb.png);}
+.lhgdig_rightBottom{background-image:url(images/dialog_rb.png);cursor:nw-resize;}
+.lhgdig_top,.lhgdig_bottom{background-repeat:repeat-x;}
+.lhgdig_top{background-image:url(images/dialog_ct.png);cursor:move;}
+.lhgdig_bottom{background-image:url(images/dialog_cb.png);font-size:0;}
+.lhgdig_left,.lhgdig_right{background-repeat:repeat-y;}
+.lhgdig_left{background-image:url(images/dialog_mlt.png);}
+.lhgdig_right{background-image:url(images/dialog_mrt.png);}
+.lhgdig_title{margin-left:5px;color:#fff;font-weight:bold;height:33px;line-height:33px;font-size:12px;}
+* html.lhgdig_ie6_fixed{background:url(*) fixed;} 
+* html.lhgdig_ie6_fixed body{height:100%;}
+* html .lhgdig_warp{position:absolute;width:100%;height:100%;left:expression(documentElement.scrollLeft+documentElement.clientWidth-this.offsetWidth);top:expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight);}

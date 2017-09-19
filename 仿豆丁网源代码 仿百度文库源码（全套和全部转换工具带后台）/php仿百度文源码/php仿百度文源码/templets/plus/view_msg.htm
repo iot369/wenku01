@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><?php echo $msgtitle; ?></title>
+<link href="<?php echo $cfg_templets_skin; ?>/style/article.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="<?php echo $cfg_templets_skin; ?>/style/reset.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="<?php echo $cfg_templets_skin; ?>/style/message.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="container">
+<div style="width:690px; padding:0; margin-left:auto; margin-right:auto;">
+  <div id="right" style="width:100%;">
+    <!--文档预览 start-->
+    <div id="Preview" class="p_box" style="width:100%;">
+      <div class="title" style="border-bottom:0px;"><span class="doc"><img src="<?php echo $cfg_templets_skin; ?>/images/productView-<?php echo $filetype; ?>_46x35.gif" align='absmiddle' style='display:block; float:left;' />
+        <h1><?php echo $arctitle; ?></h1>
+        <h2>发布时间：<?php echo $pubdate; ?></h2>
+        </span> </div>
+      <div class="tl_b"></div>
+      <div class="tr_b"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="p_box"  style="margin-bottom:10px; border-top-width:0; width:100%;">
+      <div class="downloadsite">
+        <div class="a_tips">
+          <h1><strong>文档下载提示：</strong></h1>
+          您正在下载的文档是: <strong>《<?php echo $arcLinktitle; ?>》</strong>
+          <div class="d_login"><?php echo $moremsg; ?></div>
+        </div>
+        <!--下载注意事项 start-->
+        <div  class="downTips" >
+          <p><strong>下载注意事项：</strong></p>
+          <p>1、任何网站不得非法盗链及抄袭本站资源；如引用页面，请注明来自<span style="color:#F00;"><a href="<?php echo $cfg_basehost.$cfg_indexurl; ?>"><?php echo $cfg_webname; ?></a></span>。</p>
+          <p>2、本站部分文档采用PDF格式，如不能正常下载，请尝试 在"点击下载"按钮上，鼠标右击选择"目标另存为"。下载后不能正常阅读请安装<a href="http://dl.pconline.com.cn/html_2/1/81/id=1322&pn=0.html" target="_blank">Adobe Reader阅读器</a>。</p>
+          <p>3、如果您下载时候提示您先登陆，请您<a href="<?php echo $cfg_memberurl; ?>/login.php" target="_blank">登陆</a>或者<a href="<?php echo $cfg_memberurl; ?>/index_do.php?fmdo=user&dopost=regnew" target="_blank">注册</a>成为[<?php echo $cfg_webname; ?>]网站的会员以后再进行下载。</p>
+          <p>4、如果您有丰富或者优秀的资源希望能与大家分享，请加入本站<a href="<?php echo $cfg_memberurl; ?>/upload_book.php" target="_blank">上传文档</a>。
+          <p>5、本站提供的资源均为网站会员自行上传，如果该资源涉及或 无意中侵害到您的版权请与<a href="#">我们联系</a>。 </p>
+          <p>6、更多下载问题，请进入下载<a href="#">帮助中心</a>。</p>
+        </div>
+        <!--下载注意事项 end-->
+      </div>
+    </div>
+  </div>
+  <!--right end-->
+  <div class="clear"></div>
+</div>
+</body>
+</html>

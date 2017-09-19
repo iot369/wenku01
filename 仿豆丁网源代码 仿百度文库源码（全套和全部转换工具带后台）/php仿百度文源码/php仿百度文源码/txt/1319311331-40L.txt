@@ -1,0 +1,71 @@
+编号：
+
+毕业设计(论文)说明书
+
+题
+
+目： 综合教务信息发布网站 设计与实现
+
+院 （系） ： 计算机与控制学院 专 业： 信息管理与信息系统 吴东 0400340229 张海涛 讲师
+
+学生姓名： 学 号：
+
+指导教师： 职 称：
+
+题目类型： 理论研究
+
+实验研究
+
+工程设计
+
+工程技术研究 √软件开发
+
+2008 年
+
+1
+
+月6
+
+日
+
+桂林电子科技大学毕业设计（论文）报告用纸
+
+摘
+
+要
+
+随着计算机科学技术的飞速发展，特别是计算机网络技术的发展，计算机网络在高 校教学管理工作中得到广泛应用，利用计算机实现对高校的教务信息管理势在必行。本 系统结合本校教务管理工作的实际情况，采用结构化系统开发的思想和方法，采用方便 且广泛使用的 ASP + VBScript 编程技术和 Microsoft SQL Server 2000 数据库开发出 来的基于 Web 的 B/S 结构综合教务信息发布网站管理系统。 高校教务信息发布网站管理系统从符合界面友好、操作简便、灵活、实用、安全合 理的实际要求出发， 完成对教务信息发布、 管理的全过程。 整个系统包括教务新闻管理、 教务公告管理、综合信息管理、教务动态管理、教材管理、资料下载管理和咨询留言管 理等功能模块组成，每个部分均有信息添加、删除、修改或查询等功能组成。另外，考 虑到实际的需要，为了保证合理地对留言的管理，避免一些攻击性的留言，系统还根据 需要设置了留言的审核与置顶功能。通过此功能，管理员可以根据留言内容对留言进行 审核，然后再决定是否该显示此条留言，从而限制了用户的一些扰乱正常教务工作的恶 意留言，保证教务工作的有序顺利进行。运用本系统，可以大大提高教务信息管理的效 率，减轻工作人员的工作负担。系统使用 SQL 语句对数据库进行各项操作，软件还适时 地提供提示信息，方便用户进行各项操作。同时，系统还增加了一些其他的功能，如流 量统计、时间显示等，更好的完善了该系统。 关键词：结构化；ASP；VBScript；Microsoft SQL Server 2000；Web；B/S 结构；综合 教务信息发布网站；管理系统
+
+桂林电子科技大学毕业设计（论文）报告用纸
+
+Abstract
+
+Along with the rapid development of computer science technology, especially is the development of computer network technology, the computer network has widely used in university, it is very essential to realize university educational information management with computers. This university integrative educational administration information website management system is developed by structured idea and method combining the actual conditions of the management work of my school’s educational management, it adopts the convenient and widely used ASP + VBScript as programming technology and Microsoft SQL Server 2000 as DBMS, it is a integrative educational administration information promulgate website management system based on Web and C/S structure. The integrative educational administration information promulgate website management system can realize the entire process of educational administration information promulgate and management according to the requirements such as friendly interface, easy operation, flexible, practical, and safety and reason. The system includes functional modules as follows: educational news management, educational bulletin management, integrative information management, educational trends management, book management, data downloading management, message board management and so on, each part has the functions of increase, deletion, modify or query. Moreover, thinking the needs of actual, in order to guarantee manage the message rationally, avoid some attacking message, the system also setting the auditing and top setting functions for message board management base on the actual need. With these functions, the administrators can auditing a message base on the content of the message, and then decide if display this message or not, restrict some user ’s attacking messages to disturb the teaching work, to guarantee the teaching work can circulate melodic and successfully. It may improve the efficiency of educational information management and lighten staff's burden greatly by using this system. The system adopts the SQL sentence to operate the database, and can also provide some prompt information to make it convenient for users to carry on operations at the right moment. At the same time, the s ystem also append some other functions, such as flux statistic、time display and so on, make the system more perfectly.
+
+Keywords: structured; ASP ;VBScript ;Microsoft SQL Server 2000 ;Web ;B/S structure ;integrative educational administration information promulgate website; management system
+
+桂林电子科技大学毕业设计（论文）报告用纸
+
+目
+
+录
+
+引言 ...............................................................................................................1 1 系统概述 ..................................................................................................1
+1.1 系统开发背景 ............................................................................................................. 1 1.2 系统开发与设计的主要步骤 ..................................................................................... 2 1.2.1 系统开发与设计的主要思想 ........................................................................... 2 1.2.2 系统开发与设计的主要步骤 ........................................................................... 2
+
+2
+
+系统分析 ..................................................................................................3
+2.1 系统需求分析 ............................................................................................................. 3 2.1.1 系统开发目标 ................................................................................................... 3 2.1.2 系统的可行性分析 ........................................................................................... 3 2.2 系统结构模式选择 ..................................................................................................... 4 2.3 开发工具选择 ............................................................................................................. 5 2.3.1 开发工具选择 ................................................................................................... 5 2.3.2 数据库系统选择 ............................................................................................... 7 2.4 系统详细分析 ............................................................................................................. 7 2.4.1 系统的组织结构分析 ....................................................................................... 7 2.4.2 系统的业务流程分析 ....................................................................................... 9 2.5 数据和数据流程分析 ............................................................................................... 12
+
+3
+
+系统设计 ................................................................................................16
+3.1 系统功能结构设计 ................................................................................................... 16 3.2 人机界面设计 ........................................................................................................... 17 3.2.1 前台界面设计 ................................................................................................. 17 3.2.2 后台界面设计 ................................................................................................. 19 3.3 系统详细模块设计 ................................................................................................... 20 3.3.1 教务动态 ......................................................................................................... 20 3.3.2 资料下载 ......................................................................................................... 21 3.3.3 通知发布 ......................................................................................................... 21 3.3.4 教材管理 ......................................................................................................... 22 3.3.5 留言板 ............................................................................................................. 22 3.4 关键技术 ................................................................................................................... 23 3.4.1 多表连接查询技术 ......................................................................................... 23 3.4.2 CSS 的应用 ..................................................................................................... 23 3.4.3 多种操作整合 ................................................................................................. 24 3.4.4 MD5 加密技术 ................................................................................................. 24 3.5 系统配备要求 ........................................................................................................... 24
+
+4
+
+系统数据库设计.....................................................................................25
+4.1 数据库概念模型设计 ............................................................................................... 25
+
+

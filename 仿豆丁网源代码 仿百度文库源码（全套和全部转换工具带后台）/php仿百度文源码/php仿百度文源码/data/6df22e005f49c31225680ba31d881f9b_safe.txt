@@ -1,0 +1,31 @@
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/tags.php||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/interface/inc_create_doc_img.php?aid=205||select onlineviewurl from `t_addonbook` where aid = (select arcid from t_uploads where aid = '205') limit 0,1;||sub select detect
+127.0.0.1||/docshare/interface/inc_create_doc_img.php?aid=206||select onlineviewurl from `t_addonbook` where aid = (select arcid from t_uploads where aid = '206') limit 0,1;||sub select detect
+127.0.0.1||/docshare/interface/inc_create_doc_img.php?aid=208||select onlineviewurl from `t_addonbook` where aid = (select arcid from t_uploads where aid = '208') limit 0,1;||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/docshare/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.137.53||/plus/list.php?tid=30||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.137.53||/plus/list.php?tid=20||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.137.53||/plus/list.php?tid=20||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.116.114||/plus/list.php?tid=20||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.116.114||/plus/list.php?tid=27||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+59.32.131.95||/plus/list.php?tid=17||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+117.39.25.28||/plus/list.php?tid=17||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+117.39.25.28||/plus/list.php?tid=17||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect
+127.0.0.1||/index.php?upcache=1||Select mid,userid,uname,face,scores,(select count(1) from t_archives where mid = m.mid)docnumber From t_member m order by scores desc limit 0,10||sub select detect

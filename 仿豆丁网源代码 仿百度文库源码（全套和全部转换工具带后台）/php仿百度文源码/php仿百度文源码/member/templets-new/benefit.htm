@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="<?php echo $cfg_keywords; ?>" />
+<meta name="description" content="<?php echo $cfg_description; ?>" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="copyright" href="<?php echo $cfg_basehost; ?>" />
+<title>会员中心 -<?php echo $cfg_webname; ?></title>
+<LINK rel=stylesheet type=text/css 
+href="35/style.css"><LINK rel=stylesheet type=text/css 
+href="35/css.css"><LINK rel=stylesheet type=text/css 
+href="35/table_form.css">
+<SCRIPT language=javascript src="35/common.js"></SCRIPT>
+
+<SCRIPT type=text/javascript src="35/jquery.js"></SCRIPT>
+
+<SCRIPT src="35/marquees.js"></SCRIPT>
+<link href="templets/style/base.css" rel="stylesheet" type="text/css" />
+
+<link href="<?php echo $cfg_cmspath; ?>/js/thickbox/css/thickbox.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="templets/js/j.js"></script>
+<script type="text/javascript" src="templets/js/load.js"></script>
+<script type="text/javascript" src="templets/js/leftmenu.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $cfg_cmspath; ?>/js/thickbox/js/thickbox.js"></script>
+<script type="text/javascript">
+	var tb_pathToImage = "{dede:global.cfg_cmspath/}/images/loadingAnimation.gif";
+</script>
+
+<script src="<?php echo $cfg_cmspath; ?>/js/jquery.hiAlerts.1.0/jquery.ui.draggable.js" type="text/javascript"></script>
+<!-- 拖动函数，不需要可以去掉 -->
+<!-- Core files -->
+<script src="<?php echo $cfg_cmspath; ?>/js/jquery.hiAlerts.1.0/jquery.hiAlerts-min.js" type="text/javascript"></script>
+<link href="<?php echo $cfg_cmspath; ?>/js/jquery.hiAlerts.1.0/jquery.hiAlerts.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/js/zDialog/zDrag.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmspath/}/js/zDialog/zDialog.js"></script>
+
+<script type="text/javascript">
+//判断 v 是否是整数
+function IsInt(v)
+{
+    var vArr = v.match(/^[0-9]+$/);
+    if (vArr == null)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+$().ready(function(){
+	var account = "<?php echo $account?>";
+	if(account == ""){
+		//alert("没有设置！");
+		tb_show('设置提现账号','inc/showAccountSet.php?TB_iframe=true&&height=160;width=450');
+	}
+
+	var member_money = <?php echo $cfg_ml->fields['money'] ?>;
+	var cfg_money_rmb = <?php echo $cfg_money_rmb ?>;
+	$("#money").keyup(function(){
+		var money = $(this).val();
+		if(money == ""){
+			return;
+		}
+		if(!IsInt(money)){
+			hiAlert("<div style='text-align:left;'>请输入整数！</div>", "错误提示");
+			$(this).val(member_money);
+			return;
+		}
+		if(money > member_money){
+			$(this).val(member_money);
+			return;
+		}
+		var canCav = money / cfg_money_rmb;
+		$("#rmb").val(canCav);
+	});
+	
+	$("#changeAccount").click(function(){
+		tb_show('设置提现账号','inc/showAccountSet.php?TB_iframe=true&&height=160;width=450');
+	});
+});
+
+function setAccount(account, vdcode){
+	$.ajax({
+		url: '{dede:global.cfg_memberurl/}/ajax_setbankaccount.php',
+		method:"post",
+		data: {vdcode:vdcode, account: account},
+		dataType:   "script",
+		success	:function(response) {
+			var obj = eval("("+response+")");//转换为json对象
+			if(obj.code == 0){
+				tb_remove();
+				$("#Account").val(account);
+			}else{
+				hiAlert("<div style='text-align:left;'>"+obj.msg+"</div>", "错误提示");
+			}
+		}
+	});
+}
+
+</script>
+
+<META name=GENERATOR content="MSHTML 8.00.7600.16821"></HEAD>
+<BODY><!--会员中心开始-->
+
+<!--页面头部 begin-->
+<?php include(DEDEMEMBER."/templets/head.htm"); ?>
+<!--页面头部 end-->
+<DIV class=clear></DIV><!--搜索-->
+<!--搜索-->
+<DIV class=clear></DIV><!--主体开始-->
+<DIV class=content>
+<?php include(DEDEMEMBER."/templets/left_menu.htm"); ?>
+<DIV class=right>
+<DIV id=mainFrameContainer class=maincontent>
+<?php include(DEDEMEMBER."/templets/top_caidan.htm"); ?>
+
+<BR><BR>
+<div id="mainCp">
+
+        <!--内容消息提示 -->
+        <?php
+          if($cfg_money_scores > 0) {
+          ?>
+        <div class="postForm">
+          <h3 class="meTitle">
+            <?php
+         	$canCav = floor($cfg_ml->fields['money'] / $cfg_money_rmb);
+        ?>
+            <strong>将金币转化为您的人民币收益：</strong> &nbsp;(<?php echo "兑换规则：{$cfg_money_rmb} 金币/￥1.00，你目前可申请提现的金币数量为：{$cfg_ml->fields['money']} 个"; ?>)</h3>
+          <form name="formrank" action="benefit_submit.php" method="post">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="list">
+              <tbody>
+                <tr>
+                  <td width="20%" align="right" valign="top">您的支付宝帐户：</td>
+                  <td width="35%">&nbsp;&nbsp;&nbsp;<input type="text" name="account" id="Account" style="color:red; font-weight:bold;font-size:14px;" value="<?php echo $account; ?>" readonly="readonly" /> </td>
+                  <td align='left'><button class="pn pnc"  id="changeAccount"><strong>设置账户</strong></button></td>
+                </tr>
+                <tr>
+                  <td width="20%" align="right" valign="top">&nbsp;</td>
+                  <td width="35%">&nbsp;</td>
+                  <td align='left'>&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="20%" align="right" valign="top">兑现数量：</td>
+                  <td width="35%">&nbsp;&nbsp;&nbsp;<input name="money" type="text" id="money" size="30" class="intxt" value="<?php echo $cfg_ml->fields['money']; ?>" style="width:60px"/>金币=<input name="rmb" id="rmb" type="text" readonly size="30" class="intxt" value="<?php echo $canCav; ?>" style="width:50px"/>人民币</td>
+                  <td align='left'><button class="pn pnc" type="submit"><strong>兑现</strong></button></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <?php } ?>
+      </div>
+	  <script>
+IMAGESPATH = "{dede:global.cfg_cmspath/}/js/zDialog/images/";
+var images=["icon_alert.gif","icon_dialog.gif","icon_query.gif","window.gif","dialog_cb.gif","dialog_closebtn.gif","dialog_closebtn_over.gif"];
+var dlgimgs=ielt7?["dialog_ct.gif","dialog_lb.gif","dialog_lt.gif","dialog_mlm.gif","dialog_mrm.gif","dialog_rb.gif","dialog_rt.gif"]:["dialog_cb.png",
+"dialog_ct.png","dialog_lb.png","dialog_lt.png","dialog_mlm.png","dialog_mrm.png","dialog_rb.png","dialog_rt.png"]
+var images=images.concat(dlgimgs);
+var imgsHtml=[];
+for(var i=0;i<images.length;i++){
+	imgsHtml.push('<img src="'+IMAGESPATH+images[i]+'"/>')
+}
+document.write('<div id="imgsloader" style="text-align:right; display:none;">'+imgsHtml.join("")+'</div>')
+</script>
+</DIV></DIV>
+<DIV class=clear></DIV></DIV><!--会员中心结束-->
+<DIV class=clear></DIV><!--底部通用-->
+  <?php include(DEDEMEMBER."/templets/foot.htm"); ?>
+<!--底部通用-->
+<SCRIPT type=text/javascript src="35/ajax.js"></SCRIPT>
+</BODY></HTML>

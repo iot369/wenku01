@@ -1,0 +1,24 @@
+  <div class="searchformy">
+    <form action="/app/docsearch" method="get">
+      <input type="hidden" name="fn" id="fn" value="" />
+      <input type="hidden" name="searchType_banner" id="searchType_banner" value="p" />
+      <div class="searchBox" id="searchBox">
+        <div class="searchNew">
+          <h3>搜索全球最大中文文档库</h3>
+          <div class="searchbar">
+            <input id="topsearch" type="text" maxlength="100" class='listTopDefault' name="dky" onkeydown="if(event.keyCode==13){ return searchNew()}" value="在一亿文档库里搜索文档" onfocus="if(this.value=='在一亿文档库里搜索文档') this.value='';this.className='listTopInput';" onblur="if(this.value=='') {this.value='在一亿文档库里搜索文档';this.className='listTopDefault';}"/>
+            <div id="search-listbtn">
+              <h5>文档</h5>
+              <div id="search-listtags">
+                <ul>
+                  <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='p';">文档</a></li>
+                  <li><a href="#nogo" onmousedown="document.getElementById('searchType_banner').value='u';">用户</a></li>
+                </ul>
+              </div>
+            </div>
+            <input type="submit" class="btn" value="搜索" onclick="return searchNew();" />
+            <a href="/app/docsearch?fn=more" title="高级">高级</a> </div>
+        </div>
+      </div>
+    </form>
+  </div>

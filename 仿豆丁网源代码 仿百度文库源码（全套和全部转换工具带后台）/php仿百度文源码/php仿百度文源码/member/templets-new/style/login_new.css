@@ -1,0 +1,88 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background-color: #94B6D2;
+	background-image: url(../images/login/login_06.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+img {
+	border:none;
+}
+#loginbox {
+	margin-top: 39px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 892px;
+	height: 536px;
+	overflow: hidden;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+#logintitle {
+	background-image: url(../images/login/login_04.gif);
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 176px;
+	margin-left: 158px;
+}
+#loginform {
+	background-image: url(../images/login/login_08.gif);
+	background-repeat: no-repeat;
+	height: 456px;
+	width: 892px;
+	clear: both;
+}
+#logintheme {
+	float: left;
+	height: 400px;
+	width: 440px;
+	margin: 4px;
+	background-image: url(../images/login/theme.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#login {
+	height: 204px;
+	width: 320px;
+	float: left;
+	margin-top: 140px;
+	margin-left: 44px;
+	overflow: hidden;
+}
+#login p {
+	margin-bottom: 24px;
+}
+#login span {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 18px;
+}
+.logininput {
+	font-size: 14px;
+	line-height: 18px;
+	clear: left;
+	border: 1px solid #069;
+	padding: 4px;
+	margin-left: 10px;
+	width: 180px;
+}
+.loginpin {
+	font-size: 14px;
+	line-height: 18px;
+	clear: left;
+	border: 1px solid #069;
+	padding: 4px;
+	margin-left: 10px;
+	width: 68px;
+	margin-right: 10px;
+}
+.loginbutton {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	height: 44px;
+	width: 100px;
+	margin-left: 68px;
+}

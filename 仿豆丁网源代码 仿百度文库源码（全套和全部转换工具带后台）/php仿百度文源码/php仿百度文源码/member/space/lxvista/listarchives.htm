@@ -1,0 +1,40 @@
+{dede:include file='header.htm'/}
+<div id="side" class="left"> {dede:include file='side_icon.htm'/}
+  {dede:include file='side_class.htm'/}
+  {dede:include file='side_visitor.htm'/}
+  {dede:include file='side_search.htm'/} </div>
+<!--begin main-->
+<div id="main" class="right">
+  <div class="box">
+    <h2>文档列表</h2>
+    <!--begin-->
+    {dede:datalist}
+    <?php
+	if($fields['channel']==1) {
+			$fields['arcurl'] = "index.php?uid={$_vars['userid_e']}&action=viewarchives&aid={$fields['id']}";
+	}
+?>
+    <div class="text">
+      <h3> <a href="{dede:field.arcurl/}" class="noul">{dede:field.title/}</a> </h3>
+      <table class="blog-content">
+        <tr>
+          <td><p> <img src='{dede:field.litpic/}' /><br />
+              {dede:field.description /} </p>
+            <p><a href='{dede:field.arcurl/}'>&lt;&lt;详细内容</a> </td>
+        </tr>
+      </table>
+      <div class="bb">
+        <div> <a href="{dede:field.arcurl/}" target="_blank" title="{dede:field.title/}">浏览全文</a>({dede:field.click/}) | <a href="{dede:global.cfg_phpurl/}/feedback.php?aid={dede:field.id/}" target="_blank">好评度</a>({dede:field.scores/}) |
+          上传时间：{dede:field.pubdate function="MyDate('Y-m-d h:i',@me)"/} </div>
+        <div class="c"></div>
+      </div>
+    </div>
+    {/dede:datalist}
+    <div class="big">
+      <div class="pages">{dede:pagelist/}</div>
+      </a></span></div>
+    <!--end-->
+  </div>
+</div>
+<!--end main-->
+{dede:include file='footer.htm' /}

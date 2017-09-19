@@ -1,0 +1,235 @@
+/* CSS Document */
+table{ border-collapse:collapse; border-spacing:0}
+.dpn{ display:none}
+.float-r{ float:right}
+.tac{text-align:center}
+h1{ font-size:16px;color:#333}
+h2{ font-size:16px; line-height:24px;color:#000}
+h3{ font-size:14px;color:#444}
+h4{font-size:22px;color:#000; border-bottom:1px #ccc solid; padding:17px 0 10px 8px}
+h5{ font-size:14px; color:#333; padding:0 0 5px}
+#main .login h4{ border:0; padding:17px 0 10px 25px}
+#tips span,#outer input.btn,#main input.btn,#main input.btn_login,h1,#main,#main .bottom,.active-re,.active-re em{ background:url(../images/reg_bg.png) no-repeat 0 0}
+.personal_skills button,.personal_skills  a.close_skills,.msnbtn a,.msnbtn a span,#outer a.msn_btn,#outer a.msn_btn span,#outer .msnbtn a.jump,#outer .msnbtn a.jump span{ background:url(/images_cn/personal/personal_bg.gif) no-repeat}
+h1{ background-position:-275px 0; padding:0 0 0 60px;  line-height:39px; }
+#main .bottom{ display:block;background-position:0 -482px; height:10px; overflow:hidden;width:100%;position:absolute;bottom:-1px;left:0;}
+
+
+#outer,#main{ width:986px; margin:40px auto; height:400; overflow:hidden; position:relative}
+#main{ background-position:0 -42px}
+
+#shop{ float:left;position:relative; z-index:10}
+#main #shop{ left:354px}
+table{ margin:10px 0 0 20px;}
+th{ text-align:right}
+th,td{ font-weight:normal; font-size:14px; padding:12px 0}
+#main table{ margin:10px 0 0 0;}
+#main .login th{ text-align:left; padding:5px 0 0}
+#main .login td{ padding:5px 0}
+td .fortips{position:relative}
+td input{ height:18px; padding:4px 2px; width:260px}
+td input#login_name{color:#C5C5C5}
+td input.validator{ width:40px;ime-mode:disabled}
+td input.selectd{ width:auto;  vertical-align:middle; margin:0 5px 0 0}
+#outer input.btn,#main input.btn,#main input.btn_login{ height:42px; line-height:42px;padding:0;width:170px;font-weight:bold; font-size:26px; text-align:center; border:0; color:#fff; cursor:pointer;}
+#main input.btn_login{ width:93px; background-position:-170px 0}
+td .low,td .nor,td .high{ height:20px;width:267px; position:absolute; font-size:12px; font-weight: bold; color:#fff;top:35px;left:0; text-align:center}
+#main td .fortips{ width:270px}
+td .low{background:#f00}
+td .nor{background:#f80}
+td .high{background:#0c6}
+/*#shop tr.password td,#shop tr.password th{ padding:10px 0 20px}*/
+
+
+
+
+td img.vor{ position:relative;top:6px;*top:0;margin:0 6px}
+#shop td span{cursor:pointer}
+#outer a.fz12,#main a.fz12{ font-size:12px}
+
+
+td div.tips,td div.tips_error{font-size:12px; line-height:24px;margin:0 0 0 12px; float:left;color:#555}
+td div.tips_error{ border:1px #f3d5b3 solid;color:#fe7600;padding:0 5px 0 25px;background:#fff6ed url(../images/reg_icon_cw.gif) no-repeat 3px 3px}
+
+
+
+
+
+
+#tips{ display:block;position:absolute;right:0;top:10px;width:215px; height:auto; overflow:hidden; background:#edf7ff;color:#444; z-index:20}
+#tips ol li{ font:normal 12px/30px "宋体",simsun}
+#tips span{width:6px; height:6px; overflow:hidden; font-size:0; line-height:0; position:absolute}
+#tips span.lt{ background-position:-263px 0;top:0;left:0}
+#tips span.rt{ background-position:-269px 0;top:0;right:-1px}
+#tips span.lb{ background-position:-263px -6px;bottom:-1px;left:0}
+#tips span.rb{ background-position:-269px -6px;bottom:-1px;right:-1px}
+
+
+
+
+
+
+.login{display:block;position:absolute;left:0;top:0;width:326px; height:auto; overflow:hidden;color:#444; z-index:20}
+#main .login table{ margin:10px 0 0 25px}
+
+
+
+
+
+
+.tipsbox{ border:1px #e2e9ef solid; font: normal 14px/30px ""; padding:15px 12px 18px 15px;}
+.tips_suc{ color:#414544; width:535px; margin:30px 0 60px; font-size:14px; line-height:24px}
+.tips_suc p{padding:0 0 5px; }
+.tips_suc strong{color:#008102}
+.view-link{position:absolute; margin:22px 0 0 5px;font-size:14px;color:#666}
+.active-re,.active-re em{background-position:0 -492px;;height: 23px;line-height:23px;font-size:12px;display:inline-block;cursor:pointer;}
+.active-re{padding:0 0 0 8px;}
+.active-re em{background-position:right -492px;padding:0 8px 0 0; }
+
+
+
+#outer .msn table,#outer .msn h2{width:100%;margin:0 0 0 250px;clear:both; position:relative}
+#outer #msn_login th{ width:70px}
+#outer .msn td input.input_msn{ width:200px}
+#outer a.msn_btn span{color:#fff; cursor:pointer}
+#outer .msn h2 a{ position:absolute;left:580px;top:0;font-size:14px; font-weight:normal;word-break:keep-all;}
+#outer .tips_msn{background:#FFFBF2;border:1px solid #FBDBAA;float:left;font-size:12px;height:55px;line-height:25px;padding:5px 15px 0;position:relative;cursor:auto;width:320px;color:#444}
+#outer .tips_msn span{ position:absolute;background:url(/images_cn/personal/personal_bg.gif) no-repeat;background-position:-24px 0;height:12px;left:27px;top:-12px;width:15px;}
+
+
+/**/
+#outer .msn table#msn_list{ margin:0;}
+#outer .msn #msn_list th{text-align:left; padding:0;}
+#outer .msn .nvitecont1{ padding:10px 0 0; margin:0 0 0 250px}
+#outer .msn .nvitecont1 td span.tips{ margin:10px 0 0; width:325px; height:44px; line-height:22px; padding:5px 15px}
+#outer .msn .nvitecont1 td span.tips span{ background-position:-24px 0; width:15px; height:12px; left:27px;top:-12px}
+#outer .msn .nvitecont1 label{ width:70px}
+#outer .msn .nvitecont1 p.fcqh{color:#666}
+#outer .msn .nvitecont1 .list{ width:460px; height:260px; overflow-y:scroll;overflow-x:hidden;border:1px #808080 solid; padding:1px; margin:15px 0 0; position:relative}
+#outer .msn #msn_list{ width:100%; border:1px #ddd solid; border-left:0; border-right:0}
+#outer .msn #msn_list th,#msn_list td{border-bottom:1px #ddd solid; font-size:12px;padding:0}
+#outer .msn #msn_list th{ height:28px; line-height:28px;overflow:hidden;background:#f3f3f3; text-align:left; margin:0 0 2px; vertical-align:middle;}
+#outer .msn #msn_list .colone{ width:24px; background:#f3f3f3}
+#outer .msn #msn_list .coltwo{}
+#outer .msn #msn_list td a{ border:0; margin:0;color:#000}
+#outer .msn #msn_list td input{width:13px;}
+#outer .msn #msn_list td img{float:left; margin:8px 20px 16px}
+#outer .msn #msn_list td p{ width:325px;*width:345px;line-height:30px;float:right;color:#000}
+#outer .msn #msn_list td p span{ margin:0 20px 0 0;color:#666}
+
+.nvitecont td a,.msnbtn a,#outer a.msn_btn{ margin:10px 0 0}
+#outer .nvitecont td a:hover,#outer .msnbtn a:hover,#outer a.msn_btn:hover{ text-decoration:none}
+#outer .nvitecont td a,#outer .nvitecont td a span,#outer .msnbtn a,#outer .msnbtn a span,#outer a.msn_btn,#outer a.msn_btn span{float:left; height:42px; line-height:42px; text-align:center;cursor:pointer;padding:0 0 0 31px;font-weight:bold; font-size:26px; color:#fff}
+#outer .nvitecont td a,#outer .nvitecont td a span{ padding:0;background-position:0 -182px}
+#outer .msnbtn a,#outer .msnbtn a span{ padding:0;background-position:0 -182px; width:171px; height:43px; line-height:43px; overflow:hidden}
+#outer .msnbtn a.jump,#outer .msnbtn a.jump span{background-position:-171px -182px; width:97px}
+#outer .nvitecont td a span,#outer .msnbtn a span,#outer a.msn_btn span{ padding:0 31px 0 0;}
+#outer a.msn_btn{ background-position:0 -140px;}
+#outer a.msn_btn span{ background-position:right -289px}
+
+
+.nvitecont td a.fornoborder,#outer #msn_list p a{ border:0; background:none;}
+#outer #msn_list p a,#outer #msn_list p a span{float:none;font-size:12px; font-weight:normal}
+#outer #msn_list p a span{margin:0; padding:0}
+.msnbtn a,#outer a.msn_btn{ margin:15px 0 0 105px}
+#outer a.msn_btn{ margin:0 0 0 35px}
+#outer img.loading{ margin:5px 0 0 10px}
+.msnbtn a.jump{margin:15px 0 0 15px}
+
+
+.personal_skills{position:absolute;left:50%;margin:20px 0 0 -233px;width:466px; height:auto; overflow:hidden; border-top:1px #ebeffe solid; border-bottom:4px #9fa4a7 solid; border-right:3px #b6bdc3 solid;color:#000}
+.personal_skills dd a{margin:0 8px}
+
+.p_box{ border:1px #95d4f7 solid; background:#f1faff}
+.p_box h2{ font-size:16px; height:28px; line-height:28px; padding:0 0 0 12px}
+.personal_skills .p_box h2 a,.personal_skills  a.close_skills{float:right; display:block;width:12px; height:12px; text-indent:-999px; overflow:hidden; position:relative;top:7px;right:7px;}
+.personal_skills  a.close_skills{right:-1px;top:-5px}
+.skills_cont{ margin:0 1px 1px; background:#e2efff; padding:15px 53px 0 43px}
+.skills_cont dl{ margin:5px 0; display:block; height:auto; overflow:hidden; width:100%}
+.skills_cont dt,.skills_cont dd{ float:left}
+.skills_cont dt{ margin:0 22px 0 0}
+.skills_cont dd{ width:250px; line-height:25px; font-size:14px; margin:0 0 5px}
+.skills_cont p textarea{ width:350px; height:65px; padding:5px 7px; margin:10px 0 0}
+/*.success{ padding:55px 0 65px; text-align:center}*/
+.success_skills{ padding:40px 0 35px}
+/*.success h3{ font-size:28px; line-height:40px}*/
+.success_skills h3{ font-size:14px; line-height:25px}
+/*.success p{ font-size:12px; margin:10px 0}*/
+
+.personal_skills button{ margin:15px 0;font-size:16px; font-weight:bold; cursor:pointer; border:0}
+.personal_skills button.btn{ width:148px; height:42px; margin-left:35px; background-position:0 -56px}
+.personal_skills button.btnclose{ width:92px; height:42px; margin-left:19px; background-position:0 -98px}
+
+/*for regist-suc-090812*/
+#outer .wid-850{ width:850px; margin:0 auto;padding:50px 0 50px}
+#outer .wid-850 a,#outer .wid-850 a:hover{ font-size:100%}
+#outer .wid-850 h1{ font-size:26px; margin:0 0 0 200px;padding:0 0 0 60px}
+#outer .wid-850 h2{ border-bottom:1px #e6e6e6 solid; padding:8px 10px 8px 15px; font-size:16px; background:url(../images/h4_qt.gif) no-repeat 4px 11px}
+#regist-suc-090812{ background:none; padding:0 3px; margin:20px 0 0}
+#regist-suc-090812 .hot{ padding:10px 15px 0}
+#regist-suc-090812 .hot li img{ margin:0 0 5px}
+
+#outer .wid-850 .item-cover-main{ margin:20px 0 0}
+#outer .wid-850 .item-cover-main dl{ border-bottom:1px #CDCDCD dashed}
+#outer .wid-850 .item-cover-main dd a,#outer .wid-850 .item-cover-main dd a:hover{ font-size:16px}
+
+.list-shop:after{ overflow:hidden; content:"."}
+#outer .wid-850 h1 a,.list-shop a{ text-decoration:underline}
+#outer .wid-850 h1 a:hover,.list-shop a:hove{ text-decoration:none}
+
+/*renren login*/
+.dpn-renren{}
+
+.dpn-renren th img{ margin:0 0 10px; cursor:pointer}
+h2 img{ vertical-align:middle; margin:0 0 0 13px; cursor:pointer}
+h2 span{ font-size:12px; font-weight:normal;color:#555; margin:0 0 0 73px}
+
+.formtab-wel a,.formtab .btn input,.fl-lt,.fl-rt,.fl-lb,.fl-rb{ background:url(../images/bg-renren.png) no-repeat 0 0;}
+.fl-lt,.fl-rt,.fl-lb,.fl-rb{ display:block; position:absolute; width:3px; height:3px; overflow:hidden; font-size:0}
+.fl-lt{ background-position:-151px 0;top:-1px;left:-1px}
+.fl-rt{ background-position:right 0;top:-1px;right:-1px}
+.fl-lb{ background-position:-151px -3px;bottom:-1px;left:-1px}
+.fl-rb{ background-position:right -3px;bottom:-1px;right:-1px}
+
+.formtab-wel .fl-lt{ background-position:-151px -6px}
+.formtab-wel .fl-rt{ background-position:right -6px}
+.formtab-wel .fl-lb{ background-position:-151px -9px}
+.formtab-wel .fl-rb{ background-position:right -9px}
+
+
+.user-info{ float:left; width:258px; text-align:center;}
+.user-info img{ display:block; margin:0 auto 10px; }
+.user-info dt img{ width:100px; height:100px; overflow:hidden}
+
+.formtab-wapper{ width:702px; float:right;}
+.formtab{font-size:14px; position:relative}
+
+.formtab-wel{ position:relative;margin:0 0 10px;padding:0 0 19px;border-bottom:1px solid #D5DDEA;}
+.formtab-wel h4,.formtab-wel a{ float:left}
+.formtab-wel h4{ border:none; padding:0; line-height:28px; font-size:16px;}
+.formtab-wel a{ float:left; height:28px; width:85px; margin:0 0 0 10px; text-align:center; line-height:28px;color:#fff;font-size:14px; text-decoration:none;}
+.formtab-wel a:hover{color:#fff; text-decoration:none}
+
+.formtab .float-l{ float:left;width:260px;}
+.formtab .float-r{ float:left;display:none;  background:url(../images/skill-renren.gif) no-repeat 0 20px; padding:0 0 0 30px}
+.formtab p a{ font-weight:bold}
+.formtab p.caption{ color:#666; line-height:1.8; margin:10px 0 20px}
+.formtab a.faq{ font-size:12px}
+.formtab h5{ font-size:100%;padding:17px 0 0}
+.formtab table th,.formtab table td{ font-weight:normal; text-align:left; font-size:100%;}
+
+
+.formtab input.txt{ border:1px #7E9DB9 solid; padding:5px; width:210px}
+.formtab .float-r input.txt{ width:250px}
+.formtab .float-r input.validator{ime-mode:disabled;width:40px;}
+
+
+
+.formtab .btn input{ margin:0 0 10px;font-size:14px;color:#fff; cursor:pointer; border:0; height:28px; width:101px; background-position:0 -56px}
+
+
+.formtab .float-r th{ text-align:right;}
+.formtab .float-l th{ padding:5px 0 0}
+.formtab .float-l td{ padding:5px 0}
+.formtab .float-l td span.tips{font-size:12px;margin:0 0 0 15px;padding:0 18px 0 0;background:url(../images/icon_next.gif) no-repeat right center}
+.formtab .float-l .btn input{ margin:10px 0 0; width:85px; background-position:0 -28px}

@@ -1,0 +1,32 @@
+<div class="footer">
+  <div class="search-within-results"> 搜  索: <img class="search-box-left" src="space/person/images/search-box-left.png" />
+    <input class="search-box" type="text" id="txtSearchPortfolio1"  value="" />
+    <img class="search-go-btn" src="space/person/images/btn-go.png" /> </div>
+</div>
+<div id="results-layout" class="results thumb-text-layout" > {dede:datalist}
+  <div id="d47831420" class="di">
+    <div class="l"> <a href="{dede:field.arcurl/}" class="t"><img src="{dede:field.litpic/}" height="100" width="100" /></a><a href="{dede:field.arcurl/}" class="p"></a> </div>
+    <div class="c"> <span class="ti {dede:field.filetype/}" ><a title="{dede:field.title/}" class="docName" href="{dede:field.arcurl/}">{dede:field.title/}</a></span>
+      <p class="english">{dede:field.description/}...</p>
+      <div class="iF"> 上传人：{dede:field.writer/} | 发布时间：{dede:field.pubdate function="MyDate('Y-m-d h:i',@me)"/} | 浏览：{dede:field.click/}次 | 评论： {dede:field.scores/} |</div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <!--div class="mp10 dashed">
+  <div class="mB10">
+    <h3 class="fLeft"><a href="{dede:field.arcurl/}">{dede:field.title/}</a></h3>
+    <span class="mL5 aGray">({dede:field.pubdate function="MyDate('Y-m-d h:i',@me)"/})</span> </div>
+  <p class="f14 aBlack lh22">{dede:field.description function="" /}</p>
+  <div id="artInfo"><strong class="fLeft"><a href="{dede:field.arcurl/}" target="_blank" title="点击查看全文">点击查看全文</a></strong>
+    <ul class="fRight fLeftChild overflow">
+      <li><a href="{dede:field.arcurl/}" target="_blank" title="{dede:field.title/}">浏览</a>({dede:field.click/})</li>
+      <li><a href="{dede:global.cfg_phpurl/}/feedback.php?aid={dede:field.id/}" target="_blank">评论</a>({dede:field.scores/})</li>
+      <li><a href="{dede:global.cfg_phpurl/}/feedback.php?aid={dede:field.id/}" target="_blank">好评</a>({dede:field.goodpost/})</li>
+      <li><a href="{dede:global.cfg_phpurl/}/feedback.php?aid={dede:field.id/}" target="_blank">差评</a>({dede:field.badpost/})</li>
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</div-->
+  {/dede:datalist}
+  <div class="fRight mTB10 pd10">{dede:pagelist/}</div>
+</div>

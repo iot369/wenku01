@@ -1,0 +1,57 @@
+Absence of M2..35 Cl...
+
+PRAMANA
+— journal of
+physics
+
+c Indian Academy of Sciences pp. 1–6
+
+Absence of M2 Retardation in 35Cl: Evidence for Stronger Isospin-Mixing Eﬀects in A=35 Mirror Nuclei
+
+arXiv:nucl-ex/0507019v1 13 Jul 2005
+
+Ritesh Kshetri, Indrani Ray, P. Banerjee, R. Raut, A. Goswami, J. M. Chatterjee, S. Chattopadhyay, U. Datta Pramanik, A. Mukherjee, C.C. Dey, S. Bhattacharya, B. Dasmahapatra and M. Saha Sarkar
+Saha Institute of Nuclear Physics, 1/AF, Bidhannagar, Kolkata - 700064
+
+S. Sarkar
+Department of Physics, The University of Burdwan, Golapbag, Burdwan -713104
+
+S. Bhowal
+Surendranath Evening College, Kolkata - 700016
+
+G. Ganguly
+Department of Physics, The University of Calcutta, Kolkata - 700009
+
+K. S. Golda, R. Kumar, R. P. Singh, S. Muralithar, P. V. Madhusudhana Rao, N. Madhavan, J. J. Das, S. Nath, P. Sugathan, A. Jhingan, R. K. Bhowmik
+Nuclear Science Centre, Aruna Asaf Ali Marg, New Delhi -110067
+
+P. Datta
+Anandamohan College, Kolkata- 700009
+
+P.K. Joshi, H.C. Jain
+Tata Institute of Fundamental Research, Mumbai-400005 Abstract. The lifetime of the 3163 keV, 7/2− isomeric state in 35 Cl that decays by a stretched M2 transition to the 3/2+ ground state, has been re-measured using the Doppler Shift Attenuation Method, by gating on the 1185 keV transition which directly feeds this state. This eliminates the uncertainties in the measurement arising from the direct feedings from the continuum. A mean life of 0.6+0.5 ps has been obtained from the present work. −0.2
+
+1
+
+This is considerably smaller than the adopted value 45.3(6) ps. Implication of this major reduction in the lifetime has been pointed out. Keywords. A=40, gamma spectroscopy, lifetime PACS Nos 21.10.Tg,27.30.+t
+
+1. Introduction Low-lying isomeric states that decay by stretched M2 transitions have been observed in nuclei near the doubly closed 40 Ca. During late sixties to early eighties several measurements of lifetimes of these isomeric states have been performed by populating them in fusion evaporation reactions with heavy ions or by using protons. Electronic timing techniques and diﬀerent Doppler shift methods were used for the measurements. These M2 transitions are usually explained using the shell model. Their interpretation is connected with the de -excitation of a single nucleon from the 1f7/2 to the 1d3/2 orbit. The single-nucleon transfer reactions have revealed large 1f7/2 single particle components (spectroscopic factor S≃ 0.54 on the average) in the wavefunction of the lowest 7/2− state or their analogues. The information on the lowest 3/2+ state in odd K, Ca, Sc, etc. indicated sizable d3/2 single hole component. But in spite of the dominant particle hole character of these levels, a systematic hindrance of the M2 transitions by a factor of 5-200 with respect to 1f7/2 → 1d3/2 single particle estimates has been observed. Several attempts have been made to account for this anomalous retardation eﬀect. For the relatively heavier nuclei with A=39, 41 and the Sc isotopes, isospin eﬀects and/or admixtures of core excited states can explain this retardation. Nuclei, which are three or more particles away from the core, need strong coupling and prolate deformation to account for the observed retardation. Here we concentrate on the re-measurement of the lifetime of 7/2− isomeric state in the 35 Cl nucleus [1] using the Doppler Shift Attenuation Method (DSAM). A mean life of 0.6+0.5 ps has been obtained from the present work. This is considerably −0.2 smaller than the adopted value 45.3(6) ps. This present value indicates the absence of M2 retardation in this nucleus. The new result has far reaching implications which will be discussed. 2. Experimental Details The present work is based on the results from two experiments done with the array of eight Clover detectors (INGA setup) at TIFR, Mumbai (Expt. 1) and NSC, New Delhi (Expt. 2). A 50 µg/cm2 12 C target, backed by ≃ 10.5 mg/cm2 gold was bombarded by 70 and 88 MeV 28 Si beam in the two experiments, respectively. The velocities of the recoils were 5-6% of velocity of light (c). The main interest was to study the higher spin states in the nuclei 38 Ar, 35 Cl and 37 Ar and other weaker channels like 35 Ar, 38 K where heavy ion data are scanty. DSAM was used to measure the lifetimes of several nuclear states. In Expt. 1 the detectors were at
+
+2
+
+Absence of M2..35 Cl... 30o , 60o , 65o , 90o , 105o, 120o , 145o w.r.t the beam, while in Expt. 2, they were at 81o and 134o with respect to the beam direction. Use of ”inverse” reactions in DSA measurements has some distinct advantages. These include large recoil velocities and small percentage spread in velocity [3]. For the 12 C(28 Si, αp)35 Cl reaction populating the 3163 keV level at 88 MeV energy of the 28 Si beam, the recoil velocity β ≃ 5.8%, the maximum spread in β is ≃ ±7%, while the maximum half angle of the cone of recoiling 35 Cl nuclei is ≃ 13o , compared to the value 2.5%, ±17%, and 31o , respectively, for the corresponding ”forward” reaction at the same centre of mass energy. Due to the larger velocity, the fractional energy loss of the recoils in the target material will be comparatively smaller, thereby reducing the uncertainty due to ﬁnite target thickness. Besides, there is more freedom in choosing the backing material. Also for higher recoil velocity, the main contribution to the stopping is the electronic stopping process, which is well understood. However, due to the larger recoil velocity, the lineshape extends over a large number of channels (e.g., for 3163 keV gamma ray, with βmax = 0.0575 and θ = 134o, the endpoint corresponds to a shift of 126 keV). The background under this shape can be sizable, even when it does not show any noticeable structure. Very often there are structures (contribution from other genuine or spurious peaks) which interfere with the lineshape even in the gated spectrum. 3. Data Analysis and Results In the present work we have made a preliminary estimate of the lifetime of the 7/2− isomeric state in 35 Cl nucleus using the centroid shift analysis of the DSAM data. A strong 3163 keV M2 transition connects this state to the 3/2+ ground state. The lifetime of the 3163 keV state has been estimated by gating on the 1185 keV transition which directly feeds the state of interest [1]. This eliminates the uncertainties in the measurement arising from the direct feedings from the continuum. 3.1 Energy loss of recoil The energy loss of the 35 Cl nuclei through 12 C target was very small for both energies (70 and 88 MeV) and hence was neglected. The energy loss of 35 Cl in gold has been simulated using the code SRIM-2003 [4]. The energy loss of the recoils is parametrised by using the relation [5], −M (dvz /dt) = Kn (vz /vo )−1 + Ke (vz /vo ) − K3 (vz /vo )3 (1)
+
+where M is the mass of the moving ion, vo = c/137. z direction is along the path of the recoil. The values of the parameters Kn = 0.1, Ke = 1.1 and K3 = 0.006 have been obtained by ﬁtting the simulated data by the above relation. These parameters were used in calculating the theoretical values of the attenuation coeﬃcient F(τ ) [5], (to be discussed in the next section) as a function of mean lifetime (τ ) of the level emitting that particular gamma ray. 3
+
+Ritesh Kshetri et al. 3.2 Determination of experimental F(τ ) We shall assume that the recoils are all emitted along the z axis and they are ¯ monoenergetic. The average energy Eγ of the gamma radiation emitted from an ensemble of nuclei produced at t=0 with initial velocity β(0) (= v(0)/c) and moving thereafter with velocity β(t) can be expressed for β(t) ≪ 1 as [5], Eγ = Eγo [1 + F (τ )β(0)cosθ] (2)
+
+Eγo is the γ-energy emitted by the recoil at rest. F(τ ) is the attenuation coeﬃcient which lies between 0 and 1. The lifetime of the level emitting that particular gamma ray can be determined if F(τ ) diﬀers measurably from 1 and 0. It can be obtained from the observed energy shift with the detector angle of the gamma, using the relation F (τ ) = ∆Eγ Eγo β(0)(cosθ1 − cosθ2 ) (3)
+
+The F(τ ) value thereby obtained has been corrected for the eﬀective lifetime of the 4348 keV level which decays by the 1185 keV γ ray to the level of interest, since this transition has been used as the gating transition. The centroids were determined after consideration of suitable background using the analysis program INGASORT [6]. The experimental results are summarised in Table 1.
+Table 1. Summary of the F(τ ) values and corrected τ (ps) of 3163 keV level. βmax θ1 θ2 Eγ ∆E F(τ ) Corrected τ (keV) (keV) (ps) 0.0575 81o 134o 3163 14 0.09 0.5 0.0513 90o 105o 3163 3 0.07 0.6 o 90 120o 3163 7 0.09
+
+Energy (MeV) 88 70
+
+3.3 Limitation in previous measurements and estimation of error in present measurement The large lifetime of 45.3 ps reported [2] previously may possibly be attributed to one or more of the following limitations: • Use of evaporated targets with layered structures or backing materials whose stopping powers were poorly known. • Population of the level of interest in forward reactions producing low recoil velocities (in most of the cases β ≤ 1%). • Measurements in singles mode are diﬃcult in A≃ 40 due to interference from overlapping gamma rays. 4
+
+

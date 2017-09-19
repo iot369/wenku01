@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:xn="http://www.renren.com/2009/xnml" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="/templets/jxdoc/style/common.css" rel="stylesheet" type="text/css" />
+<link href="/templets/jxdoc/style/index.css" rel="stylesheet" type="text/css" />
+<link href="/templets/jxdoc/style/reset.css" rel="stylesheet" type="text/css" />
+<LINK rel=stylesheet type=text/css href="/templets/jxdoc/baidu/homenew.css">
+<!-- /公共js引用 开始 -->
+{dede:include filename="comm_js.htm"/}
+<!-- /公共js引用 结束-->
+<script language="javascript" type="text/javascript" src="/templets/jxdoc/js/jquery.marquee.js"></script>
+<script language="javascript" type="text/javascript" src="/templets/jxdoc/js/jcarousellite.js"></script>
+<script language="javascript" type="text/javascript">
+
+</script>
+</head>
+<body>
+<!-- /header 开始 -->
+{dede:include filename="head.htm"/}
+<!-- /header 结束-->
+<!-- /search 开始 -->
+<!-- /search 结束-->
+<div class="content">
+  <!--导航位置-->
+  <div class="position"> <strong>当前位置:</strong>：<a href="{dede:global.cfg_cmsurl/}/">主页</a> &gt; <a href='tags.php'>TAG标签</a></div>
+  <!--导航位置 end-->
+  <!--left part-->
+  <div class="left">
+    <!--tips start-->
+    <div id="tips">
+      <div class="tab">
+        <div class="tab_l"><img src="/templets/jxdoc/images/tab_l.gif" width="4" height="29" /></div>
+        <div class="tab_m">最新标签</div>
+        <div class="tab_r"><img src="/templets/jxdoc/images/tab_r.gif" width="4" height="29" /></div>
+      </div>
+      <div class="tab_c"> {dede:tag row='60' sort='new'} <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a> {/dede:tag}</div>
+      <div class="tab_end"><img src="/templets/jxdoc/images/tab_end.gif" width="685" height="4" /></div>
+    </div>
+    <!--tips end-->
+    <br/>
+    <!--tips start-->
+    <div id="tips">
+      <div class="tab">
+        <div class="tab_l"><img src="/templets/jxdoc/images/tab_l.gif" width="4" height="29" /></div>
+        <div class="tab_m">当月热门标签</div>
+        <div class="tab_r"><img src="/templets/jxdoc/images/tab_r.gif" width="4" height="29" /></div>
+      </div>
+      <div class="tab_c"> {dede:tag row='60' sort='month'} <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a> {/dede:tag}</div>
+      <div class="tab_end"><img src="/templets/jxdoc/images/tab_end.gif" width="685" height="4" /></div>
+    </div>
+    <!--tips end-->
+    <br/>
+    <!--tips start-->
+    <div id="tips">
+      <div class="tab">
+        <div class="tab_l"><img src="/templets/jxdoc/images/tab_l.gif" width="4" height="29" /></div>
+        <div class="tab_m">随机标签</div>
+        <div class="tab_r"><img src="/templets/jxdoc/images/tab_r.gif" width="4" height="29" /></div>
+      </div>
+      <div class="tab_c"> {dede:tag row='100' sort='rand'} <a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a> {/dede:tag}</div>
+      <div class="tab_end"><img src="/templets/jxdoc/images/tab_end.gif" width="685" height="4" /></div>
+    </div>
+    <!--tips end-->
+  </div>
+  <!--left part end-->
+  <!--right part-->
+  <div class="right">
+    <!--news start-->
+    <div id="news">
+      <div class="tab">
+        <div class="tab_l"><img src="/templets/jxdoc/images/tab_l.gif" width="4" height="29" /></div>
+        <div class="tab_m"><span><a href="list-mynews.php" target="_blank">更多>></a></span>公告</div>
+        <div class="tab_r"><img src="/templets/jxdoc/images/tab_r.gif" width="4" height="29" /></div>
+      </div>
+      <ul class="n_content">
+        {dede:mynews row='5' titlelen='40'}
+        <li><a href="mynews.php?aid=[field:aid /]">[field:title /]</a> {/dede:mynews}
+      </ul>
+      <div class="n_end"><span></span></div>
+    </div>
+    <!--news end-->
+    <!--友情链接-->
+    <div class="l-list">
+      <div class="l-top"> 友情链接 </div>
+      <div class="l-content index_link">
+        <script src='/docshare/plus/ad_js.php?aid=2' language='javascript'></script>
+        <script src='/docshare/plus/ad_js.php?aid=3' language='javascript'></script>
+        <script src='/docshare/plus/ad_js.php?aid=4' language='javascript'></script>
+        <script src='/docshare/plus/ad_js.php?aid=5' language='javascript'></script>
+      </div>
+      <div class="l-end"></div>
+    </div>
+    <!--友情链接 end-->
+  </div>
+  <!--right part end-->
+  <div class="clear"></div>
+</div>
+<!-- /foot 开始 -->
+{dede:include filename="footer.htm"/}
+<!-- /foot 结束-->
+</body>
+</html>
